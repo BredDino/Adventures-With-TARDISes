@@ -37,7 +37,7 @@ public class TardisRegistry {
     public static AddonExterior LEGO2;
     public static AddonExterior LEGO3;
 
-    public void onInitialize() {
+    public static void onInitialize() {
         BAKER = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "baker").register();
         BAKER.setDoor(new AddonExterior.Door(BAKER, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
         SECOND = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "second").register();

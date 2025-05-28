@@ -1,0 +1,6 @@
+{
+    "id": "awt:crystalalt",
+    "parent": "ait:console/crystalline",
+    "texture": "ait:textures/blockentities/consoles/crystalline.png",
+    "emission": "awt:textures/blockentities/consoles/crystallinealt_emission.png"
+}

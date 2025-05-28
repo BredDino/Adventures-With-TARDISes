@@ -1,5 +1,6 @@
 package net.awt;
 
+import net.awt.TARDIS.TardisRegistry;
 import net.awt.block.ModBlocks;
 import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
@@ -18,5 +19,6 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+		TardisRegistry.onInitialize();
 	}
 }

@@ -1,5 +1,6 @@
 package net.awt;
 
+import net.awt.datagen.ModBlockTagProvider;
 import net.awt.datagen.ModLootTableProvider;
 import net.awt.datagen.ModWorldGenerator;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -12,5 +13,6 @@ public class AdventuresWithTARDISesDataGenerator implements DataGeneratorEntrypo
 
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
+		pack.addProvider(ModBlockTagProvider::new);
 	}
 }

@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"net.awt.AdventuresWithTARDISesDataGenerator"
+		],
+		"ait-main": [
+			"net.awt.amblekit.ait.AITUtil"
 		]
 	},
 	"mixins": [
