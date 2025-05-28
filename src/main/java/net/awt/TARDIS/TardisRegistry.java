@@ -1,9 +1,12 @@
 package net.awt.TARDIS;
 
 import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
+import net.awt.TARDIS.client.model.door.*;
+import net.awt.TARDIS.client.model.exterior.*;
 import net.awt.sound.AWTSound;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import org.joml.Vector3f;
 
 import static net.awt.AdventuresWithTARDISes.MOD_ID;
 
@@ -121,5 +124,123 @@ public class TardisRegistry {
 
         LEGO3 = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "logo_tardis_darkblue").register();
         LEGO3.setDoor(new AddonExterior.Door(LEGO3, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+    }
+
+    public static void registerClientAddonExteriors() {
+        BAKER.setModel(new BakerExteriorModel()).toClient().register();
+        BAKER.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        //AWT.BAKER.setPortalWidth(1f);
+        // AWT.BAKER.setPortalHeight(2f);
+        BAKER.toDoor().setModel(new BakerDoorModel(BakerDoorModel.getTexturedModelData().createModel())).toClient().register();
+
+        SECOND.setModel(new ThirdAndSecondBaseExterior()).toClient().register();
+        SECOND.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        SECOND.toDoor().setModel(new ThirdAndSecondBaseDoor(ThirdAndSecondBaseDoor.getTexturedModelData().createModel())).toClient().register();
+
+        THIRD.setModel(new ThirdAndSecondBaseExterior()).toClient().register();
+        THIRD.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        THIRD.toDoor().setModel(new ThirdAndSecondBaseDoor(ThirdAndSecondBaseDoor.getTexturedModelData().createModel())).toClient().register();
+
+        REDONION.setModel(new OnionExterior()).toClient().register();
+        REDONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        REDONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        YELLOWONION.setModel(new OnionExterior()).toClient().register();
+        YELLOWONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        YELLOWONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        BLUEONION.setModel(new OnionExterior()).toClient().register();
+        BLUEONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        BLUEONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        WHITEONION.setModel(new OnionExterior()).toClient().register();
+        WHITEONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        WHITEONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        PURPLEONION.setModel(new OnionExterior()).toClient().register();
+        PURPLEONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        PURPLEONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        GREYONION.setModel(new OnionExterior()).toClient().register();
+        GREYONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        GREYONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        PINKONION.setModel(new OnionExterior()).toClient().register();
+        PINKONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        PINKONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        LIGHTBLUEONION.setModel(new OnionExterior()).toClient().register();
+        LIGHTBLUEONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        LIGHTBLUEONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        LIMEGREENONION.setModel(new OnionExterior()).toClient().register();
+        LIMEGREENONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        LIMEGREENONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        MULTIONION.setModel(new OnionExterior()).toClient().register();
+        MULTIONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
+        MULTIONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+
+        CUBE.setModel(new CubeExterior()).toClient().register();
+        CUBE.toDoor().setModel(new CubeDoor(CubeDoor.getTexturedModelData().createModel())).toClient().register();
+        CUBE.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        ATRIUM.setModel(new AtriumExterior()).toClient().register();
+        ATRIUM.toDoor().setModel(new AtriumDoor(AtriumDoor.getTexturedModelData().createModel())).toClient().register();
+        ATRIUM.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOX.setModel(new policebox()).toClient().register();
+        POLICEBOX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        VASTDEFAULT.setModel(new VastBox()).toClient().register();
+        VASTDEFAULT.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTDEFAULT.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        VASTCORAL.setModel(new VastBox()).toClient().register();
+        VASTCORAL.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTCORAL.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        VASTTOKOMAK.setModel(new VastBox()).toClient().register();
+        VASTTOKOMAK.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTTOKOMAK.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        TYPE70.setModel(new Type70Exterior()).toClient().register();
+        TYPE70.toDoor().setModel(new Type70Door(Type70Door.getTexturedModelData().createModel())).toClient().register();
+        TYPE70.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        DEOTYPE70.setModel(new DeoType70Exterior()).toClient().register();
+        DEOTYPE70.toDoor().setModel(new DeoType70Door(DeoType70Door.getTexturedModelData().createModel())).toClient().register();
+        DEOTYPE70.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        BLOCKTIS.setModel(new BlocktisExterior()).toClient().register();
+        BLOCKTIS.toDoor().setModel(new BlocktisDoor(BlocktisDoor.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTIS.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        BLOCKTISV2.setModel(new BlocktisV2Exterior()).toClient().register();
+        BLOCKTISV2.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTISV2.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        BLOCKTISV3.setModel(new BlocktisV2Exterior()).toClient().register();
+        BLOCKTISV3.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTISV3.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        DEOBOX.setModel(new DeoBox()).toClient().register();
+        DEOBOX.toDoor().setModel(new DeoBoxDoor(DeoBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        DEOBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        LEGO.setModel(new logo_tardis_model()).toClient().register();
+        LEGO.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        LEGO2.setModel(new logo_tardis_model()).toClient().register();
+        LEGO2.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO2.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        LEGO3.setModel(new logo_tardis_model()).toClient().register();
+        LEGO3.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO3.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+
     }
 }

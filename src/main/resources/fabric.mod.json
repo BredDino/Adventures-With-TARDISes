@@ -18,6 +18,9 @@
 		"main": [
 			"net.awt.AdventuresWithTARDISes"
 		],
+		"client": [
+			"net.awt.AdventureWithTARDISesClient"
+		],
 		"fabric-datagen": [
 			"net.awt.AdventuresWithTARDISesDataGenerator"
 		],
