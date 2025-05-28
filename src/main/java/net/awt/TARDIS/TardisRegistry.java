@@ -114,16 +114,16 @@ public class TardisRegistry {
         BLOCKTISV3.setDoor(new AddonExterior.Door(BLOCKTISV3, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, net.minecraft.sound.SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
         DEOBOX = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "deobox").register();
-        DEOBOX.setDoor(new AddonExterior.Door(DEOBOX, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+        DEOBOX.setDoor(new AddonExterior.Door(DEOBOX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         LEGO = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "logo_tardis_default").register();
-        LEGO.setDoor(new AddonExterior.Door(LEGO, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+        LEGO.setDoor(new AddonExterior.Door(LEGO, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         LEGO2 = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "logo_tardis_purple").register();
-        LEGO2.setDoor(new AddonExterior.Door(LEGO2, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+        LEGO2.setDoor(new AddonExterior.Door(LEGO2, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         LEGO3 = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "logo_tardis_darkblue").register();
-        LEGO3.setDoor(new AddonExterior.Door(LEGO3, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+        LEGO3.setDoor(new AddonExterior.Door(LEGO3, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
     }
 
     public static void registerClientAddonExteriors() {
