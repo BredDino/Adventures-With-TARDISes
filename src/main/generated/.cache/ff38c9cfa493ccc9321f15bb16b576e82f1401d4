@@ -1,6 +1,6 @@
-// 1.20.1	2025-05-29T00:14:38.3184538	Adventures With TARDISes/Tags for minecraft:block
-f646bd89d38c20e4127a313e1a62aeac6957b333 data\minecraft\tags\blocks\needs_stone_tool.json
+// 1.20.1	2025-05-29T00:43:22.3822061	Adventures With TARDISes/Tags for minecraft:block
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_diamond_tool.json
+f646bd89d38c20e4127a313e1a62aeac6957b333 data\minecraft\tags\blocks\needs_stone_tool.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\fabric\tags\blocks\needs_tool_level_5.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\logs_that_burn.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\walls.json
