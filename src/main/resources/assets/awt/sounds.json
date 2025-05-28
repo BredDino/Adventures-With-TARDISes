@@ -1,0 +1,143 @@
+
+{
+  "paradoxmat": {
+    "category": "mat",
+    "subtitle": "subtitles.paradoxmat",
+    "sounds": [
+      {
+        "name": "awt:paradoxmat",
+        "stream": false
+      }
+    ]
+  },
+  "type70mat": {
+    "category": "mat",
+    "subtitle": "subtitles.type70mat",
+    "sounds": [
+      {
+        "name": "awt:type70mat",
+        "stream": false
+      }
+    ]
+  },
+  "type70demat": {
+    "category": "demat",
+    "subtitle": "subtitles.type70demat",
+    "sounds": [
+      {
+        "name": "awt:type70demat",
+        "stream": false
+      }
+    ]
+  },
+  "type70flight": {
+    "category": "flight",
+    "subtitle": "subtitles.type70flight",
+    "sounds": [
+      {
+        "name": "awt:type70flight",
+        "stream": false
+      }
+    ]
+  },
+  "emergency_land": {
+    "category": "mat",
+    "subtitle": "subtitles.emergency_land",
+    "sounds": [
+      {
+        "name": "awt:emergency_land",
+        "stream": false
+      }
+    ]
+  },
+  "police_box_door_open": {
+    "category": "door",
+    "subtitle": "subtitles.police_box_door_open",
+    "sounds": [
+      {
+        "name": "awt:police_box_door_open",
+        "stream": false
+      }
+    ]
+  },
+  "police_box_door_close": {
+    "category": "door",
+    "subtitle": "subtitles.police_box_door_close",
+    "sounds": [
+      {
+        "name": "awt:police_box_door_close",
+        "stream": false
+      }
+    ]
+  },
+  "classic1": {
+    "category": "music",
+    "subtitle": "subtitles.classic1",
+    "sounds": [
+      {
+        "name": "awt:classic1",
+        "stream": false
+      }
+    ]
+  },
+  "classic2": {
+    "category": "music",
+    "subtitle": "subtitles.classic2",
+    "sounds": [
+      {
+        "name": "awt:classic2",
+        "stream": false
+      }
+    ]
+  },
+  "doctor_who_60th": {
+    "category": "music",
+    "subtitle": "subtitles.doctor_who_60th",
+    "sounds": [
+      {
+        "name": "awt:doctor_who_60th",
+        "stream": false
+      }
+    ]
+  },
+
+  "bloop": {
+    "category": "neutral",
+    "subtitle": "subtitles.bloop",
+    "sounds": [
+      {
+        "name": "awt:bloop",
+        "stream": false,
+        "vortexactivate": {
+          "category": "neutral",
+          "subtitle": "subtitles.vortexactivate",
+          "sounds": [
+            {
+              "name": "ddwa:vortex_manipulator_use",
+              "stream": false
+            }
+          ]
+        },
+        "dalekshoot": {
+          "category": "hostile",
+          "subtitle": "subtitles.dalekshoot",
+          "sounds": [
+            {
+              "name": "ddwa:dalekshoot",
+              "stream": false
+            }
+          ]
+        },
+        "dalekbossfightmusic": {
+          "category": "music",
+          "sounds": [
+            {
+              "name": "ddwa:y2mate.com-ksi-thick-of-it-feat-trippie-redd-official-lyric-video",
+              "stream": true
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
