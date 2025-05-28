@@ -1,11 +1,16 @@
 package net.awt.TARDIS.client.model.door;
 
+import dev.amble.ait.AITMod;
+import dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity;
 import dev.amble.ait.client.models.doors.DoorModel;
+import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
+import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.RotationAxis;
 
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn
