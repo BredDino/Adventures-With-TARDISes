@@ -248,18 +248,26 @@ public class TardisRegistry {
 
         DEOBOX.setModel(new DeoBox()).toClient().register();
         DEOBOX.toDoor().setModel(new DeoBoxDoor(DeoBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        DEOBOX.setPortalWidth(1f);
+        DEOBOX.setPortalHeight(2f);
         DEOBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         LEGO.setModel(new logo_tardis_model()).toClient().register();
         LEGO.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO.setPortalWidth(1f);
+        LEGO.setPortalHeight(2f);
         LEGO.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         LEGO2.setModel(new logo_tardis_model()).toClient().register();
         LEGO2.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO2.setPortalWidth(1f);
+        LEGO2.setPortalHeight(2f);
         LEGO2.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         LEGO3.setModel(new logo_tardis_model()).toClient().register();
         LEGO3.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO3.setPortalWidth(1f);
+        LEGO3.setPortalHeight(2f);
         LEGO3.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
 
