@@ -136,10 +136,14 @@ public class TardisRegistry {
 
         SECOND.setModel(new ThirdAndSecondBaseExterior()).toClient().register();
         SECOND.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        SECOND.setPortalWidth(1.25f);
+        SECOND.setPortalHeight(2.25f);
         SECOND.toDoor().setModel(new ThirdAndSecondBaseDoor(ThirdAndSecondBaseDoor.getTexturedModelData().createModel())).toClient().register();
 
         THIRD.setModel(new ThirdAndSecondBaseExterior()).toClient().register();
         THIRD.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        THIRD.setPortalWidth(1.25f);
+        THIRD.setPortalHeight(2.25f);
         THIRD.toDoor().setModel(new ThirdAndSecondBaseDoor(ThirdAndSecondBaseDoor.getTexturedModelData().createModel())).toClient().register();
 
         REDONION.setModel(new OnionExterior()).toClient().register();
