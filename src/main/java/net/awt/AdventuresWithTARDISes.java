@@ -21,6 +21,6 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
 		TardisRegistry.onInitialize();
-		ModWorldGeneration.generateModWorldGen();
+		//ModWorldGeneration.generateModWorldGen();
 	}
 }
