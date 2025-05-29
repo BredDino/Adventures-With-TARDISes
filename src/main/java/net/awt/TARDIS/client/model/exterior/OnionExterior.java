@@ -161,6 +161,7 @@ public class OnionExterior extends ExteriorModel {
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
+
 		Root.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
@@ -168,8 +169,17 @@ public class OnionExterior extends ExteriorModel {
 	public <T extends Entity & Linkable> void renderEntity(T falling, ModelPart root, MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		matrices.push();
 		matrices.scale(1, 1, 1);
-		matrices.translate(1.5f, 1.5f, 1.5f);
+		matrices.translate(1.5f, 3f, 1.5f);
 		super.renderEntity(falling, root, matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		matrices.pop();
+	}
+
+	@Override
+	public void renderWithAnimations(ClientTardis tardis, ExteriorBlockEntity exterior, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha) {
+		matrices.push();
+		matrices.scale(1, 1, 1);
+		matrices.translate(0, -1.59f, 0);
+		super.renderWithAnimations(tardis, exterior, root, matrices, vertices, light, overlay, red, green, blue, alpha);
 		matrices.pop();
 	}
 
