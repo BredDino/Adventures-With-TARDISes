@@ -1,5 +1,7 @@
 package net.awt.item.custom;
 
+import net.awt.screens.VortexManipulatorScreen;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -15,7 +17,9 @@ public class VortexManipulator extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-
+        if (world.isClient) {
+            MinecraftClient.getInstance().setScreen(new VortexManipulatorScreen());
+        }
         return super.use(world, user, hand);
     }
 }
