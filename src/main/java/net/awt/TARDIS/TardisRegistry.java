@@ -1,6 +1,7 @@
 package net.awt.TARDIS;
 
 import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
+import net.awt.AdventuresWithTARDISes;
 import net.awt.TARDIS.client.model.door.*;
 import net.awt.TARDIS.client.model.exterior.*;
 import net.awt.sound.AWTSound;
@@ -129,8 +130,8 @@ public class TardisRegistry {
     public static void registerClientAddonExteriors() {
         BAKER.setModel(new BakerExteriorModel()).toClient().register();
         BAKER.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
-        //AWT.BAKER.setPortalWidth(1f);
-        // AWT.BAKER.setPortalHeight(2f);
+        BAKER.setPortalWidth(1.25f);
+        BAKER.setPortalHeight(2.5f);
         BAKER.toDoor().setModel(new BakerDoorModel(BakerDoorModel.getTexturedModelData().createModel())).toClient().register();
 
         SECOND.setModel(new ThirdAndSecondBaseExterior()).toClient().register();
