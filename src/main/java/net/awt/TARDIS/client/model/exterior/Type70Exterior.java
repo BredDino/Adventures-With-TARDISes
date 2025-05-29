@@ -69,10 +69,9 @@ public class Type70Exterior extends ExteriorModel {
 		DoorHandler door = exterior.tardis().get().door();
 
 		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
-			this.bone.getChild("type70door").yaw = (door.isLeftOpen() || door.isOpen()) ? -5.0F : 0.0F;
+			this.type70door.pivotX = -3 + (door.isOpen() ? 16 : 0);
 		} else {
-			float maxRot = -90f;
-			this.bone.getChild("type70door").yaw = (float) Math.toRadians(maxRot * door.getLeftRot());
+			this.type70door.pivotX = -3 + 16 * door.getLeftRot();
 		}
 
 		super.renderWithAnimations(tardis, exterior, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
