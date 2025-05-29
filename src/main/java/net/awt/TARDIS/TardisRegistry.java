@@ -230,14 +230,20 @@ public class TardisRegistry {
 
         BLOCKTIS.setModel(new BlocktisExterior()).toClient().register();
         BLOCKTIS.toDoor().setModel(new BlocktisDoor(BlocktisDoor.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTIS.setPortalWidth(0.75f);
+        BLOCKTIS.setPortalHeight(1.75f);
         BLOCKTIS.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTISV2.setModel(new BlocktisV2Exterior()).toClient().register();
         BLOCKTISV2.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTISV2.setPortalWidth(0.75f);
+        BLOCKTISV2.setPortalHeight(1.75f);
         BLOCKTISV2.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTISV3.setModel(new BlocktisV2Exterior()).toClient().register();
         BLOCKTISV3.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTISV3.setPortalWidth(0.75f);
+        BLOCKTISV3.setPortalHeight(1.75f);
         BLOCKTISV3.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         DEOBOX.setModel(new DeoBox()).toClient().register();
