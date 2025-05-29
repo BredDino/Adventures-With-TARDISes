@@ -200,14 +200,20 @@ public class TardisRegistry {
 
         VASTDEFAULT.setModel(new VastBox()).toClient().register();
         VASTDEFAULT.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTDEFAULT.setPortalWidth(1f);
+        VASTDEFAULT.setPortalHeight(2f);
         VASTDEFAULT.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         VASTCORAL.setModel(new VastBox()).toClient().register();
         VASTCORAL.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTCORAL.setPortalWidth(1f);
+        VASTCORAL.setPortalHeight(2f);
         VASTCORAL.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         VASTTOKOMAK.setModel(new VastBox()).toClient().register();
         VASTTOKOMAK.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTTOKOMAK.setPortalWidth(1f);
+        VASTTOKOMAK.setPortalHeight(2f);
         VASTTOKOMAK.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         TYPE70.setModel(new Type70Exterior()).toClient().register();
