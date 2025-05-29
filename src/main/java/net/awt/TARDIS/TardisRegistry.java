@@ -224,6 +224,8 @@ public class TardisRegistry {
 
         DEOTYPE70.setModel(new DeoType70Exterior()).toClient().register();
         DEOTYPE70.toDoor().setModel(new DeoType70Door(DeoType70Door.getTexturedModelData().createModel())).toClient().register();
+        DEOTYPE70.setPortalWidth(1f);
+        DEOTYPE70.setPortalHeight(2f);
         DEOTYPE70.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTIS.setModel(new BlocktisExterior()).toClient().register();
