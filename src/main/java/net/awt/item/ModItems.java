@@ -2,6 +2,7 @@ package net.awt.item;
 
 import net.awt.AdventuresWithTARDISes;
 import net.awt.item.custom.VortexManipulator;
+import net.awt.sound.AWTSound;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -32,7 +33,15 @@ public class ModItems {
             )
     );
 
-    */
+
+
+    public static final Item VALEDECEM = registerItem("Vale Decem",
+            new MusicDiscItem(4, AWTSound.DRWHOVALE,
+                    new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC),
+                    2680 // length in ticks
+            )
+    );
+     */
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(ARTRIUM);

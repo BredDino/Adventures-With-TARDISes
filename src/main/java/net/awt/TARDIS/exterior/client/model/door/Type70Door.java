@@ -42,13 +42,17 @@ public class Type70Door extends DoorModel {
 
 	@Override
 	public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
-		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
-			DoorHandler door = doorEntity.tardis().get().door();
-			type70door.yaw = !door.isLeftOpen() && !door.isOpen() ? 0.0F : -5.0F;
-		} else {
-			float maxRot = -90.0F;
-			type70door.yaw = (float)(Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getLeftRot())));
-		}
+			if ( doorEntity.tardis().isEmpty())
+				return;
+
+			DoorHandler door =  doorEntity.tardis().get().door();
+
+			if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
+				this.type70door.pivotX = -3 + (door.isOpen() ? 16 : 0);
+			} else {
+				this.type70door.pivotX = -3 + 16 * door.getLeftRot();
+			}
+
 
 		matrices.push();
 		matrices.scale(1, 1, 1);

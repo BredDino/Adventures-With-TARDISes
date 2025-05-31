@@ -53,8 +53,7 @@ public class OnionExterior extends ExteriorModel {
 		this.Joint8 = this.Joint7.getChild("Joint8");
 		this.Joint9 = this.Joint8.getChild("Joint9");
 	}
-
-	public OnionExterior()   {
+	public OnionExterior()  {
 		this(getTexturedModelData().createModel());
 	}
 
@@ -166,6 +165,8 @@ public class OnionExterior extends ExteriorModel {
 
 	@Override
 	public <T extends Entity & Linkable> void renderEntity(T falling, ModelPart root, MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
+
+
 		matrices.push();
 		matrices.scale(1, 1, 1);
 		matrices.translate(1.5f, 3f, 1.5f);
@@ -175,6 +176,12 @@ public class OnionExterior extends ExteriorModel {
 
 	@Override
 	public void renderWithAnimations(ClientTardis tardis, ExteriorBlockEntity exterior, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha) {
+		if ( exterior.tardis().isEmpty())
+			return;
+
+		DoorHandler door =  exterior.tardis().get().door();
+		this.OmgitsaUFO.visible = door.isOpen();
+
 		matrices.push();
 		matrices.scale(1, 1, 1);
 		matrices.translate(0, -1.59f, 0);
@@ -184,6 +191,6 @@ public class OnionExterior extends ExteriorModel {
 
 	@Override
 	public ModelPart getPart() {
-		return getTexturedModelData().createModel();
+		return Root;
 	}
 }
