@@ -21,8 +21,9 @@ public class ModItems {
     public static final Item ENERGIZEDARTRIUM = registerItem("energized_artrium", new Item(new FabricItemSettings()));
     public static final Item ARTRIUMCORE = registerItem("artrium_core", new Item(new FabricItemSettings()));
     public static final Item ROUNDELMOLD = registerItem("roundel_mold", new Item(new FabricItemSettings()));
-
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator",new VortexManipulator(new FabricItemSettings()));
+    public static final Item DRWHOVALE_MUSIC_DISC = registerItem("drwhovale_music_disc",
+            new MusicDiscItem(10, AWTSound.DRWHOVALE, new FabricItemSettings().maxCount(1), 127));
 
     /*
 
@@ -30,15 +31,6 @@ public class ModItems {
             new MusicDiscItem(4, AWTSound.CLASSIC1,
                     new FabricItemSettings().maxCount(1).rarity(Rarity.COMMON),
                     185 // Length in ticks
-            )
-    );
-
-
-
-    public static final Item VALEDECEM = registerItem("Vale Decem",
-            new MusicDiscItem(4, AWTSound.DRWHOVALE,
-                    new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC),
-                    2680 // length in ticks
             )
     );
      */
@@ -50,6 +42,7 @@ public class ModItems {
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(AdventuresWithTARDISes.MOD_ID, name), item);
     }
+
 
     public static void registerModItems() {
         AdventuresWithTARDISes.LOGGER.info("Registering Mod Items for" + AdventuresWithTARDISes.MOD_ID);

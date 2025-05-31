@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ARTRIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_ARTRIUM_ORE);
                         //entries.add(ModItems.CLASSIC1);
+                        entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                     }).build());
 
 

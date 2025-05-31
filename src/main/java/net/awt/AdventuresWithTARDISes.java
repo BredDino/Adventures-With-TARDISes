@@ -6,6 +6,7 @@ import net.awt.TARDIS.exterior.TardisExteriorRegistry;
 import net.awt.block.ModBlocks;
 import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
+import net.awt.sound.AWTSound;
 import net.awt.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -19,6 +20,7 @@ public class AdventuresWithTARDISes implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		AWTSound.init();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
