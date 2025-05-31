@@ -43,12 +43,15 @@ public class DeoType70Door extends DoorModel {
 
 	@Override
 	public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
+		if ( doorEntity.tardis().isEmpty())
+			return;
+
+		DoorHandler door =  doorEntity.tardis().get().door();
+
 		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
-			DoorHandler door = doorEntity.tardis().get().door();
-			bone.yaw = !door.isLeftOpen() && !door.isOpen() ? 0.0F : -5.0F;
+			this.door.pivotZ = -5 + (door.isOpen() ? -11 : 0);
 		} else {
-			float maxRot = -90.0F;
-			bone.yaw = (float)(Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getLeftRot())));
+			this.door.pivotZ = -5 + -11 * door.getLeftRot();
 		}
 
 		matrices.push();

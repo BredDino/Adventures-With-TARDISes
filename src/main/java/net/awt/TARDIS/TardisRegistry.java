@@ -1,6 +1,7 @@
 package net.awt.TARDIS;
 
 import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
+import net.awt.AdventuresWithTARDISes;
 import net.awt.TARDIS.client.model.door.*;
 import net.awt.TARDIS.client.model.exterior.*;
 import net.awt.sound.AWTSound;
@@ -129,16 +130,20 @@ public class TardisRegistry {
     public static void registerClientAddonExteriors() {
         BAKER.setModel(new BakerExteriorModel()).toClient().register();
         BAKER.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
-        //AWT.BAKER.setPortalWidth(1f);
-        // AWT.BAKER.setPortalHeight(2f);
+        BAKER.setPortalWidth(1.25f);
+        BAKER.setPortalHeight(2.5f);
         BAKER.toDoor().setModel(new BakerDoorModel(BakerDoorModel.getTexturedModelData().createModel())).toClient().register();
 
         SECOND.setModel(new ThirdAndSecondBaseExterior()).toClient().register();
         SECOND.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        SECOND.setPortalWidth(1.25f);
+        SECOND.setPortalHeight(2.25f);
         SECOND.toDoor().setModel(new ThirdAndSecondBaseDoor(ThirdAndSecondBaseDoor.getTexturedModelData().createModel())).toClient().register();
 
         THIRD.setModel(new ThirdAndSecondBaseExterior()).toClient().register();
         THIRD.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
+        THIRD.setPortalWidth(1.25f);
+        THIRD.setPortalHeight(2.25f);
         THIRD.toDoor().setModel(new ThirdAndSecondBaseDoor(ThirdAndSecondBaseDoor.getTexturedModelData().createModel())).toClient().register();
 
         REDONION.setModel(new OnionExterior()).toClient().register();
@@ -195,50 +200,74 @@ public class TardisRegistry {
 
         VASTDEFAULT.setModel(new VastBox()).toClient().register();
         VASTDEFAULT.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTDEFAULT.setPortalWidth(1f);
+        VASTDEFAULT.setPortalHeight(2f);
         VASTDEFAULT.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         VASTCORAL.setModel(new VastBox()).toClient().register();
         VASTCORAL.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTCORAL.setPortalWidth(1f);
+        VASTCORAL.setPortalHeight(2f);
         VASTCORAL.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         VASTTOKOMAK.setModel(new VastBox()).toClient().register();
         VASTTOKOMAK.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        VASTTOKOMAK.setPortalWidth(1f);
+        VASTTOKOMAK.setPortalHeight(2f);
         VASTTOKOMAK.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         TYPE70.setModel(new Type70Exterior()).toClient().register();
         TYPE70.toDoor().setModel(new Type70Door(Type70Door.getTexturedModelData().createModel())).toClient().register();
+        TYPE70.setPortalWidth(1f);
+        TYPE70.setPortalHeight(2f);
         TYPE70.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         DEOTYPE70.setModel(new DeoType70Exterior()).toClient().register();
         DEOTYPE70.toDoor().setModel(new DeoType70Door(DeoType70Door.getTexturedModelData().createModel())).toClient().register();
+        DEOTYPE70.setPortalWidth(1f);
+        DEOTYPE70.setPortalHeight(2f);
         DEOTYPE70.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTIS.setModel(new BlocktisExterior()).toClient().register();
         BLOCKTIS.toDoor().setModel(new BlocktisDoor(BlocktisDoor.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTIS.setPortalWidth(0.75f);
+        BLOCKTIS.setPortalHeight(1.75f);
         BLOCKTIS.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTISV2.setModel(new BlocktisV2Exterior()).toClient().register();
         BLOCKTISV2.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTISV2.setPortalWidth(0.75f);
+        BLOCKTISV2.setPortalHeight(1.75f);
         BLOCKTISV2.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTISV3.setModel(new BlocktisV2Exterior()).toClient().register();
         BLOCKTISV3.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTISV3.setPortalWidth(0.75f);
+        BLOCKTISV3.setPortalHeight(1.75f);
         BLOCKTISV3.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         DEOBOX.setModel(new DeoBox()).toClient().register();
         DEOBOX.toDoor().setModel(new DeoBoxDoor(DeoBoxDoor.getTexturedModelData().createModel())).toClient().register();
+        DEOBOX.setPortalWidth(1f);
+        DEOBOX.setPortalHeight(2f);
         DEOBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         LEGO.setModel(new logo_tardis_model()).toClient().register();
         LEGO.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO.setPortalWidth(1f);
+        LEGO.setPortalHeight(2f);
         LEGO.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         LEGO2.setModel(new logo_tardis_model()).toClient().register();
         LEGO2.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO2.setPortalWidth(1f);
+        LEGO2.setPortalHeight(2f);
         LEGO2.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         LEGO3.setModel(new logo_tardis_model()).toClient().register();
         LEGO3.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGO3.setPortalWidth(1f);
+        LEGO3.setPortalHeight(2f);
         LEGO3.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
 

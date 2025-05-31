@@ -75,10 +75,9 @@ public class DeoType70Exterior extends ExteriorModel {
 		DoorHandler door = exterior.tardis().get().door();
 
 		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
-			this.bone.getChild("door").yaw = (door.isLeftOpen() || door.isOpen()) ? -5.0F : 0.0F;
+			this.door.pivotZ = -5 + (door.isOpen() ? -11 : 0);
 		} else {
-			float maxRot = 180;
-			this.bone.getChild("door").yaw = (float) Math.toRadians(maxRot * door.getLeftRot());
+			this.door.pivotZ = -5 + -11 * door.getLeftRot();
 		}
 
 		super.renderWithAnimations(tardis, exterior, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
