@@ -90,6 +90,16 @@
       }
     ]
   },
+  "drwhovale": {
+    "category": "music",
+    "subtitle": "Bro thinks he's david tennant",
+    "sounds": [
+      {
+        "name": "awt:drwhovale",
+        "stream": true
+      }
+    ]
+  },
   "doctor_who_60th": {
     "category": "music",
     "subtitle": "subtitles.doctor_who_60th",
@@ -100,7 +110,6 @@
       }
     ]
   },
-
   "bloop": {
     "category": "neutral",
     "subtitle": "subtitles.bloop",
@@ -125,15 +134,6 @@
             {
               "name": "ddwa:dalekshoot",
               "stream": false
-            }
-          ]
-        },
-        "dalekbossfightmusic": {
-          "category": "music",
-          "sounds": [
-            {
-              "name": "ddwa:y2mate.com-ksi-thick-of-it-feat-trippie-redd-official-lyric-video",
-              "stream": true
             }
           ]
         }
