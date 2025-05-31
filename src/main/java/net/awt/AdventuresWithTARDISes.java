@@ -1,9 +1,8 @@
 package net.awt;
 
-import dev.amble.lib.register.AmbleRegistries;
-import net.awt.TARDIS.exterior.TardisExteriorRegistry;
+import net.awt.TARDIS.console.AWTConsoleRegistry;
 import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
-import net.awt.TARDIS.console.ConsoleRegistry;
+import net.awt.TARDIS.exterior.TardisExteriorRegistry;
 import net.awt.block.ModBlocks;
 import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
@@ -25,9 +24,10 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		TardisExteriorRegistry.onInitialize();
-		//ConsoleRegistry.init();
+		AWTConsoleRegistry.init();
+		AWTConsoleVariantRegistry.init();
 
-		ModWorldGeneration.generateModWorldGen();
+		//ModWorldGeneration.generateModWorldGen();
 	}
 
 	public static Identifier id(String path) {

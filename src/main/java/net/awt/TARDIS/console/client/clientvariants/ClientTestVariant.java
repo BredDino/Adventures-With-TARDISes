@@ -21,7 +21,7 @@ public class ClientTestVariant extends ClientConsoleVariantSchema {
 
     @Override
     public Identifier emission() {
-        return null;
+        return TEXTURE;
     }
 
     @Override
