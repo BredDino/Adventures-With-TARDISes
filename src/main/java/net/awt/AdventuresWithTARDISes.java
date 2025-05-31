@@ -1,12 +1,15 @@
 package net.awt;
 
-import net.awt.TARDIS.TardisRegistry;
+import dev.amble.lib.register.AmbleRegistries;
+import net.awt.TARDIS.exterior.TardisExteriorRegistry;
+import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
+import net.awt.TARDIS.console.ConsoleRegistry;
 import net.awt.block.ModBlocks;
 import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
 import net.awt.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
-
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +23,14 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
-		TardisRegistry.onInitialize();
+
+		TardisExteriorRegistry.onInitialize();
+		//ConsoleRegistry.init();
+
 		ModWorldGeneration.generateModWorldGen();
+	}
+
+	public static Identifier id(String path) {
+		return new Identifier("awt", path);
 	}
 }
