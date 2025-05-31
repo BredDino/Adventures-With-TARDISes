@@ -10,6 +10,5 @@ public class AWTConsoleRegistry {
 
 
     public static void init() {
-        TEST = ConsoleRegistry.register(new TestType());
     }
 }

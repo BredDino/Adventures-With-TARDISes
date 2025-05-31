@@ -1,5 +1,7 @@
 package net.awt.TARDIS.console.client.models;
 
+import dev.amble.ait.client.animation.console.hartnell.HartnellAnimations;
+import dev.amble.ait.client.animation.console.toyota.ToyotaAnimations;
 import dev.amble.ait.client.models.consoles.ConsoleModel;
 import dev.amble.ait.core.tardis.handler.travel.TravelHandlerBase;
 import net.minecraft.client.model.*;
@@ -29,7 +31,7 @@ public class TestModel extends ConsoleModel {
 
 	@Override
 	public Animation getAnimationForState(TravelHandlerBase.State state) {
-		return null;
+		return HartnellAnimations.HARTNELL_IDLE_ANIMATION;
 	}
 
 	@Override

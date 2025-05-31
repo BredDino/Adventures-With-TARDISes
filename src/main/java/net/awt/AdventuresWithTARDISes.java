@@ -7,7 +7,6 @@ import net.awt.block.ModBlocks;
 import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
 import net.awt.sound.AWTSound;
-import net.awt.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;

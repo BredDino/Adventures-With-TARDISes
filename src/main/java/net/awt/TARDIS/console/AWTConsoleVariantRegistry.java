@@ -8,6 +8,6 @@ public class AWTConsoleVariantRegistry {
     public static ConsoleVariantSchema TEST;
 
     public static void init() {
-        TEST = (ConsoleVariantSchema) ConsoleVariantRegistry.registerStatic(new TestVariant());
+        TEST = ConsoleVariantRegistry.registerStatic(new TestVariant());
     }
 }
