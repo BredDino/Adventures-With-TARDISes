@@ -6,6 +6,7 @@ import net.awt.TARDIS.exterior.TardisExteriorRegistry;
 import net.awt.block.ModBlocks;
 import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
+import net.awt.networking.ModPackets;
 import net.awt.sound.AWTSound;
 import net.awt.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -30,6 +31,8 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		AWTConsoleVariantRegistry.init();
 
 		ModWorldGeneration.generateModWorldGen();
+
+		ModPackets.registerC2SPackets();
 	}
 
 	public static Identifier id(String path) {
