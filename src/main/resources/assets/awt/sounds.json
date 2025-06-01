@@ -76,7 +76,7 @@
     "sounds": [
       {
         "name": "awt:classic1",
-        "stream": false
+        "stream": true
       }
     ]
   },
@@ -86,7 +86,7 @@
     "sounds": [
       {
         "name": "awt:classic2",
-        "stream": false
+        "stream": true
       }
     ]
   },
@@ -106,7 +106,7 @@
     "sounds": [
       {
         "name": "awt:doctor_who_60th",
-        "stream": false
+        "stream": true
       }
     ]
   },

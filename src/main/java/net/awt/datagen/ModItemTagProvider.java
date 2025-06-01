@@ -16,9 +16,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
-                .add(ModItems.DRWHOVALE_MUSIC_DISC);
+                .add(ModItems.DRWHOVALE_MUSIC_DISC)
+                .add(ModItems.DRWHO60TH);
 
         getOrCreateTagBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
-                .add(ModItems.DRWHOVALE_MUSIC_DISC);
+                .add(ModItems.DRWHOVALE_MUSIC_DISC)
+                  .add(ModItems.DRWHO60TH);
     }
 }
