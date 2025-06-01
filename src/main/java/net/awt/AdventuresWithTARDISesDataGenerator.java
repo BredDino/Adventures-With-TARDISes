@@ -1,6 +1,7 @@
 package net.awt;
 
 import net.awt.datagen.ModBlockTagProvider;
+import net.awt.datagen.ModItemTagProvider;
 import net.awt.datagen.ModLootTableProvider;
 import net.awt.datagen.ModWorldGenerator;
 import net.awt.world.ModConfiguredFeatures;
@@ -18,6 +19,7 @@ public class AdventuresWithTARDISesDataGenerator implements DataGeneratorEntrypo
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
 		pack.addProvider(ModBlockTagProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
 	}
 
 	@Override
