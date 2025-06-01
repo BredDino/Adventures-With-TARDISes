@@ -17,10 +17,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
                 .add(ModItems.DRWHOVALE_MUSIC_DISC)
-                .add(ModItems.DRWHO60TH);
+                .add(ModItems.doctorwhoxv_music_disc);
 
         getOrCreateTagBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
                 .add(ModItems.DRWHOVALE_MUSIC_DISC)
-                  .add(ModItems.DRWHO60TH);
+                .add(ModItems.doctorwhoxv_music_disc);
     }
 }

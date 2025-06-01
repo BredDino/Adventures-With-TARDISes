@@ -24,7 +24,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_ARTRIUM_ORE);
                         //entries.add(ModItems.CLASSIC1);
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
-                        entries.add(ModItems.DRWHO60TH);
+                        entries.add(ModItems.doctorwhoxv_music_disc);
                     }).build());
 
 

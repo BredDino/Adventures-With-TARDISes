@@ -100,12 +100,12 @@
       }
     ]
   },
-  "doctor_who_60th": {
+  "doctorwhoxv": {
     "category": "music",
-    "subtitle": "subtitles.doctor_who_60th",
+    "subtitle": "OOO WEE OOO EEEEE OOOOO",
     "sounds": [
       {
-        "name": "awt:doctor_who_60th",
+        "name": "awt:doctorwhoxv",
         "stream": true
       }
     ]

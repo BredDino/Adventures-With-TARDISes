@@ -17,7 +17,7 @@ public class AWTSound {
     public static final SoundEvent POLICEBOXDOORCLOSED = register("police_box_door_close");
     public static final SoundEvent CLASSIC1 = register("classic1");
     public static final SoundEvent CLASSIC2 = register("classic2");
-    public static final SoundEvent DRWHO60TH = register("doctor_who_60th");
+    public static final SoundEvent doctorwhoxv = register("doctorwhoxv");
     public static final SoundEvent DRWHOVALE = register("drwhovale");
 
     public static SoundEvent register(String id) {

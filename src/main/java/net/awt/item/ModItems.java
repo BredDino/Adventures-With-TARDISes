@@ -23,8 +23,8 @@ public class ModItems {
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator",new VortexManipulator(new FabricItemSettings()));
     public static final Item DRWHOVALE_MUSIC_DISC = registerItem("drwhovale_music_disc",
             new MusicDiscItem(10, AWTSound.DRWHOVALE, new FabricItemSettings().maxCount(1), 127));
-    public static final Item DRWHO60TH = registerItem("doctor_who_60th",
-            new MusicDiscItem(10, AWTSound.DRWHO60TH, new FabricItemSettings().maxCount(1), 29));
+    public static final Item doctorwhoxv_music_disc = registerItem("doctorwhoxv_music_disc",
+            new MusicDiscItem(15, AWTSound.doctorwhoxv, new FabricItemSettings().maxCount(1), 29));
 
     /*
 
