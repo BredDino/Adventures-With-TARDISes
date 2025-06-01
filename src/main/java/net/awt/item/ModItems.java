@@ -12,7 +12,6 @@ import net.minecraft.item.MusicDiscItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 
 public class ModItems {
     public static final Item ARTRIUM = registerItem("artrium", new Item(new FabricItemSettings()));
