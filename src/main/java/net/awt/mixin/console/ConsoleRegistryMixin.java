@@ -1,4 +1,4 @@
-package net.awt.mixin;
+package net.awt.mixin.console;
 
 import dev.amble.ait.registry.impl.console.ConsoleRegistry;
 import net.awt.TARDIS.console.AWTConsoleRegistry;

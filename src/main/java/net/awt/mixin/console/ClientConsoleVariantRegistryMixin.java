@@ -1,4 +1,4 @@
-package net.awt.mixin;
+package net.awt.mixin.console;
 
 import dev.amble.ait.data.schema.console.ClientConsoleVariantSchema;
 import dev.amble.ait.registry.impl.console.variant.ClientConsoleVariantRegistry;
