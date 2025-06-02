@@ -15,12 +15,13 @@
     },
     "c": {
       "item": "awt:processing_unit"
-    },
+
+    }},
     "result": {
       "item": "awt:vortex_manipulator",
       "count": 1
     }
- }
+
 }
 
 
