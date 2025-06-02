@@ -3,14 +3,16 @@
   "package": "net.awt.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ExampleMixin",
+    "client.LogoDrawerMixin",
     "console.ConsoleRegistryMixin",
-    "console.ConsoleVariantRegistryMixin",
-    "ExampleMixin"
+    "console.ConsoleVariantRegistryMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
+    "client.LogoDrawerMixin",
     "console.ClientConsoleVariantRegistryMixin"
   ]
 }
