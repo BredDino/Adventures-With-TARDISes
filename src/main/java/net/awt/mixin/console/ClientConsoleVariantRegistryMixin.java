@@ -4,6 +4,7 @@ import dev.amble.ait.data.schema.console.ClientConsoleVariantSchema;
 import dev.amble.ait.registry.impl.console.variant.ClientConsoleVariantRegistry;
 import dev.amble.lib.register.datapack.DatapackRegistry;
 import net.awt.TARDIS.console.client.AWTClientConsoleVariantRegistry;
+import net.awt.TARDIS.console.client.clientvariants.ClientDiceVariant;
 import net.awt.TARDIS.console.client.clientvariants.ClientTestVariant;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -24,6 +25,7 @@ public abstract class ClientConsoleVariantRegistryMixin {
     @Inject(method = "onClientInit", at = @At("HEAD"), remap = false)
     private void defaults(CallbackInfo ci) {
         AWTClientConsoleVariantRegistry.TEST = this.getInstance().register(new ClientTestVariant());
+        AWTClientConsoleVariantRegistry.DICE = this.getInstance().register(new ClientDiceVariant());
 
     }
 }

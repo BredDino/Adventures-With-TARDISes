@@ -36,17 +36,17 @@ public class VortexManipulatorScreen extends Screen {
 
                     ));
         })
-                .dimensions(width/2 -90, 240 ,180 ,20)
+                .dimensions(width/2 -69, 203 ,40 ,40)
                 .build();
 
-        dimension = new TextFieldWidget(textRenderer,width/2 -90, 80, 180, 20, Text.literal("meow"));
-        x = new TextFieldWidget(textRenderer,width/2 -90, 120, 90, 20, Text.literal("x"));
-        y = new TextFieldWidget(textRenderer,width/2 -90, 160, 90, 20, Text.literal("y"));
-        z = new TextFieldWidget(textRenderer,width/2 -90, 200, 90, 20, Text.literal("z"));
+        dimension = new TextFieldWidget(textRenderer,width/2 -94, 123, 90, 20, Text.literal("meow"));
+        x = new TextFieldWidget(textRenderer,width/2 +44, 112, 54, 18, Text.literal("x"));
+        y = new TextFieldWidget(textRenderer,width/2 +44, 148, 54, 18, Text.literal("y"));
+        z = new TextFieldWidget(textRenderer,width/2 +44, 184, 54, 18, Text.literal("z"));
 
         surface = new ToggleButtonWidget(width/2 +90, 160, 20, 20, false);
 
-        addDrawableChild(teleport);
+        addSelectableChild(teleport);
         addDrawableChild(dimension);
         addDrawableChild(x);
         addDrawableChild(y);
@@ -67,7 +67,7 @@ public class VortexManipulatorScreen extends Screen {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        context.drawTexture(new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/img.png"), width/2-100, height/2-100, 0, 0, 200, 200);
+        context.drawTexture(new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/img.png"), width/2-125, height/2-125, 0, 0, 250, 250);
         super.render(context, mouseX, mouseY, delta);
     }
 
