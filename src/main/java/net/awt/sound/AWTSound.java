@@ -19,6 +19,7 @@ public class AWTSound {
     public static final SoundEvent CLASSIC2 = register("classic2");
     public static final SoundEvent doctorwhoxv = register("doctorwhoxv");
     public static final SoundEvent DRWHOVALE = register("drwhovale");
+    public static final SoundEvent paralyzer = register("paralyzer");
 
     public static SoundEvent register(String id) {
         Identifier identifier = new Identifier(AdventuresWithTARDISes.MOD_ID, id);

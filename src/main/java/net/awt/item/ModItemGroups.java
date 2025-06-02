@@ -25,6 +25,7 @@ public class ModItemGroups {
                         //entries.add(ModItems.CLASSIC1);
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.doctorwhoxv_music_disc);
+                        entries.add(ModItems.paralyzer_music_disc);
                     }).build());
 
 

@@ -3,13 +3,20 @@
 	"id": "awt",
 	"version": "${version}",
 	"name": "Adventures With TARDISes",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "I live, I see, I conquer. An addon specially designed for AIT by a group of mates.",
 	"authors": [
-		"Me!"
+		"Lieutenant_DO7",
+		"Dino",
+		"Left",
+		"Rhamn0us",
+		"TheTARDISOwner",
+		"NathanR2",
+		"torchwood1"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Lt-DO7/Adventures-With-TARDISes",
+		"issues": "https://github.com/Lt-DO7/Adventures-With-TARDISes/issues"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/awt/icon.png",

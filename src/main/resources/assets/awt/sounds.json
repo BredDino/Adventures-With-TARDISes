@@ -110,6 +110,16 @@
       }
     ]
   },
+  "paralyzer": {
+    "category": "jukebox",
+    "subtitle": "Bro's from Old Youtube",
+    "sounds": [
+      {
+        "name": "awt:paralyzer",
+        "stream": true
+      }
+    ]
+  },
   "bloop": {
     "category": "neutral",
     "subtitle": "subtitles.bloop",

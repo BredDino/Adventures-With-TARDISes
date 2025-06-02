@@ -25,6 +25,8 @@ public class ModItems {
             new MusicDiscItem(10, AWTSound.DRWHOVALE, new FabricItemSettings().maxCount(1), 127));
     public static final Item doctorwhoxv_music_disc = registerItem("doctorwhoxv_music_disc",
             new MusicDiscItem(15, AWTSound.doctorwhoxv, new FabricItemSettings().maxCount(1), 29));
+    public static final Item paralyzer_music_disc = registerItem("paralyzer_music_disc",
+            new MusicDiscItem(15, AWTSound.paralyzer, new FabricItemSettings().maxCount(1), 207));
 
     /*
 
