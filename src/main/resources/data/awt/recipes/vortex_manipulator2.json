@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "bcb",
-    "bab",
-    "bcb"
+    "bbb",
+    "cac",
+    "bbb"
   ],
   "key": {
     "a": {
@@ -18,7 +18,7 @@
 
     }},
     "result": {
-      "item": "awt:vortex_manipulator",
+      "item": "awt:vortex_manipulator2",
       "count": 1
     }
 

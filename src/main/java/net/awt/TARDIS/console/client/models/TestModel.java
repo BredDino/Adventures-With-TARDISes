@@ -1,8 +1,8 @@
 package net.awt.TARDIS.console.client.models;
 
-import dev.amble.ait.client.animation.console.hartnell.HartnellAnimations;
-import dev.amble.ait.client.animation.console.toyota.ToyotaAnimations;
 import dev.amble.ait.client.models.consoles.ConsoleModel;
+import dev.amble.ait.client.tardis.ClientTardis;
+import dev.amble.ait.core.blockentities.ConsoleBlockEntity;
 import dev.amble.ait.core.tardis.handler.travel.TravelHandlerBase;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -26,12 +26,21 @@ public class TestModel extends ConsoleModel {
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
+
 		bb_main.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
 	@Override
+	public void renderWithAnimations(ConsoleBlockEntity console, ClientTardis tardis, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
+		matrices.push();
+		matrices.translate(0.5, -1.5, -0.5);
+		super.renderWithAnimations(console, tardis, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
+		matrices.pop();
+	}
+
+	@Override
 	public Animation getAnimationForState(TravelHandlerBase.State state) {
-		return HartnellAnimations.HARTNELL_IDLE_ANIMATION;
+		return Animation.Builder.create(0.0F).build();
 	}
 
 	@Override
