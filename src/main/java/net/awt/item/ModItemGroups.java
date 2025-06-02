@@ -22,6 +22,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ARTRIUM_BLOCK);
                         entries.add(ModBlocks.ARTRIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_ARTRIUM_ORE);
+                        entries.add(ModItems.VORTEX_MANIPULATOR);
+                        entries.add(ModItems.VORTEX_MANIPULATOR2);
                         //entries.add(ModItems.CLASSIC1);
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.doctorwhoxv_music_disc);
