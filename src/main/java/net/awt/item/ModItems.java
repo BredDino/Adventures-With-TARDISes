@@ -28,16 +28,8 @@ public class ModItems {
             new MusicDiscItem(15, AWTSound.doctorwhoxv, new FabricItemSettings().maxCount(1), 29));
     public static final Item paralyzer_music_disc = registerItem("paralyzer_music_disc",
             new MusicDiscItem(15, AWTSound.paralyzer, new FabricItemSettings().maxCount(1), 207));
-
-    /*
-
-    public static final Item CLASSIC1 = registerItem("classic_1",
-            new MusicDiscItem(4, AWTSound.CLASSIC1,
-                    new FabricItemSettings().maxCount(1).rarity(Rarity.COMMON),
-                    185 // Length in ticks
-            )
-    );
-     */
+    public static final Item Dugga_doo_music_disc = registerItem("Dugga_doo_music_disc",
+            new MusicDiscItem(15, AWTSound.Dugga_doo, new FabricItemSettings().maxCount(1),101));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(ARTRIUM);
