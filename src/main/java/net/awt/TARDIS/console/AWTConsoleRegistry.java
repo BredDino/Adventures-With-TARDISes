@@ -7,6 +7,7 @@ import net.awt.TARDIS.console.types.TestType;
 public class AWTConsoleRegistry {
     public static ConsoleTypeSchema TEST;
     public static ConsoleTypeSchema DICE;
+    public static ConsoleTypeSchema JUNKGLASS;
 
 
 
