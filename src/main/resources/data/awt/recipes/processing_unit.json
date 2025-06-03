@@ -8,13 +8,13 @@
   ],
   "key": {
     "a": {
-      "item": "awt:artrium_core"
+      "item": "awt:atrium_core"
     },
     "b": {
-      "item": "awt:energized_artrium"
+      "item": "awt:energized_atrium"
     },
     "c": {
-      "item": "awt:artrium"
+      "item": "awt:atrium"
     },
     "d": {
       "item": "minecraft:redstone"

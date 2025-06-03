@@ -8,10 +8,10 @@
   ],
   "key": {
     "a": {
-      "item": "awt:energized_artrium"
+      "item": "awt:energized_atrium"
     },
     "b": {
-      "item": "awt:artrium"
+      "item": "awt:atrium"
     },
     "c": {
       "item": "ait:charged_zeiton_crystal"
@@ -21,7 +21,7 @@
     }
   },
     "result": {
-      "item": "awt:artrium_core",
+      "item": "awt:atrium_core",
       "count": 1
     }
 }

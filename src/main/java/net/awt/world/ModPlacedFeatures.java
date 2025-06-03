@@ -18,13 +18,13 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
-    public static final RegistryKey<PlacedFeature> ARTRIUM_ORE_PLACED_KEY = registerKey("artrium_ore_placed");
+    public static final RegistryKey<PlacedFeature> ATRIUM_ORE_PLACED_KEY = registerKey("atrium_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
 
-        register(context, ARTRIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ARTRIUM_ORE_KEY),
+        register(context, ATRIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ATRIUM_ORE_KEY),
                 ModOreGeneration.modifiersWithCount(10,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
 

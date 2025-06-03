@@ -48,9 +48,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.ARTRIUM_BLOCK)
-                .add(ModBlocks.ARTRIUM_ORE)
-                .add(ModBlocks.DEEPSLATE_ARTRIUM_ORE)
+                .add(ModBlocks.ATRIUM_BLOCK)
+                .add(ModBlocks.ATRIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_ATRIUM_ORE)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
@@ -66,9 +66,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.ARTRIUM_BLOCK)
-                .add(ModBlocks.ARTRIUM_ORE)
-                .add(ModBlocks.DEEPSLATE_ARTRIUM_ORE)
+                .add(ModBlocks.ATRIUM_BLOCK)
+                .add(ModBlocks.ATRIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_ATRIUM_ORE)
         ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)

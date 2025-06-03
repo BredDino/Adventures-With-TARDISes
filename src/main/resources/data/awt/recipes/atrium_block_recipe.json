@@ -8,11 +8,11 @@
   ],
   "key": {
     "a": {
-      "item": "awt:artrium"
+      "item": "awt:atrium"
     }
   },
     "result": {
-      "item": "awt:artrium_block",
+      "item": "awt:atrium_block",
       "count": 1
     }
 }

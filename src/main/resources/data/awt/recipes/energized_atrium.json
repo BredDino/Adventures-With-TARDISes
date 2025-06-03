@@ -8,7 +8,7 @@
   ],
   "key": {
     "a": {
-      "item": "awt:artrium"
+      "item": "awt:atrium"
     },
     "b": {
       "item": "minecraft:redstone"
@@ -18,7 +18,7 @@
     }
   },
     "result": {
-      "item": "awt:energized_artrium",
+      "item": "awt:energized_atrium",
       "count": 1
     }
 }
