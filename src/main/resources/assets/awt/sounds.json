@@ -120,12 +120,12 @@
       }
     ]
   },
-  "Duggadoo": {
+  "duggadoo": {
     "category": "jukebox",
     "subtitle": "Dugga doo Dugga doo Dugga doo",
     "sounds": [
       {
-        "name": "awt:Dugga_doo",
+        "name": "awt:dugga_doo",
         "stream": true
       }
     ]
