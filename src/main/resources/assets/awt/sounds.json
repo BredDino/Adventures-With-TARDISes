@@ -120,6 +120,16 @@
       }
     ]
   },
+  "Duggadoo": {
+    "category": "jukebox",
+    "subtitle": "Dugga doo Dugga doo Dugga doo",
+    "sounds": [
+      {
+        "name": "awt:Dugga_doo",
+        "stream": true
+      }
+    ]
+  },
   "bloop": {
     "category": "neutral",
     "subtitle": "subtitles.bloop",
