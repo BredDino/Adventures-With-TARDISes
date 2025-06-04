@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "awt:block/artrium_ore"
+      "model": "awt:block/atrium_ore"
     }
   }
 }
