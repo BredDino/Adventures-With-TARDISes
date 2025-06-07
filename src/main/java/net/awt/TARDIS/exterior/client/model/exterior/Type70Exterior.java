@@ -2,6 +2,7 @@ package net.awt.TARDIS.exterior.client.model.exterior;
 
 import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.Linkable;
+import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.exteriors.ExteriorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
@@ -68,7 +69,7 @@ public class Type70Exterior extends ExteriorModel {
 
 		DoorHandler door = exterior.tardis().get().door();
 
-		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
+		if (!AITModClient.CONFIG.animateDoors) {
 			this.type70door.pivotX = -3 + (door.isOpen() ? 16 : 0);
 		} else {
 			this.type70door.pivotX = -3 + 16 * door.getLeftRot();

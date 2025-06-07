@@ -2,6 +2,7 @@ package net.awt.TARDIS.exterior.client.model.exterior;
 
 import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.Linkable;
+import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.exteriors.ExteriorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
@@ -501,7 +502,7 @@ public class policebox extends ExteriorModel {
 
 		DoorHandler door = exterior.tardis().get().door();
 
-		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
+		if (!AITModClient.CONFIG.animateDoors) {
 			this.doors.getChild("leftdoor").yaw = (door.isLeftOpen() || door.isOpen()) ? -5.0F : 0.0F;
 			this.doors.getChild("rightdoor").yaw = (door.isRightOpen() || door.areBothOpen())
 					? 5.0F
