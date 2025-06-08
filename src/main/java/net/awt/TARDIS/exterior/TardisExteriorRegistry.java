@@ -40,6 +40,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior LEGO2;
     public static AddonExterior LEGO3;
     public static AddonExterior HOTTUBTIMEMACHINE;
+    public static AddonExterior LEGODIM;
 
     public static void onInitialize() {
         BAKER = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "baker").register();
@@ -128,6 +129,9 @@ public class TardisExteriorRegistry {
 
         HOTTUBTIMEMACHINE = new AddonExterior(new Identifier(MOD_ID, "hottub"), MOD_ID, "hottubtimemachine").register();
         HOTTUBTIMEMACHINE.setDoor(new AddonExterior.Door(HOTTUBTIMEMACHINE, false, net.awt.sound.AWTSound.BLOOP, net.awt.sound.AWTSound.BLOOP)).toDoor().register();
+
+        LEGODIM = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "lego_dimensions_police_box").register();
+        LEGODIM.setDoor(new AddonExterior.Door(LEGODIM, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
     }
 
 
@@ -277,5 +281,12 @@ public class TardisExteriorRegistry {
         HOTTUBTIMEMACHINE.setModel(new hottubtimemachine()).toClient().register();
         HOTTUBTIMEMACHINE.toDoor().setModel(new hottubtimemachinedoor(hottubtimemachinedoor.getTexturedModelData().createModel())).toClient().register();
         HOTTUBTIMEMACHINE.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        LEGODIM.setModel(new lego_tardis_model()).toClient().register();
+        LEGODIM.toDoor().setModel(new lego_tardis_model_door(lego_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
+        LEGODIM.setPortalWidth(0.90f);
+        LEGODIM.setPortalHeight(1.5f);
+        LEGODIM.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
     }
 }
