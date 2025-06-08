@@ -159,7 +159,9 @@
   "desktop.awt.awakenedinterior": "Awakened",
   "desktop.awt.stainedwoodinterior": "Stainedwood",
   "desktop.awt.orbitalinterior": "Orbital",
-  
+  "desktop.awt.angelic": "Angelic",
+  "desktop.awt.diner": "Diner",
+
   "animation.awt.paradox_mat": "Paradox Mat",
   "animation.awt.goofy_fall_demat": "Oops I Died",
   "animation.awt.awt_mat": "AWT Mat",
