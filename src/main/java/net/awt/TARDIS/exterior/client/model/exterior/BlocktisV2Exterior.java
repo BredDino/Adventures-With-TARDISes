@@ -2,6 +2,7 @@ package net.awt.TARDIS.exterior.client.model.exterior;
 
 import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.Linkable;
+import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.exteriors.ExteriorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
@@ -110,7 +111,7 @@ public class BlocktisV2Exterior extends ExteriorModel {
 
 		DoorHandler door = exterior.tardis().get().door();
 
-		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
+		if (!AITModClient.CONFIG.animateDoors) {
 			this.bone.getChild("door").yaw = (door.isLeftOpen() || door.isOpen()) ? -5.0F : 0.0F;
 		} else {
 			float maxRot = -85;
