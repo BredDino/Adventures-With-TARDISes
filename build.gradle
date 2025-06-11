@@ -79,9 +79,9 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	include (implementation "net.objecthunter:exp4j:0.4.8")
-	// Cardinal Components API
-	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:<latest_version>"
-	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-player:<latest_version>"
+	// Cardinal Components API  p.s from deo this needs also puttin in libs and gradel properties
+	//modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:<latest_version>"
+	//modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-player:<latest_version>"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
