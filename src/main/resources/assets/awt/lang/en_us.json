@@ -1,29 +1,30 @@
 {
   "text.config.aitconfig.title": "Adventures With TARDISes",
 
-  "item.awt.artrium":"Atrium",
+  "item.awt.atrium":"Atrium",
   "item.awt.lightsaber":"Lightsaber",
   "item.awt.processing_unit": "Processing Unit",
-  "item.awt.artrium_core": "Atrium Core",
-  "item.awt.energized_artrium": "Energised Atrium",
+  "item.awt.atrium_core": "Atrium Core",
+  "item.awt.energized_atrium": "Energised Atrium",
   "item.awt.roundel_mold": "Roundel Mold",
   "item.awt.vortex_manipulator": "Vortex Manipulator",
   "item.awt.vortex_manipulator2": "Vortex Manipulator",
-  "item.awt.drwhovale_music_disc": "Regenerating Music Disc",
+  "item.awt.drwhovale_music_disc": "§cMusic Disc",
   "item.awt.drwhovale_music_disc.desc": "Murray Gold - Vale Decem",
-  "item.awt.doctorwhoxv_music_disc": "Binary Music Disc",
+  "item.awt.doctorwhoxv_music_disc": "§cMusic Disc",
   "item.awt.doctorwhoxv_music_disc.desc": "Murray Gold - Doctor Who XV",
-  "item.awt.paralyzer_music_disc": "2000s Nostalgic Music Disc",
+  "item.awt.paralyzer_music_disc": "§cMusic Disc",
   "item.awt.paralyzer_music_disc.desc": "Finger Eleven - Paralyzer (Alternate Mix)",
-  "item.awt.dugga_doo_music_disc": "Dugga doo music Disc",
+  "item.awt.dugga_doo_music_disc": "§cMusic Disc",
   "item.awt.dugga_doo_music_disc.desc": "Dugga doo - Dugga doo",
-  "item_group.Artrium":"AWT",
+  "item_group.Atrium":"AWT",
 
   "exterior.awt.awtboxes": "AWT Boxes",
   "exterior.awt.onion": "The Onion",
   "exterior.awt.vast": "Vast Boxes",
   "exterior.awt.lefts": "Left's Boxes",
   "exterior.awt.blocktardis": "Block TARDISes",
+  "exterior.awt.hottub": "Hot Tubs",
 
   "exterior.awt.third": "Pertwee",
   "exterior.awt.second": "Troughton",
@@ -53,6 +54,7 @@
   "exterior.awt.logo_tardis_default": "Lego PoliceBox",
   "exterior.awt.logo_tardis_purple": "Lego PoliceBoxV2",
   "exterior.awt.logo_tardis_darkblue": "Lego PoliceBoxV3",
+  "exterior.awt.hottubtimemachine": "Hot Tub Time Machine",
 
   "exterior.awt.billcipher": "Bill Cipher",
   "exterior.awt.toywardianbooth": "GambleBox Booth",
@@ -156,7 +158,11 @@
   "desktop.awt.monochromeinterior": "Monochrome",
   "desktop.awt.awakenedinterior": "Awakened",
   "desktop.awt.stainedwoodinterior": "Stainedwood",
-  
+  "desktop.awt.orbitalinterior": "Orbital",
+  "desktop.awt.diner": "Diner",
+  "desktop.awt.angelic": "Angelic",
+  "desktop.awt.tomb_raider": "Tomb Raider",
+
   "animation.awt.paradox_mat": "Paradox Mat",
   "animation.awt.goofy_fall_demat": "Oops I Died",
   "animation.awt.awt_mat": "AWT Mat",
@@ -211,9 +217,9 @@
   "console.awt.toyota_rhamnous": "Rhamnous' Toyota",
   "console.awt.crystalalt": "TardisOwners' Crystalline",
 
-  "block.awt.artrium_block": "Atrium Block",
-  "block.awt.artrium_ore": "Atrium Ore",
-  "block.awt.deepslate_artrium_ore": "Deepslate Atrium Ore",
+  "block.awt.atrium_block": "Atrium Block",
+  "block.awt.atrium_ore": "Atrium Ore",
+  "block.awt.deepslate_atrium_ore": "Deepslate Atrium Ore",
 
   "item_group.awt.Roundel": "Roundels"
 

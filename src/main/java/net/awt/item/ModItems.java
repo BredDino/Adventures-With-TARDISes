@@ -14,11 +14,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item ARTRIUM = registerItem("artrium", new Item(new FabricItemSettings()));
+    public static final Item ATRIUM = registerItem("atrium", new Item(new FabricItemSettings()));
     public static final Item LIGHTSABER = registerItem("lightsaber", new Item(new FabricItemSettings()));
     public static final Item PROCESSINGUNIT = registerItem("processing_unit", new Item(new FabricItemSettings()));
-    public static final Item ENERGIZEDARTRIUM = registerItem("energized_artrium", new Item(new FabricItemSettings()));
-    public static final Item ARTRIUMCORE = registerItem("artrium_core", new Item(new FabricItemSettings()));
+    public static final Item ENERGIZEDATRIUM = registerItem("energized_atrium", new Item(new FabricItemSettings()));
+    public static final Item ATRIUMCORE = registerItem("atrium_core", new Item(new FabricItemSettings()));
     public static final Item ROUNDELMOLD = registerItem("roundel_mold", new Item(new FabricItemSettings()));
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator",new VortexManipulator(new FabricItemSettings()));
     public static final Item VORTEX_MANIPULATOR2 = registerItem("vortex_manipulator2",new VortexManipulator(new FabricItemSettings()));
@@ -32,7 +32,7 @@ public class ModItems {
             new MusicDiscItem(15, AWTSound.DUGGA_DOO, new FabricItemSettings().maxCount(1),101));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(ARTRIUM);
+        entries.add(ATRIUM);
     }
 
     private static Item registerItem(String name, Item item) {

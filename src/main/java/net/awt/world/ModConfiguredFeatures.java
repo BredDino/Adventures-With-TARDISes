@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
 
-    public static final RegistryKey<ConfiguredFeature<?, ?>> ARTRIUM_ORE_KEY = registerKey("artrium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ATRIUM_ORE_KEY = registerKey("atrium_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -30,12 +30,12 @@ public class ModConfiguredFeatures {
 
 
         List<OreFeatureConfig.Target> overworldPinkGarnetOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.ARTRIUM_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_ARTRIUM_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.ATRIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_ATRIUM_ORE.getDefaultState()));
 
 
 
-        register(context, ARTRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPinkGarnetOres, 12));
+        register(context, ATRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPinkGarnetOres, 12));
 
     }
 

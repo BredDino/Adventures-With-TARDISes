@@ -2,6 +2,7 @@ package net.awt.TARDIS.exterior.client.model.door;
 
 import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity;
+import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.doors.DoorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
@@ -48,7 +49,7 @@ public class DeoType70Door extends DoorModel {
 
 		DoorHandler door =  doorEntity.tardis().get().door();
 
-		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
+		if (!AITModClient.CONFIG.animateDoors) {
 			this.door.pivotZ = -5 + (door.isOpen() ? -11 : 0);
 		} else {
 			this.door.pivotZ = -5 + -11 * door.getLeftRot();

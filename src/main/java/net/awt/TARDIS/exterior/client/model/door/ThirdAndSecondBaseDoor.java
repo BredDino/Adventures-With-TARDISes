@@ -2,6 +2,7 @@ package net.awt.TARDIS.exterior.client.model.door;
 
 import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity;
+import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.doors.DoorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
@@ -60,7 +61,7 @@ public class ThirdAndSecondBaseDoor extends DoorModel {
 
 	@Override
 	public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
-		if (!AITMod.CONFIG.CLIENT.ANIMATE_DOORS) {
+		if (!AITModClient.CONFIG.animateDoors) {
 			DoorHandler door = doorEntity.tardis().get().door();
 			left_door.yaw = !door.isLeftOpen() && !door.isOpen() ? 0.0F : -5.0F;
 			right_door.yaw = !door.isRightOpen() && !door.areBothOpen() ? 0.0F : 5.0F;

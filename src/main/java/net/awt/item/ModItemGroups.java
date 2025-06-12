@@ -11,17 +11,17 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final ItemGroup ARTRIUM_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(AdventuresWithTARDISes.MOD_ID, "artrium"),
-            FabricItemGroup.builder().displayName(Text.translatable("item_group.Artrium"))
-                    .icon(() -> new ItemStack(ModItems.ARTRIUM)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.ARTRIUM);
+    public static final ItemGroup ATRIUM_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(AdventuresWithTARDISes.MOD_ID, "atrium"),
+            FabricItemGroup.builder().displayName(Text.translatable("item_group.Atrium"))
+                    .icon(() -> new ItemStack(ModItems.ATRIUM)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.ATRIUM);
                         entries.add(ModItems.PROCESSINGUNIT);
-                        entries.add(ModItems.ARTRIUMCORE);
-                        entries.add(ModItems.ENERGIZEDARTRIUM);
-                        entries.add(ModBlocks.ARTRIUM_BLOCK);
-                        entries.add(ModBlocks.ARTRIUM_ORE);
-                        entries.add(ModBlocks.DEEPSLATE_ARTRIUM_ORE);
+                        entries.add(ModItems.ATRIUMCORE);
+                        entries.add(ModItems.ENERGIZEDATRIUM);
+                        entries.add(ModBlocks.ATRIUM_BLOCK);
+                        entries.add(ModBlocks.ATRIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_ATRIUM_ORE);
                         entries.add(ModItems.VORTEX_MANIPULATOR);
                         entries.add(ModItems.VORTEX_MANIPULATOR2);
                         //entries.add(ModItems.CLASSIC1);
