@@ -1,0 +1,13 @@
+{
+    "id": "harmony:harmonybox",
+    "category":"ait:exterior/police_box",
+    "parent": "ait:exterior/police_box/coral",
+    "texture": "harmony:textures/exterior/harmony_policebox.png",
+    "emission": "harmony:textures/exterior/harmony_policebox_emission.png",
+    "overrides": {"snowy": "ait:textures/blockentities/exteriors/classic/classic_prime_snowy.png",
+    "chorus": "ait:textures/blockentities/exteriors/classic/classic_prime_chorus.png",
+    "cherry": "ait:textures/blockentities/exteriors/classic/classic_prime_cherry.png",
+    "sculk": "ait:textures/blockentities/exteriors/classic/classic_prime_sculk.png",
+    "sandy": "ait:textures/blockentities/exteriors/classic/classic_sand.png",
+    "muddy": "ait:textures/blockentities/exteriors/classic/classic_mud.png"}
+  }
