@@ -23,8 +23,9 @@
   "exterior.awt.onion": "The Onion",
   "exterior.awt.vast": "Vast Boxes",
   "exterior.awt.lefts": "Left's Boxes",
-  "exterior.awt.blocktardis": "Block TARDISes",
+  "exterior.awt.blocktardis": "Vanilla-Styled",
   "exterior.awt.hottub": "Hot Tubs",
+  "exterior.awt.legoboxes": "Lego-Styled",
 
   "exterior.awt.third": "Pertwee",
   "exterior.awt.second": "Troughton",
@@ -87,7 +88,7 @@
   "exterior.awt.bee_k6": "Bee Booth",
   "exterior.awt.crimson": "Crimson",
   "exterior.awt.zen": "Zen",
-  "exterior.awt.harmonybox": "Harmony",
+  "exterior.awt.harmonybox": "Rhamnous",
 
   "sonic.awt.blunt": "Blunt",
   "sonic.awt.tardis": "Tardis",

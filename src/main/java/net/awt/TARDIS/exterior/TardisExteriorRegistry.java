@@ -120,19 +120,19 @@ public class TardisExteriorRegistry {
         DEOBOX = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "deobox").register();
         DEOBOX.setDoor(new AddonExterior.Door(DEOBOX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-        LEGO = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "logo_tardis_default").register();
+        LEGO = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_default").register();
         LEGO.setDoor(new AddonExterior.Door(LEGO, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-        LEGO2 = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "logo_tardis_purple").register();
+        LEGO2 = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_purple").register();
         LEGO2.setDoor(new AddonExterior.Door(LEGO2, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-        LEGO3 = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "logo_tardis_darkblue").register();
+        LEGO3 = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_darkblue").register();
         LEGO3.setDoor(new AddonExterior.Door(LEGO3, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         HOTTUBTIMEMACHINE = new AddonExterior(new Identifier(MOD_ID, "hottub"), MOD_ID, "hottubtimemachine").register();
         HOTTUBTIMEMACHINE.setDoor(new AddonExterior.Door(HOTTUBTIMEMACHINE, false, net.awt.sound.AWTSound.BLOOP, net.awt.sound.AWTSound.BLOOP)).toDoor().register();
 
-        LEGODIM = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "lego_dimensions_police_box").register();
+        LEGODIM = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "lego_dimensions_police_box").register();
         LEGODIM.setDoor(new AddonExterior.Door(LEGODIM, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
     }
 
