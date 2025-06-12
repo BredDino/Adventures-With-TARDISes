@@ -4,6 +4,7 @@ import dev.amble.ait.data.schema.console.ClientConsoleVariantSchema;
 import dev.amble.ait.registry.impl.console.variant.ClientConsoleVariantRegistry;
 import dev.amble.lib.register.datapack.DatapackRegistry;
 import net.awt.TARDIS.console.client.AWTClientConsoleVariantRegistry;
+import net.awt.TARDIS.console.client.clientvariants.ClientBlockVariant;
 import net.awt.TARDIS.console.client.clientvariants.ClientDiceVariant;
 import net.awt.TARDIS.console.client.clientvariants.ClientJunkGlassVariant;
 import net.awt.TARDIS.console.client.clientvariants.ClientTestVariant;
@@ -28,6 +29,7 @@ public abstract class ClientConsoleVariantRegistryMixin {
         AWTClientConsoleVariantRegistry.TEST = this.getInstance().register(new ClientTestVariant());
         AWTClientConsoleVariantRegistry.DICE = this.getInstance().register(new ClientDiceVariant());
         AWTClientConsoleVariantRegistry.JUNKGLASS = this.getInstance().register(new ClientJunkGlassVariant());
+        AWTClientConsoleVariantRegistry.BLOCK = this.getInstance().register(new ClientBlockVariant());
 
     }
 }

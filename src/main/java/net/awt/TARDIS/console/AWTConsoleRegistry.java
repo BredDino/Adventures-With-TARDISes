@@ -8,6 +8,7 @@ public class AWTConsoleRegistry {
     public static ConsoleTypeSchema TEST;
     public static ConsoleTypeSchema DICE;
     public static ConsoleTypeSchema JUNKGLASS;
+    public static ConsoleTypeSchema BLOCK;
 
 
 

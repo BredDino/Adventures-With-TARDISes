@@ -2,6 +2,7 @@ package net.awt.mixin.console;
 
 import dev.amble.ait.registry.impl.console.variant.ConsoleVariantRegistry;
 import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
+import net.awt.TARDIS.console.variants.BlockVariant;
 import net.awt.TARDIS.console.variants.DiceVariant;
 import net.awt.TARDIS.console.variants.JunkGlassVariant;
 import net.awt.TARDIS.console.variants.TestVariant;
@@ -20,6 +21,7 @@ public class ConsoleVariantRegistryMixin {
         AWTConsoleVariantRegistry.TEST = registerStatic(new TestVariant());
         AWTConsoleVariantRegistry.DICE = registerStatic(new DiceVariant());
         AWTConsoleVariantRegistry.JUNKGLASS = registerStatic(new JunkGlassVariant());
+        AWTConsoleVariantRegistry.BLOCK = registerStatic(new BlockVariant());
 
     }
 }

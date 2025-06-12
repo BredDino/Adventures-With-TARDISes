@@ -6,6 +6,7 @@ public class AWTClientConsoleVariantRegistry  {
     public static ClientConsoleVariantSchema TEST;
     public static ClientConsoleVariantSchema DICE;
     public static ClientConsoleVariantSchema JUNKGLASS;
+    public static ClientConsoleVariantSchema BLOCK;
 
     public static void init() {
     }

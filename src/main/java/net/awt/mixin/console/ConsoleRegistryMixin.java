@@ -2,6 +2,7 @@ package net.awt.mixin.console;
 
 import dev.amble.ait.registry.impl.console.ConsoleRegistry;
 import net.awt.TARDIS.console.AWTConsoleRegistry;
+import net.awt.TARDIS.console.types.BlockConsoleType;
 import net.awt.TARDIS.console.types.DiceType;
 import net.awt.TARDIS.console.types.JunkGlassType;
 import net.awt.TARDIS.console.types.TestType;
@@ -18,6 +19,7 @@ public class ConsoleRegistryMixin {
         AWTConsoleRegistry.TEST = ConsoleRegistry.register(new TestType());
         AWTConsoleRegistry.DICE = ConsoleRegistry.register(new DiceType());
         AWTConsoleRegistry.JUNKGLASS = ConsoleRegistry.register(new JunkGlassType());
+        AWTConsoleRegistry.BLOCK = ConsoleRegistry.register(new BlockConsoleType());
 
     }
 }
