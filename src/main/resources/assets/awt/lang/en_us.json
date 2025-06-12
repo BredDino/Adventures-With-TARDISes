@@ -19,6 +19,9 @@
   "item.awt.dugga_doo_music_disc.desc": "Dugga doo - Dugga doo",
   "item_group.Atrium":"AWT",
 
+  "item.awt.tardis_detector": "TARDIS Detector",
+  "item.awt.tardis_detector.desc": "Cheap one use Stat remote which may not always work",
+
   "exterior.awt.awtboxes": "AWT Boxes",
   "exterior.awt.onion": "The Onion",
   "exterior.awt.vast": "Vast Boxes",
