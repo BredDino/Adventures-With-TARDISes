@@ -1,6 +1,8 @@
 package net.awt.item.custom;
 
 import net.awt.screens.VortexManipulatorScreen;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -24,9 +26,14 @@ public class VortexManipulator extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (world.isClient) {
-            MinecraftClient.getInstance().setScreen(new VortexManipulatorScreen());
+            openscreen();
         }
         return super.use(world, user, hand);
+    }
+
+    @Environment(EnvType.CLIENT)
+    private void openscreen() {
+        MinecraftClient.getInstance().setScreen(new VortexManipulatorScreen());
     }
 
     @Override

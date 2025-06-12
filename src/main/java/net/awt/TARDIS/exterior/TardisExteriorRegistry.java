@@ -4,6 +4,8 @@ import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
 import net.awt.TARDIS.exterior.client.model.door.*;
 import net.awt.TARDIS.exterior.client.model.exterior.*;
 import net.awt.sound.AWTSound;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import org.joml.Vector3f;
@@ -134,7 +136,7 @@ public class TardisExteriorRegistry {
         LEGODIM.setDoor(new AddonExterior.Door(LEGODIM, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
     }
 
-
+    @Environment(EnvType.CLIENT)
     public static void registerClientAddonExteriors() {
         BAKER.setModel(new BakerExteriorModel()).toClient().register();
         BAKER.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
