@@ -10,24 +10,21 @@
     "a": {
       "item": "awt:energized_atrium"
     },
-  "key": {
     "b": {
-      "item": "ait:zeiton_shard"
-  },
-  "key": {
+      "item": "awt:processing_unit"
+    },
     "c": {
       "item": "minecraft:redstone"
     },
-    "key": {
-      "d": {
-        "item": "minecraft:diamond"
-      }
-    },
-    "result": {
-      "item": "awt:tardis_detector",
-      "count": 1
+    "d": {
+      "item": "awt:atrium_core"
     }
-  }}}}
+  },
+  "result": {
+    "item": "awt:tardis_detector",
+    "count": 1
+  }
+}
 
 
 
