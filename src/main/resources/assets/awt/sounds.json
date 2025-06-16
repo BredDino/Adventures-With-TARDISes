@@ -10,6 +10,16 @@
       }
     ]
   },
+  "hourglass": {
+    "category": "hum",
+    "subtitle": "hourglass hums",
+    "sounds": [
+      {
+        "name": "awt:hourglass",
+        "stream": false
+      }
+    ]
+  },
   "type70mat": {
     "category": "mat",
     "subtitle": "subtitles.type70mat",
