@@ -18,10 +18,7 @@ public class ConsoleVariantRegistryMixin {
 
     @Inject(method = "defaults", at = @At("HEAD"), remap = false)
     private void defaults(CallbackInfo ci) {
-        AWTConsoleVariantRegistry.TEST = registerStatic(new TestVariant());
-        AWTConsoleVariantRegistry.DICE = registerStatic(new DiceVariant());
-        AWTConsoleVariantRegistry.JUNKGLASS = registerStatic(new JunkGlassVariant());
-        AWTConsoleVariantRegistry.BLOCK = registerStatic(new BlockVariant());
+        AWTConsoleVariantRegistry.registerConsoleVariants();
 
     }
 }
