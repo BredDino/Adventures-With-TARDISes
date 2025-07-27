@@ -26,10 +26,6 @@ public abstract class ClientConsoleVariantRegistryMixin {
 
     @Inject(method = "onClientInit", at = @At("HEAD"), remap = false)
     private void defaults(CallbackInfo ci) {
-        AWTClientConsoleVariantRegistry.TEST = this.getInstance().register(new ClientTestVariant());
-        AWTClientConsoleVariantRegistry.DICE = this.getInstance().register(new ClientDiceVariant());
-        AWTClientConsoleVariantRegistry.JUNKGLASS = this.getInstance().register(new ClientJunkGlassVariant());
-        AWTClientConsoleVariantRegistry.BLOCK = this.getInstance().register(new ClientBlockVariant());
-
+        AWTClientConsoleVariantRegistry.registerClientConsoleVariants(getInstance());
     }
 }

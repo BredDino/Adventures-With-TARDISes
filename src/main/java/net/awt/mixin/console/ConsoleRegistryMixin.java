@@ -16,10 +16,6 @@ public class ConsoleRegistryMixin {
 
     @Inject(method = "init", at = @At("HEAD"), remap = false)
     private static void defaults(CallbackInfo ci) {
-        AWTConsoleRegistry.TEST = ConsoleRegistry.register(new TestType());
-        AWTConsoleRegistry.DICE = ConsoleRegistry.register(new DiceType());
-        AWTConsoleRegistry.JUNKGLASS = ConsoleRegistry.register(new JunkGlassType());
-        AWTConsoleRegistry.BLOCK = ConsoleRegistry.register(new BlockConsoleType());
-
+        AWTConsoleRegistry.registerConsoles();
     }
 }
