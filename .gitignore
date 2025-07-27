@@ -38,4 +38,6 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
-/src/main/generated/
+/src/main/generated/.cache
+/src/main/generated/assets/ait
+/src/main/generated/data/ait
