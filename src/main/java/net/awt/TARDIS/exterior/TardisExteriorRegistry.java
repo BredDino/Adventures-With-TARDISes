@@ -45,13 +45,13 @@ public class TardisExteriorRegistry {
     public static AddonExterior LEGODIM;
 
     public static void onInitialize() {
-        BAKER = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "baker").register();
+        BAKER = new AddonExterior(new Identifier(MOD_ID, "classicboxes"), MOD_ID, "baker").register();
         BAKER.setDoor(new AddonExterior.Door(BAKER, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-        SECOND = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "second").register();
+        SECOND = new AddonExterior(new Identifier(MOD_ID, "classicboxes"), MOD_ID, "second").register();
         SECOND.setDoor(new AddonExterior.Door(SECOND, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-        THIRD = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "third").register();
+        THIRD = new AddonExterior(new Identifier(MOD_ID, "classicboxes"), MOD_ID, "third").register();
         THIRD.setDoor(new AddonExterior.Door(THIRD, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         REDONION = new AddonExterior(new Identifier(MOD_ID, "onion"), MOD_ID, "redonion").register();
@@ -84,13 +84,7 @@ public class TardisExteriorRegistry {
         MULTIONION = new AddonExterior(new Identifier(MOD_ID, "onion"), MOD_ID, "multionion").register();
         MULTIONION.setDoor(new AddonExterior.Door(MULTIONION, false, net.awt.sound.AWTSound.BLOOP, net.awt.sound.AWTSound.BLOOP)).toDoor().register();
 
-        CUBE = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "cube").register();
-        CUBE.setDoor(new AddonExterior.Door(CUBE, false, net.awt.sound.AWTSound.BLOOP, net.awt.sound.AWTSound.BLOOP)).toDoor().register();
-
-        ATRIUM = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "atrium").register();
-        ATRIUM.setDoor(new AddonExterior.Door(ATRIUM, false, net.awt.sound.AWTSound.BLOOP, net.awt.sound.AWTSound.BLOOP)).toDoor().register();
-
-        POLICEBOX = new AddonExterior(new Identifier(MOD_ID, "lefts"), MOD_ID, "policebox").register();
+        POLICEBOX = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox").register();
         POLICEBOX.setDoor(new AddonExterior.Door(POLICEBOX, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         VASTDEFAULT = new AddonExterior(new Identifier(MOD_ID, "vast"), MOD_ID, "vastdefault").register();
@@ -102,10 +96,10 @@ public class TardisExteriorRegistry {
         VASTTOKOMAK = new AddonExterior(new Identifier(MOD_ID, "vast"), MOD_ID, "vasttokomak").register();
         VASTTOKOMAK.setDoor(new AddonExterior.Door(VASTTOKOMAK, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-        TYPE70 = new AddonExterior(new Identifier(MOD_ID, "lefts"), MOD_ID, "type70").register();
+        TYPE70 = new AddonExterior(new Identifier(MOD_ID, "capsules"), MOD_ID, "type70").register();
         TYPE70.setDoor(new AddonExterior.Door(TYPE70, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, net.minecraft.sound.SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
-        DEOTYPE70 = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "deotype70").register();
+        DEOTYPE70 = new AddonExterior(new Identifier(MOD_ID, "capsules"), MOD_ID, "deotype70").register();
         DEOTYPE70.setDoor(new AddonExterior.Door(DEOTYPE70, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, net.minecraft.sound.SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
         BLOCKTIS = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktis").register();
@@ -117,7 +111,7 @@ public class TardisExteriorRegistry {
         BLOCKTISV3 = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktisv3").register();
         BLOCKTISV3.setDoor(new AddonExterior.Door(BLOCKTISV3, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, net.minecraft.sound.SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
-        DEOBOX = new AddonExterior(new Identifier(MOD_ID, "awtboxes"), MOD_ID, "deobox").register();
+        DEOBOX = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "deobox").register();
         DEOBOX.setDoor(new AddonExterior.Door(DEOBOX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         LEGO = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_default").register();
@@ -195,14 +189,6 @@ public class TardisExteriorRegistry {
         MULTIONION.setModel(new OnionExterior()).toClient().register();
         MULTIONION.toDoor().setModel(new OnionDoor(OnionDoor.getTexturedModelData().createModel())).toClient().register();
         MULTIONION.setSonicItemTranslations(new Vector3f(0.15f, 1.122f, 0.94f));
-
-        CUBE.setModel(new CubeExterior()).toClient().register();
-        CUBE.toDoor().setModel(new CubeDoor(CubeDoor.getTexturedModelData().createModel())).toClient().register();
-        CUBE.setSonicItemTranslations(new Vector3f(0, 0, 0));
-
-        ATRIUM.setModel(new AtriumExterior()).toClient().register();
-        ATRIUM.toDoor().setModel(new AtriumDoor(AtriumDoor.getTexturedModelData().createModel())).toClient().register();
-        ATRIUM.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOX.setModel(new policebox()).toClient().register();
         POLICEBOX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
