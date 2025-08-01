@@ -3,6 +3,7 @@ package net.awt.mixin.console;
 import dev.amble.ait.registry.impl.console.variant.ConsoleVariantRegistry;
 import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
 import net.awt.TARDIS.console.variants.BlockVariant;
+import net.awt.TARDIS.console.variants.BlockVariant2;
 import net.awt.TARDIS.console.variants.DiceVariant;
 import net.awt.TARDIS.console.variants.JunkGlassVariant;
 import net.awt.TARDIS.console.variants.TestVariant;

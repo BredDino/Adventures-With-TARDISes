@@ -12,6 +12,7 @@ public class AWTConsoleRegistry {
     public static ConsoleTypeSchema DICE;
     public static ConsoleTypeSchema JUNKGLASS;
     public static ConsoleTypeSchema BLOCK;
+    public static ConsoleTypeSchema BLOCK2;
 
     public static void init() {
     }
@@ -21,5 +22,6 @@ public class AWTConsoleRegistry {
         AWTConsoleRegistry.DICE = ConsoleRegistry.register(new DiceType());
         AWTConsoleRegistry.JUNKGLASS = ConsoleRegistry.register(new JunkGlassType());
         AWTConsoleRegistry.BLOCK = ConsoleRegistry.register(new BlockConsoleType());
+        AWTConsoleRegistry.BLOCK2 = ConsoleRegistry.register(new BlockConsoleType());
     }
 }
