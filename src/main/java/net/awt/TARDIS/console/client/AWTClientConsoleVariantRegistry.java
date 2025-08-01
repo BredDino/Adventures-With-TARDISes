@@ -10,6 +10,7 @@ public class AWTClientConsoleVariantRegistry  {
     public static ClientConsoleVariantSchema JUNKGLASS;
     public static ClientConsoleVariantSchema BLOCK;
     public static ClientConsoleVariantSchema BLOCK2;
+    public static ClientConsoleVariantSchema BLOCK3;
 
 
     public static void init() {
@@ -21,6 +22,6 @@ public class AWTClientConsoleVariantRegistry  {
         AWTClientConsoleVariantRegistry.JUNKGLASS = instance.register(new ClientJunkGlassVariant());
         AWTClientConsoleVariantRegistry.BLOCK = instance.register(new ClientBlockVariant());
         AWTClientConsoleVariantRegistry.BLOCK2 = instance.register(new ClientBlockVariant2());
-
+        AWTClientConsoleVariantRegistry.BLOCK3 = instance.register(new ClientBlockVariant3());
     }
 }
