@@ -6,7 +6,6 @@ import net.awt.AdventuresWithTARDISes;
 import net.awt.TARDIS.console.client.models.BlockConsoleModel;
 import net.awt.TARDIS.console.client.models.DiceConsoleModel;
 import net.awt.TARDIS.console.variants.BlockVariant;
-import net.awt.TARDIS.console.variants.BlockVariant2;
 import net.awt.TARDIS.console.variants.DiceVariant;
 import net.minecraft.util.Identifier;
 import org.joml.Vector3f;
@@ -16,7 +15,7 @@ public class ClientBlockVariant extends ClientConsoleVariantSchema {
     public static final Identifier EMISSION = new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/blockentities/consoles/block_console_emission.png");
 
     public ClientBlockVariant() {
-        super(BlockVariant2.REFERENCE, BlockVariant2.REFERENCE);
+        super(BlockVariant.REFERENCE, BlockVariant.REFERENCE);
     }
 
     @Override
