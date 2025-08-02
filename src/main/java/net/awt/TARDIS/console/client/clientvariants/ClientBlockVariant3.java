@@ -32,7 +32,7 @@ public class ClientBlockVariant3 extends ClientConsoleVariantSchema {
     }
 
     public Vector3f sonicItemTranslations() {
-        return new Vector3f(-0.5275F, 1.35F, 0.7F);
+        return new Vector3f(1.52F, 1F, 1.43F);
     }
 
     public float[] sonicItemRotations() {
@@ -40,10 +40,12 @@ public class ClientBlockVariant3 extends ClientConsoleVariantSchema {
     }
 
     public Vector3f handlesTranslations() {
-        return new Vector3f(0.05F, 1.75F, 0.36F);
+        {
+            return new Vector3f(1F, 1.5F, 0.9F);
+        }
     }
 
     public float[] handlesRotations() {
-        return new float[]{60.0F, 135.0F};
+        return new float[]{-45.0F, 135.0F};
     }
 }
