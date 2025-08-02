@@ -42,7 +42,7 @@ public class ClientJunkGlassVariant extends ClientConsoleVariantSchema {
     }
 
     public Vector3f handlesTranslations() {
-        return new Vector3f(0.05F, 1.75F, 0.36F);
+        return new Vector3f(0.01F, 1.75F, 0.7F);
     }
 
     public float[] handlesRotations() {
