@@ -200,6 +200,8 @@ public class TardisExteriorRegistry {
 
         POLICEBOX.setModel(new policebox()).toClient().register();
         POLICEBOX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOX.setPortalWidth(1f);
+        POLICEBOX.setPortalHeight(2f);
         POLICEBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         VASTDEFAULT.setModel(new VastBox()).toClient().register();
@@ -286,10 +288,14 @@ public class TardisExteriorRegistry {
 
         POLICEBOXALT.setModel(new policebox()).toClient().register();
         POLICEBOXALT.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXALT.setPortalWidth(1f);
+        POLICEBOXALT.setPortalHeight(2f);
         POLICEBOXALT.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXPURPLE.setModel(new policebox()).toClient().register();
         POLICEBOXPURPLE.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXPURPLE.setPortalWidth(1f);
+        POLICEBOXPURPLE.setPortalHeight(2f);
         POLICEBOXPURPLE.setSonicItemTranslations(new Vector3f(0, 0, 0));
     }
 }
