@@ -1,4 +1,4 @@
-package net.awt.mixin;
+package net.awt.mixin.category;
 
 import dev.amble.ait.data.schema.exterior.category.ExclusiveCategory;
 import net.awt.AWTDevTeam;

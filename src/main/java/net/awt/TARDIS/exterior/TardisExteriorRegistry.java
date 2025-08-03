@@ -1,7 +1,7 @@
 package net.awt.TARDIS.exterior;
 
-import dev.amble.ait.AITMod;
 import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
+import net.awt.TARDIS.exterior.category.custom.AWTExclusiveCategory;
 import net.awt.TARDIS.exterior.client.model.door.*;
 import net.awt.TARDIS.exterior.client.model.exterior.*;
 import net.awt.sound.AWTSound;
@@ -133,7 +133,7 @@ public class TardisExteriorRegistry {
         POLICEBOXALT = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_alt").register();
         POLICEBOXALT.setDoor(new AddonExterior.Door(POLICEBOXALT, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-        POLICEBOXPURPLE = new AddonExterior((AITMod.id("exterior/exclusive")), MOD_ID, "policebox_purple").register();
+        POLICEBOXPURPLE = new AddonExterior(AWTExclusiveCategory.REFERENCE, MOD_ID, "policebox_purple").register();
         POLICEBOXPURPLE.setDoor(new AddonExterior.Door(POLICEBOXPURPLE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
     }
