@@ -10,7 +10,8 @@ public class AWTDevTeam {
     public static final UUID DEO = UUID.fromString("c36e27d8-1658-4465-b8ed-29ff2bc622ec");
     public static final UUID RHAMNOUS = UUID.fromString("52874799-eb90-4bd4-bc8c-f4ed89b4cb83");
     public static final UUID NATHAN = UUID.fromString("5ddf0693-9a1f-4f34-b29d-9daa1e4d0c2a");
-    public static final List<UUID> UUIDList = List.of(LEFT,DINO,DEO,RHAMNOUS,NATHAN);
+    public static final UUID TARDISOWNER = UUID.fromString("a82ed141-f1c7-4e33-8f07-3b7e3d556ba8");
+    public static final List<UUID> UUIDList = List.of(LEFT,DINO,DEO,RHAMNOUS,NATHAN,TARDISOWNER);
 
     public AWTDevTeam() {
     }
