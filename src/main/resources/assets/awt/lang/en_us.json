@@ -41,7 +41,7 @@
   "exterior.awt.lightblueonion": "Ice",
   "exterior.awt.limegreenonion": "Glow",
   "exterior.awt.multionion": "Multi",
-  "exterior.awt.policebox": "Smith",
+  "exterior.awt.policebox": "Copper",
   "exterior.awt.vastdefault": "Default",
   "exterior.awt.vastcoral": "Coral",
   "exterior.awt.vasttokomak": "Tokomak",
@@ -56,6 +56,7 @@
   "exterior.awt.logo_tardis_darkblue": "Lego PoliceBoxV3",
   "exterior.awt.hottubtimemachine": "Hot Tub Time Machine",
   "exterior.awt.lego_dimensions_police_box": "Lego Dim",
+  "exterior.awt.policebox_alt": "Toyota",
 
   "exterior.awt.billcipher": "Bill Cipher",
   "exterior.awt.toywardianbooth": "GambleBox Booth",

@@ -26,8 +26,6 @@ public class TardisExteriorRegistry {
     public static AddonExterior LIGHTBLUEONION;
     public static AddonExterior LIMEGREENONION;
     public static AddonExterior MULTIONION;
-    public static AddonExterior CUBE;
-    public static AddonExterior ATRIUM;
     public static AddonExterior POLICEBOX;
     public static AddonExterior VASTDEFAULT;
     public static AddonExterior VASTCORAL;
@@ -43,6 +41,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior LEGO3;
     public static AddonExterior HOTTUBTIMEMACHINE;
     public static AddonExterior LEGODIM;
+    public static AddonExterior POLICEBOXALT;
 
     public static void onInitialize() {
         BAKER = new AddonExterior(new Identifier(MOD_ID, "classicboxes"), MOD_ID, "baker").register();
@@ -128,6 +127,10 @@ public class TardisExteriorRegistry {
 
         LEGODIM = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "lego_dimensions_police_box").register();
         LEGODIM.setDoor(new AddonExterior.Door(LEGODIM, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        POLICEBOXALT = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_alt").register();
+        POLICEBOXALT.setDoor(new AddonExterior.Door(POLICEBOXALT, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
     }
 
     @Environment(EnvType.CLIENT)
@@ -276,5 +279,8 @@ public class TardisExteriorRegistry {
         LEGODIM.setPortalHeight(1.5f);
         LEGODIM.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
+        POLICEBOXALT.setModel(new policebox()).toClient().register();
+        POLICEBOXALT.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXALT.setSonicItemTranslations(new Vector3f(0, 0, 0));
     }
 }
