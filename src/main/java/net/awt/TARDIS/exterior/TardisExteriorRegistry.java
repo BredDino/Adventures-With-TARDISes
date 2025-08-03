@@ -42,6 +42,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior HOTTUBTIMEMACHINE;
     public static AddonExterior LEGODIM;
     public static AddonExterior POLICEBOXALT;
+    public static AddonExterior POLICEBOXPURPLE;
 
     public static void onInitialize() {
         BAKER = new AddonExterior(new Identifier(MOD_ID, "classicboxes"), MOD_ID, "baker").register();
@@ -130,6 +131,9 @@ public class TardisExteriorRegistry {
 
         POLICEBOXALT = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_alt").register();
         POLICEBOXALT.setDoor(new AddonExterior.Door(POLICEBOXALT, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        POLICEBOXPURPLE = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_purple").register();
+        POLICEBOXPURPLE.setDoor(new AddonExterior.Door(POLICEBOXPURPLE, true, net.awt.sound.AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
     }
 
@@ -282,5 +286,9 @@ public class TardisExteriorRegistry {
         POLICEBOXALT.setModel(new policebox()).toClient().register();
         POLICEBOXALT.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
         POLICEBOXALT.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOXPURPLE.setModel(new policebox()).toClient().register();
+        POLICEBOXPURPLE.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXPURPLE.setSonicItemTranslations(new Vector3f(0, 0, 0));
     }
 }
