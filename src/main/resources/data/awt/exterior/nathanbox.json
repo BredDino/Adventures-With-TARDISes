@@ -1,6 +1,6 @@
 {
     "id": "awt:nathanbox",
-    "category": "ait:exterior/police_box",
+    "category": "ait:exterior/exclusive",
     "parent": "ait:exterior/police_box/default",
     "texture": "awt:textures/exterior/nathan_box.png",
     "emission": "awt:textures/exterior/nathan_box_emission.png",
