@@ -19,8 +19,11 @@ import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
@@ -30,14 +33,18 @@ import net.minecraft.util.math.ColorHelper;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.util.math.Vec3d;
 
+import java.awt.*;
 import java.util.Optional;
 
 public class SonicGlassesOverlay implements HudRenderCallback {
     private String namespace = AdventuresWithTARDISes.MOD_ID + "/textures/overlay/sonic_glasses/";
+
+    private ItemStack equippedStack = Items.AIR.getDefaultStack();
+
     @Override
     public void onHudRender(DrawContext drawContext, float v) {
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
-        if (hasEquipped(player, ModItems.SONIC_GLASSES)) {
+        if (hasEquipped(player, ModItems.SONIC_GLASSES) && equippedStack.getOrCreateNbt().getDouble("fuel") > 0) {
             MatrixStack matrixStack = drawContext.getMatrices();
             RenderSystem.enableBlend();
             RenderSystem.setShaderColor(1,1,1, 0.5f);
@@ -50,38 +57,60 @@ public class SonicGlassesOverlay implements HudRenderCallback {
             RenderSystem.setShaderColor(1,1,1, 1f);
             RenderSystem.disableBlend();
 
+            RenderSystem.enableBlend();
+            RenderSystem.setShaderColor(1,1,1, doDeadBatteryEffect() ? Math.max((float) Math.random(), 0.75f) : 1);
+
             Entity entity = MinecraftClient.getInstance().getCameraEntity();
             HitResult blockHit = entity.raycast(5.0, 0.0F, false);
             if (blockHit.getType() == net.minecraft.util.hit.HitResult.Type.BLOCK) {
-                RenderSystem.enableBlend();
-                RenderSystem.setShaderColor(1,1,1,(float) Math.max((float) Math.random(), 0.75f));
                 BlockPos posOfTargetedBlock = ((BlockHitResult) blockHit).getBlockPos();
                 Block targetBlock = player.getWorld().getBlockState(new BlockPos((int) posOfTargetedBlock.getX(), (int) posOfTargetedBlock.getY(), (int) posOfTargetedBlock.getZ())).getBlock();
                 matrixStack.push();
-                matrixStack.translate(Math.random()>0.95 ? 1 : 0, Math.random()>0.95 ? 1 : 0,0);
+                if (doDeadBatteryEffect()) matrixStack.translate(Math.random()>0.95 ? 1 : 0, Math.random()>0.95 ? 1 : 0,0);
 
                 matrixStack.translate(drawContext.getScaledWindowWidth(), 8,0);
-                matrixStack.scale(1.5f, 1.5f, 1.5f);
+                matrixStack.scale(1.25f, 1.25f, 1.25f);
                 Text text = Text.of("X: " + posOfTargetedBlock.getX() + " Y: " + posOfTargetedBlock.getY() + " Z: " + posOfTargetedBlock.getZ());
                 int k = MinecraftClient.getInstance().textRenderer.getWidth(text.getString());
                 drawContext.drawItem(targetBlock.asItem().getDefaultStack(), -20 - k -2, 0);
-                drawContext.drawText(MinecraftClient.getInstance().textRenderer, text, -k -2,4, ColorHelper.Argb.getArgb(1, 30, 60, 220), true);
+                drawContext.drawText(MinecraftClient.getInstance().textRenderer, text, -k -2,4, ColorHelper.Argb.getArgb(1, 33, 220, 255), true);
                 matrixStack.pop();
-                RenderSystem.setShaderColor(1,1,1, 1f);
-                RenderSystem.disableBlend();
 
             }
 
+            Text fueltext = Text.of("AU: " + equippedStack.getOrCreateNbt().getDouble("fuel"));
+            matrixStack.push();
+            if (doDeadBatteryEffect()) matrixStack.translate(Math.random()>0.95 ? 1 : 0, Math.random()>0.95 ? 1 : 0,0);
+
+            matrixStack.translate(drawContext.getScaledWindowWidth(), 4,0);
+            matrixStack.scale(1, 1, 1);
+            int k = MinecraftClient.getInstance().textRenderer.getWidth(fueltext.getString());
+            drawContext.drawText(MinecraftClient.getInstance().textRenderer, fueltext, -k -2,0, ColorHelper.Argb.getArgb(1, 252, 249, 57), true);
+            matrixStack.pop();
+            RenderSystem.setShaderColor(1,1,1, 1f);
+            RenderSystem.disableBlend();
+
         }
+    }
+
+    private boolean doDeadBatteryEffect() {
+        return equippedStack.getOrCreateNbt().getDouble("fuel") < 250;
     }
 
     public boolean hasEquipped(PlayerEntity player, Item item) {
         Optional<TrinketComponent> trinketComponent = TrinketsApi.getTrinketComponent(player);
 
         if (trinketComponent.isPresent()) {
-            return trinketComponent.get().isEquipped(stack -> stack.isOf(item));
+            return trinketComponent.get().isEquipped(stack -> {
+                if (stack.isOf(item)) {
+                    this.equippedStack = stack;
+                }
+                return stack.isOf(item);
+            });
         }
 
         return false;
     }
+
+
 }
