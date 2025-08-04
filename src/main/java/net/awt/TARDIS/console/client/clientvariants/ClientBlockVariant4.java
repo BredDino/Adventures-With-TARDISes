@@ -10,7 +10,7 @@ import org.joml.Vector3f;
 
 public class ClientBlockVariant4 extends ClientConsoleVariantSchema {
     public static final Identifier TEXTURE = new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/blockentities/consoles/block_console4.png");
-    public static final Identifier EMISSION = new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/blockentities/consoles/block_console_emission.png");
+    public static final Identifier EMISSION = new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/blockentities/consoles/block_console4_emission.png");
 
     public ClientBlockVariant4() {
         super(BlockVariant4.REFERENCE, BlockVariant4.REFERENCE);
