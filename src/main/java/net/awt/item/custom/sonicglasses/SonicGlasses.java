@@ -155,7 +155,7 @@ public class SonicGlasses extends LinkableItem implements TrinketRenderer, Artro
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) { //make it so you can also use it when its in the trinket slot on the head
         ItemStack stack = user.getStackInHand(hand);
         SonicMode mode = mode(stack);
 
