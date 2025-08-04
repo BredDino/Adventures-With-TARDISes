@@ -77,3 +77,4 @@ public class SonicGlasses extends TrinketItem implements TrinketRenderer, Artron
         return 100;
     }
 }
+//make it work like sonic, however make sure it links via telepathic circuits and doesn't have a battery like the normal sonic does. Thank you, Dino <3
