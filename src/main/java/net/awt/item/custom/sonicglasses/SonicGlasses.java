@@ -8,6 +8,7 @@ import dev.amble.ait.core.AITItems;
 import dev.amble.ait.core.AITSounds;
 import dev.amble.ait.core.item.sonic.SonicMode;
 import dev.amble.ait.registry.impl.SonicRegistry;
+import dev.emi.trinkets.TrinketSlot;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketItem;
@@ -155,7 +156,7 @@ public class SonicGlasses extends LinkableItem implements TrinketRenderer, Artro
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) { //make it so you can also use it when its in the trinket slot on the head
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand, TrinketSlot face) { //make it so you can also use it when its in the trinket slot on the head
         ItemStack stack = user.getStackInHand(hand);
         SonicMode mode = mode(stack);
 
