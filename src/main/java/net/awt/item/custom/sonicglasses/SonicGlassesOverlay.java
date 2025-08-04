@@ -1,0 +1,87 @@
+package net.awt.item.custom.sonicglasses;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+import dev.emi.trinkets.api.TrinketComponent;
+import dev.emi.trinkets.api.TrinketsApi;
+import net.awt.AdventuresWithTARDISes;
+import net.awt.block.ModBlocks;
+import net.awt.item.ModItems;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.minecraft.block.Block;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.item.ItemRenderer;
+import net.minecraft.client.render.model.json.ModelTransformationMode;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.HitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ColorHelper;
+import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.math.Vec3d;
+
+import java.util.Optional;
+
+public class SonicGlassesOverlay implements HudRenderCallback {
+    private String namespace = AdventuresWithTARDISes.MOD_ID + "/textures/overlay/sonic_glasses/";
+    @Override
+    public void onHudRender(DrawContext drawContext, float v) {
+        ClientPlayerEntity player = MinecraftClient.getInstance().player;
+        if (hasEquipped(player, ModItems.SONIC_GLASSES)) {
+            MatrixStack matrixStack = drawContext.getMatrices();
+            RenderSystem.enableBlend();
+            RenderSystem.setShaderColor(1,1,1, 0.5f);
+            matrixStack.push();
+            matrixStack.translate(drawContext.getScaledWindowWidth(), 0, 0);
+            matrixStack.multiply(RotationAxis.POSITIVE_Z.rotationDegrees((player.getWorld().getTime() % 360)));
+            matrixStack.scale(1.25f,1.25f,1.25f);
+            drawContext.drawTexture(new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/overlay/sonic_glasses/symbol.png"), -128, -128, 0, 0, 256, 256);
+            matrixStack.pop();
+            RenderSystem.setShaderColor(1,1,1, 1f);
+            RenderSystem.disableBlend();
+
+            Entity entity = MinecraftClient.getInstance().getCameraEntity();
+            HitResult blockHit = entity.raycast(5.0, 0.0F, false);
+            if (blockHit.getType() == net.minecraft.util.hit.HitResult.Type.BLOCK) {
+                RenderSystem.enableBlend();
+                RenderSystem.setShaderColor(1,1,1,(float) Math.max((float) Math.random(), 0.75f));
+                BlockPos posOfTargetedBlock = ((BlockHitResult) blockHit).getBlockPos();
+                Block targetBlock = player.getWorld().getBlockState(new BlockPos((int) posOfTargetedBlock.getX(), (int) posOfTargetedBlock.getY(), (int) posOfTargetedBlock.getZ())).getBlock();
+                matrixStack.push();
+                matrixStack.translate(Math.random()>0.95 ? 1 : 0, Math.random()>0.95 ? 1 : 0,0);
+
+                matrixStack.translate(drawContext.getScaledWindowWidth(), 8,0);
+                matrixStack.scale(1.5f, 1.5f, 1.5f);
+                Text text = Text.of("X: " + posOfTargetedBlock.getX() + " Y: " + posOfTargetedBlock.getY() + " Z: " + posOfTargetedBlock.getZ());
+                int k = MinecraftClient.getInstance().textRenderer.getWidth(text.getString());
+                drawContext.drawItem(targetBlock.asItem().getDefaultStack(), -20 - k -2, 0);
+                drawContext.drawText(MinecraftClient.getInstance().textRenderer, text, -k -2,4, ColorHelper.Argb.getArgb(1, 30, 60, 220), true);
+                matrixStack.pop();
+                RenderSystem.setShaderColor(1,1,1, 1f);
+                RenderSystem.disableBlend();
+
+            }
+
+        }
+    }
+
+    public boolean hasEquipped(PlayerEntity player, Item item) {
+        Optional<TrinketComponent> trinketComponent = TrinketsApi.getTrinketComponent(player);
+
+        if (trinketComponent.isPresent()) {
+            return trinketComponent.get().isEquipped(stack -> stack.isOf(item));
+        }
+
+        return false;
+    }
+}

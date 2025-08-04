@@ -29,6 +29,15 @@ repositories {
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
 
+	maven {
+		name = "Ladysnake Libs"
+		url = 'https://maven.ladysnake.org/releases'
+	}
+
+	dependencies {
+		modImplementation "dev.emi:trinkets:${trinkets_version}"
+	}
+
 	exclusiveContent {
 		forRepository {
 			maven {
