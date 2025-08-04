@@ -251,4 +251,3 @@ public class SonicGlasses extends LinkableItem implements TrinketRenderer, Artro
     }
 
 }
-//make it work like sonic, however make sure it links via telepathic circuits and doesn't have a battery like the normal sonic does. Thank you, Dino <3
