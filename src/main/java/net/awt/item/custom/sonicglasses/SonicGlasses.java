@@ -1,8 +1,12 @@
 package net.awt.item.custom.sonicglasses;
 
+import dev.amble.ait.api.AITUseActions;
 import dev.amble.ait.api.ArtronHolderItem;
 import dev.amble.ait.api.tardis.link.LinkableItem;
+import dev.amble.ait.client.sounds.ClientSoundManager;
 import dev.amble.ait.core.AITItems;
+import dev.amble.ait.core.AITSounds;
+import dev.amble.ait.core.item.sonic.SonicMode;
 import dev.amble.ait.registry.impl.SonicRegistry;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
@@ -27,14 +31,16 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
-import net.minecraft.util.ClickType;
-import net.minecraft.util.Formatting;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Optional;
+
+import static dev.amble.ait.core.item.SonicItem.*;
 
 public class SonicGlasses extends LinkableItem implements TrinketRenderer, ArtronHolderItem {
     private String GLASSES_HEIGHT_KEY = "glasses_height_key";
@@ -49,7 +55,17 @@ public class SonicGlasses extends LinkableItem implements TrinketRenderer, Artro
         NbtCompound nbt = stack.getOrCreateNbt();
         nbt.putDouble("fuel", this.getMaxFuel(stack));
 
-        return stack;    }
+        stack = new ItemStack(this);
+        nbt = stack.getOrCreateNbt();
+
+        nbt.putInt(MODE_KEY, -1);
+        nbt.putDouble(FUEL_KEY, getMaxFuel(stack));
+
+        if (SonicRegistry.DEFAULT != null)
+            nbt.putString(SONIC_TYPE, SonicRegistry.DEFAULT.id().toString());
+
+        return stack;
+    }
 
     @Override
     public boolean onClicked(ItemStack stack, ItemStack otherStack, Slot slot, ClickType clickType, PlayerEntity player, StackReference cursorStackReference) {
@@ -132,5 +148,107 @@ public class SonicGlasses extends LinkableItem implements TrinketRenderer, Artro
     public double getMaxFuel(ItemStack itemStack) {
         return 5000;
     }
+
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return AITUseActions.SONIC;
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack stack = user.getStackInHand(hand);
+        SonicMode mode = mode(stack);
+
+        if (mode == null)
+            return TypedActionResult.fail(stack);
+
+        if (!this.checkFuel(stack))
+            return TypedActionResult.fail(stack);
+
+        if (user.isSneaking()) {
+            mode = mode.next();
+            setMode(stack, mode);
+
+            world.playSound(user, user.getBlockPos(), AITSounds.SONIC_SWITCH, SoundCategory.PLAYERS, 1F, 1F);
+            user.sendMessage(mode.text(), true);
+
+            return TypedActionResult.consume(stack);
+        }
+
+        if (mode.startUsing(stack, world, user, hand)) {
+            user.setCurrentHand(hand);
+            return TypedActionResult.consume(stack);
+        }
+
+        return TypedActionResult.fail(stack);
+    }
+
+    @Override
+    public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
+        SonicMode mode = mode(stack);
+
+        if (mode == SonicMode.Modes.INACTIVE)
+            return;
+
+        if (world.isClient())
+            ClientSoundManager.getSonicSound().onUse((AbstractClientPlayerEntity) user);
+
+        int ticks = mode.maxTime() - remainingUseTicks;
+
+        if (ticks % 10 == 0) {
+            removeFuel(mode.fuelCost(), stack);
+
+            if (!this.checkFuel(stack))
+                return;
+        }
+
+        mode.tick(stack, world, user, ticks, remainingUseTicks);
+    }
+
+    @Override
+    public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+        SonicMode mode = mode(stack);
+
+        if (mode == SonicMode.Modes.INACTIVE)
+            return;
+
+        if (world.isClient())
+            ClientSoundManager.getSonicSound().onFinishUse((AbstractClientPlayerEntity) user);
+
+        mode.stopUsing(stack, world, user, mode.maxTime() - remainingUseTicks, remainingUseTicks);
+    }
+
+    @Override
+    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
+        SonicMode mode = mode(stack);
+
+        if (mode == SonicMode.Modes.INACTIVE)
+            return stack;
+
+        if (world.isClient())
+            ClientSoundManager.getSonicSound().onFinishUse((AbstractClientPlayerEntity) user);
+
+        mode.finishUsing(stack, world, user);
+        return stack;
+    }
+
+    @Override
+    public int getMaxUseTime(ItemStack stack) {
+        return mode(stack).maxTime();
+    }
+
+    private boolean checkFuel(ItemStack stack) {
+        SonicMode mode = mode(stack);
+
+        if (this.isOutOfFuel(stack) && mode != SonicMode.Modes.INACTIVE) {
+            mode = SonicMode.Modes.INACTIVE;
+
+            setMode(stack, mode);
+            return false;
+        }
+
+        return true;
+    }
+
 }
 //make it work like sonic, however make sure it links via telepathic circuits and doesn't have a battery like the normal sonic does. Thank you, Dino <3
