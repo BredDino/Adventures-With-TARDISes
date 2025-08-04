@@ -1,6 +1,7 @@
 package net.awt.item.custom.sonicglasses;
 
 import dev.amble.ait.api.ArtronHolderItem;
+import dev.amble.ait.api.tardis.link.LinkableItem;
 import dev.amble.ait.core.AITItems;
 import dev.amble.ait.registry.impl.SonicRegistry;
 import dev.emi.trinkets.api.SlotReference;
@@ -35,11 +36,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public class SonicGlasses extends TrinketItem implements TrinketRenderer, ArtronHolderItem {
+public class SonicGlasses extends LinkableItem implements TrinketRenderer, ArtronHolderItem {
     private String GLASSES_HEIGHT_KEY = "glasses_height_key";
 
     public SonicGlasses(Settings settings) {
-        super(settings);
+        super(settings, true);
     }
 
     @Override
@@ -88,18 +89,6 @@ public class SonicGlasses extends TrinketItem implements TrinketRenderer, Artron
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
 
         super.inventoryTick(stack, world, entity, slot, selected);
-    }
-
-    @Override
-    public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {
-        if (hasEquipped((PlayerEntity) entity, this)) {
-            if (entity.age % 20 == 0) {
-                if (stack.getOrCreateNbt().getDouble("fuel") > 0) {
-                    stack.getOrCreateNbt().putDouble("fuel", stack.getOrCreateNbt().getDouble("fuel") - 0.5);
-                }
-            }
-        }
-        super.tick(stack, slot, entity);
     }
 
     public boolean hasEquipped(PlayerEntity player, Item item) {
