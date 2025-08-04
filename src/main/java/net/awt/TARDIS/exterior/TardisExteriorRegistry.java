@@ -1,5 +1,6 @@
 package net.awt.TARDIS.exterior;
 
+import dev.amble.ait.client.models.exteriors.JakeTheDogExteriorModel;
 import dev.amble.ait.data.schema.exterior.variant.addon.AddonExterior;
 import net.awt.TARDIS.exterior.category.custom.AWTExclusiveCategory;
 import net.awt.TARDIS.exterior.client.model.door.*;
@@ -44,6 +45,8 @@ public class TardisExteriorRegistry {
     public static AddonExterior LEGODIM;
     public static AddonExterior POLICEBOXALT;
     public static AddonExterior POLICEBOXPURPLE;
+
+    public static AddonExterior JAKE;
 
     public static void onInitialize() {
         BAKER = new AddonExterior(new Identifier(MOD_ID, "classicboxes"), MOD_ID, "baker").register();
@@ -135,6 +138,9 @@ public class TardisExteriorRegistry {
 
         POLICEBOXPURPLE = new AddonExterior(AWTExclusiveCategory.REFERENCE, MOD_ID, "policebox_purple").register();
         POLICEBOXPURPLE.setDoor(new AddonExterior.Door(POLICEBOXPURPLE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        JAKE = new AddonExterior(AWTExclusiveCategory.REFERENCE, MOD_ID, "jake").register();
+        JAKE.setDoor(new AddonExterior.Door(JAKE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
     }
 
@@ -297,5 +303,9 @@ public class TardisExteriorRegistry {
         POLICEBOXPURPLE.setPortalWidth(1f);
         POLICEBOXPURPLE.setPortalHeight(2f);
         POLICEBOXPURPLE.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        JAKE.setModel(new JakeTheDogExteriorModel(JakeTheDogExteriorModel.getTexturedModelData().createModel())).toClient().register();
+        JAKE.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+
     }
 }
