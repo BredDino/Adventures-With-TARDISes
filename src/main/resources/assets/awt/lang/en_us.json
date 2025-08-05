@@ -224,6 +224,10 @@
   "block.awt.atrium_block": "Atrium Block",
   "block.awt.atrium_ore": "Atrium Ore",
   "block.awt.deepslate_atrium_ore": "Deepslate Atrium Ore",
+  "block.awt.grate_block": "Grate",
+  "block.awt.thick_grate_block": "Thick Grate",
+  "block.awt.rusty_grate_block": "Rusty Grate",
+  "block.awt.rusty_thick_grate_block": "Rusty Thick Grate",
 
   "item_group.awt.Roundel": "Roundels"
 

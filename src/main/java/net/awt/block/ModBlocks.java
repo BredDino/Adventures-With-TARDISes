@@ -24,6 +24,18 @@ public class ModBlocks {
     public static final Block DEEPSLATE_ATRIUM_ORE = registerBlock("deepslate_atrium_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE).sounds(BlockSoundGroup.DEEPSLATE).requiresTool().strength(1.5F, 3.0F)));
 
+    public static final Block GRATE_BLOCK = registerBlock("grate_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
+
+    public static final Block THICK_GRATE_BLOCK = registerBlock("thick_grate_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
+
+    public static final Block RUSTY_GRATE_BLOCK = registerBlock("rusty_grate_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
+
+    public static final Block RUSTY_THICK_GRATE_BLOCK = registerBlock("rusty_thick_grate_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
+
 
     //roundels
 

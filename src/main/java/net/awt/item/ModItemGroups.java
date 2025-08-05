@@ -30,6 +30,10 @@ public class ModItemGroups {
                         entries.add(ModItems.paralyzer_music_disc);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);
                         entries.add(ModItems.SONIC_GLASSES);
+                        entries.add(ModBlocks.GRATE_BLOCK);
+                        entries.add(ModBlocks.THICK_GRATE_BLOCK);
+                        entries.add(ModBlocks.RUSTY_GRATE_BLOCK);
+                        entries.add(ModBlocks.RUSTY_THICK_GRATE_BLOCK);
                     }).build());
 
 
