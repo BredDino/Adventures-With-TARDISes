@@ -42,8 +42,7 @@ public class policebox extends ExteriorModel {
 		this.phone = this.rightdoor.getChild("phone");
 		this.leftdoor = this.doors.getChild("leftdoor");
 	}
-
-	public policebox()   {
+	public policebox()  {
 		this(getTexturedModelData().createModel());
 	}
 
@@ -125,16 +124,16 @@ public class policebox extends ExteriorModel {
 
 		ModelPartData cube_r13 = rightdoor.addChild("cube_r13", ModelPartBuilder.create().uv(82, 47).cuboid(-1.7187F, 2.9719F, -12.043F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(7.3874F, -7.6642F, 4.2961F, -1.5708F, 0.0F, 0.0F));
 
-		ModelPartData phone = rightdoor.addChild("phone", ModelPartBuilder.create().uv(88, 33).cuboid(-1.25F, -4.0F, -0.75F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
-		.uv(94, 80).cuboid(-2.75F, -4.0F, -0.75F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
-		.uv(56, 81).cuboid(-3.0F, -4.0F, -1.0F, 3.0F, 4.0F, 1.0F, new Dilation(0.0F))
-		.uv(90, 97).cuboid(-3.5F, -4.0F, -1.0F, 4.0F, 4.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(4.2187F, -16.25F, 2.0313F));
+		ModelPartData phone = rightdoor.addChild("phone", ModelPartBuilder.create().uv(89, 34).cuboid(-1.25F, -4.0F, -0.75F, 1.0F, 3.0F, 0.0F, new Dilation(0.0F))
+		.uv(95, 81).cuboid(-2.75F, -4.0F, -0.75F, 1.0F, 3.0F, 0.0F, new Dilation(0.0F))
+		.uv(57, 82).cuboid(-3.0F, -4.0F, -1.0F, 3.0F, 4.0F, 0.0F, new Dilation(0.0F))
+		.uv(91, 98).cuboid(-3.5F, -4.0F, -1.0F, 4.0F, 4.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(4.2187F, -16.25F, 2.0313F));
 
-		ModelPartData cube_r14 = phone.addChild("cube_r14", ModelPartBuilder.create().uv(94, 76).cuboid(-1.0F, -2.0F, -1.0F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-0.7929F, -0.7071F, -0.5F, 0.0F, 0.0F, -0.7854F));
+		ModelPartData cube_r14 = phone.addChild("cube_r14", ModelPartBuilder.create().uv(95, 77).cuboid(-1.0F, -2.0F, -1.0F, 2.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-0.7929F, -0.7071F, -0.5F, 0.0F, 0.0F, -0.7854F));
 
-		ModelPartData cube_r15 = phone.addChild("cube_r15", ModelPartBuilder.create().uv(76, 47).cuboid(-1.0F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-1.5429F, -3.5F, -0.2071F, 0.0F, 0.7854F, 0.0F));
+		ModelPartData cube_r15 = phone.addChild("cube_r15", ModelPartBuilder.create().uv(77, 48).cuboid(-1.0F, -1.0F, -1.0F, 1.0F, 1.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(-1.5429F, -3.5F, -0.2071F, 0.0F, 0.7854F, 0.0F));
 
-		ModelPartData cube_r16 = phone.addChild("cube_r16", ModelPartBuilder.create().uv(72, 47).cuboid(-1.0F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-0.0429F, -3.5F, -0.2071F, 0.0F, 0.7854F, 0.0F));
+		ModelPartData cube_r16 = phone.addChild("cube_r16", ModelPartBuilder.create().uv(73, 48).cuboid(-1.0F, -1.0F, -1.0F, 1.0F, 1.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(-0.0429F, -3.5F, -0.2071F, 0.0F, 0.7854F, 0.0F));
 
 		ModelPartData leftdoor = doors.addChild("leftdoor", ModelPartBuilder.create().uv(132, 104).cuboid(-7.2813F, -30.0F, -0.7187F, 7.0F, 31.0F, 1.0F, new Dilation(0.0F))
 		.uv(36, 135).cuboid(-7.2813F, -30.0F, -0.9687F, 7.0F, 31.0F, 0.0F, new Dilation(0.0F))
