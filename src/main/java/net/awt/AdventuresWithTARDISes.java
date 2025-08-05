@@ -5,12 +5,15 @@ import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
 import net.awt.TARDIS.exterior.TardisExteriorRegistry;
 import net.awt.TARDIS.exterior.category.AWTCategoryRegistry;
 import net.awt.block.ModBlocks;
+import net.awt.entity.ModEntities;
+import net.awt.entity.custom.K9Entity;
 import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
 import net.awt.networking.ModPackets;
 import net.awt.sound.AWTSound;
 import net.awt.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,6 +38,8 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 
 		ModPackets.registerC2SPackets();
+
+        FabricDefaultAttributeRegistry.register(ModEntities.K9, K9Entity.createK9Attributes());
 	}
 
 	public static Identifier id(String path) {
