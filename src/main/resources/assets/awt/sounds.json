@@ -2,10 +2,40 @@
 {
   "paradoxmat": {
     "category": "mat",
-    "subtitle": "subtitles.paradoxmat",
+    "subtitle": "paradoxmat",
     "sounds": [
       {
         "name": "awt:paradoxmat",
+        "stream": false
+      }
+    ]
+  },
+  "k9_die": {
+    "category": "k9",
+    "subtitle": "K9 Dies",
+    "sounds": [
+      {
+        "name": "awt:k9_die",
+        "stream": false
+      }
+    ]
+  },
+  "k9_hurt": {
+    "category": "k9",
+    "subtitle": "K9 Gets Hit",
+    "sounds": [
+      {
+        "name": "awt:k9_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "k9_tame": {
+    "category": "k9",
+    "subtitle": "K9 Gets Tamed",
+    "sounds": [
+      {
+        "name": "awt:k9_tame",
         "stream": false
       }
     ]
@@ -32,7 +62,7 @@
   },
   "type70demat": {
     "category": "demat",
-    "subtitle": "subtitles.type70demat",
+    "subtitle": "type70demat",
     "sounds": [
       {
         "name": "awt:type70demat",
@@ -42,7 +72,7 @@
   },
   "type70flight": {
     "category": "flight",
-    "subtitle": "subtitles.type70flight",
+    "subtitle": "type70flight",
     "sounds": [
       {
         "name": "awt:type70flight",
@@ -52,7 +82,7 @@
   },
   "emergency_land": {
     "category": "mat",
-    "subtitle": "subtitles.emergency_land",
+    "subtitle": "emergency_land",
     "sounds": [
       {
         "name": "awt:emergency_land",
@@ -62,7 +92,7 @@
   },
   "police_box_door_open": {
     "category": "door",
-    "subtitle": "subtitles.police_box_door_open",
+    "subtitle": "police_box_door_open",
     "sounds": [
       {
         "name": "awt:police_box_door_open",
@@ -72,7 +102,7 @@
   },
   "police_box_door_close": {
     "category": "door",
-    "subtitle": "subtitles.police_box_door_close",
+    "subtitle": "police_box_door_close",
     "sounds": [
       {
         "name": "awt:police_box_door_close",
@@ -82,7 +112,7 @@
   },
   "classic1": {
     "category": "music",
-    "subtitle": "subtitles.classic1",
+    "subtitle": "classic1",
     "sounds": [
       {
         "name": "awt:classic1",
@@ -92,7 +122,7 @@
   },
   "classic2": {
     "category": "music",
-    "subtitle": "subtitles.classic2",
+    "subtitle": "classic2",
     "sounds": [
       {
         "name": "awt:classic2",
@@ -142,14 +172,14 @@
   },
   "bloop": {
     "category": "neutral",
-    "subtitle": "subtitles.bloop",
+    "subtitle": "bloop",
     "sounds": [
       {
         "name": "awt:bloop",
         "stream": false,
         "vortexactivate": {
           "category": "neutral",
-          "subtitle": "subtitles.vortexactivate",
+          "subtitle": "vortexactivate",
           "sounds": [
             {
               "name": "ddwa:vortex_manipulator_use",
@@ -159,7 +189,7 @@
         },
         "dalekshoot": {
           "category": "hostile",
-          "subtitle": "subtitles.dalekshoot",
+          "subtitle": "dalekshoot",
           "sounds": [
             {
               "name": "ddwa:dalekshoot",
