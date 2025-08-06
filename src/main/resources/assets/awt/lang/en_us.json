@@ -1,6 +1,8 @@
 {
   "text.config.aitconfig.title": "Adventures With TARDISes",
 
+  "entity.awt.k9": "K-9",
+
   "item.awt.atrium":"Atrium",
   "item.awt.lightsaber":"Lightsaber",
   "item.awt.processing_unit": "Processing Unit",
