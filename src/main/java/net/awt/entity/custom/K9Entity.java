@@ -57,8 +57,8 @@ public class K9Entity extends AnimalEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new LookAtEntityGoal(this, PlayerEntity.class,4f));
-        this.goalSelector.add(2, new WanderAroundGoal(this,1D));
+        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class,4f));
+        this.goalSelector.add(1, new WanderAroundGoal(this,1D));
         this.goalSelector.add(3, new LookAroundGoal(this));
     }
 
