@@ -1,6 +1,7 @@
 package net.awt.entity.custom;
 
 import net.awt.entity.ModEntities;
+import net.awt.sound.AWTSound;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
@@ -8,11 +9,13 @@ import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WanderAroundGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -43,4 +46,19 @@ public class K9Entity extends AnimalEntity {
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.K9.create(world);
     }
+
+    @Nullable
+    @Override
+    protected  SoundEvent getDeathSound() {
+        return AWTSound.K9DIE;
+    }
+
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return AWTSound.K9HURT;
+    }
+
+    //add a tame sound code ((we have tame sound in the files))
 }
