@@ -6,5 +6,5 @@ import net.minecraft.util.Identifier;
 
 public class ModModelLayers {
     public static final EntityModelLayer K9 =
-            new EntityModelLayer(new Identifier(AdventuresWithTARDISes.MOD_ID, "K9"), "main");
+            new EntityModelLayer(new Identifier(AdventuresWithTARDISes.MOD_ID, "k9"), "main");
 }
