@@ -2,6 +2,8 @@ package net.awt.entity.custom;
 
 import net.awt.entity.ModEntities;
 import net.awt.sound.AWTSound;
+import net.minecraft.entity.AnimationState;
+import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
@@ -20,8 +22,36 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class K9Entity extends AnimalEntity {
+
+    public final AnimationState idleAnimationState = new AnimationState();
+    private int idleAnimationTimeout = 0;
+
     public K9Entity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
+    }
+
+
+    private void setupAnimationStates(){
+     if (this.idleAnimationTimeout <= 0){
+         this.idleAnimationTimeout = this.random.nextInt(40) + 80;
+         this.idleAnimationState.start(this.age);
+     } else{
+         --this.idleAnimationTimeout;
+     }
+    }
+
+    @Override
+    protected void updateLimbs(float posDelta){
+        float f = this.getPose() == EntityPose.STANDING ? Math.min(posDelta * 6.0f, 1.0f) : 0.0f;
+        this.limbAnimator.updateLimbs(f, 0.2f);
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        if(this.getWorld().isClient){
+          setupAnimationStates();
+        }
     }
 
     @Override
