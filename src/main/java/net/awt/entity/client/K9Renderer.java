@@ -1,10 +1,11 @@
 package net.awt.entity.client;
 
-import com.sun.jna.platform.unix.X11;
 import net.awt.AdventuresWithTARDISes;
 import net.awt.entity.custom.K9Entity;
 import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
+import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
@@ -20,6 +21,11 @@ public class K9Renderer extends ModEntityRenderer<K9Entity, K9Model<K9Entity>>{
         return TEXTURE;
     }
 
+public void render(K9Entity mobEntity, float f, float g, MatrixStack matrixStack,
+                   VertexConsumerProvider vertexConsumerProvider, int i){
+        matrixStack.scale(1f,1f,1f);
 
+        super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
+}
 
 }

@@ -214,9 +214,7 @@ public class K9Model<T extends K9Entity> extends SinglePartEntityModel<T> {
 		.uv(162, 160).cuboid(-6.75F, -7.4201F, 23.0237F, 1.0F, 1.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 		return TexturedModelData.of(modelData, 256, 256);
 	}
-	@Override
-	public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-	}
+
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		k9.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
