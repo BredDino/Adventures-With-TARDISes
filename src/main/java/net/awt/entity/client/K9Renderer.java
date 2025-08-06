@@ -23,7 +23,7 @@ public class K9Renderer extends MobEntityRenderer<K9Entity, K9Model<K9Entity>>{
 
 public void render(K9Entity mobEntity, float f, float g, MatrixStack matrixStack,
                    VertexConsumerProvider vertexConsumerProvider, int i){
-        matrixStack.scale(1f,1f,1f);
+        matrixStack.scale(0.5f,0.5f,0.5f);
 
         super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
 }

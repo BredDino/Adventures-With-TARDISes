@@ -13,30 +13,10 @@ import net.minecraft.entity.Entity;
 
 public class K9Model<T extends K9Entity> extends SinglePartEntityModel<T> {
 	private final ModelPart k9;
-	private final ModelPart panels;
-	private final ModelPart torso;
-	private final ModelPart head;
-	private final ModelPart bone8;
-	private final ModelPart bone7;
-	private final ModelPart bone6;
-	private final ModelPart tail;
-	private final ModelPart label;
-	private final ModelPart bone;
-	private final ModelPart bone2;
-	private final ModelPart bone3;
+
 	public K9Model(ModelPart root) {
 		this.k9 = root.getChild("k9");
-		this.panels = root.getChild("panels");
-		this.torso = root.getChild("torso");
-		this.head = root.getChild("head");
-		this.bone8 = root.getChild("bone8");
-		this.bone7 = root.getChild("bone7");
-		this.bone6 = root.getChild("bone6");
-		this.tail = root.getChild("tail");
-		this.label = root.getChild("label");
-		this.bone = root.getChild("bone");
-		this.bone2 = root.getChild("bone2");
-		this.bone3 = root.getChild("bone3");
+
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
