@@ -66,7 +66,7 @@ public class K9Entity extends AnimalEntity {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH,50)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.5f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.25f)
                 .add(EntityAttributes.GENERIC_ARMOR,1);
 
     }
