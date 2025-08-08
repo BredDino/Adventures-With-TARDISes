@@ -21,6 +21,13 @@ public class ModDimensions {
     public static final RegistryKey<DimensionType> SKARO_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
             new Identifier(AdventuresWithTARDISes.MOD_ID, "skaro_type"));
 
+    public static final RegistryKey<DimensionOptions> ABANDONEDOVERWORLD_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
+            new Identifier(AdventuresWithTARDISes.MOD_ID, "abandonedoverworld"));
+    public static final RegistryKey<World> ABANDONEDOVERWORLD_KEY_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
+            new Identifier(AdventuresWithTARDISes.MOD_ID, "abandonedoverworld"));
+    public static final RegistryKey<DimensionType> ABANDONEDOVERWORLD_KEY_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
+            new Identifier(AdventuresWithTARDISes.MOD_ID, "abandonedoverworld_type"));
+
     public static void bootstrapType(Registerable<DimensionType> context) {
         context.register(SKARO_DIM_TYPE, new DimensionType(
                 OptionalLong.of(12000), // fixedTime
