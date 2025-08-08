@@ -1,0 +1,17 @@
+{
+  "type": "awt:skaro_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:plains",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "height": 10,
+          "block": "minecraft:stone"
+        }
+      ]
+    }
+  }
+}
