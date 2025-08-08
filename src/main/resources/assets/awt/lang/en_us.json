@@ -31,6 +31,7 @@
   "exterior.awt.legoboxes": "Lego-Styled",
   "exterior.awt.capsules": "TT Capsules",
   "exterior.awt.awt-exclusive": "AWT Exclusive",
+  "exterior.awt.altmodernboxes": "Alt Modern Boxes",
 
   "exterior.awt.third": "Pertwee",
   "exterior.awt.second": "Troughton",
@@ -54,7 +55,7 @@
   "exterior.awt.blocktis": "OG Blocktis",
   "exterior.awt.blocktisv2": "Blocktis V2",
   "exterior.awt.blocktisv3": "Blocktis V3",
-  "exterior.awt.deobox": "Deo's PoliceBox",
+  "exterior.awt.deobox": "Toyota",
   "exterior.awt.logo_tardis_default": "Lego PoliceBox",
   "exterior.awt.logo_tardis_purple": "Lego PoliceBoxV2",
   "exterior.awt.logo_tardis_darkblue": "Lego PoliceBoxV3",

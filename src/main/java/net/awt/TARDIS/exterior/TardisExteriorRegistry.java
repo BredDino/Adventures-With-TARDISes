@@ -115,7 +115,7 @@ public class TardisExteriorRegistry {
         BLOCKTISV3 = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktisv3").register();
         BLOCKTISV3.setDoor(new AddonExterior.Door(BLOCKTISV3, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
-        DEOBOX = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "deobox").register();
+        DEOBOX = new AddonExterior(new Identifier(MOD_ID, "altmodernboxes"), MOD_ID, "deobox").register();
         DEOBOX.setDoor(new AddonExterior.Door(DEOBOX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         LEGO = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_default").register();
