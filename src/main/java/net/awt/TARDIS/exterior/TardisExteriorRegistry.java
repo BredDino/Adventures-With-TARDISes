@@ -45,6 +45,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior LEGODIM;
     public static AddonExterior POLICEBOXALT;
     public static AddonExterior POLICEBOXPURPLE;
+    public static AddonExterior LEFTHOTTUB;
 
     public static AddonExterior JAKE;
 
@@ -141,6 +142,10 @@ public class TardisExteriorRegistry {
 
         JAKE = new AddonExterior(AWTExclusiveCategory.REFERENCE, MOD_ID, "jake").register();
         JAKE.setDoor(new AddonExterior.Door(JAKE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        LEFTHOTTUB = new AddonExterior(new Identifier(MOD_ID, "hottub"), MOD_ID, "lefthottub").register();
+        LEFTHOTTUB.setDoor(new AddonExterior.Door(LEFTHOTTUB, false, AWTSound.BLOOP, AWTSound.BLOOP)).toDoor().register();
+
 
     }
 
@@ -306,6 +311,10 @@ public class TardisExteriorRegistry {
 
         JAKE.setModel(new JakeTheDogExteriorModel(JakeTheDogExteriorModel.getTexturedModelData().createModel())).toClient().register();
         JAKE.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+
+        LEFTHOTTUB.setModel(new lefthottub()).toClient().register();
+        LEFTHOTTUB.toDoor().setModel(new lefthottubdoor(lefthottubdoor.getTexturedModelData().createModel())).toClient().register();
+        LEFTHOTTUB.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
     }
 }
