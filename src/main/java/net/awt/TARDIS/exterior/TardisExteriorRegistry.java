@@ -33,7 +33,6 @@ public class TardisExteriorRegistry {
     public static AddonExterior VASTCORAL;
     public static AddonExterior VASTTOKOMAK;
     public static AddonExterior TYPE70;
-    public static AddonExterior DEOTYPE70;
     public static AddonExterior BLOCKTIS;
     public static AddonExterior BLOCKTISV2;
     public static AddonExterior BLOCKTISV3;
@@ -103,9 +102,6 @@ public class TardisExteriorRegistry {
 
         TYPE70 = new AddonExterior(new Identifier(MOD_ID, "capsules"), MOD_ID, "type70").register();
         TYPE70.setDoor(new AddonExterior.Door(TYPE70, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
-
-        DEOTYPE70 = new AddonExterior(new Identifier(MOD_ID, "capsules"), MOD_ID, "deotype70").register();
-        DEOTYPE70.setDoor(new AddonExterior.Door(DEOTYPE70, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
         BLOCKTIS = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktis").register();
         BLOCKTIS.setDoor(new AddonExterior.Door(BLOCKTIS, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
@@ -238,12 +234,6 @@ public class TardisExteriorRegistry {
         TYPE70.setPortalWidth(1f);
         TYPE70.setPortalHeight(2f);
         TYPE70.setSonicItemTranslations(new Vector3f(0, 0, 0));
-
-        DEOTYPE70.setModel(new DeoType70Exterior()).toClient().register();
-        DEOTYPE70.toDoor().setModel(new DeoType70Door(DeoType70Door.getTexturedModelData().createModel())).toClient().register();
-        DEOTYPE70.setPortalWidth(1f);
-        DEOTYPE70.setPortalHeight(2f);
-        DEOTYPE70.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTIS.setModel(new BlocktisExterior()).toClient().register();
         BLOCKTIS.toDoor().setModel(new BlocktisDoor(BlocktisDoor.getTexturedModelData().createModel())).toClient().register();
