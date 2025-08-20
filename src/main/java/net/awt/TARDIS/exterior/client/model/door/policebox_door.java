@@ -59,7 +59,13 @@ public class policebox_door extends DoorModel {
 		ModelPartData phone = rightdoor.addChild("phone", ModelPartBuilder.create().uv(88, 33).cuboid(-1.25F, -4.0F, -1.75F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
 		.uv(94, 80).cuboid(-2.75F, -4.0F, -1.75F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
 		.uv(56, 81).cuboid(-3.0F, -4.0F, -2.0F, 3.0F, 4.0F, 1.0F, new Dilation(0.0F))
-		.uv(91, 98).cuboid(-3.5F, -4.75F, -1.75F, 4.0F, 5.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(4.2187F, -16.25F, 3.0313F));
+		.uv(91, 98).cuboid(-3.5F, -4.75F, -1.75F, 4.0F, 5.0F, 2.0F, new Dilation(0.0F))
+		.uv(0, 0).cuboid(-1.5F, -4.0F, -2.0F, 2.0F, 4.0F, 1.0F, new Dilation(0.0F))
+		.uv(1, 1).cuboid(-2.75F, -4.0F, -2.0F, 1.0F, 4.0F, 1.0F, new Dilation(0.0F))
+		.uv(2, 7).cuboid(-1.05F, -3.5F, -1.7F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
+		.uv(2, 7).cuboid(-1.05F, -1.5F, -1.7F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
+		.uv(2, 2).cuboid(-2.25F, -3.4F, -1.0F, 1.0F, 1.0F, 0.0F, new Dilation(0.0F))
+		.uv(2, 2).cuboid(-2.25F, -1.4F, -1.0F, 1.0F, 1.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(4.2187F, -16.25F, 3.0313F));
 
 		ModelPartData cube_r5 = phone.addChild("cube_r5", ModelPartBuilder.create().uv(95, 77).cuboid(-1.0F, -2.0F, -1.0F, 2.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-0.7929F, -0.7071F, -0.5F, 0.0F, 0.0F, -0.7854F));
 
