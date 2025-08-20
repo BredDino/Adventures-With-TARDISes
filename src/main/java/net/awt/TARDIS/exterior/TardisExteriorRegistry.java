@@ -39,7 +39,6 @@ public class TardisExteriorRegistry {
     public static AddonExterior LEGO;
     public static AddonExterior LEGO2;
     public static AddonExterior LEGO3;
-    public static AddonExterior HOTTUBTIMEMACHINE;
     public static AddonExterior LEGODIM;
     public static AddonExterior POLICEBOXALT;
     public static AddonExterior POLICEBOXPURPLE;
@@ -122,9 +121,6 @@ public class TardisExteriorRegistry {
 
         LEGO3 = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_darkblue").register();
         LEGO3.setDoor(new AddonExterior.Door(LEGO3, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
-
-        HOTTUBTIMEMACHINE = new AddonExterior(new Identifier(MOD_ID, "hottub"), MOD_ID, "hottubtimemachine").register();
-        HOTTUBTIMEMACHINE.setDoor(new AddonExterior.Door(HOTTUBTIMEMACHINE, false, AWTSound.BLOOP, AWTSound.BLOOP)).toDoor().register();
 
         LEGODIM = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "lego_dimensions_police_box").register();
         LEGODIM.setDoor(new AddonExterior.Door(LEGODIM, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
@@ -277,10 +273,6 @@ public class TardisExteriorRegistry {
         LEGO3.setPortalWidth(1f);
         LEGO3.setPortalHeight(2f);
         LEGO3.setSonicItemTranslations(new Vector3f(0, 0, 0));
-
-        HOTTUBTIMEMACHINE.setModel(new hottubtimemachine()).toClient().register();
-        HOTTUBTIMEMACHINE.toDoor().setModel(new hottubtimemachinedoor(hottubtimemachinedoor.getTexturedModelData().createModel())).toClient().register();
-        HOTTUBTIMEMACHINE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         LEGODIM.setModel(new lego_tardis_model()).toClient().register();
         LEGODIM.toDoor().setModel(new lego_tardis_model_door(lego_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
