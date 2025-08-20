@@ -42,11 +42,9 @@ public class policebox extends ExteriorModel {
 		this.phone = this.rightdoor.getChild("phone");
 		this.leftdoor = this.doors.getChild("leftdoor");
 	}
-
     public policebox()  {
         this(getTexturedModelData().createModel());
     }
-
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
@@ -106,7 +104,7 @@ public class policebox extends ExteriorModel {
 		ModelPartData cube_r9 = posts.addChild("cube_r9", ModelPartBuilder.create().uv(84, 38).cuboid(-10.7651F, -5.6145F, -10.7651F, 2.0F, 2.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(23.9536F, -35.3855F, 0.0464F, 0.0F, -1.5708F, 0.0F));
 
 		ModelPartData front = bone.addChild("front", ModelPartBuilder.create().uv(62, 135).cuboid(8.7187F, -33.0F, -13.2187F, 1.0F, 31.0F, 2.0F, new Dilation(0.0F))
-		.uv(132, 136).cuboid(-6.2813F, -34.0F, -13.2187F, 16.0F, 1.0F, 2.0F, new Dilation(0.0F))
+		.uv(131, 136).cuboid(-7.0813F, -34.0F, -13.2187F, 17.0F, 1.0F, 2.0F, new Dilation(0.0F))
 		.uv(68, 135).cuboid(-6.2813F, -33.0F, -13.2187F, 1.0F, 31.0F, 2.0F, new Dilation(0.0F))
 		.uv(0, 112).cuboid(-8.7349F, -36.9886F, -14.2651F, 21.0F, 3.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 

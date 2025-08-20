@@ -37,7 +37,7 @@ public class policebox_door extends DoorModel {
 		ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create(), ModelTransform.pivot(-1.3F, 26.0F, 6.0F));
 
 		ModelPartData front = bone.addChild("front", ModelPartBuilder.create().uv(62, 135).cuboid(8.7187F, -33.0F, -13.2187F, 1.0F, 31.0F, 2.0F, new Dilation(0.0F))
-		.uv(132, 136).cuboid(-6.2813F, -34.0F, -13.2187F, 16.0F, 1.0F, 2.0F, new Dilation(0.0F))
+		.uv(131, 136).cuboid(-7.0813F, -34.0F, -13.2187F, 17.0F, 1.0F, 2.0F, new Dilation(0.0F))
 		.uv(68, 135).cuboid(-6.2813F, -33.0F, -13.2187F, 1.0F, 31.0F, 2.0F, new Dilation(0.0F))
 		.uv(0, 112).cuboid(-8.7349F, -36.9886F, -14.2651F, 21.0F, 3.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
