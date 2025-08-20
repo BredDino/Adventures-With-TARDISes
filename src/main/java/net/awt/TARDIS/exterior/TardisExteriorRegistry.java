@@ -36,7 +36,6 @@ public class TardisExteriorRegistry {
     public static AddonExterior BLOCKTIS;
     public static AddonExterior BLOCKTISV2;
     public static AddonExterior BLOCKTISV3;
-    public static AddonExterior DEOBOX;
     public static AddonExterior LEGO;
     public static AddonExterior LEGO2;
     public static AddonExterior LEGO3;
@@ -114,9 +113,6 @@ public class TardisExteriorRegistry {
 
         BLOCKTISV3 = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktisv3").register();
         BLOCKTISV3.setDoor(new AddonExterior.Door(BLOCKTISV3, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
-
-        DEOBOX = new AddonExterior(new Identifier(MOD_ID, "altmodernboxes"), MOD_ID, "deobox").register();
-        DEOBOX.setDoor(new AddonExterior.Door(DEOBOX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         LEGO = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_default").register();
         LEGO.setDoor(new AddonExterior.Door(LEGO, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
@@ -263,12 +259,6 @@ public class TardisExteriorRegistry {
         BLOCKTISV3.setPortalWidth(0.75f);
         BLOCKTISV3.setPortalHeight(1.75f);
         BLOCKTISV3.setSonicItemTranslations(new Vector3f(0, 0, 0));
-
-        DEOBOX.setModel(new DeoBox()).toClient().register();
-        DEOBOX.toDoor().setModel(new DeoBoxDoor(DeoBoxDoor.getTexturedModelData().createModel())).toClient().register();
-        DEOBOX.setPortalWidth(1f);
-        DEOBOX.setPortalHeight(2f);
-        DEOBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         LEGO.setModel(new logo_tardis_model()).toClient().register();
         LEGO.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
