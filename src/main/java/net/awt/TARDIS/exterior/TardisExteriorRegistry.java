@@ -45,6 +45,9 @@ public class TardisExteriorRegistry {
     public static AddonExterior POLICEBOXALT;
     public static AddonExterior POLICEBOXPURPLE;
     public static AddonExterior LEFTHOTTUB;
+    public static AddonExterior POLICEBOXCORAL;
+    public static AddonExterior POLICEBOXBADWOLF;
+    public static AddonExterior GAMBLEBOX;
 
     public static AddonExterior JAKE;
 
@@ -142,6 +145,14 @@ public class TardisExteriorRegistry {
         LEFTHOTTUB = new AddonExterior(new Identifier(MOD_ID, "hottub"), MOD_ID, "lefthottub").register();
         LEFTHOTTUB.setDoor(new AddonExterior.Door(LEFTHOTTUB, false, AWTSound.BLOOP, AWTSound.BLOOP)).toDoor().register();
 
+        POLICEBOXCORAL = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_coral").register();
+        POLICEBOXCORAL.setDoor(new AddonExterior.Door(POLICEBOXCORAL, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        POLICEBOXBADWOLF = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_badwolf").register();
+        POLICEBOXBADWOLF.setDoor(new AddonExterior.Door(POLICEBOXBADWOLF, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        GAMBLEBOX = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "gamblebox").register();
+        GAMBLEBOX.setDoor(new AddonExterior.Door(GAMBLEBOX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
     }
 
@@ -306,5 +317,22 @@ public class TardisExteriorRegistry {
         LEFTHOTTUB.toDoor().setModel(new lefthottubdoor(lefthottubdoor.getTexturedModelData().createModel())).toClient().register();
         LEFTHOTTUB.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
+        POLICEBOXCORAL.setModel(new policebox()).toClient().register();
+        POLICEBOXCORAL.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXCORAL.setPortalWidth(1f);
+        POLICEBOXCORAL.setPortalHeight(2f);
+        POLICEBOXCORAL.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOXBADWOLF.setModel(new policebox()).toClient().register();
+        POLICEBOXBADWOLF.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXBADWOLF.setPortalWidth(1f);
+        POLICEBOXBADWOLF.setPortalHeight(2f);
+        POLICEBOXBADWOLF.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        GAMBLEBOX.setModel(new policebox()).toClient().register();
+        GAMBLEBOX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        GAMBLEBOX.setPortalWidth(1f);
+        GAMBLEBOX.setPortalHeight(2f);
+        GAMBLEBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
     }
 }
