@@ -117,17 +117,20 @@ public class policebox extends ExteriorModel {
 		ModelPartData rightdoor = doors.addChild("rightdoor", ModelPartBuilder.create().uv(126, 41).cuboid(5.9687F, -30.0F, -0.2687F, 2.0F, 30.0F, 0.0F, new Dilation(0.0F))
 		.uv(134, 73).cuboid(-0.2813F, -30.0F, 0.0313F, 7.0F, 31.0F, 0.0F, new Dilation(0.0F))
 		.uv(134, 41).cuboid(-0.2813F, -30.0F, 0.2813F, 7.0F, 31.0F, 1.0F, new Dilation(0.0F))
-		.uv(80, 47).cuboid(5.6687F, -19.7071F, -0.6758F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(-5.0F, -3.0F, -13.0F));
+		.uv(80, 47).cuboid(5.6687F, -19.7071F, -0.6758F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F))
+		.uv(80, 50).cuboid(1.6687F, -19.7071F, -0.6758F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(-5.0F, -3.0F, -13.0F));
 
-		ModelPartData cube_r12 = rightdoor.addChild("cube_r12", ModelPartBuilder.create().uv(84, 46).cuboid(-1.7187F, -12.3358F, -5.679F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(7.3874F, -23.3851F, 11.66F, 1.5708F, 0.0F, 0.0F));
+		ModelPartData cube_r12 = rightdoor.addChild("cube_r12", ModelPartBuilder.create().uv(82, 50).cuboid(-1.7187F, 2.9719F, -12.043F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F))
+		.uv(82, 47).cuboid(2.2813F, 2.9719F, -12.043F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(3.3874F, -7.6642F, 4.2961F, -1.5708F, 0.0F, 0.0F));
 
-		ModelPartData cube_r13 = rightdoor.addChild("cube_r13", ModelPartBuilder.create().uv(82, 47).cuboid(-1.7187F, 2.9719F, -12.043F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(7.3874F, -7.6642F, 4.2961F, -1.5708F, 0.0F, 0.0F));
+		ModelPartData cube_r13 = rightdoor.addChild("cube_r13", ModelPartBuilder.create().uv(84, 49).cuboid(-1.7187F, -12.3358F, -5.679F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F))
+		.uv(84, 46).cuboid(2.2813F, -12.3358F, -5.679F, 1.0F, 2.0F, 0.0F, new Dilation(0.0F)), ModelTransform.of(3.3874F, -23.3851F, 11.66F, 1.5708F, 0.0F, 0.0F));
 
 		ModelPartData phone = rightdoor.addChild("phone", ModelPartBuilder.create().uv(88, 33).cuboid(-1.25F, -4.0F, -1.75F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
 		.uv(94, 80).cuboid(-2.75F, -4.0F, -1.75F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
 		.uv(56, 81).cuboid(-3.0F, -4.0F, -2.0F, 3.0F, 4.0F, 1.0F, new Dilation(0.0F))
 		.uv(91, 98).cuboid(-3.5F, -4.75F, -1.75F, 4.0F, 5.0F, 2.0F, new Dilation(0.0F))
-		.uv(0, 0).cuboid(-1.5F, -4.0F, -2.0F, 2.0F, 4.0F, 1.0F, new Dilation(0.0F))
+		.uv(1, 1).cuboid(-1.5F, -4.0F, -2.0F, 2.0F, 4.0F, 1.0F, new Dilation(0.0F))
 		.uv(1, 1).cuboid(-2.75F, -4.0F, -2.0F, 1.0F, 4.0F, 1.0F, new Dilation(0.0F))
 		.uv(2, 7).cuboid(-1.05F, -3.5F, -1.7F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
 		.uv(2, 7).cuboid(-1.05F, -1.5F, -1.7F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
