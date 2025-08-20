@@ -135,7 +135,7 @@ public class TardisExteriorRegistry {
         JAKE.setDoor(new AddonExterior.Door(JAKE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         LEFTHOTTUB = new AddonExterior(new Identifier(MOD_ID, "hottub"), MOD_ID, "lefthottub").register();
-        LEFTHOTTUB.setDoor(new AddonExterior.Door(LEFTHOTTUB, false, AWTSound.BLOOP, AWTSound.BLOOP)).toDoor().register();
+        LEFTHOTTUB.setDoor(new AddonExterior.Door(LEFTHOTTUB, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         POLICEBOXCORAL = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_coral").register();
         POLICEBOXCORAL.setDoor(new AddonExterior.Door(POLICEBOXCORAL, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
