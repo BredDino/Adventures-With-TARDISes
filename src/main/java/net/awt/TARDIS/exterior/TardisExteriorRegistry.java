@@ -47,6 +47,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior POLICEBOXBADWOLF;
     public static AddonExterior GAMBLEBOX;
     public static AddonExterior POLICEBOXTOKOMAK;
+    public static AddonExterior POLICEBOXALT2;
 
     public static AddonExterior JAKE;
 
@@ -149,6 +150,9 @@ public class TardisExteriorRegistry {
 
         POLICEBOXTOKOMAK = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_tokomak").register();
         POLICEBOXTOKOMAK.setDoor(new AddonExterior.Door(POLICEBOXTOKOMAK, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        POLICEBOXALT2 = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_alt2").register();
+        POLICEBOXALT2.setDoor(new AddonExterior.Door(POLICEBOXALT2, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
     }
 
@@ -326,5 +330,11 @@ public class TardisExteriorRegistry {
         POLICEBOXTOKOMAK.setPortalWidth(1f);
         POLICEBOXTOKOMAK.setPortalHeight(2f);
         POLICEBOXTOKOMAK.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOXALT2.setModel(new policebox()).toClient().register();
+        POLICEBOXALT2.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXALT2.setPortalWidth(1f);
+        POLICEBOXALT2.setPortalHeight(2f);
+        POLICEBOXALT2.setSonicItemTranslations(new Vector3f(0, 0, 0));
     }
 }
