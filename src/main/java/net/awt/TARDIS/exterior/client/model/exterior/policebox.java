@@ -135,7 +135,7 @@ public class policebox extends ExteriorModel {
 		.uv(2, 7).cuboid(-1.45F, -3.5F, -1.7F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
 		.uv(2, 7).cuboid(-1.45F, -1.5F, -1.7F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
 		.uv(2, 2).cuboid(-2.65F, -3.4F, -1.0F, 1.0F, 1.0F, 0.0F, new Dilation(0.0F))
-		.uv(2, 2).cuboid(-2.65F, -1.4F, -1.0F, 1.0F, 1.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(4.2187F, -16.25F, 3.0313F));
+		.uv(2, 2).cuboid(-2.65F, -1.4F, -1.0F, 1.0F, 1.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(4.7187F, -16.25F, 3.0313F));
 
 		ModelPartData cube_r14 = phone.addChild("cube_r14", ModelPartBuilder.create().uv(95, 77).cuboid(-1.0F, -2.0F, -1.0F, 2.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-0.7929F, -0.7071F, -0.5F, 0.0F, 0.0F, -0.7854F));
 
