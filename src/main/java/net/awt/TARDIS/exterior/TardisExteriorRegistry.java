@@ -49,6 +49,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior POLICEBOXTOKOMAK;
     public static AddonExterior POLICEBOXALT2;
     public static AddonExterior POLICEBOXRHAMNOUS;
+    public static AddonExterior POLICEBOXNATHAN;
 
     public static AddonExterior JAKE;
 
@@ -157,6 +158,9 @@ public class TardisExteriorRegistry {
 
         POLICEBOXRHAMNOUS = new AddonExterior(AWTExclusiveCategory.REFERENCE, MOD_ID, "policebox_rhamnous").register();
         POLICEBOXRHAMNOUS.setDoor(new AddonExterior.Door(POLICEBOXRHAMNOUS, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        POLICEBOXNATHAN = new AddonExterior(AWTExclusiveCategory.REFERENCE, MOD_ID, "policebox_nathan").register();
+        POLICEBOXNATHAN.setDoor(new AddonExterior.Door(POLICEBOXNATHAN, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
     }
 
@@ -346,5 +350,11 @@ public class TardisExteriorRegistry {
         POLICEBOXRHAMNOUS.setPortalWidth(1f);
         POLICEBOXRHAMNOUS.setPortalHeight(2f);
         POLICEBOXRHAMNOUS.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOXNATHAN.setModel(new policebox()).toClient().register();
+        POLICEBOXNATHAN.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXNATHAN.setPortalWidth(1f);
+        POLICEBOXNATHAN.setPortalHeight(2f);
+        POLICEBOXNATHAN.setSonicItemTranslations(new Vector3f(0, 0, 0));
     }
 }
