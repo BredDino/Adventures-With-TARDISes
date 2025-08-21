@@ -66,8 +66,13 @@ public class policebox extends ExteriorModel {
 		.uv(50, 135).cuboid(7.4187F, -33.0F, 5.7813F, 1.0F, 31.0F, 2.0F, new Dilation(0.0F))
 		.uv(104, 104).cuboid(-6.5813F, -33.0F, 7.7813F, 14.0F, 31.0F, 0.0F, new Dilation(0.0F))
 		.uv(104, 72).cuboid(-6.5813F, -33.0F, 6.5313F, 14.0F, 31.0F, 1.0F, new Dilation(0.0F))
+		.uv(126, 163).cuboid(0.45F, -15.0F, 7.0F, 0.0F, 5.0F, 5.0F, new Dilation(0.0F))
+		.uv(126, 158).cuboid(0.45F, -21.0F, 7.0F, 0.0F, 5.0F, 5.0F, new Dilation(0.0F))
+		.uv(126, 153).cuboid(0.45F, -27.0F, 7.0F, 0.0F, 5.0F, 5.0F, new Dilation(0.0F))
+		.uv(126, 148).cuboid(0.45F, -33.0F, 7.0F, 0.0F, 5.0F, 5.0F, new Dilation(0.0F))
 		.uv(56, 135).cuboid(-7.5813F, -33.0F, 5.7813F, 1.0F, 31.0F, 2.0F, new Dilation(0.0F))
-		.uv(122, 41).cuboid(-0.5813F, -33.0F, 7.7813F, 2.0F, 31.0F, 0.0F, new Dilation(0.0F)), ModelTransform.pivot(1.3F, 0.0F, 0.0F));
+		.uv(122, 41).cuboid(-0.5813F, -33.0F, 7.7813F, 2.0F, 31.0F, 0.0F, new Dilation(0.0F))
+		.uv(126, 168).cuboid(0.45F, -9.0F, 7.0F, 0.0F, 5.0F, 5.0F, new Dilation(0.0F)), ModelTransform.pivot(1.3F, 0.0F, 0.0F));
 
 		ModelPartData roof = bone.addChild("roof", ModelPartBuilder.create().uv(0, 49).cuboid(-6.2813F, -4.5F, -10.8187F, 16.0F, 2.0F, 16.0F, new Dilation(0.0F))
 		.uv(0, 27).cuboid(-7.2813F, -3.5F, -11.8187F, 18.0F, 4.0F, 18.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -37.0F, 0.1F));
