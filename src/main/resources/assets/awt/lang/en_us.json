@@ -59,10 +59,11 @@
   "exterior.awt.logo_tardis_purple": "Lego PoliceBoxV2",
   "exterior.awt.logo_tardis_darkblue": "Lego PoliceBoxV3",
   "exterior.awt.lego_dimensions_police_box": "Lego Dim",
-  "exterior.awt.policebox_alt": "Toyota",
-  "exterior.awt.policebox_purple": "Toyota Purple",
   "exterior.awt.lefthottub": "Hot Tub Time Machine",
   "exterior.awt.jake": "AiT Jake",
+
+  "exterior.awt.policebox_alt": "Toyota",
+  "exterior.awt.policebox_purple": "TardisOwner",
   "exterior.awt.policebox_coral": "Coral",
   "exterior.awt.policebox_badwolf": "Badwolf",
   "exterior.awt.gamblebox": "Gamblebox",
