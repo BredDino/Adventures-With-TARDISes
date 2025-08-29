@@ -127,10 +127,10 @@ public class neziko extends ExteriorModel {
         DoorHandler door = exterior.tardis().get().door();
 
         if (!AITModClient.CONFIG.animateDoors) {
-            this.doorframe.getChild("door").yaw = (door.isLeftOpen() || door.isOpen()) ? -5.0F : 0.0F;
+            this.doorframe.getChild("door").yaw = (door.isRightOpen() || door.isOpen()) ? -5.0F : 0.0F;
         } else {
             float maxRot = -90;
-            this.doorframe.getChild("door").yaw = (float) Math.toRadians(maxRot * door.getLeftRot());
+            this.doorframe.getChild("door").yaw = (float) Math.toRadians(maxRot * door.getRightRot());
         }
 
         super.renderWithAnimations(tardis, exterior, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);

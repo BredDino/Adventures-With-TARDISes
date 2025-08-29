@@ -52,10 +52,10 @@ public class nezikodoor extends DoorModel {
     public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
         if (!AITModClient.CONFIG.animateDoors) {
             DoorHandler door = doorEntity.tardis().get().door();
-            bone.yaw = !door.isLeftOpen() && !door.isOpen() ? 0.0F : -5.0F;
+            bone.yaw = !door.isRightOpen() && !door.isOpen() ? 0.0F : -5.0F;
         } else {
             float maxRot = 90.0F;
-            door.yaw = (float)(Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getLeftRot())));
+            door.yaw = (float)(Math.toRadians((double)(maxRot * doorEntity.tardis().get().door().getRightRot())));
         }
 
         matrices.push();
