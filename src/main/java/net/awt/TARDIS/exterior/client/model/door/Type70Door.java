@@ -18,58 +18,58 @@ import net.minecraft.util.math.RotationAxis;
 // Paste this class into your mod and generate all required imports
 public class Type70Door extends DoorModel {
 	private final ModelPart bone;
-	private final ModelPart type70door;
+	private final ModelPart door;
 	public Type70Door(ModelPart root) {
 		this.bone = root.getChild("bone");
-		this.type70door = this.bone.getChild("type70door");
+		this.door = this.bone.getChild("door");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create(), ModelTransform.of(-1.0F, 24.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
+		ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create().uv(89, 152).cuboid(-16.0F, -36.0F, 0.0F, 32.0F, 4.0F, 1.0F, new Dilation(0.0F))
+		.uv(119, 157).cuboid(7.0F, -32.0F, 0.0F, 9.0F, 32.0F, 1.0F, new Dilation(0.0F))
+		.uv(89, 190).cuboid(-16.0F, -32.0F, 0.0F, 9.0F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, -7.0F));
 
-		ModelPartData type70door = bone.addChild("type70door", ModelPartBuilder.create().uv(48, 72).cuboid(-11.0F, 26.9F, -7.0F, 19.0F, 1.0F, 14.0F, new Dilation(0.0F))
-		.uv(48, 102).cuboid(8.0F, -3.1F, -7.0F, 1.0F, 31.0F, 14.0F, new Dilation(0.0F))
-		.uv(48, 87).cuboid(-11.0F, -3.1F, -7.0F, 19.0F, 1.0F, 14.0F, new Dilation(0.0F)), ModelTransform.pivot(-3.0F, -28.0F, 1.0F));
+		ModelPartData door = bone.addChild("door", ModelPartBuilder.create().uv(89, 157).cuboid(-7.0F, -32.01F, -9.0F, 14.0F, 32.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 8.0F));
 		return TexturedModelData.of(modelData, 256, 256);
 	}
-	@Override
-	public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-	}
-	@Override
-	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		bone.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
-	}
+    @Override
+    public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    }
+    @Override
+    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
+        bone.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+    }
 
-	@Override
-	public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
-			if ( doorEntity.tardis().isEmpty())
-				return;
+    @Override
+    public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
+        if ( doorEntity.tardis().isEmpty())
+            return;
 
-			DoorHandler door =  doorEntity.tardis().get().door();
+        DoorHandler door =  doorEntity.tardis().get().door();
 
-		if (!AITModClient.CONFIG.animateDoors) {
-				this.type70door.pivotX = -3 + (door.isOpen() ? 16 : 0);
-			} else {
-				this.type70door.pivotX = -3 + 16 * door.getLeftRot();
-			}
+        if (!AITModClient.CONFIG.animateDoors) {
+            this.door.pivotZ = 8 + (door.isOpen() ? 11 : 0);
+        } else {
+            this.door.pivotZ = 8 - 11 * door.getLeftRot();
+        }
 
 
-		matrices.push();
-		matrices.scale(1, 1, 1);
-		matrices.translate(0.0F, -1.5F, 0.0F);
-		matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180.0F));
-		super.renderWithAnimations(tardis, doorEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
-		matrices.pop();
-	}
+        matrices.push();
+        matrices.scale(1, 1, 1);
+        matrices.translate(0.0F, -1.5F, 0.0F);
+        matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180.0F));
+        super.renderWithAnimations(tardis, doorEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
+        matrices.pop();
+    }
 
-	@Override
-	public Animation getAnimationForDoorState(DoorHandler.AnimationDoorState state) {
-		return Animation.Builder.create(0).build();
-	}
+    @Override
+    public Animation getAnimationForDoorState(DoorHandler.AnimationDoorState state) {
+        return Animation.Builder.create(0).build();
+    }
 
-	@Override
-	public ModelPart getPart() {
-		return bone;
-	}
+    @Override
+    public ModelPart getPart() {
+        return bone;
+    }
 }
