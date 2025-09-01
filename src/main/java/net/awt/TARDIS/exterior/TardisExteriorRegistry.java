@@ -29,9 +29,6 @@ public class TardisExteriorRegistry {
     public static AddonExterior LIMEGREENONION;
     public static AddonExterior MULTIONION;
     public static AddonExterior POLICEBOX;
-    public static AddonExterior VASTDEFAULT;
-    public static AddonExterior VASTCORAL;
-    public static AddonExterior VASTTOKOMAK;
     public static AddonExterior TYPE70;
     public static AddonExterior TYPE70WG;
     public static AddonExterior TYPE70ALT;
@@ -100,15 +97,6 @@ public class TardisExteriorRegistry {
 
         POLICEBOX = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox").register();
         POLICEBOX.setDoor(new AddonExterior.Door(POLICEBOX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
-
-        VASTDEFAULT = new AddonExterior(new Identifier(MOD_ID, "vast"), MOD_ID, "vastdefault").register();
-        VASTDEFAULT.setDoor(new AddonExterior.Door(VASTDEFAULT, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
-
-        VASTCORAL = new AddonExterior(new Identifier(MOD_ID, "vast"), MOD_ID, "vastcoral").register();
-        VASTCORAL.setDoor(new AddonExterior.Door(VASTCORAL, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
-
-        VASTTOKOMAK = new AddonExterior(new Identifier(MOD_ID, "vast"), MOD_ID, "vasttokomak").register();
-        VASTTOKOMAK.setDoor(new AddonExterior.Door(VASTTOKOMAK, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         TYPE70 = new AddonExterior(new Identifier(MOD_ID, "capsules"), MOD_ID, "type70").register();
         TYPE70.setDoor(new AddonExterior.Door(TYPE70, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
@@ -249,24 +237,6 @@ public class TardisExteriorRegistry {
         POLICEBOX.setPortalWidth(1f);
         POLICEBOX.setPortalHeight(2f);
         POLICEBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
-
-        VASTDEFAULT.setModel(new VastBox()).toClient().register();
-        VASTDEFAULT.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
-        VASTDEFAULT.setPortalWidth(1f);
-        VASTDEFAULT.setPortalHeight(2f);
-        VASTDEFAULT.setSonicItemTranslations(new Vector3f(0, 0, 0));
-
-        VASTCORAL.setModel(new VastBox()).toClient().register();
-        VASTCORAL.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
-        VASTCORAL.setPortalWidth(1f);
-        VASTCORAL.setPortalHeight(2f);
-        VASTCORAL.setSonicItemTranslations(new Vector3f(0, 0, 0));
-
-        VASTTOKOMAK.setModel(new VastBox()).toClient().register();
-        VASTTOKOMAK.toDoor().setModel(new VastBoxDoor(VastBoxDoor.getTexturedModelData().createModel())).toClient().register();
-        VASTTOKOMAK.setPortalWidth(1f);
-        VASTTOKOMAK.setPortalHeight(2f);
-        VASTTOKOMAK.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         TYPE70.setModel(new Type70Exterior()).toClient().register();
         TYPE70.toDoor().setModel(new Type70Door(Type70Door.getTexturedModelData().createModel())).toClient().register();
