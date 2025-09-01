@@ -33,6 +33,8 @@ public class TardisExteriorRegistry {
     public static AddonExterior VASTCORAL;
     public static AddonExterior VASTTOKOMAK;
     public static AddonExterior TYPE70;
+    public static AddonExterior TYPE70WG;
+    public static AddonExterior TYPE70ALT;
     public static AddonExterior BLOCKTIS;
     public static AddonExterior BLOCKTISV2;
     public static AddonExterior BLOCKTISV3;
@@ -110,6 +112,12 @@ public class TardisExteriorRegistry {
 
         TYPE70 = new AddonExterior(new Identifier(MOD_ID, "capsules"), MOD_ID, "type70").register();
         TYPE70.setDoor(new AddonExterior.Door(TYPE70, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
+
+        TYPE70WG = new AddonExterior(new Identifier(MOD_ID, "capsules"), MOD_ID, "type70wg").register();
+        TYPE70WG.setDoor(new AddonExterior.Door(TYPE70WG, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
+
+        TYPE70ALT = new AddonExterior(new Identifier(MOD_ID, "capsules"), MOD_ID, "type70alt").register();
+        TYPE70ALT.setDoor(new AddonExterior.Door(TYPE70ALT, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
         BLOCKTIS = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktis").register();
         BLOCKTIS.setDoor(new AddonExterior.Door(BLOCKTIS, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
@@ -265,6 +273,18 @@ public class TardisExteriorRegistry {
         TYPE70.setPortalWidth(1f);
         TYPE70.setPortalHeight(2f);
         TYPE70.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        TYPE70WG.setModel(new Type70Exterior()).toClient().register();
+        TYPE70WG.toDoor().setModel(new Type70Door(Type70Door.getTexturedModelData().createModel())).toClient().register();
+        TYPE70WG.setPortalWidth(1f);
+        TYPE70WG.setPortalHeight(2f);
+        TYPE70WG.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        TYPE70ALT.setModel(new Type70Exterior()).toClient().register();
+        TYPE70ALT.toDoor().setModel(new Type70Door(Type70Door.getTexturedModelData().createModel())).toClient().register();
+        TYPE70ALT.setPortalWidth(1f);
+        TYPE70ALT.setPortalHeight(2f);
+        TYPE70ALT.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTIS.setModel(new BlocktisExterior()).toClient().register();
         BLOCKTIS.toDoor().setModel(new BlocktisDoor(BlocktisDoor.getTexturedModelData().createModel())).toClient().register();
