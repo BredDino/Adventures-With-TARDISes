@@ -21,9 +21,14 @@
   "item.awt.paralyzer_music_disc.desc": "Finger Eleven - Paralyzer (Alternate Mix)",
   "item.awt.dugga_doo_music_disc": "§cMusic Disc",
   "item.awt.dugga_doo_music_disc.desc": "Dugga doo - Dugga doo",
+
   "item_group.Atrium":"AWT",
   "item.awt.sonic_glasses": "Sonic Shades",
   "item.awt.k9_spawn_egg": "k9 spawn egg",
+  "item.awt.spoon": "spoon",
+  "item.awt.spoon.desc": "I am the doctor and this is my spoon",
+
+  "effect.awt.Antiradiation":"Anti-Radiation",
 
   "exterior.awt.classicboxes": "Classic Boxes",
   "exterior.awt.onion": "The Onion",

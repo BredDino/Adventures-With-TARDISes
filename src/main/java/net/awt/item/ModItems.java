@@ -16,6 +16,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import org.spongepowered.asm.mixin.injection.Desc;
 
 public class ModItems {
     public static final Item ATRIUM = registerItem("atrium", new Item(new FabricItemSettings()));
@@ -24,6 +25,7 @@ public class ModItems {
     public static final Item ENERGIZEDATRIUM = registerItem("energized_atrium", new Item(new FabricItemSettings()));
     public static final Item ATRIUMCORE = registerItem("atrium_core", new Item(new FabricItemSettings()));
     public static final Item ROUNDELMOLD = registerItem("roundel_mold", new Item(new FabricItemSettings()));
+    public static final Item spoon = registerItem("spoon", new Item(new FabricItemSettings()));
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator",new VortexManipulator(new FabricItemSettings()));
     public static final Item VORTEX_MANIPULATOR2 = registerItem("vortex_manipulator2",new VortexManipulator(new FabricItemSettings()));
     public static final Item DRWHOVALE_MUSIC_DISC = registerItem("drwhovale_music_disc",

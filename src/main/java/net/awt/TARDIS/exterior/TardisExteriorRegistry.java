@@ -10,7 +10,11 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import org.joml.Vector3d;
 import org.joml.Vector3f;
+import org.joml.Vector4f;
+
+import java.util.Vector;
 
 import static net.awt.AdventuresWithTARDISes.MOD_ID;
 

@@ -25,6 +25,7 @@ public class ModItemGroups {
                         entries.add(ModItems.VORTEX_MANIPULATOR);
                         entries.add(ModItems.VORTEX_MANIPULATOR2);
                         entries.add(ModItems.K9_SPAWN_EGG);
+                        entries.add(ModItems.spoon);
                         //entries.add(ModItems.CLASSIC1);
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.doctorwhoxv_music_disc);

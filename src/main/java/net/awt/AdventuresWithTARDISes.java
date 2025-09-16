@@ -5,6 +5,7 @@ import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
 import net.awt.TARDIS.exterior.TardisExteriorRegistry;
 import net.awt.TARDIS.exterior.category.AWTCategoryRegistry;
 import net.awt.block.ModBlocks;
+import net.awt.effect.ModEffects;
 import net.awt.entity.ModEntities;
 import net.awt.entity.custom.K9Entity;
 import net.awt.item.ModItemGroups;
@@ -29,6 +30,7 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+		ModEffects.registerEffects();
 
 		TardisExteriorRegistry.onInitialize();
 		AWTConsoleRegistry.init();

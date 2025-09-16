@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.GlassBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -25,16 +26,16 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE).sounds(BlockSoundGroup.DEEPSLATE).requiresTool().strength(1.5F, 3.0F)));
 
     public static final Block GRATE_BLOCK = registerBlock("grate_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
 
     public static final Block THICK_GRATE_BLOCK = registerBlock("thick_grate_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
 
     public static final Block RUSTY_GRATE_BLOCK = registerBlock("rusty_grate_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
 
     public static final Block RUSTY_THICK_GRATE_BLOCK = registerBlock("rusty_thick_grate_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.CHAIN).requiresTool().strength(1.5F, 3.0F)));
 
 
     //roundels
