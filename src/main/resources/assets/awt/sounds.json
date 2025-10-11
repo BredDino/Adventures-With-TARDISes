@@ -166,7 +166,7 @@
     "sounds": [
       {
         "name": "awt:dugga_doo",
-        "stream": true
+        "stream": false
       }
     ]
   },
@@ -192,7 +192,7 @@
           "subtitle": "dalekshoot",
           "sounds": [
             {
-              "name": "ddwa:dalekshoot",
+              "name": "awt:dalekshoot",
               "stream": false
             }
           ]

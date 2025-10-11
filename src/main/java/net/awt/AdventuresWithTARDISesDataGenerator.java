@@ -6,6 +6,7 @@ import net.awt.datagen.ModLootTableProvider;
 import net.awt.datagen.ModWorldGenerator;
 import net.awt.world.ModConfiguredFeatures;
 import net.awt.world.ModPlacedFeatures;
+import net.awt.world.dimension.ModDimensions;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -27,5 +28,6 @@ public class AdventuresWithTARDISesDataGenerator implements DataGeneratorEntrypo
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 		DataGeneratorEntrypoint.super.buildRegistry(registryBuilder);
+        //registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
 	}
 }
