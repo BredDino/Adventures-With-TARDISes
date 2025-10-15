@@ -23,11 +23,11 @@
   "item.awt.dugga_doo_music_disc.desc": "Dugga doo - Dugga doo",
   "item.awt.weapon_matrix": "weapon matrix",
 
-  "item_group.Atrium":"AWT",
+
   "item.awt.sonic_glasses": "Sonic Shades",
   "item.awt.k9_spawn_egg": "k9 spawn egg",
   "item.awt.spoon": "spoon",
-  "item.awt.spoon.desc": "I am the doctor and this is my spoon",
+  "item.awt.spoon.tooltip": "I am the doctor and this is my spoon",
 
   "effect.awt.Antiradiation":"Anti-Radiation",
 
@@ -223,6 +223,7 @@
   "block.awt.blue_concrete_roundel": "Blue Concrete Roundel",
   "block.awt.exposed_copper_roundel": "Exposed Copper Roundel",
   "block.awt.copper_roundel": "Copper Roundel",
+  "block.awt.themoment": "the moment",
 
   "console.awt.toyota_rhamnous": "Rhamnous' Toyota",
   "console.awt.crystalalt": "TardisOwners' Crystalline",
@@ -247,6 +248,6 @@
   "block.awt.rusty_grate_block": "Rusty Grate",
   "block.awt.rusty_thick_grate_block": "Rusty Thick Grate",
 
-  "item_group.awt.Roundel": "Roundels"
-
+  "item_group.awt.Roundel": "AWT: decorative",
+  "item_group.Atrium":"AWT"
 }

@@ -53,7 +53,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_ATRIUM_ORE)
         ;
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.themoment)
+        ;
+
 
         getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")));
 
@@ -69,6 +72,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ATRIUM_BLOCK)
                 .add(ModBlocks.ATRIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_ATRIUM_ORE)
+                .add(ModBlocks.themoment)
         ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)

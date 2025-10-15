@@ -26,6 +26,7 @@ public class ModItemGroups {
                         entries.add(ModItems.VORTEX_MANIPULATOR2);
                         entries.add(ModItems.K9_SPAWN_EGG);
                         entries.add(ModItems.WEAPON_MATRIX);
+                        entries.add(ModBlocks.themoment);
 
                         entries.add(ModItems.spoon);
 

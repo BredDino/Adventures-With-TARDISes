@@ -17,7 +17,10 @@ public class ModBlocks {
     //AWT
 
     public static final Block ATRIUM_BLOCK = registerBlock("atrium_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).sounds(BlockSoundGroup.COPPER).requiresTool().strength(1.5F, 3.0F)));
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool().strength(1.5F, 3.0F)));
+
+    public static final Block themoment = registerBlock("themoment",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.ANVIL).requiresTool()));
 
     public static final Block ATRIUM_ORE = registerBlock("atrium_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
