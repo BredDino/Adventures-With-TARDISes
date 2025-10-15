@@ -24,7 +24,7 @@ repositories {
 	}
 	maven { url 'https://maven.isxander.dev/releases' }
 // Scheduler, Queue, MultiDim, AutoJSON
-	maven { url "https://theo.is-a.dev/maven-repo/" }
+	maven { url "https://theo.is-a.dev/maven/" }
 
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/releases/" }
