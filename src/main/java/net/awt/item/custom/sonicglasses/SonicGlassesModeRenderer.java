@@ -54,7 +54,7 @@ public class SonicGlassesModeRenderer {
                     matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180));
                     matrices.scale(0.75f, 0.75f, 0.75f);
                     RenderSystem.enableBlend();
-                    PoliceBoxModel.getTexturedModelData().createModel().render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(new Identifier("ait", "textures/blockentities/exteriors/police_box/police_box_default.png"))), 250, OverlayTexture.DEFAULT_UV, 0f,0.41f,0.92f, (float)Math.max (0.75f*Math.random(), 0.5f));
+                    //PoliceBoxModel.getTexturedModelData().createModel().render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(new Identifier("ait", "textures/blockentities/exteriors/police_box/police_box_default.png"))), 250, OverlayTexture.DEFAULT_UV, 0f,0.41f,0.92f, (float)Math.max (0.75f*Math.random(), 0.5f));
 
                     RenderSystem.disableBlend();
 
