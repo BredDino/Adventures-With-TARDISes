@@ -33,8 +33,11 @@
 		],
 		"ait-main": [
 			"net.awt.amblekit.ait.AITUtil"
+		],
+		"cardinal-components": [
+			"net.awt.components.ModComponents"
 		]
-	},
+			},
 	"mixins": [
 		"awt.mixins.json"
 	],
@@ -46,5 +49,10 @@
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"awt:sonic_glasses_component"
+		]
 	}
 }

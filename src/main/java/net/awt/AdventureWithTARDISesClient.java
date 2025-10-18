@@ -20,12 +20,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.RenderLayer;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
-
-import static net.awt.AdventuresWithTARDISes.id;
 
 
 public class AdventureWithTARDISesClient implements ClientModInitializer {
@@ -33,7 +28,6 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
     public void onInitializeClient() {
         TardisExteriorRegistry.registerClientAddonExteriors();
         AWTClientConsoleVariantRegistry.init();
-        resourcepackRegister();
 
         TrinketRendererRegistry.registerRenderer(ModItems.SONIC_GLASSES, (TrinketRenderer) ModItems.SONIC_GLASSES);
         HudRenderCallback.EVENT.register(new SonicGlassesOverlay());
@@ -48,22 +42,4 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.K9, K9Renderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.K9, K9Model::getTexturedModelData);
     }
-
-    public static void resourcepackRegister() {
-
-        // Register builtin resourcepacks
-        FabricLoader.getInstance().
-
-                getModContainer("awt").
-
-                ifPresent(modContainer ->
-
-                {
-
-                    ResourceManagerHelper.registerBuiltinResourcePack(id("greyedgui"), modContainer, ResourcePackActivationType.NORMAL);
-                    ResourceManagerHelper.registerBuiltinResourcePack(id("lebronjamesgui"), modContainer, ResourcePackActivationType.NORMAL);
-                });
-    }
-
 }
-

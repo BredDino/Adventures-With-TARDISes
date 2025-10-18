@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ConsoleRegistry.class)
 public class ConsoleRegistryMixin {
 
-    @Inject(method = "init", at = @At("HEAD"), remap = false)
+    @Inject(method = "onCommonInit", at = @At("HEAD"), remap = false)
     private static void defaults(CallbackInfo ci) {
         AWTConsoleRegistry.registerConsoles();
     }

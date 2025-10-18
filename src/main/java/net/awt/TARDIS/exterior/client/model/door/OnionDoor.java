@@ -3,6 +3,7 @@ package net.awt.TARDIS.exterior.client.model.door;
 import dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity;
 import dev.amble.ait.client.models.doors.DoorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
+import dev.amble.ait.core.blockentities.DoorBlockEntity;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -37,12 +38,7 @@ public class OnionDoor extends DoorModel {
 	}
 
 	@Override
-	public Animation getAnimationForDoorState(DoorHandler.AnimationDoorState animationDoorState) {
-		return null;
-	}
-
-	@Override
-	public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
+	public void renderWithAnimations(ClientTardis tardis, DoorBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha, float tickDelta) {
 		if ( doorEntity.tardis().isEmpty())
 			return;
 
@@ -52,7 +48,7 @@ public class OnionDoor extends DoorModel {
 		matrices.push();
 		matrices.scale(1F, 1F, 1F);
 		matrices.translate(0.0F, -1.5F, 0.0F);
-		super.renderWithAnimations(tardis, doorEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
+		super.renderWithAnimations(tardis, doorEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha, tickDelta);
 		matrices.pop();
 	}
 

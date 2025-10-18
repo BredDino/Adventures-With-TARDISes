@@ -1,6 +1,7 @@
 package net.awt.TARDIS.console.client.models;
 
 import dev.amble.ait.client.models.consoles.ConsoleModel;
+import dev.amble.ait.client.models.consoles.SimpleConsoleModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ConsoleBlockEntity;
 import dev.amble.ait.core.tardis.handler.travel.TravelHandlerBase;
@@ -13,7 +14,7 @@ import net.minecraft.util.math.RotationAxis;
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
-public class BlockConsoleModel extends ConsoleModel {
+public class BlockConsoleModel extends SimpleConsoleModel {
 	private final ModelPart Root;
 	private final ModelPart console;
 	private final ModelPart stairs;

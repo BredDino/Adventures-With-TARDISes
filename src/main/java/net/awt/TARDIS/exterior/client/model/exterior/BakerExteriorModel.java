@@ -4,6 +4,7 @@ import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.Linkable;
 import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.exteriors.ExteriorModel;
+import dev.amble.ait.client.models.exteriors.SimpleExteriorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
@@ -16,7 +17,7 @@ import net.minecraft.entity.Entity;
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
-public class BakerExteriorModel extends ExteriorModel {
+public class BakerExteriorModel extends SimpleExteriorModel {
 	private final ModelPart body;
 	private final ModelPart rightdoor;
 	private final ModelPart leftdoor;
@@ -124,10 +125,6 @@ public class BakerExteriorModel extends ExteriorModel {
 		return body;
 	}
 
-	@Override
-	public net.minecraft.client.render.entity.animation.Animation getAnimationForDoorState(DoorHandler.AnimationDoorState state) {
-		return Animation.Builder.create(0).build();
-	}
 
 	@Override
 	public void renderDoors(ClientTardis tardis, ExteriorBlockEntity exterior, net.minecraft.client.model.ModelPart root, net.minecraft.client.util.math.MatrixStack matrices, net.minecraft.client.render.VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha, boolean isBOTI) {

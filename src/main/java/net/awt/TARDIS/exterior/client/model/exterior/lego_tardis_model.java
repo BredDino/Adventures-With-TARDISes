@@ -4,6 +4,7 @@ import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.Linkable;
 import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.exteriors.ExteriorModel;
+import dev.amble.ait.client.models.exteriors.SimpleExteriorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
@@ -17,7 +18,7 @@ import net.minecraft.util.math.RotationAxis;
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
-public class lego_tardis_model extends ExteriorModel {
+public class lego_tardis_model extends SimpleExteriorModel {
 	private final ModelPart LegoTARDIS;
 	private final ModelPart Hinges;
 	private final ModelPart back_wall;
@@ -136,11 +137,6 @@ public class lego_tardis_model extends ExteriorModel {
 	@Override
 	public ModelPart getPart() {
 		return LegoTARDIS;
-	}
-
-	@Override
-	public net.minecraft.client.render.entity.animation.Animation getAnimationForDoorState(DoorHandler.AnimationDoorState state) {
-		return Animation.Builder.create(0).build();
 	}
 
 	@Override

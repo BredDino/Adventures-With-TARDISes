@@ -2,6 +2,7 @@ package net.awt.TARDIS.exterior.client.model.exterior;
 
 import dev.amble.ait.api.tardis.link.v2.Linkable;
 import dev.amble.ait.client.models.exteriors.ExteriorModel;
+import dev.amble.ait.client.models.exteriors.SimpleExteriorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ExteriorBlockEntity;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
@@ -14,7 +15,7 @@ import net.minecraft.entity.Entity;
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
-public class lefthottub extends ExteriorModel {
+public class lefthottub extends SimpleExteriorModel {
 	private final ModelPart bone;
 	private final ModelPart water;
 	private final ModelPart bone2;
@@ -63,11 +64,6 @@ public class lefthottub extends ExteriorModel {
 	}
     @Override
     public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-    }
-
-    @Override
-    public Animation getAnimationForDoorState(DoorHandler.AnimationDoorState animationDoorState) {
-        return null;
     }
 
     @Override

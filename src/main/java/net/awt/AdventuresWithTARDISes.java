@@ -8,12 +8,16 @@ import net.awt.block.ModBlocks;
 import net.awt.effect.ModEffects;
 import net.awt.entity.ModEntities;
 import net.awt.entity.custom.K9Entity;
+import net.awt.events.UseEvent;
+import net.awt.events.UseItemEvent;
 import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
 import net.awt.networking.ModPackets;
 import net.awt.sound.AWTSound;
 import net.awt.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -37,14 +41,17 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		AWTConsoleVariantRegistry.init();
 		AWTCategoryRegistry.init();
 
+		UseBlockCallback.EVENT.register(UseEvent.EVENT.invoker());
+		UseItemCallback.EVENT.register(UseItemEvent.EVENT.invoker());
+
 		ModWorldGeneration.generateModWorldGen();
 
 		ModPackets.registerC2SPackets();
 
         FabricDefaultAttributeRegistry.register(ModEntities.K9, K9Entity.createK9Attributes());
 	}
-
 	public static Identifier id(String path) {
 		return new Identifier("awt", path);
 	}
+
 }

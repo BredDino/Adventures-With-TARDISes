@@ -17,9 +17,9 @@ public class AWTConsoleRegistry {
     }
 
     public static void registerConsoles() {
-        AWTConsoleRegistry.TEST = ConsoleRegistry.register(new TestType());
-        AWTConsoleRegistry.DICE = ConsoleRegistry.register(new DiceType());
-        AWTConsoleRegistry.JUNKGLASS = ConsoleRegistry.register(new JunkGlassType());
-        AWTConsoleRegistry.BLOCK = ConsoleRegistry.register(new BlockConsoleType());
+        AWTConsoleRegistry.TEST = ConsoleRegistry.getInstance().register(new TestType());
+        AWTConsoleRegistry.DICE = ConsoleRegistry.getInstance().register(new DiceType());
+        AWTConsoleRegistry.JUNKGLASS = ConsoleRegistry.getInstance().register(new JunkGlassType());
+        AWTConsoleRegistry.BLOCK = ConsoleRegistry.getInstance().register(new BlockConsoleType());
     }
 }

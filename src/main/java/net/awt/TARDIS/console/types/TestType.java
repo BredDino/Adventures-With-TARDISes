@@ -7,8 +7,8 @@ import dev.amble.ait.core.tardis.control.impl.pos.IncrementControl;
 import dev.amble.ait.core.tardis.control.impl.pos.XControl;
 import dev.amble.ait.core.tardis.control.impl.pos.YControl;
 import dev.amble.ait.core.tardis.control.impl.pos.ZControl;
-import dev.amble.ait.core.tardis.control.impl.waypoint.MarkWaypointControl;
-import dev.amble.ait.core.tardis.control.impl.waypoint.SetWaypointControl;
+import dev.amble.ait.core.tardis.control.impl.waypoint.SaveWaypointControl;
+import dev.amble.ait.core.tardis.control.impl.waypoint.LoadWaypointControl;
 import dev.amble.ait.data.schema.console.ConsoleTypeSchema;
 import dev.amble.ait.data.schema.console.ConsoleVariantSchema;
 import net.awt.AdventuresWithTARDISes;
@@ -44,7 +44,7 @@ public class TestType extends ConsoleTypeSchema {
             new ControlTypes(new RefuelerControl(), EntityDimensions.changing(0.1125F, 0.08749999F), new Vector3f(0.3F, 0.4874998F, -1.0429688F)),
             new ControlTypes(new HADSControl(), EntityDimensions.changing(0.074999996F, 0.1F), new Vector3f(0.51601565F, 0.57500017F, 0.4033203F)),
             new ControlTypes(new PowerControl(), EntityDimensions.changing(0.125F, 0.1F), new Vector3f(0.790625F, 0.5250003F, 0.45234376F)),
-            new ControlTypes(new ConsolePortControl(), EntityDimensions.changing(0.16250001F, 0.0875F), new Vector3f(-0.425F, 0.6000002F, 0.24140623F)), new ControlTypes(new MarkWaypointControl(), EntityDimensions.changing(0.074999996F, 0.0875F), new Vector3f(0.1875F, 0.4750002F, 0.94082034F)), new ControlTypes(new EngineOverloadControl(), EntityDimensions.changing(0.1125F, 0.1F), new Vector3f(0.06484375F, 0.47500014F, -1.0359373F)), new ControlTypes(new SetWaypointControl(), EntityDimensions.changing(0.07499999F, 0.1F), new Vector3f(-0.9609375F, 0.46250054F, -0.22285157F)), new ControlTypes(new SonicPortControl(), EntityDimensions.changing(0.125F, 0.08749999F), new Vector3f(-0.4359375F, 0.625F, -0.26015624F)), new ControlTypes(new ElectricalDischargeControl(), EntityDimensions.changing(0.099999994F, 0.087499976F), new Vector3f(0.7343742F, 0.5249996F, -0.5765621F)), new ControlTypes(new ShieldsControl(), EntityDimensions.changing(0.099999994F, 0.07499999F), new Vector3f(-0.5734375F, 0.5374998F, 0.6625F))};
+            new ControlTypes(new ConsolePortControl(), EntityDimensions.changing(0.16250001F, 0.0875F), new Vector3f(-0.425F, 0.6000002F, 0.24140623F)), new ControlTypes(new SaveWaypointControl(), EntityDimensions.changing(0.074999996F, 0.0875F), new Vector3f(0.1875F, 0.4750002F, 0.94082034F)), new ControlTypes(new EngineOverloadControl(), EntityDimensions.changing(0.1125F, 0.1F), new Vector3f(0.06484375F, 0.47500014F, -1.0359373F)), new ControlTypes(new LoadWaypointControl(), EntityDimensions.changing(0.07499999F, 0.1F), new Vector3f(-0.9609375F, 0.46250054F, -0.22285157F)), new ControlTypes(new SonicPortControl(), EntityDimensions.changing(0.125F, 0.08749999F), new Vector3f(-0.4359375F, 0.625F, -0.26015624F)), new ControlTypes(new ElectricalDischargeControl(), EntityDimensions.changing(0.099999994F, 0.087499976F), new Vector3f(0.7343742F, 0.5249996F, -0.5765621F)), new ControlTypes(new ShieldsControl(), EntityDimensions.changing(0.099999994F, 0.07499999F), new Vector3f(-0.5734375F, 0.5374998F, 0.6625F))};
 
     public TestType() {
         super(REFERENCE, "test");

@@ -5,6 +5,7 @@ import dev.amble.ait.api.tardis.link.v2.block.AbstractLinkableBlockEntity;
 import dev.amble.ait.client.AITModClient;
 import dev.amble.ait.client.models.doors.DoorModel;
 import dev.amble.ait.client.tardis.ClientTardis;
+import dev.amble.ait.core.blockentities.DoorBlockEntity;
 import dev.amble.ait.core.tardis.handler.DoorHandler;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -60,7 +61,7 @@ public class ThirdAndSecondBaseDoor extends DoorModel {
 	}
 
 	@Override
-	public void renderWithAnimations(ClientTardis tardis, AbstractLinkableBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha) {
+	public void renderWithAnimations(ClientTardis tardis, DoorBlockEntity doorEntity, ModelPart root, MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha, float tickDelta) {
 		if (!AITModClient.CONFIG.animateDoors) {
 			DoorHandler door = doorEntity.tardis().get().door();
 			left_door.yaw = !door.isLeftOpen() && !door.isOpen() ? 0.0F : -5.0F;
@@ -77,13 +78,8 @@ public class ThirdAndSecondBaseDoor extends DoorModel {
 		matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180.0F));
 		matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(90));
 
-		super.renderWithAnimations(tardis, doorEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
+		super.renderWithAnimations(tardis, doorEntity, root, matrices, vertices, light, overlay, red, green, blue, pAlpha, tickDelta);
 		matrices.pop();
-	}
-
-	@Override
-	public Animation getAnimationForDoorState(DoorHandler.AnimationDoorState state) {
-		return Animation.Builder.create(0).build();
 	}
 
 	@Override

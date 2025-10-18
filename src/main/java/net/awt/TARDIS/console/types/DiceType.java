@@ -6,8 +6,8 @@ import dev.amble.ait.core.tardis.control.impl.pos.IncrementControl;
 import dev.amble.ait.core.tardis.control.impl.pos.XControl;
 import dev.amble.ait.core.tardis.control.impl.pos.YControl;
 import dev.amble.ait.core.tardis.control.impl.pos.ZControl;
-import dev.amble.ait.core.tardis.control.impl.waypoint.MarkWaypointControl;
-import dev.amble.ait.core.tardis.control.impl.waypoint.SetWaypointControl;
+import dev.amble.ait.core.tardis.control.impl.waypoint.LoadWaypointControl;
+import dev.amble.ait.core.tardis.control.impl.waypoint.SaveWaypointControl;
 import dev.amble.ait.data.schema.console.ConsoleTypeSchema;
 import dev.amble.ait.data.schema.console.ConsoleVariantSchema;
 import net.awt.AdventuresWithTARDISes;
@@ -55,8 +55,8 @@ public class DiceType extends ConsoleTypeSchema {
             )
             ),
             new ControlTypes(new HADSControl(), EntityDimensions.changing(0.07499999F, 0.17500001F), new Vector3f(-0.0953125F, 0.7624998F, 0.76875F)),
-            new ControlTypes(new MarkWaypointControl(), EntityDimensions.changing(0.07499999F, 0.0875F), new Vector3f(0.18828124F, 0.5750004F, -1.459375F)),
-            new ControlTypes(new SetWaypointControl(), EntityDimensions.changing(0.06249999F, 0.112500004F), new Vector3f(0.15078124F, 0.7000004F, -1.0609375F)),
+            new ControlTypes(new SaveWaypointControl(), EntityDimensions.changing(0.07499999F, 0.0875F), new Vector3f(0.18828124F, 0.5750004F, -1.459375F)),
+            new ControlTypes(new LoadWaypointControl(), EntityDimensions.changing(0.06249999F, 0.112500004F), new Vector3f(0.15078124F, 0.7000004F, -1.0609375F)),
             new ControlTypes(new ConsolePortControl(), EntityDimensions.changing(0.125F, 0.1125F), new Vector3f(0.0015624892F, 0.73750055F, -0.7953125F)),
             new ControlTypes(new CloakControl(), EntityDimensions.changing(0.099999994F, 0.1125F), new Vector3f(0.82734376F, 0.75000036F, -0.1609375F)),
             new ControlTypes(new SonicPortControl(), EntityDimensions.changing(0.125F, 0.08749999F), new Vector3f(-1.0605469F, 0.7624998F, 0.21328126F)),

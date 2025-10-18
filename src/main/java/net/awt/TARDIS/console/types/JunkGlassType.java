@@ -6,8 +6,8 @@ import dev.amble.ait.core.tardis.control.impl.pos.IncrementControl;
 import dev.amble.ait.core.tardis.control.impl.pos.XControl;
 import dev.amble.ait.core.tardis.control.impl.pos.YControl;
 import dev.amble.ait.core.tardis.control.impl.pos.ZControl;
-import dev.amble.ait.core.tardis.control.impl.waypoint.MarkWaypointControl;
-import dev.amble.ait.core.tardis.control.impl.waypoint.SetWaypointControl;
+import dev.amble.ait.core.tardis.control.impl.waypoint.SaveWaypointControl;
+import dev.amble.ait.core.tardis.control.impl.waypoint.LoadWaypointControl;
 import dev.amble.ait.data.schema.console.ConsoleTypeSchema;
 import dev.amble.ait.data.schema.console.ConsoleVariantSchema;
 import net.awt.AdventuresWithTARDISes;
@@ -265,7 +265,7 @@ public class JunkGlassType extends ConsoleTypeSchema {
                             0.743750f-yoff,
                             -0.881250f
                     )),
-            new ControlTypes(new MarkWaypointControl(), EntityDimensions.changing(
+            new ControlTypes(new SaveWaypointControl(), EntityDimensions.changing(
                     0.125f,
                     0.1875f
             ),
@@ -274,7 +274,7 @@ public class JunkGlassType extends ConsoleTypeSchema {
                             0.743750f-yoff,
                             -0.487500f
                     )),
-            new ControlTypes(new SetWaypointControl(), EntityDimensions.changing(
+            new ControlTypes(new LoadWaypointControl(), EntityDimensions.changing(
                     0.125f,
                     0.1875f
             ),

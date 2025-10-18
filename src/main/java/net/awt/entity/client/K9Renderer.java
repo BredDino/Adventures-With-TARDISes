@@ -10,7 +10,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 
 public class K9Renderer extends MobEntityRenderer<K9Entity, K9Model<K9Entity>>{
-    private static final Identifier TEXTURE = new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/entity/robotdog.png");
+    public static final Identifier TEXTURE = new Identifier(AdventuresWithTARDISes.MOD_ID, "textures/entity/robotdog.png");
 
     public K9Renderer(EntityRendererFactory.Context context){
         super(context, new K9Model<>(context.getPart(ModModelLayers.K9)), 0.6f);

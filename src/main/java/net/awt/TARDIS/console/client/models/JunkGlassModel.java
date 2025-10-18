@@ -2,6 +2,7 @@ package net.awt.TARDIS.console.client.models;
 
 import dev.amble.ait.client.animation.console.toyota.ToyotaAnimations;
 import dev.amble.ait.client.models.consoles.ConsoleModel;
+import dev.amble.ait.client.models.consoles.SimpleConsoleModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ConsoleBlockEntity;
 import dev.amble.ait.core.tardis.control.impl.pos.IncrementManager;
@@ -17,7 +18,7 @@ import net.minecraft.util.math.RotationAxis;
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
-public class JunkGlassModel extends ConsoleModel {
+public class JunkGlassModel extends SimpleConsoleModel {
 	private final ModelPart Root;
 	private final ModelPart Rotor;
 	private final ModelPart RotorGlass;

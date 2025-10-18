@@ -58,7 +58,7 @@ public class SonicGlassesOverlay implements HudRenderCallback {
             RenderSystem.disableBlend();
 
             RenderSystem.enableBlend();
-            RenderSystem.setShaderColor(1,1,1, doDeadBatteryEffect() ? Math.max((float) Math.random(), 0.75f) : 1);
+            RenderSystem.setShaderColor(1 +getRandomDBE(),1 +getRandomDBE(),1 +getRandomDBE(), doDeadBatteryEffect() ? Math.max((float) Math.random(), 0.75f) : 1);
 
             Entity entity = MinecraftClient.getInstance().getCameraEntity();
             HitResult blockHit = entity.raycast(5.0, 0.0F, false);
@@ -89,12 +89,15 @@ public class SonicGlassesOverlay implements HudRenderCallback {
             matrixStack.pop();
             RenderSystem.setShaderColor(1,1,1, 1f);
             RenderSystem.disableBlend();
-
         }
     }
 
     private boolean doDeadBatteryEffect() {
         return equippedStack.getOrCreateNbt().getDouble("fuel") < 250;
+    }
+
+    private float getRandomDBE() {
+        return doDeadBatteryEffect() ? (float) (Math.random() - 0.5) *0.5f : 0;
     }
 
     public boolean hasEquipped(PlayerEntity player, Item item) {

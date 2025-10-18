@@ -1,6 +1,7 @@
 package net.awt.TARDIS.console.client.models;
 
 import dev.amble.ait.client.models.consoles.ConsoleModel;
+import dev.amble.ait.client.models.consoles.SimpleConsoleModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ConsoleBlockEntity;
 import dev.amble.ait.core.tardis.handler.travel.TravelHandlerBase;
@@ -12,7 +13,7 @@ import net.minecraft.client.util.math.MatrixStack;
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
-public class TestModel extends ConsoleModel {
+public class TestModel extends SimpleConsoleModel {
 	private final ModelPart bb_main;
 	public TestModel(ModelPart root) {
 		this.bb_main = root.getChild("bb_main");
