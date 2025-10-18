@@ -12,10 +12,11 @@ import java.util.UUID;
 @Mixin(ExclusiveCategory.class)
 public class ExclusiveCategoryMixin {
 
-    @Inject(method = "isUnlocked", at = @At("HEAD"), remap = false)
+    @Inject(method = "isUnlocked", at = @At("HEAD"), remap = false, cancellable = true)
     private static void isUnlocked(UUID uuid, CallbackInfoReturnable<Boolean> cir) {
         if (AWTDevTeam.isDev(uuid)) {
             cir.setReturnValue(AWTDevTeam.isDev(uuid));
+            cir.cancel();
         }
     }
 }
