@@ -1,5 +1,10 @@
 package net.awt;
 
+import dev.amble.ait.core.handles.HandlesResponse;
+import dev.amble.ait.core.handles.HandlesSound;
+import dev.amble.ait.core.tardis.ServerTardis;
+import dev.amble.ait.core.tardis.handler.TardisCrashHandler;
+import dev.amble.ait.registry.impl.HandlesResponseRegistry;
 import net.awt.TARDIS.console.AWTConsoleRegistry;
 import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
 import net.awt.TARDIS.exterior.TardisExteriorRegistry;
@@ -19,9 +24,13 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 public class AdventuresWithTARDISes implements ModInitializer {
 	public static final String MOD_ID = "awt";
@@ -40,6 +49,25 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		AWTConsoleRegistry.init();
 		AWTConsoleVariantRegistry.init();
 		AWTCategoryRegistry.init();
+
+        HandlesResponseRegistry.register(new HandlesResponse() {
+            @Override
+            public boolean run(ServerPlayerEntity serverPlayerEntity, HandlesSound handlesSound, ServerTardis serverTardis) {
+                serverTardis.selfDestruct().boom();
+                this.sendChat(serverPlayerEntity, Text.literal("Killing myself."));
+                return this.success(handlesSound);
+            }
+
+            @Override
+            public List<String> getCommandWords() {
+                return List.of("kill yourself", "kys");
+            }
+
+            @Override
+            public Identifier id() {
+                return new Identifier(AdventuresWithTARDISes.MOD_ID, "kill_yourself");
+            }
+        });
 
 		UseBlockCallback.EVENT.register(UseEvent.EVENT.invoker());
 		UseItemCallback.EVENT.register(UseItemEvent.EVENT.invoker());
