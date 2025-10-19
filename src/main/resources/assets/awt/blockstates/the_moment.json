@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "awt:block/themoment"
+      "model": "awt:block/the_moment"
     }
   }
 }

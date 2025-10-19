@@ -42,6 +42,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BLUE_CONCRETE_ROUNDEL);
         addDrop(ModBlocks.EXPOSED_COPPER_ROUNDEL);
         addDrop(ModBlocks.COPPER_ROUNDEL);
-        addDrop(ModBlocks.themoment);
+        addDrop(ModBlocks.THE_MOMENT);
     }
 }
