@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "awt:item/sonic_tools/classic_war_scanning",
-		"particle": "awt:item/sonic_tools/classic_war_scanning"
+		"0": "awt:item/sonic_tools/classic_war",
+		"particle": "awt:item/sonic_tools/classic_war"
 	},
 	"elements": [
 		{
