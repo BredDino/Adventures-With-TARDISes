@@ -38,6 +38,7 @@ import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.Text;
 import net.minecraft.util.ClickType;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.math.RotationAxis;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -158,8 +159,8 @@ public class DBZScouter extends TrinketItem implements TrinketRenderer, ArtronHo
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         TrinketRenderer.translateToFace(matrixStack, (PlayerEntityModel<AbstractClientPlayerEntity>) contextModel, (AbstractClientPlayerEntity) entity, headYaw, headPitch);
         matrixStack.scale(1, -1, 1);
-        matrixStack.scale(0.6f, 0.6f, 0.6f);
-        matrixStack.translate(0,-0.05,0.5);
+        matrixStack.scale(0.75f, 0.75f, 0.75f);
+        matrixStack.translate(0.05,-0.05,0.5);
         matrixStack.translate(0, 0.1*stack.getOrCreateNbt().getInt(GLASSES_HEIGHT_KEY), 0);
         itemRenderer.renderItem(entity, stack, ModelTransformationMode.HEAD, false, matrixStack, vertexConsumers, entity.getWorld(), light, OverlayTexture.DEFAULT_UV, 0);
         matrixStack.scale(-1,-1,-1);
