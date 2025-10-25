@@ -245,8 +245,6 @@ public class TardisExteriorRegistry {
 
         POLICEBOX.setModel(new policebox()).toClient().register();
         POLICEBOX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOX.setPortalWidth(1f);
-        POLICEBOX.setPortalHeight(2f);
         POLICEBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         TYPE70.setModel(new Type70Exterior()).toClient().register();
@@ -311,14 +309,10 @@ public class TardisExteriorRegistry {
 
         POLICEBOXALT.setModel(new policebox()).toClient().register();
         POLICEBOXALT.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXALT.setPortalWidth(1f);
-        POLICEBOXALT.setPortalHeight(2f);
         POLICEBOXALT.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXPURPLE.setModel(new policebox()).toClient().register();
         POLICEBOXPURPLE.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXPURPLE.setPortalWidth(1f);
-        POLICEBOXPURPLE.setPortalHeight(2f);
         POLICEBOXPURPLE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         JAKE.setModel(new JakeTheDogExteriorModel(JakeTheDogExteriorModel.getTexturedModelData().createModel())).toClient().register();
@@ -330,32 +324,22 @@ public class TardisExteriorRegistry {
 
         POLICEBOXCORAL.setModel(new policebox()).toClient().register();
         POLICEBOXCORAL.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXCORAL.setPortalWidth(1f);
-        POLICEBOXCORAL.setPortalHeight(2f);
         POLICEBOXCORAL.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXBADWOLF.setModel(new policebox()).toClient().register();
         POLICEBOXBADWOLF.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXBADWOLF.setPortalWidth(1f);
-        POLICEBOXBADWOLF.setPortalHeight(2f);
         POLICEBOXBADWOLF.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         GAMBLEBOX.setModel(new policebox()).toClient().register();
         GAMBLEBOX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        GAMBLEBOX.setPortalWidth(1f);
-        GAMBLEBOX.setPortalHeight(2f);
         GAMBLEBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXTOKOMAK.setModel(new policebox()).toClient().register();
         POLICEBOXTOKOMAK.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXTOKOMAK.setPortalWidth(1f);
-        POLICEBOXTOKOMAK.setPortalHeight(2f);
         POLICEBOXTOKOMAK.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXALT2.setModel(new policebox()).toClient().register();
         POLICEBOXALT2.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXALT2.setPortalWidth(1f);
-        POLICEBOXALT2.setPortalHeight(2f);
         POLICEBOXALT2.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXRHAMNOUS.setModel(new policebox()).toClient().register();
@@ -367,14 +351,10 @@ public class TardisExteriorRegistry {
 
         POLICEBOXNATHAN.setModel(new policebox()).toClient().register();
         POLICEBOXNATHAN.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXNATHAN.setPortalWidth(1f);
-        POLICEBOXNATHAN.setPortalHeight(2f);
         POLICEBOXNATHAN.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXDINO.setModel(new policebox()).toClient().register();
         POLICEBOXDINO.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXDINO.setPortalWidth(1f);
-        POLICEBOXDINO.setPortalHeight(2f);
         POLICEBOXDINO.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXFLATLINE.setModel(new flatline_policebox()).toClient().register();
