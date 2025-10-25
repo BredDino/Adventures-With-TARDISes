@@ -379,8 +379,6 @@ public class TardisExteriorRegistry {
 
         POLICEBOXFLATLINE.setModel(new flatline_policebox()).toClient().register();
         POLICEBOXFLATLINE.toDoor().setModel(new flatline_policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXFLATLINE.setPortalWidth(0.5f);
-        POLICEBOXFLATLINE.setPortalHeight(1f);
         POLICEBOXFLATLINE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
        // BEEHIVE.setModel(new beehive()).toClient().register();
