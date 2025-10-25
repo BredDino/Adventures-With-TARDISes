@@ -54,6 +54,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior POLICEBOXRHAMNOUS;
     public static AddonExterior POLICEBOXNATHAN;
     public static AddonExterior POLICEBOXDINO;
+    public static AddonExterior POLICEBOXFLATLINE;
    // public static AddonExterior BEEHIVE;
    // public static AddonExterior NEZUKO;
 
@@ -168,7 +169,10 @@ public class TardisExteriorRegistry {
         POLICEBOXDINO = new AddonExterior(AWTExclusiveCategory.REFERENCE, MOD_ID, "policebox_dino").register();
         POLICEBOXDINO.setDoor(new AddonExterior.Door(POLICEBOXDINO, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-       // BEEHIVE = new AddonExterior(new Identifier(MOD_ID, "beehive"), MOD_ID, "beehive").register();
+        POLICEBOXFLATLINE = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_flatline").register();
+        POLICEBOXFLATLINE.setDoor(new AddonExterior.Door(POLICEBOXFLATLINE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        // BEEHIVE = new AddonExterior(new Identifier(MOD_ID, "beehive"), MOD_ID, "beehive").register();
         //BEEHIVE.setDoor(new AddonExterior.Door(BEEHIVE, false, SoundEvents.BLOCK_BEEHIVE_ENTER, SoundEvents.BLOCK_BEEHIVE_EXIT)).toDoor().register();
 
         //NEZUKO = new AddonExterior(new Identifier(MOD_ID, "nezukobox"), MOD_ID, "nezuko").register();
@@ -368,6 +372,12 @@ public class TardisExteriorRegistry {
         POLICEBOXDINO.setPortalWidth(1f);
         POLICEBOXDINO.setPortalHeight(2f);
         POLICEBOXDINO.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOXFLATLINE.setModel(new flatline_policebox()).toClient().register();
+        POLICEBOXFLATLINE.toDoor().setModel(new flatline_policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXFLATLINE.setPortalWidth(0.5f);
+        POLICEBOXFLATLINE.setPortalHeight(1f);
+        POLICEBOXFLATLINE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
        // BEEHIVE.setModel(new beehive()).toClient().register();
        // BEEHIVE.toDoor().setModel(new beehivedoor(beehivedoor.getTexturedModelData().createModel())).toClient().register();
