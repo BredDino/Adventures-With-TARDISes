@@ -26,17 +26,17 @@ public class ModItemGroups {
                         entries.add(ModItems.VORTEX_MANIPULATOR2);
                         entries.add(ModItems.K9_SPAWN_EGG);
                         entries.add(ModItems.WEAPON_MATRIX);
-                        entries.add(ModBlocks.THE_MOMENT);
+                       // entries.add(ModBlocks.THE_MOMENT);
 
-                        entries.add(ModItems.spoon);
+                       // entries.add(ModItems.spoon);
 
                         //entries.add(ModItems.CLASSIC1);
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.doctorwhoxv_music_disc);
                         entries.add(ModItems.paralyzer_music_disc);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);
-                        entries.add(ModItems.SONIC_GLASSES);
-                        entries.add(ModItems.DBZ_SCOUTER);
+                       // entries.add(ModItems.SONIC_GLASSES);
+                       // entries.add(ModItems.DBZ_SCOUTER);
                         entries.add(ModBlocks.GRATE_BLOCK);
                         entries.add(ModBlocks.THICK_GRATE_BLOCK);
                         entries.add(ModBlocks.RUSTY_GRATE_BLOCK);
