@@ -10,11 +10,14 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.Direction;
 import org.joml.Vector3d;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 
 import java.util.Vector;
+import java.util.function.BiFunction;
 
 import static net.awt.AdventuresWithTARDISes.MOD_ID;
 
@@ -359,6 +362,7 @@ public class TardisExteriorRegistry {
         POLICEBOXRHAMNOUS.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
         POLICEBOXRHAMNOUS.setPortalWidth(1f);
         POLICEBOXRHAMNOUS.setPortalHeight(2f);
+        // POLICEBOXRHAMNOUS.setPortalTranslations(BiFunction<Vector3d,Byte,Vector3d>);
         POLICEBOXRHAMNOUS.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXNATHAN.setModel(new policebox()).toClient().register();
