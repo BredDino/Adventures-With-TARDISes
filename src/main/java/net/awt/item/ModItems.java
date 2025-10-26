@@ -17,7 +17,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import org.spongepowered.asm.mixin.injection.Desc;
 
 public class ModItems {
     public static final Item ATRIUM = registerItem("atrium", new Item(new FabricItemSettings()));
@@ -39,6 +38,8 @@ public class ModItems {
             new MusicDiscItem(15, AWTSound.paralyzer, new FabricItemSettings().maxCount(1), 207));
     public static final Item DUGGA_DOO_MUSIC_DISC = registerItem("dugga_doo_music_disc",
             new MusicDiscItem(15, AWTSound.DUGGA_DOO, new FabricItemSettings().maxCount(1),101));
+    public static final Item doctorwho1411_music_disc = registerItem("doctorwho1411_music_disc",
+            new MusicDiscItem(15, AWTSound.doctorwho1411, new FabricItemSettings().maxCount(1), 60));
 
     public static final Item K9_SPAWN_EGG = registerItem("k9_spawn_egg",
             new SpawnEggItem(ModEntities.K9, 0xFFFFFF,0xFFFFFFFF, new FabricItemSettings().maxCount(64)));

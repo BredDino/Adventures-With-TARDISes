@@ -21,10 +21,12 @@ public class AWTSound {
     public static final SoundEvent DRWHOVALE = register("drwhovale");
     public static final SoundEvent paralyzer = register("paralyzer");
     public static final SoundEvent DUGGA_DOO = register("dugga_doo");
+    public static final SoundEvent doctorwho1411 = register("doctorwho1411");
     public static final SoundEvent HOURGLASS = register("hourglass");
     public static final SoundEvent K9HURT = register("k9_hurt");
     public static final SoundEvent K9DIE = register("k9_die");
     public static final SoundEvent K9TAME = register("k9_tame");
+
 
     public static SoundEvent register(String id) {
         Identifier identifier = new Identifier(AdventuresWithTARDISes.MOD_ID, id);

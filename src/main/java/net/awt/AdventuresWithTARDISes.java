@@ -85,6 +85,13 @@ public class AdventuresWithTARDISes implements ModInitializer {
         var modContainer = FabricLoader.getInstance().getModContainer("awt").orElseThrow();
 
         ResourceManagerHelper.registerBuiltinResourcePack(
+                new Identifier("awt", "awtmenu"),
+                modContainer,
+                Text.literal("Main Menu Music"),
+                ResourcePackActivationType.DEFAULT_ENABLED
+        );
+
+        ResourceManagerHelper.registerBuiltinResourcePack(
                 new Identifier("awt", "greyedgui"),
                 modContainer,
                 Text.literal("Greyed Out TARDIS Monitor GUI"),
