@@ -91,7 +91,7 @@ public class BakerExteriorModel extends SimpleExteriorModel {
 			return;
 
 		matrices.push();
-		matrices.scale(0.63F, 0.63F, 0.63F);
+		matrices.scale(0.55f, 0.55f, 0.55f);
 		matrices.translate(0, -1.5f, 0);
 
 		DoorHandler door = exterior.tardis().get().door();
