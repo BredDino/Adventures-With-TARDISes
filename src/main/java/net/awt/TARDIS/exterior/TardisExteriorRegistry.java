@@ -365,7 +365,7 @@ public class TardisExteriorRegistry {
         POLICEBOXRHAMNOUS.setModel(new policebox()).toClient().register();
         POLICEBOXRHAMNOUS.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
         //POLICEBOXRHAMNOUS.setPortalWidth(1f);
-       // POLICEBOXRHAMNOUS.setPortalHeight(2f);
+        //POLICEBOXRHAMNOUS.setPortalHeight(2f);
         // POLICEBOXRHAMNOUS.setPortalTranslations(BiFunction<Vector3d,Byte,Vector3d>);
         POLICEBOXRHAMNOUS.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
