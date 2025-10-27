@@ -52,7 +52,7 @@ public class SonicGlassesComponent extends PlayerComponent implements CommonTick
     public void writeToNbt(NbtCompound nbtCompound) {
         nbtCompound.putInt("mode", sonicMode.index());
         nbtCompound.putInt("fuel", fuel);
-        nbtCompound.putBoolean("sg_equipped", equipped);
+        if (this.equipped != null) nbtCompound.putBoolean("sg_equipped", equipped);
     }
 
     public boolean hasEquipped(PlayerEntity player, Item item) {
