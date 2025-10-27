@@ -17,6 +17,16 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 
+    // Trinkets API repos, so we can finally have it as a lib.
+
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
+        name = "Ladysnake Libs"
+        url = 'https://maven.ladysnake.org/releases'
+    }
 	maven { url "https://jitpack.io"
 		metadataSources {
 			artifact() // Look directly for artifact
