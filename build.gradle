@@ -17,7 +17,7 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 
-    // Trinkets API repos, so we can finally have it as a lib.
+    // Direct links to the Trinkets API repos, so we don't need to worry about these, directly copied from their github.
 
     maven {
         name = "TerraformersMC"
@@ -27,11 +27,7 @@ repositories {
         name = "Ladysnake Libs"
         url = 'https://maven.ladysnake.org/releases'
     }
-	maven { url "https://jitpack.io"
-		metadataSources {
-			artifact() // Look directly for artifact
-		}
-	}
+
 	maven { url 'https://maven.isxander.dev/releases' }
 // Scheduler, Queue, MultiDim, AutoJSON
 	maven { url "https://theo.is-a.dev/maven/" }
