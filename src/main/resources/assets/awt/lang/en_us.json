@@ -24,7 +24,7 @@
   "item.awt.doctorwho1411_music_disc.desc": "2023 x 2010 Remix - Doctor Music Master",
   "item.awt.weapon_matrix": "Weapon Matrix",
 
-  "item_group.Atrium": "Adventures With TARDISes",
+
   "item.awt.sonic_glasses": "Sonic Shades",
   "item.awt.dbz_scouter": "Sonic Scouter",
   "item.awt.k9_spawn_egg": "K-9 Spawn Egg",
@@ -70,7 +70,7 @@
   "exterior.awt.logo_tardis_purple": "Lego PoliceBox V2",
   "exterior.awt.logo_tardis_darkblue": "Lego PoliceBox V3",
   "exterior.awt.lego_dimensions_police_box": "Lego Dim",
-  "exterior.awt.lefthottub": "Hot Tub Time Machine",
+  "exterior.awt.lefthottub": "Hot Tub Space/Time Machine",
   "exterior.awt.jake": "AiT Jake",
 
   "exterior.awt.policebox_alt": "Toyota",
@@ -205,8 +205,12 @@
   "block.awt.polished_diorite_roundel": "Polished Diorite Roundel",
   "block.awt.polished_granite_roundel": "Polished Granite Roundel",
   "block.awt.quartz_roundel": "Quartz Roundel",
+  "block.awt.ambquartz_roundel": "Amber-Quartz Roundel",
   "block.awt.bluequartz_roundel": "Blue-Quartz Roundel",
   "block.awt.crimquartz_roundel": "Crimson-Quartz Roundel",
+  "block.awt.verdquartz_roundel": "Verdant-Quartz Roundel",
+  "block.awt.vioquartz_roundel": "Violet-Quartz Roundel",
+  "block.awt.obsiquartz_roundel": "Obsidi-Quartz Roundel",
   "block.awt.sandstone_roundel": "Sandstone Roundel",
   "block.awt.stripped_acacia_log_roundel": "Stripped Acacia Log Roundel",
   "block.awt.stripped_birch_log_roundel": "Stripped Birch Log Roundel",
@@ -256,6 +260,6 @@
   "block.awt.rusty_grate_block": "Rusty Grate",
   "block.awt.rusty_thick_grate_block": "Rusty Thick Grate",
 
-  "item_group.awt.Roundel": "AWT: Roundels"
-
+  "item_group.awt.Roundel": "Roundels",
+  "item_group.Atrium": "AWT"
 }

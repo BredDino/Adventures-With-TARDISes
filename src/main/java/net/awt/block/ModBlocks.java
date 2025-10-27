@@ -165,6 +165,19 @@ public class ModBlocks {
     public static final Block CRIMQUARTZ_ROUNDEL = registerBlock("crimquartz_roundel",
             new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE)));
 
+    public static final Block VERDQUARTZ_ROUNDEL = registerBlock("verdquartz_roundel",
+            new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE)));
+
+    public static final Block AMBQUARTZ_ROUNDEL = registerBlock("ambquartz_roundel",
+            new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE)));
+
+    public static final Block VIOQUARTZ_ROUNDEL = registerBlock("vioquartz_roundel",
+            new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE)));
+
+    public static final Block OBSIQUARTZ_ROUNDEL = registerBlock("obsiquartz_roundel",
+            new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE)));
+
+
 
 
 

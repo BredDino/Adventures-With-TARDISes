@@ -63,8 +63,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.POLISHED_DIORITE_ROUNDEL);
                         entries.add(ModBlocks.POLISHED_GRANITE_ROUNDEL);
                         entries.add(ModBlocks.QUARTZ_ROUNDEL);
+                        entries.add(ModBlocks.AMBQUARTZ_ROUNDEL);
                         entries.add(ModBlocks.BLUEQUARTZ_ROUNDEL);
                         entries.add(ModBlocks.CRIMQUARTZ_ROUNDEL);
+                        entries.add(ModBlocks.VERDQUARTZ_ROUNDEL);
+                        entries.add(ModBlocks.VIOQUARTZ_ROUNDEL);
+                        entries.add(ModBlocks.OBSIQUARTZ_ROUNDEL);
                         entries.add(ModBlocks.SANDSTONE_ROUNDEL);
                         entries.add(ModBlocks.STRIPPED_ACACIA_LOG_ROUNDEL);
                         entries.add(ModBlocks.STRIPPED_BIRCH_LOG_ROUNDEL);
