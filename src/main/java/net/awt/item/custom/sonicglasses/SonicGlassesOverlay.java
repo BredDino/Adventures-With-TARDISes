@@ -1,10 +1,12 @@
 package net.awt.item.custom.sonicglasses;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import dev.amble.ait.core.item.sonic.SonicMode;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.awt.AdventuresWithTARDISes;
 import net.awt.block.ModBlocks;
+import net.awt.components.ModComponents;
 import net.awt.item.ModItems;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.block.Block;
@@ -60,22 +62,25 @@ public class SonicGlassesOverlay implements HudRenderCallback {
             RenderSystem.enableBlend();
             RenderSystem.setShaderColor(1 +getRandomDBE(),1 +getRandomDBE(),1 +getRandomDBE(), doDeadBatteryEffect() ? Math.max((float) Math.random(), 0.75f) : 1);
 
-            Entity entity = MinecraftClient.getInstance().getCameraEntity();
-            HitResult blockHit = entity.raycast(5.0, 0.0F, false);
-            if (blockHit.getType() == net.minecraft.util.hit.HitResult.Type.BLOCK) {
-                BlockPos posOfTargetedBlock = ((BlockHitResult) blockHit).getBlockPos();
-                Block targetBlock = player.getWorld().getBlockState(new BlockPos((int) posOfTargetedBlock.getX(), (int) posOfTargetedBlock.getY(), (int) posOfTargetedBlock.getZ())).getBlock();
-                matrixStack.push();
-                if (doDeadBatteryEffect()) matrixStack.translate(Math.random()>0.95 ? 1 : 0, Math.random()>0.95 ? 1 : 0,0);
+            if (ModComponents.SONIC_GLASSES.maybeGet(player).isPresent() && ModComponents.SONIC_GLASSES.get(player).sonicMode == SonicMode.Modes.SCANNING) {
+                Entity entity = MinecraftClient.getInstance().getCameraEntity();
+                HitResult blockHit = entity.raycast(5.0, 0.0F, false);
+                if (blockHit.getType() == net.minecraft.util.hit.HitResult.Type.BLOCK) {
+                    BlockPos posOfTargetedBlock = ((BlockHitResult) blockHit).getBlockPos();
+                    Block targetBlock = player.getWorld().getBlockState(new BlockPos((int) posOfTargetedBlock.getX(), (int) posOfTargetedBlock.getY(), (int) posOfTargetedBlock.getZ())).getBlock();
+                    matrixStack.push();
+                    if (doDeadBatteryEffect())
+                        matrixStack.translate(Math.random() > 0.95 ? 1 : 0, Math.random() > 0.95 ? 1 : 0, 0);
 
-                matrixStack.translate(drawContext.getScaledWindowWidth(), 8,0);
-                matrixStack.scale(1.25f, 1.25f, 1.25f);
-                Text text = Text.of("X: " + posOfTargetedBlock.getX() + " Y: " + posOfTargetedBlock.getY() + " Z: " + posOfTargetedBlock.getZ());
-                int k = MinecraftClient.getInstance().textRenderer.getWidth(text.getString());
-                drawContext.drawItem(targetBlock.asItem().getDefaultStack(), -20 - k -2, 0);
-                drawContext.drawText(MinecraftClient.getInstance().textRenderer, text, -k -2,4, ColorHelper.Argb.getArgb(1, 33, 220, 255), true);
-                matrixStack.pop();
+                    matrixStack.translate(drawContext.getScaledWindowWidth(), 8, 0);
+                    matrixStack.scale(1.25f, 1.25f, 1.25f);
+                    Text text = Text.of("X: " + posOfTargetedBlock.getX() + " Y: " + posOfTargetedBlock.getY() + " Z: " + posOfTargetedBlock.getZ());
+                    int k = MinecraftClient.getInstance().textRenderer.getWidth(text.getString());
+                    drawContext.drawItem(targetBlock.asItem().getDefaultStack(), -20 - k - 2, 0);
+                    drawContext.drawText(MinecraftClient.getInstance().textRenderer, text, -k - 2, 4, ColorHelper.Argb.getArgb(1, 33, 220, 255), true);
+                    matrixStack.pop();
 
+                }
             }
 
             Text fueltext = Text.of("AU: " + equippedStack.getOrCreateNbt().getDouble("fuel"));
@@ -93,7 +98,7 @@ public class SonicGlassesOverlay implements HudRenderCallback {
     }
 
     private boolean doDeadBatteryEffect() {
-        return equippedStack.getOrCreateNbt().getDouble("fuel") < 250;
+        return equippedStack.getOrCreateNbt().getDouble("fuel") < 100;
     }
 
     private float getRandomDBE() {
