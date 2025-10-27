@@ -19,7 +19,7 @@ public class ModBlocks {
     public static final Block ATRIUM_BLOCK = registerBlock("atrium_block",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool().strength(1.5F, 3.0F)));
 
-    public static final Block themoment = registerBlock("themoment",
+    public static final Block THE_MOMENT = registerBlock("the_moment",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.ANVIL).requiresTool()));
 
     public static final Block ATRIUM_ORE = registerBlock("atrium_ore",

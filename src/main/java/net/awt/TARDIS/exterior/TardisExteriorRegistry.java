@@ -10,11 +10,14 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.Direction;
 import org.joml.Vector3d;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 
 import java.util.Vector;
+import java.util.function.BiFunction;
 
 import static net.awt.AdventuresWithTARDISes.MOD_ID;
 
@@ -54,6 +57,9 @@ public class TardisExteriorRegistry {
     public static AddonExterior POLICEBOXRHAMNOUS;
     public static AddonExterior POLICEBOXNATHAN;
     public static AddonExterior POLICEBOXDINO;
+    public static AddonExterior POLICEBOXFLATLINE;
+    public static AddonExterior RHAMNOUSVANILLA;
+    public static AddonExterior GLASGLOWVANILLA;
    // public static AddonExterior BEEHIVE;
    // public static AddonExterior NEZUKO;
 
@@ -120,6 +126,12 @@ public class TardisExteriorRegistry {
         BLOCKTISV3 = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktisv3").register();
         BLOCKTISV3.setDoor(new AddonExterior.Door(BLOCKTISV3, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
+        RHAMNOUSVANILLA = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "rhamnous_vanilla").register();
+        RHAMNOUSVANILLA.setDoor(new AddonExterior.Door(RHAMNOUSVANILLA, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
+
+        GLASGLOWVANILLA = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "glasglow_vanilla").register();
+        GLASGLOWVANILLA.setDoor(new AddonExterior.Door(GLASGLOWVANILLA, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
+
         LEGO = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_default").register();
         LEGO.setDoor(new AddonExterior.Door(LEGO, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
@@ -168,7 +180,10 @@ public class TardisExteriorRegistry {
         POLICEBOXDINO = new AddonExterior(AWTExclusiveCategory.REFERENCE, MOD_ID, "policebox_dino").register();
         POLICEBOXDINO.setDoor(new AddonExterior.Door(POLICEBOXDINO, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
-       // BEEHIVE = new AddonExterior(new Identifier(MOD_ID, "beehive"), MOD_ID, "beehive").register();
+        POLICEBOXFLATLINE = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_flatline").register();
+        POLICEBOXFLATLINE.setDoor(new AddonExterior.Door(POLICEBOXFLATLINE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        // BEEHIVE = new AddonExterior(new Identifier(MOD_ID, "beehive"), MOD_ID, "beehive").register();
         //BEEHIVE.setDoor(new AddonExterior.Door(BEEHIVE, false, SoundEvents.BLOCK_BEEHIVE_ENTER, SoundEvents.BLOCK_BEEHIVE_EXIT)).toDoor().register();
 
         //NEZUKO = new AddonExterior(new Identifier(MOD_ID, "nezukobox"), MOD_ID, "nezuko").register();
@@ -238,8 +253,6 @@ public class TardisExteriorRegistry {
 
         POLICEBOX.setModel(new policebox()).toClient().register();
         POLICEBOX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOX.setPortalWidth(1f);
-        POLICEBOX.setPortalHeight(2f);
         POLICEBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         TYPE70.setModel(new Type70Exterior()).toClient().register();
@@ -278,6 +291,18 @@ public class TardisExteriorRegistry {
         BLOCKTISV3.setPortalHeight(1.75f);
         BLOCKTISV3.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
+        RHAMNOUSVANILLA.setModel(new RhamnousVanilla()).toClient().register();
+        RHAMNOUSVANILLA.toDoor().setModel(new RhamnousVanillaDoor(RhamnousVanillaDoor.getTexturedModelData().createModel())).toClient().register();
+        RHAMNOUSVANILLA.setPortalWidth(0.75f);
+        RHAMNOUSVANILLA.setPortalHeight(1.75f);
+        RHAMNOUSVANILLA.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        GLASGLOWVANILLA.setModel(new BlocktisV2Exterior()).toClient().register();
+        GLASGLOWVANILLA.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
+        GLASGLOWVANILLA.setPortalWidth(0.75f);
+        GLASGLOWVANILLA.setPortalHeight(1.75f);
+        GLASGLOWVANILLA.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
         LEGO.setModel(new logo_tardis_model()).toClient().register();
         LEGO.toDoor().setModel(new logo_tardis_model_door(logo_tardis_model_door.getTexturedModelData().createModel())).toClient().register();
         LEGO.setPortalWidth(1f);
@@ -304,14 +329,10 @@ public class TardisExteriorRegistry {
 
         POLICEBOXALT.setModel(new policebox()).toClient().register();
         POLICEBOXALT.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXALT.setPortalWidth(1f);
-        POLICEBOXALT.setPortalHeight(2f);
         POLICEBOXALT.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXPURPLE.setModel(new policebox()).toClient().register();
         POLICEBOXPURPLE.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXPURPLE.setPortalWidth(1f);
-        POLICEBOXPURPLE.setPortalHeight(2f);
         POLICEBOXPURPLE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         JAKE.setModel(new JakeTheDogExteriorModel(JakeTheDogExteriorModel.getTexturedModelData().createModel())).toClient().register();
@@ -323,51 +344,42 @@ public class TardisExteriorRegistry {
 
         POLICEBOXCORAL.setModel(new policebox()).toClient().register();
         POLICEBOXCORAL.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXCORAL.setPortalWidth(1f);
-        POLICEBOXCORAL.setPortalHeight(2f);
         POLICEBOXCORAL.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXBADWOLF.setModel(new policebox()).toClient().register();
         POLICEBOXBADWOLF.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXBADWOLF.setPortalWidth(1f);
-        POLICEBOXBADWOLF.setPortalHeight(2f);
         POLICEBOXBADWOLF.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         GAMBLEBOX.setModel(new policebox()).toClient().register();
         GAMBLEBOX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        GAMBLEBOX.setPortalWidth(1f);
-        GAMBLEBOX.setPortalHeight(2f);
         GAMBLEBOX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXTOKOMAK.setModel(new policebox()).toClient().register();
         POLICEBOXTOKOMAK.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXTOKOMAK.setPortalWidth(1f);
-        POLICEBOXTOKOMAK.setPortalHeight(2f);
         POLICEBOXTOKOMAK.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXALT2.setModel(new policebox()).toClient().register();
         POLICEBOXALT2.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXALT2.setPortalWidth(1f);
-        POLICEBOXALT2.setPortalHeight(2f);
         POLICEBOXALT2.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXRHAMNOUS.setModel(new policebox()).toClient().register();
         POLICEBOXRHAMNOUS.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXRHAMNOUS.setPortalWidth(1f);
-        POLICEBOXRHAMNOUS.setPortalHeight(2f);
+        //POLICEBOXRHAMNOUS.setPortalWidth(1f);
+        //POLICEBOXRHAMNOUS.setPortalHeight(2f);
+        // POLICEBOXRHAMNOUS.setPortalTranslations(BiFunction<Vector3d,Byte,Vector3d>);
         POLICEBOXRHAMNOUS.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXNATHAN.setModel(new policebox()).toClient().register();
         POLICEBOXNATHAN.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXNATHAN.setPortalWidth(1f);
-        POLICEBOXNATHAN.setPortalHeight(2f);
         POLICEBOXNATHAN.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         POLICEBOXDINO.setModel(new policebox()).toClient().register();
         POLICEBOXDINO.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
-        POLICEBOXDINO.setPortalWidth(1f);
-        POLICEBOXDINO.setPortalHeight(2f);
         POLICEBOXDINO.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOXFLATLINE.setModel(new flatline_policebox()).toClient().register();
+        POLICEBOXFLATLINE.toDoor().setModel(new flatline_policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXFLATLINE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
        // BEEHIVE.setModel(new beehive()).toClient().register();
        // BEEHIVE.toDoor().setModel(new beehivedoor(beehivedoor.getTexturedModelData().createModel())).toClient().register();

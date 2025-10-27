@@ -21,6 +21,9 @@ import net.awt.networking.ModPackets;
 import net.awt.sound.AWTSound;
 import net.awt.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -77,7 +80,39 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModPackets.registerC2SPackets();
 
         FabricDefaultAttributeRegistry.register(ModEntities.K9, K9Entity.createK9Attributes());
+
+        // Resource Pack Handler
+        var modContainer = FabricLoader.getInstance().getModContainer("awt").orElseThrow();
+
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                new Identifier("awt", "awtmenu"),
+                modContainer,
+                Text.literal("Main Menu Music"),
+                ResourcePackActivationType.DEFAULT_ENABLED
+        );
+
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                new Identifier("awt", "greyedgui"),
+                modContainer,
+                Text.literal("Greyed Out TARDIS Monitor GUI"),
+                ResourcePackActivationType.NORMAL
+        );
+
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                new Identifier("awt", "lebronjamesgui"),
+                modContainer,
+                Text.literal("Lebron James TARDIS Monitor GUI"),
+                ResourcePackActivationType.NORMAL
+        );
+
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                new Identifier("awt", "redshiftgui"),
+                modContainer,
+                Text.literal("Redshifted TARDIS Monitor GUIs"),
+                ResourcePackActivationType.NORMAL
+        );
 	}
+
 	public static Identifier id(String path) {
 		return new Identifier("awt", path);
 	}

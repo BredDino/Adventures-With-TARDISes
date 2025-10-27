@@ -6,28 +6,31 @@
   "dimension.awt.thelostworld": "The Lost Reality",
 
   "item.awt.atrium":"Atrium",
-  "item.awt.lightsaber":"Lightsaber",
   "item.awt.processing_unit": "Processing Unit",
   "item.awt.atrium_core": "Atrium Core",
   "item.awt.energized_atrium": "Energised Atrium",
   "item.awt.roundel_mold": "Roundel Mold",
   "item.awt.vortex_manipulator": "Vortex Manipulator",
   "item.awt.vortex_manipulator2": "Vortex Manipulator",
-  "item.awt.drwhovale_music_disc": "§cMusic Disc",
+  "item.awt.drwhovale_music_disc": "§6Music Disc",
   "item.awt.drwhovale_music_disc.desc": "Murray Gold - Vale Decem",
   "item.awt.doctorwhoxv_music_disc": "§cMusic Disc",
   "item.awt.doctorwhoxv_music_disc.desc": "Murray Gold - Doctor Who XV",
-  "item.awt.paralyzer_music_disc": "§cMusic Disc",
+  "item.awt.paralyzer_music_disc": "§7NMusic Disc",
   "item.awt.paralyzer_music_disc.desc": "Finger Eleven - Paralyzer (Alternate Mix)",
-  "item.awt.dugga_doo_music_disc": "§cMusic Disc",
+  "item.awt.dugga_doo_music_disc": "§6Music Disc",
   "item.awt.dugga_doo_music_disc.desc": "Dugga doo - Dugga doo",
+  "item.awt.doctorwho1411_music_disc": "§dMusic Disc",
+  "item.awt.doctorwho1411_music_disc.desc": "2023 x 2010 Remix - Doctor Music Master",
   "item.awt.weapon_matrix": "Weapon Matrix",
 
-  "item_group.Atrium":"AWT",
+  "item_group.Atrium": "Adventures With TARDISes",
   "item.awt.sonic_glasses": "Sonic Shades",
+  "item.awt.dbz_scouter": "Sonic Scouter",
   "item.awt.k9_spawn_egg": "K-9 Spawn Egg",
+  "item.awt.k9_spawn_egg.desc": "K-9!!",
   "item.awt.spoon": "Spoon",
-  "item.awt.spoon.desc": "I am The Doctor and this is my spoon",
+  "item.awt.spoon.desc": "I am The Doctor and this is my spoon!",
 
   "effect.awt.Antiradiation":"Anti-Radiation",
 
@@ -61,9 +64,11 @@
   "exterior.awt.blocktis": "OG Blocktis",
   "exterior.awt.blocktisv2": "Blocktis V2",
   "exterior.awt.blocktisv3": "Blocktis V3",
+  "exterior.awt.rhamnous_vanilla": "Paradox",
+  "exterior.awt.glasglow_vanilla": "Glasglow",
   "exterior.awt.logo_tardis_default": "Lego PoliceBox",
-  "exterior.awt.logo_tardis_purple": "Lego PoliceBoxV2",
-  "exterior.awt.logo_tardis_darkblue": "Lego PoliceBoxV3",
+  "exterior.awt.logo_tardis_purple": "Lego PoliceBox V2",
+  "exterior.awt.logo_tardis_darkblue": "Lego PoliceBox V3",
   "exterior.awt.lego_dimensions_police_box": "Lego Dim",
   "exterior.awt.lefthottub": "Hot Tub Time Machine",
   "exterior.awt.jake": "AiT Jake",
@@ -78,6 +83,7 @@
   "exterior.awt.policebox_rhamnous": "Rhamnous",
   "exterior.awt.policebox_nathan": "NathanBox",
   "exterior.awt.policebox_dino": "Dino",
+  "exterior.awt.policebox_flatline": "Flatline",
 
   "exterior.awt.billcipher": "Bill Cipher",
   "exterior.awt.toywardianbooth": "GambleBox Booth",
@@ -101,11 +107,11 @@
   "exterior.awt.bee_k6": "Bee Booth",
   "exterior.awt.crimson": "Crimson",
   "exterior.awt.zen": "Zen",
-  "exterior.awt.harmonybox": "Rhamnous",
+  "exterior.awt.harmonybox": "Harmony",
   "exterior.awt.creamk6booth": "Gloom Booth",
 
   "sonic.awt.blunt": "Blunt",
-  "sonic.awt.tardis": "Tardis",
+  "sonic.awt.tardis": "TARDIS",
   "sonic.awt.toywardian": "Glückspiel Sonic",
   "sonic.awt.classic_baker_sonic": "Baker",
   "sonic.awt.corissance": "Corissance",
@@ -135,6 +141,7 @@
   "sonic.awt.kenobi_sonic": "Sonic Kenobi Lightsaber",
   "sonic.awt.elegant_sonic": "Sonic Dooku Lightsaber",
   "sonic.awt.laser_screwdriver": "Laser Screwdriver",
+  "sonic.awt.dbz_sonic": "Dragon Ball Radar",
 
   "desktop.awt.hell": "Hell",
   "desktop.awt.fnaf4": "FNAF 4",
@@ -236,7 +243,7 @@
   "console.awt.toyota_alt": "Toyota Alt",
   "console.awt.toyota_alt2": "Toyota Alt2",
   "console.awt.8_alt": "Hudolin Alt",
-  "console.awt.toyota_rhamnous_alt": "Toyota Alt3",
+  "console.awt.toyota_rhamnous_alt": "Toyota Alt 3",
   "console.awt.junkglass2": "Junkglass Alt",
 
   "block.awt.atrium_block": "Atrium Block",
@@ -247,6 +254,6 @@
   "block.awt.rusty_grate_block": "Rusty Grate",
   "block.awt.rusty_thick_grate_block": "Rusty Thick Grate",
 
-  "item_group.awt.Roundel": "Roundels"
+  "item_group.awt.Roundel": "AWT: Roundels"
 
 }

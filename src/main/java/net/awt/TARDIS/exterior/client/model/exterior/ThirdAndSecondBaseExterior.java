@@ -98,7 +98,7 @@ public class ThirdAndSecondBaseExterior extends SimpleExteriorModel {
 			return;
 
 		matrices.push();
-		matrices.scale(0.63F, 0.63F, 0.63F);
+		matrices.scale(0.55f, 0.55f, 0.55f);
 		matrices.translate(0, -1.5f, 0);
 		matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(90));
 

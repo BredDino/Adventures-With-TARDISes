@@ -45,11 +45,11 @@ public class LogoDrawerMixin {
         }
 
 
-        int logoWidth = 400;
-        int logoHeight = 120;
+        int logoWidth = 300;
+        int logoHeight = 90;
 
         int centerX = (screenWidth - logoWidth) / 2;
-        int logoY = 0; // Adjust vertical position
+        int logoY = 12; // Adjust vertical position
 
         RenderSystem.enableBlend();
         context.drawTexture(logo, centerX, logoY, 0.0f, 0.0f, logoWidth, logoHeight, logoWidth, logoHeight);

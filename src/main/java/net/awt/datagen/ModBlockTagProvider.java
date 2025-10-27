@@ -54,7 +54,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.themoment)
+                .add(ModBlocks.THE_MOMENT)
         ;
 
 
@@ -72,7 +72,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ATRIUM_BLOCK)
                 .add(ModBlocks.ATRIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_ATRIUM_ORE)
-                .add(ModBlocks.themoment)
+                .add(ModBlocks.THE_MOMENT)
         ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
