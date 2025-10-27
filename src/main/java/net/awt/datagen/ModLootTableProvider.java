@@ -27,6 +27,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.POLISHED_GRANITE_ROUNDEL);
         addDrop(ModBlocks.POLISHED_DIORITE_ROUNDEL);
         addDrop(ModBlocks.QUARTZ_ROUNDEL);
+        addDrop(ModBlocks.BLUEQUARTZ_ROUNDEL);
+        addDrop(ModBlocks.CRIMQUARTZ_ROUNDEL);
         addDrop(ModBlocks.SANDSTONE_ROUNDEL);
         addDrop(ModBlocks.CYAN_CONCRETE_ROUNDEL);
         addDrop(ModBlocks.YELLOW_CONCRETE_ROUNDEL);

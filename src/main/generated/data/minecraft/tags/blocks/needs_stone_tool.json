@@ -12,6 +12,8 @@
     "awt:polished_granite_roundel",
     "awt:polished_diorite_roundel",
     "awt:quartz_roundel",
+    "awt:bluequartz_roundel",
+    "awt:crimquartz_roundel",
     "awt:sandstone_roundel",
     "awt:cyan_concrete_roundel",
     "awt:yellow_concrete_roundel",
@@ -26,7 +28,6 @@
     "awt:light_blue_concrete_roundel",
     "awt:blue_concrete_roundel",
     "awt:exposed_copper_roundel",
-    "awt:copper_roundel",
-    "awt:bluequartz_roundel"
+    "awt:copper_roundel"
   ]
 }

@@ -205,6 +205,8 @@
   "block.awt.polished_diorite_roundel": "Polished Diorite Roundel",
   "block.awt.polished_granite_roundel": "Polished Granite Roundel",
   "block.awt.quartz_roundel": "Quartz Roundel",
+  "block.awt.bluequartz_roundel": "Blue-Quartz Roundel",
+  "block.awt.crimquartz_roundel": "Crimson-Quartz Roundel",
   "block.awt.sandstone_roundel": "Sandstone Roundel",
   "block.awt.stripped_acacia_log_roundel": "Stripped Acacia Log Roundel",
   "block.awt.stripped_birch_log_roundel": "Stripped Birch Log Roundel",
@@ -230,7 +232,6 @@
   "block.awt.blue_concrete_roundel": "Blue Concrete Roundel",
   "block.awt.exposed_copper_roundel": "Exposed Copper Roundel",
   "block.awt.copper_roundel": "Copper Roundel",
-  "block.awt.bluequartz_roundel": "Blue-Quartz Roundel",
 
   "console.awt.toyota_rhamnous": "Rhamnous' Toyota",
   "console.awt.crystalalt": "TardisOwners' Crystalline",

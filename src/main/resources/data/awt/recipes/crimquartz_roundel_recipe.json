@@ -8,7 +8,7 @@
   ],
   "key": {
     "a": {
-      "item": "minecraft:blue_concrete"
+      "item": "minecraft:red_concrete"
     },
     "b": {
       "item": "minecraft:quartz_block"
@@ -21,7 +21,7 @@
     }
   },
   "result": {
-    "item": "awt:bluequartz_roundel",
+    "item": "awt:crimquartz_roundel",
     "count": 1
   }
 }

@@ -30,6 +30,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_GRANITE_ROUNDEL)
                 .add(ModBlocks.POLISHED_DIORITE_ROUNDEL)
                 .add(ModBlocks.QUARTZ_ROUNDEL)
+                .add(ModBlocks.BLUEQUARTZ_ROUNDEL)
+                .add(ModBlocks.CRIMQUARTZ_ROUNDEL)
                 .add(ModBlocks.SANDSTONE_ROUNDEL)
                 .add(ModBlocks.CYAN_CONCRETE_ROUNDEL)
                 .add(ModBlocks.YELLOW_CONCRETE_ROUNDEL)
@@ -45,7 +47,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLUE_CONCRETE_ROUNDEL)
                 .add(ModBlocks.EXPOSED_COPPER_ROUNDEL)
                 .add(ModBlocks.COPPER_ROUNDEL)
-                .add(ModBlocks.BLUEQUARTZ_ROUNDEL)
+
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
