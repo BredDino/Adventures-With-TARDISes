@@ -18,14 +18,10 @@ repositories {
 	// for more information about repositories.
 
     // Direct links to the Trinkets API repos, so we don't need to worry about these, directly copied from their github.
-
-    maven {
-        name = "TerraformersMC"
-        url = "https://maven.terraformersmc.com/"
-    }
-    maven {
-        name = "Ladysnake Libs"
-        url = 'https://maven.ladysnake.org/releases'
+    maven { url "https://jitpack.io"
+        metadataSources {
+            artifact() // Look directly for artifact
+        }
     }
 
 	maven { url 'https://maven.isxander.dev/releases' }
