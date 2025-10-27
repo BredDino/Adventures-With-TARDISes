@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "cbc",
+    "cac",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blue_concrete"
+    },
+    "b": {
+      "item": "minecraft:quartz_block"
+    },
+    "c": {
+      "item": "minecraft:air"
+    }
+  },
+  "result": {
+    "item": "awt:bluequartz_roundel",
+    "count": 3
+  }
+}
