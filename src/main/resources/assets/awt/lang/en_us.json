@@ -16,14 +16,20 @@
   "item.awt.drwhovale_music_disc.desc": "Murray Gold - Vale Decem",
   "item.awt.doctorwhoxv_music_disc": "§cMusic Disc",
   "item.awt.doctorwhoxv_music_disc.desc": "Murray Gold - Doctor Who XV",
-  "item.awt.paralyzer_music_disc": "§7NMusic Disc",
+  "item.awt.paralyzer_music_disc": "§7Music Disc",
   "item.awt.paralyzer_music_disc.desc": "Finger Eleven - Paralyzer (Alternate Mix)",
   "item.awt.dugga_doo_music_disc": "§6Music Disc",
   "item.awt.dugga_doo_music_disc.desc": "Dugga doo - Dugga doo",
   "item.awt.doctorwho1411_music_disc": "§dMusic Disc",
   "item.awt.doctorwho1411_music_disc.desc": "2023 x 2010 Remix - Doctor Music Master",
+  "item.awt.takedown_music_disc": "§6Music Disc",
+  "item.awt.takedown_music_disc.desc": "Takedown - HUNTR/X",
+  "item.awt.youridol_music_disc": "§5Corrupted Music Disc",
+  "item.awt.youridol_music_disc.desc": "§cMay have an effect on your TARDIS.§f (Your Idol - Saja Boys)",
   "item.awt.weapon_matrix": "Weapon Matrix",
+  "item.awt.atrium_fuel": "§eAtriacoal",
 
+  "tooltip.awt.atrium_fuel": "§cA Super-Fuel created from Atrium and coal.",
 
   "item.awt.sonic_glasses": "Sonic Shades",
   "item.awt.dbz_scouter": "Sonic Scouter",
@@ -260,6 +266,7 @@
   "block.awt.rusty_grate_block": "Rusty Grate",
   "block.awt.rusty_thick_grate_block": "Rusty Thick Grate",
 
-  "item_group.awt.Roundel": "Roundels",
-  "item_group.Atrium": "AWT"
+  "item_group.awt.Roundel": "AWT: Roundels",
+  "item_group.Atrium": "Adventures With TARDISes",
+  "item_group.awt.Decor": "AWT: Decor"
 }

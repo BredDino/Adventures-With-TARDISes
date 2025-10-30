@@ -18,6 +18,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ATRIUM);
                         entries.add(ModItems.PROCESSINGUNIT);
                         entries.add(ModItems.ATRIUMCORE);
+                        entries.add(ModItems.ATRIUM_FUEL);
                         entries.add(ModItems.ENERGIZEDATRIUM);
                         entries.add(ModBlocks.ATRIUM_BLOCK);
                         entries.add(ModBlocks.ATRIUM_ORE);
@@ -36,6 +37,8 @@ public class ModItemGroups {
                         entries.add(ModItems.paralyzer_music_disc);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);
                         entries.add(ModItems.doctorwho1411_music_disc);
+                        entries.add(ModItems.youridol_music_disc);
+                        entries.add(ModItems.takedown_music_disc);
                        // entries.add(ModItems.SONIC_GLASSES);
                        // entries.add(ModItems.DBZ_SCOUTER);
                         entries.add(ModBlocks.GRATE_BLOCK);
@@ -44,7 +47,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUSTY_THICK_GRATE_BLOCK);
                     }).build());
 
-
+    public static final ItemGroup DECOR_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(AdventuresWithTARDISes.MOD_ID, "decor"),
+            FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Decor"))
+                    .icon(() -> new ItemStack(ModBlocks.RUSTY_GRATE_BLOCK)).entries((displayContext, entries) ->  {
+                        entries.add(ModBlocks.GRATE_BLOCK);
+                        entries.add(ModBlocks.THICK_GRATE_BLOCK);
+                        entries.add(ModBlocks.RUSTY_GRATE_BLOCK);
+                        entries.add(ModBlocks.RUSTY_THICK_GRATE_BLOCK);
+                    }).build());
 
     public static final ItemGroup ROUNDEL_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdventuresWithTARDISes.MOD_ID, "roundel"),

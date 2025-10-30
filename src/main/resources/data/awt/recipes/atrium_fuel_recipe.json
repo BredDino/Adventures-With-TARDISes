@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "bbb",
+    "bab",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "awt:atrium"
+    },
+    "b": {
+      "item": "minecraft:coal"
+    },
+  },
+  "result": {
+    "item": "awt:atrium_fuel",
+    "count": 1
+  }
+}

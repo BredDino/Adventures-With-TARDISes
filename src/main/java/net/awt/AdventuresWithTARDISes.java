@@ -21,13 +21,16 @@ import net.awt.networking.ModPackets;
 import net.awt.sound.AWTSound;
 import net.awt.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.server.command.PlaySoundCommand;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -53,6 +56,12 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		AWTConsoleVariantRegistry.init();
 		AWTCategoryRegistry.init();
 
+        //Atrium Coal
+        FuelRegistry.INSTANCE.add(ModItems.ATRIUM_FUEL, 12800);
+
+        // Your Idol Disc TARDIS Response
+
+        // Handles, KYS.
         HandlesResponseRegistry.register(new HandlesResponse() {
             @Override
             public boolean run(ServerPlayerEntity serverPlayerEntity, HandlesSound handlesSound, ServerTardis serverTardis) {
