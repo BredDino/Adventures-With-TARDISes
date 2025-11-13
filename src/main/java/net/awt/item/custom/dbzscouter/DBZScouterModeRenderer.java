@@ -2,6 +2,8 @@ package net.awt.item.custom.dbzscouter;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import dev.amble.ait.client.models.exteriors.PoliceBoxModel;
+import dev.amble.ait.core.item.sonic.SonicMode;
+import net.awt.components.ModComponents;
 import net.awt.entity.client.K9Model;
 import net.awt.entity.client.K9Renderer;
 import net.minecraft.block.BlockState;
@@ -31,13 +33,13 @@ public class DBZScouterModeRenderer {
     }
 
     private void renderTardis(MatrixStack matrices, VertexConsumerProvider.Immediate vertexConsumers, double cameraX, double cameraY, double cameraZ) {
-        if (client.player != null) {
+        if (client.player != null && ModComponents.SONIC_GLASSES.maybeGet(client.player).isPresent() && ModComponents.SONIC_GLASSES.get(client.player).sonicMode == SonicMode.Modes.TARDIS && ModComponents.SONIC_GLASSES.get(client.player).equipped && ModComponents.SONIC_GLASSES.get(client.player).fuel>0 ) {
             matrices.push();
             matrices.translate(0,1,0);
             Entity entity = MinecraftClient.getInstance().getCameraEntity();
             HitResult blockHit = entity.raycast(5.0, 0.0F, false);
 
-            if (blockHit.getType() == HitResult.Type.BLOCK) {
+            if (blockHit.getType() == net.minecraft.util.hit.HitResult.Type.BLOCK) {
                 BlockPos hitblock = ((BlockHitResult) blockHit).getBlockPos();
                 BlockPos posOfTargetedBlock = ((BlockHitResult) blockHit).getBlockPos().up();
 
@@ -54,7 +56,7 @@ public class DBZScouterModeRenderer {
                     matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180));
                     matrices.scale(0.75f, 0.75f, 0.75f);
                     RenderSystem.enableBlend();
-                    //PoliceBoxModel.getTexturedModelData().createModel().render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(new Identifier("ait", "textures/blockentities/exteriors/police_box/police_box_default.png"))), 250, OverlayTexture.DEFAULT_UV, 0f,0.41f,0.92f, (float)Math.max (0.75f*Math.random(), 0.5f));
+                    PoliceBoxModel.getTexturedModelData().createModel().render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntityTranslucentCull(new Identifier("ait", "textures/blockentities/exteriors/police_box/police_box_default.png"))), 250, OverlayTexture.DEFAULT_UV, 0f,0.41f,0.92f, (float)Math.max (0.75f*Math.random(), 0.5f));
 
                     RenderSystem.disableBlend();
 
