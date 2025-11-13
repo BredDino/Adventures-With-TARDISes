@@ -39,12 +39,8 @@ public class ModItemGroups {
                         entries.add(ModItems.doctorwho1411_music_disc);
                         entries.add(ModItems.youridol_music_disc);
                         entries.add(ModItems.takedown_music_disc);
-                       // entries.add(ModItems.SONIC_GLASSES);
-                       // entries.add(ModItems.DBZ_SCOUTER);
-                        entries.add(ModBlocks.GRATE_BLOCK);
-                        entries.add(ModBlocks.THICK_GRATE_BLOCK);
-                        entries.add(ModBlocks.RUSTY_GRATE_BLOCK);
-                        entries.add(ModBlocks.RUSTY_THICK_GRATE_BLOCK);
+                        entries.add(ModItems.SONIC_GLASSES);
+                        entries.add(ModItems.DBZ_SCOUTER);
                     }).build());
 
     public static final ItemGroup DECOR_GROUP = Registry.register(Registries.ITEM_GROUP,
