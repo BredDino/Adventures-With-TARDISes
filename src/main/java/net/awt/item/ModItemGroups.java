@@ -29,9 +29,8 @@ public class ModItemGroups {
                         entries.add(ModItems.WEAPON_MATRIX);
                        // entries.add(ModBlocks.THE_MOMENT);
 
-                       // entries.add(ModItems.spoon);
+                        entries.add(ModItems.spoon);
 
-                        //entries.add(ModItems.CLASSIC1);
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.doctorwhoxv_music_disc);
                         entries.add(ModItems.paralyzer_music_disc);
