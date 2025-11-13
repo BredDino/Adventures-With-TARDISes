@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    "bab",
+    "   "
+  ],
+  "key": {
+    "a": {
+      "item": "ait:sonic_screwdriver"
+    },
+    "b": {
+      "item": "awt:processing_unit"
+    }
+  },
+    "result": {
+      "item": "awt:sonic_glasses",
+      "count": 1
+    }
+
+}
+
+
+

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    " a ",
+    "   "
+  ],
+  "key": {
+    "a": {
+      "item": "awt:dbz_scouter"
+    }
+  },
+    "result": {
+      "item": "awt:sonic_glasses",
+      "count": 1
+    }
+
+}
+
+
+
