@@ -3,7 +3,6 @@ package net.awt.item;
 import net.awt.AdventuresWithTARDISes;
 import net.awt.entity.ModEntities;
 import net.awt.item.custom.AtriumFuel;
-import net.awt.item.custom.dbzscouter.DBZScouter;
 import net.awt.item.custom.sonicglasses.SonicGlasses;
 import net.awt.item.custom.VortexManipulator;
 import net.awt.sound.AWTSound;
@@ -53,7 +52,7 @@ public class ModItems {
 
     public static final Item SONIC_GLASSES = registerItem("sonic_glasses", new SonicGlasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
-    public static final Item DBZ_SCOUTER = registerItem("dbz_scouter", new DBZScouter(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item DBZ_SCOUTER = registerItem("dbz_scouter", new SonicGlasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(ATRIUM);
