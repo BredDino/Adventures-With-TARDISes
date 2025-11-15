@@ -4,7 +4,7 @@ import dev.amble.ait.core.AITSounds;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import mdt.k9mod.client.renderers.K9EntityRenderer;
-import net.awt.TARDIS.console.client.AWTClientConsoleVariantRegistry;
+
 import net.awt.TARDIS.exterior.TardisExteriorRegistry;
 import net.awt.block.ModBlocks;
 import net.awt.components.ModComponents;
@@ -45,7 +45,6 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         TardisExteriorRegistry.registerClientAddonExteriors();
-        AWTClientConsoleVariantRegistry.init();
 
         TrinketRendererRegistry.registerRenderer(ModItems.SONIC_GLASSES, (TrinketRenderer) ModItems.SONIC_GLASSES);
         HudRenderCallback.EVENT.register(new SonicGlassesOverlay());

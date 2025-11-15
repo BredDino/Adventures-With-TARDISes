@@ -5,9 +5,7 @@
   "mixins": [
     "category.CategoryRegistryMixin",
     "category.ExclusiveCategoryMixin",
-    "client.LogoDrawerMixin",
-    "console.ConsoleRegistryMixin",
-    "console.ConsoleVariantRegistryMixin"
+    "client.LogoDrawerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -15,7 +13,6 @@
   "client": [
     "client.ControlEntityRendererMixin",
     "client.DebugRendererMixin",
-    "client.LogoDrawerMixin",
-    "console.ClientConsoleVariantRegistryMixin"
+    "client.LogoDrawerMixin"
   ]
 }

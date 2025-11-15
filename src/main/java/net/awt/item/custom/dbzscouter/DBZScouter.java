@@ -13,8 +13,6 @@ import dev.amble.ait.registry.impl.SonicRegistry;
 import dev.emi.trinkets.TrinketSlot;
 import dev.emi.trinkets.api.*;
 import dev.emi.trinkets.api.client.TrinketRenderer;
-import net.awt.TARDIS.console.client.clientvariants.ClientJunkGlassVariant;
-import net.awt.TARDIS.console.client.models.JunkGlassModel;
 import net.awt.entity.client.K9Model;
 import net.awt.entity.client.K9Renderer;
 import net.awt.entity.client.ModModelLayers;

@@ -5,8 +5,6 @@ import dev.amble.ait.core.handles.HandlesSound;
 import dev.amble.ait.core.tardis.ServerTardis;
 import dev.amble.ait.core.tardis.handler.TardisCrashHandler;
 import dev.amble.ait.registry.impl.HandlesResponseRegistry;
-import net.awt.TARDIS.console.AWTConsoleRegistry;
-import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
 import net.awt.TARDIS.exterior.TardisExteriorRegistry;
 import net.awt.TARDIS.exterior.category.AWTCategoryRegistry;
 import net.awt.block.ModBlocks;
@@ -52,8 +50,6 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModEffects.registerEffects();
 
 		TardisExteriorRegistry.onInitialize();
-		AWTConsoleRegistry.init();
-		AWTConsoleVariantRegistry.init();
 		AWTCategoryRegistry.init();
 
         //Atrium Coal
