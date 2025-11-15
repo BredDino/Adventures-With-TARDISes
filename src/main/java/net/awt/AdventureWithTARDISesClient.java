@@ -16,7 +16,6 @@ import net.awt.entity.client.K9Model;
 import net.awt.entity.custom.K9Entity;
 import net.awt.item.ModItems;
 import net.awt.item.custom.sonicglasses.SonicGlassesOverlay;
-import net.awt.item.custom.dbzscouter.DBZScouterOverlay;
 import net.awt.networking.ModPackets;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -51,7 +50,6 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
         HudRenderCallback.EVENT.register(new SonicGlassesOverlay());
 
         TrinketRendererRegistry.registerRenderer(ModItems.DBZ_SCOUTER, (TrinketRenderer) ModItems.DBZ_SCOUTER);
-        HudRenderCallback.EVENT.register(new DBZScouterOverlay());
 
         ModPackets.registerS2CPackets();
 
