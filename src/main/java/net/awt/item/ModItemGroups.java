@@ -36,8 +36,6 @@ public class ModItemGroups {
                         entries.add(ModItems.paralyzer_music_disc);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);
                         entries.add(ModItems.doctorwho1411_music_disc);
-                        entries.add(ModItems.youridol_music_disc);
-                        entries.add(ModItems.takedown_music_disc);
                         entries.add(ModItems.SONIC_GLASSES);
                         entries.add(ModItems.DBZ_SCOUTER);
                     }).build());
