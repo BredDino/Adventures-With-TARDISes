@@ -177,6 +177,8 @@ public class ModBlocks {
     public static final Block OBSIQUARTZ_ROUNDEL = registerBlock("obsiquartz_roundel",
             new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE)));
 
+    public static final Block HARTNELL_ROUNDEL = registerBlock("hartnell_roundel",
+            new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
 
 
 
