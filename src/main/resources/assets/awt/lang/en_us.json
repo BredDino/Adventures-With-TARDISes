@@ -115,6 +115,9 @@
   "exterior.awt.zen": "Zen",
   "exterior.awt.harmonybox": "Harmony",
   "exterior.awt.creamk6booth": "Gloom Booth",
+  "exterior.awt.eleventh": "Smith",
+  "exterior.awt.mystical": "Mystical",
+  "exterior.awt.dimensional": "Dimensional",
 
   "sonic.awt.blunt": "Blunt",
   "sonic.awt.tardis": "TARDIS",
@@ -185,6 +188,9 @@
   "desktop.awt.harmony": "Harmony",
   "desktop.awt.travelers_respite": "Travelers Respite",
   "desktop.awt.70default": "Type 70",
+  "desktop.awt.classic_mystical": "Classic Mystical",
+  "desktop.awt.classic_neon": "Classic Neon",
+  "desktop.awt.mystical": "Mystical",
 
   "animation.awt.paradox_mat": "Paradox Mat",
   "animation.awt.goofy_fall_demat": "Oops I Died",
