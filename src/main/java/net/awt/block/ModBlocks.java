@@ -180,6 +180,8 @@ public class ModBlocks {
     public static final Block HARTNELL_ROUNDEL = registerBlock("hartnell_roundel",
             new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
 
+    public static final Block HARTNELL_WALL = registerBlock("hartnell_wall",
+            new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
 
 
 

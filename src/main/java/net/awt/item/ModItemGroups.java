@@ -45,7 +45,8 @@ public class ModItemGroups {
     public static final ItemGroup DECOR_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdventuresWithTARDISes.MOD_ID, "decor"),
             FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Decor"))
-                    .icon(() -> new ItemStack(ModBlocks.RUSTY_GRATE_BLOCK)).entries((displayContext, entries) ->  {
+                    .icon(() -> new ItemStack(ModBlocks.HARTNELL_WALL)).entries((displayContext, entries) ->  {
+                        entries.add(ModBlocks.HARTNELL_WALL);
                         entries.add(ModBlocks.GRATE_BLOCK);
                         entries.add(ModBlocks.THICK_GRATE_BLOCK);
                         entries.add(ModBlocks.RUSTY_GRATE_BLOCK);
