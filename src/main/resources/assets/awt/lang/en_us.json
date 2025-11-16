@@ -271,5 +271,8 @@
 
   "item_group.awt.Roundel": "AWT: Roundels",
   "item_group.Atrium": "AWT: Main",
-  "item_group.awt.Decor": "AWT: Decor"
+  "item_group.awt.Decor": "AWT: Decor",
+
+  "key.awt.sgm": "Sonic Shades",
+  "category.awt": "AWT"
 }
