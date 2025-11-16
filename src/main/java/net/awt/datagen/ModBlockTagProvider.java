@@ -51,7 +51,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLUE_CONCRETE_ROUNDEL)
                 .add(ModBlocks.EXPOSED_COPPER_ROUNDEL)
                 .add(ModBlocks.COPPER_ROUNDEL)
-
+                .add(ModBlocks.HARTNELL_ROUNDEL)
+                .add(ModBlocks.HARTNELL_WALL)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
