@@ -48,7 +48,6 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(ModItems.SONIC_GLASSES, (TrinketRenderer) ModItems.SONIC_GLASSES);
         HudRenderCallback.EVENT.register(new SonicGlassesOverlay());
 
-        TrinketRendererRegistry.registerRenderer(ModItems.DBZ_SCOUTER, (TrinketRenderer) ModItems.DBZ_SCOUTER);
 
         ModPackets.registerS2CPackets();
 
