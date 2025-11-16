@@ -3,7 +3,6 @@ package net.awt.item;
 import net.awt.AdventuresWithTARDISes;
 import net.awt.entity.ModEntities;
 import net.awt.item.custom.AtriumFuel;
-import net.awt.item.custom.dbzscouter.DBZScouter;
 import net.awt.item.custom.sonicglasses.SonicGlasses;
 import net.awt.item.custom.VortexManipulator;
 import net.awt.sound.AWTSound;
@@ -41,10 +40,6 @@ public class ModItems {
             new MusicDiscItem(15, AWTSound.DUGGA_DOO, new FabricItemSettings().maxCount(1),101));
     public static final Item doctorwho1411_music_disc = registerItem("doctorwho1411_music_disc",
             new MusicDiscItem(15, AWTSound.doctorwho1411, new FabricItemSettings().maxCount(1), 60));
-    public static final Item youridol_music_disc = registerItem("youridol_music_disc",
-            new MusicDiscItem(15, AWTSound.youridol, new FabricItemSettings().maxCount(1), 192 ));
-    public static final Item takedown_music_disc = registerItem("takedown_music_disc",
-            new MusicDiscItem(15, AWTSound.takedown, new FabricItemSettings().maxCount(1), 182 ));
     public static final Item K9_SPAWN_EGG = registerItem("k9_spawn_egg",
             new SpawnEggItem(ModEntities.K9, 0xFFFFFF,0xFFFFFFFF, new FabricItemSettings().maxCount(64)));
 
@@ -53,7 +48,7 @@ public class ModItems {
 
     public static final Item SONIC_GLASSES = registerItem("sonic_glasses", new SonicGlasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
-    public static final Item DBZ_SCOUTER = registerItem("dbz_scouter", new DBZScouter(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item DBZ_SCOUTER = registerItem("dbz_scouter", new SonicGlasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(ATRIUM);

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "awt:block/roundel/hartnell_c",
+    "up": "awt:block/roundel/hartnell_c",
+    "north": "awt:block/roundel/hartnell_a",
+    "east": "awt:block/roundel/hartnell_b",
+    "south": "awt:block/roundel/hartnell_a",
+    "west": "awt:block/roundel/hartnell_b",
+    "particle": "awt:block/roundel/hartnell_c"
+  },
+  "render_type": "solid"
+}

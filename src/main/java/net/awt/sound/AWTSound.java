@@ -18,8 +18,6 @@ public class AWTSound {
     public static final SoundEvent CLASSIC1 = register("classic1");
     public static final SoundEvent CLASSIC2 = register("classic2");
 
-    public static final SoundEvent youridol = register("youridol");
-    public static final SoundEvent takedown = register("takedown");
     public static final SoundEvent doctorwhoxv = register("doctorwhoxv");
     public static final SoundEvent DRWHOVALE = register("drwhovale");
     public static final SoundEvent paralyzer = register("paralyzer");

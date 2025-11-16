@@ -160,26 +160,6 @@
       }
     ]
   },
-  "takedown": {
-    "category": "jukebox",
-    "subtitle": "Bro's feuding with demons",
-    "sounds": [
-      {
-        "name": "awt:takedown",
-        "stream": true
-      }
-    ]
-  },
-  "youridol": {
-    "category": "jukebox",
-    "subtitle": "straight up banger",
-    "sounds": [
-      {
-        "name": "awt:youridol",
-        "stream": true
-      }
-    ]
-  },
   "paralyzer": {
     "category": "jukebox",
     "subtitle": "Bro's from Old Youtube",

@@ -23,12 +23,8 @@
   "item.awt.doctorwho1411_music_disc": "§dMusic Disc",
   "item.awt.doctorwho1411_music_disc.desc": "2023 x 2010 Remix - Doctor Music Master",
   "item.awt.takedown_music_disc": "§6Music Disc",
-  "item.awt.takedown_music_disc.desc": "Takedown - HUNTR/X",
-  "item.awt.youridol_music_disc": "§5Corrupted Music Disc",
-  "item.awt.youridol_music_disc.desc": "§cMay have an effect on your TARDIS.§f (Your Idol - Saja Boys)",
   "item.awt.weapon_matrix": "Weapon Matrix",
   "item.awt.atrium_fuel": "§eAtriacoal",
-
   "tooltip.awt.atrium_fuel": "§cA Super-Fuel created from Atrium and coal.",
 
   "item.awt.sonic_glasses": "Sonic Shades",
@@ -115,6 +111,9 @@
   "exterior.awt.zen": "Zen",
   "exterior.awt.harmonybox": "Harmony",
   "exterior.awt.creamk6booth": "Gloom Booth",
+  "exterior.awt.eleventh": "Smith",
+  "exterior.awt.mystical": "Mystical",
+  "exterior.awt.dimensional": "Dimensional",
 
   "sonic.awt.blunt": "Blunt",
   "sonic.awt.tardis": "TARDIS",
@@ -170,7 +169,6 @@
   "desktop.awt.letts": "Three Doctors",
   "desktop.awt.hearth": "Hearth",
   "desktop.awt.liberty": "Liberty",
-  "desktop.awt.toywardianmk2": "Toywardian Mk2",
   "desktop.awt.darkwardian": "Darkwardian",
   "desktop.awt.cavernwood": "Cavernwood Hollow",
   "desktop.awt.sprucewood": "Sprucewood",
@@ -185,6 +183,9 @@
   "desktop.awt.harmony": "Harmony",
   "desktop.awt.travelers_respite": "Travelers Respite",
   "desktop.awt.70default": "Type 70",
+  "desktop.awt.classic_mystical": "Classic Mystical",
+  "desktop.awt.classic_neon": "Classic Neon",
+  "desktop.awt.mystical": "Mystical",
 
   "animation.awt.paradox_mat": "Paradox Mat",
   "animation.awt.goofy_fall_demat": "Oops I Died",
@@ -242,6 +243,8 @@
   "block.awt.blue_concrete_roundel": "Blue Concrete Roundel",
   "block.awt.exposed_copper_roundel": "Exposed Copper Roundel",
   "block.awt.copper_roundel": "Copper Roundel",
+  "block.awt.hartnell_roundel": "Hartnell Roundel",
+  "block.awt.hartnell_wall": "Hartnell Wall",
 
   "console.awt.toyota_rhamnous": "Rhamnous' Toyota",
   "console.awt.crystalalt": "TardisOwners' Crystalline",

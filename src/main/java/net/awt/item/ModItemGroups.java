@@ -36,8 +36,6 @@ public class ModItemGroups {
                         entries.add(ModItems.paralyzer_music_disc);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);
                         entries.add(ModItems.doctorwho1411_music_disc);
-                        entries.add(ModItems.youridol_music_disc);
-                        entries.add(ModItems.takedown_music_disc);
                         entries.add(ModItems.SONIC_GLASSES);
                         entries.add(ModItems.DBZ_SCOUTER);
                     }).build());
@@ -45,7 +43,8 @@ public class ModItemGroups {
     public static final ItemGroup DECOR_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdventuresWithTARDISes.MOD_ID, "decor"),
             FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Decor"))
-                    .icon(() -> new ItemStack(ModBlocks.RUSTY_GRATE_BLOCK)).entries((displayContext, entries) ->  {
+                    .icon(() -> new ItemStack(ModBlocks.HARTNELL_WALL)).entries((displayContext, entries) ->  {
+                        entries.add(ModBlocks.HARTNELL_WALL);
                         entries.add(ModBlocks.GRATE_BLOCK);
                         entries.add(ModBlocks.THICK_GRATE_BLOCK);
                         entries.add(ModBlocks.RUSTY_GRATE_BLOCK);
@@ -55,7 +54,8 @@ public class ModItemGroups {
     public static final ItemGroup ROUNDEL_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdventuresWithTARDISes.MOD_ID, "roundel"),
             FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Roundel"))
-                    .icon(() -> new ItemStack(ModBlocks.WHITE_CONCRETE_ROUNDEL)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModBlocks.HARTNELL_ROUNDEL)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.HARTNELL_ROUNDEL);
                         entries.add(ModBlocks.WHITE_CONCRETE_ROUNDEL);
                         entries.add(ModBlocks.BLACK_CONCRETE_ROUNDEL);
                         entries.add(ModBlocks.CYAN_CONCRETE_ROUNDEL);

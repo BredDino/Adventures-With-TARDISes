@@ -24,6 +24,7 @@ public class SonicGlassesComponent extends PlayerComponent implements CommonTick
     public Boolean equipped;
     public ItemStack equippedStack;
     public int fuel;
+    public int cooldown;
 
     public SonicGlassesComponent(PlayerEntity owner) {
         super(owner);
@@ -46,12 +47,14 @@ public class SonicGlassesComponent extends PlayerComponent implements CommonTick
         sonicMode = SonicMode.Modes.getAndWrap(nbtCompound.getInt("mode"));
         equipped = nbtCompound.getBoolean("sg_equipped");
         fuel = nbtCompound.getInt("fuel");
+        cooldown = nbtCompound.getInt("cooldown");
     }
 
     @Override
     public void writeToNbt(NbtCompound nbtCompound) {
         nbtCompound.putInt("mode", sonicMode.index());
         nbtCompound.putInt("fuel", fuel);
+        nbtCompound.putInt("cooldown", cooldown);
         if (this.equipped != null) nbtCompound.putBoolean("sg_equipped", equipped);
     }
 
@@ -75,6 +78,9 @@ public class SonicGlassesComponent extends PlayerComponent implements CommonTick
         this.equipped = hasEquipped(player, ModItems.SONIC_GLASSES);
         if (equippedStack != null) {
             fuel = equippedStack.getOrCreateNbt().getInt("fuel");
+        }
+        if (cooldown > 0) {
+            cooldown--;
         }
     }
 
