@@ -60,6 +60,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior POLICEBOXFLATLINE;
     public static AddonExterior RHAMNOUSVANILLA;
     public static AddonExterior GLASGLOWVANILLA;
+    public static AddonExterior GAMBLEBLOCKTIS;
    // public static AddonExterior BEEHIVE;
    // public static AddonExterior NEZUKO;
 
@@ -131,6 +132,9 @@ public class TardisExteriorRegistry {
 
         GLASGLOWVANILLA = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "glasglow_vanilla").register();
         GLASGLOWVANILLA.setDoor(new AddonExterior.Door(GLASGLOWVANILLA, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
+
+        GAMBLEBLOCKTIS = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "gambleblocktis").register();
+        GAMBLEBLOCKTIS.setDoor(new AddonExterior.Door(GAMBLEBLOCKTIS, false, SoundEvents.BLOCK_WOODEN_DOOR_OPEN, SoundEvents.BLOCK_WOODEN_DOOR_CLOSE)).toDoor().register();
 
         LEGO = new AddonExterior(new Identifier(MOD_ID, "legoboxes"), MOD_ID, "logo_tardis_default").register();
         LEGO.setDoor(new AddonExterior.Door(LEGO, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
@@ -296,6 +300,12 @@ public class TardisExteriorRegistry {
         RHAMNOUSVANILLA.setPortalWidth(0.75f);
         RHAMNOUSVANILLA.setPortalHeight(1.75f);
         RHAMNOUSVANILLA.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        GAMBLEBLOCKTIS.setModel(new gambleblocktis()).toClient().register();
+        GAMBLEBLOCKTIS.toDoor().setModel(new RhamnousVanillaDoor(RhamnousVanillaDoor.getTexturedModelData().createModel())).toClient().register();
+        GAMBLEBLOCKTIS.setPortalWidth(0.75f);
+        GAMBLEBLOCKTIS.setPortalHeight(1.75f);
+        GAMBLEBLOCKTIS.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         GLASGLOWVANILLA.setModel(new BlocktisV2Exterior()).toClient().register();
         GLASGLOWVANILLA.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
