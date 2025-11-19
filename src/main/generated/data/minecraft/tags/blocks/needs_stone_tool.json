@@ -32,6 +32,8 @@
     "awt:light_blue_concrete_roundel",
     "awt:blue_concrete_roundel",
     "awt:exposed_copper_roundel",
-    "awt:copper_roundel"
+    "awt:copper_roundel",
+    "awt:hartnell_roundel",
+    "awt:hartnell_wall"
   ]
 }
