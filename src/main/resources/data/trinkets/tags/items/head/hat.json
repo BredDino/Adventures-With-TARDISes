@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "awt:trustable_hat"
+    "awt:trustable_hat",
+    "awt:fez"
   ]
 }

@@ -3,6 +3,8 @@ package net.awt.item;
 import net.awt.AdventuresWithTARDISes;
 import net.awt.entity.ModEntities;
 import net.awt.item.custom.AtriumFuel;
+import net.awt.item.custom.clothing.Bowtie;
+import net.awt.item.custom.clothing.Fez;
 import net.awt.item.custom.clothing.TrustableHat;
 import net.awt.item.custom.sonicglasses.SonicGlasses;
 import net.awt.item.custom.VortexManipulator;
@@ -52,7 +54,9 @@ public class ModItems {
     public static final Item DBZ_SCOUTER = registerItem("dbz_scouter", new SonicGlasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item TRUSTABLE_HAT = registerItem("trustable_hat", new TrustableHat(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
-    public static final Item BOWTIE = registerItem("bowtie", new TrustableHat(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item BOWTIE = registerItem("bowtie", new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item FEZ = registerItem("fez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(ATRIUM);
     }

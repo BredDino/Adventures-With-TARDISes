@@ -26,10 +26,10 @@ import net.minecraft.world.event.GameEvent;
 
 import java.util.Optional;
 
-public class Bowtie extends Item implements Trinket, TrinketRenderer {
-    public static final String NECKLACE_HEIGHT_KEY = "necklace_height_key";
+public class Fez extends Item implements Trinket, TrinketRenderer {
+    public static final String HAT_HEIGHT_KEY = "hat_height_key";
 
-    public Bowtie(Settings settings) {
+    public Fez(Settings settings) {
         super(settings);
         TrinketsApi.registerTrinket(this, this);
     }
@@ -38,9 +38,10 @@ public class Bowtie extends Item implements Trinket, TrinketRenderer {
     public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrixStack, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         TrinketRenderer.translateToFace(matrixStack, (PlayerEntityModel<AbstractClientPlayerEntity>) contextModel, (AbstractClientPlayerEntity) entity, headYaw, headPitch);
-        matrixStack.translate(0,0.85,0.4);
+        matrixStack.translate(0,0.15,0.3);
+        matrixStack.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(180.0F));
         itemRenderer.renderItem(entity, stack, ModelTransformationMode.HEAD, false, matrixStack, vertexConsumers, entity.getWorld(), light, OverlayTexture.DEFAULT_UV, 0);
-        matrixStack.scale(1,1,1);
+        matrixStack.scale(0,0,0);
     }
 
     @Override
