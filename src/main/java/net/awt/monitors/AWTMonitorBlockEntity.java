@@ -1,13 +1,16 @@
 package net.awt.monitors;
 
+import dev.amble.ait.core.AITBlockEntityTypes;
 import net.awt.AWTBlockEntityTypes;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import dev.amble.ait.core.blockentities.WallMonitorBlockEntity;
 import dev.amble.ait.AITMod;
 import dev.amble.ait.api.tardis.link.v2.block.InteriorLinkableBlockEntity;
 import dev.amble.ait.core.tardis.Tardis;
@@ -17,12 +20,13 @@ import dev.amble.ait.core.tardis.control.impl.SecurityControl;
 public class AWTMonitorBlockEntity extends InteriorLinkableBlockEntity {
 
     public AWTMonitorBlockEntity(BlockPos pos, BlockState state) {
-        super(AWTBlockEntityTypes.AWT_MONITOR_BLOCK_ENTITY_TYPE, pos, state);
+        super(AITBlockEntityTypes.WALL_MONITOR_BLOCK_ENTITY_TYPE, pos, state);
     }
 
-    public float getScale() {
-        return 1.3f; // Replace with logic to dynamically determine the scale if needed
+    public AWTMonitorBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        super(type, pos, state);
     }
+
     public void useOn(World world, boolean sneaking, PlayerEntity player) {
         if (!(player instanceof ServerPlayerEntity serverPlayer))
             return;
@@ -41,7 +45,8 @@ public class AWTMonitorBlockEntity extends InteriorLinkableBlockEntity {
             return;
 
         player.playSound(SoundEvents.UI_BUTTON_CLICK.value(), 1.0F, 1.0F);
-        AITMod.openScreen(serverPlayer, 0, tardis.getUuid()); // we can cast because we know its on server :p
+        AITMod.openScreen((ServerPlayerEntity) player, 0, tardis.getUuid()); // we can cast because we know its on
+        // server :p
     }
-}
 
+}

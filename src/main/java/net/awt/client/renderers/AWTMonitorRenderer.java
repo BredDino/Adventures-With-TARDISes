@@ -60,8 +60,8 @@ public class AWTMonitorRenderer<T extends AWTMonitorBlockEntity> implements Bloc
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180));
 
         // Retrieve scale dynamically and apply it
-        float scale = entity.getScale();
-        matrices.scale(scale, scale, scale);
+       // float scale = entity.getScale();
+       // matrices.scale(scale, scale, scale);
 
         this.trustableMonitorModel.render(matrices,
                 vertexConsumers.getBuffer(RenderLayer.getEntityTranslucent(MONITOR_TEXTURE)), light, overlay, 1.0F,
@@ -84,7 +84,7 @@ public class AWTMonitorRenderer<T extends AWTMonitorBlockEntity> implements Bloc
         matrices.translate(0.5, 0.75, 0.5);
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180f));
         matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180 - h)); // Apply block rotation here
-        matrices.scale(0.004f * scale, 0.004f * scale, 0.004f * scale);
+       // matrices.scale(0.004f * scale, 0.004f * scale, 0.004f * scale);
         matrices.translate(-50f, 0, -47);
 
 // Render text

@@ -12,6 +12,6 @@ import net.minecraft.block.entity.BlockEntityType;
 public class AWTBlockEntityTypes implements BlockEntityContainer{
 
     public static BlockEntityType<AWTMonitorBlockEntity> AWT_MONITOR_BLOCK_ENTITY_TYPE = FabricBlockEntityTypeBuilder
-            .create(AWTMonitorBlockEntity::new, ModBlocks.AWT_TRUSTABLE_MONITOR_BLOCK).build();
+            .create(AWTMonitorBlockEntity::new, ModBlocks.TRUSTABLE_MONITOR).build();
 
     }

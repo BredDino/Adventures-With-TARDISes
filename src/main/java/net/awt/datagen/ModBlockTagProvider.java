@@ -53,7 +53,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COPPER_ROUNDEL)
                 .add(ModBlocks.HARTNELL_ROUNDEL)
                 .add(ModBlocks.HARTNELL_WALL)
-                .add(ModBlocks.AWT_TRUSTABLE_MONITOR_BLOCK)
+                .add(ModBlocks.TRUSTABLE_MONITOR)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)

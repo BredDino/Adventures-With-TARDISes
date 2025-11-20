@@ -28,6 +28,7 @@ public class ModItemGroups {
                         entries.add(ModItems.K9_SPAWN_EGG);
                         entries.add(ModItems.WEAPON_MATRIX);
                        // entries.add(ModBlocks.THE_MOMENT);
+                        entries.add(ModItems.TRUSTABLE_MONITOR);
 
                         entries.add(ModItems.spoon);
 
@@ -36,11 +37,13 @@ public class ModItemGroups {
                         entries.add(ModItems.paralyzer_music_disc);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);
                         entries.add(ModItems.doctorwho1411_music_disc);
+
                         entries.add(ModItems.SONIC_GLASSES);
                         entries.add(ModItems.DBZ_SCOUTER);
                         entries.add(ModItems.TRUSTABLE_HAT);
                         entries.add(ModItems.BOWTIE);
                         entries.add(ModItems.FEZ);
+
                     }).build());
 
     public static final ItemGroup DECOR_GROUP = Registry.register(Registries.ITEM_GROUP,
