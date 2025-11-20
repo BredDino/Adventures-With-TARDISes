@@ -38,6 +38,7 @@ public class ModItemGroups {
                         entries.add(ModItems.doctorwho1411_music_disc);
                         entries.add(ModItems.SONIC_GLASSES);
                         entries.add(ModItems.DBZ_SCOUTER);
+                        entries.add(ModItems.TRUSTABLE_HAT);
                     }).build());
 
     public static final ItemGroup DECOR_GROUP = Registry.register(Registries.ITEM_GROUP,

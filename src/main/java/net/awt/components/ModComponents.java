@@ -13,7 +13,6 @@ public class ModComponents implements EntityComponentInitializer {
     public static final ComponentKey<SonicGlassesComponent> SONIC_GLASSES =
             ComponentRegistry.getOrCreate(new Identifier(AdventuresWithTARDISes.MOD_ID, "sonic_glasses_component"), SonicGlassesComponent.class);
 
-
     @Override
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry entityComponentFactoryRegistry) {
         entityComponentFactoryRegistry.beginRegistration(PlayerEntity.class, SONIC_GLASSES).end(SonicGlassesComponent::new);
