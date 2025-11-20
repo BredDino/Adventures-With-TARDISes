@@ -4,6 +4,7 @@ import dev.emi.trinkets.TrinketSlot;
 import dev.emi.trinkets.api.*;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -18,12 +19,16 @@ import net.minecraft.item.Equipment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Optional;
 
 public class Fez extends Item implements Trinket, TrinketRenderer {
@@ -32,6 +37,12 @@ public class Fez extends Item implements Trinket, TrinketRenderer {
     public Fez(Settings settings) {
         super(settings);
         TrinketsApi.registerTrinket(this, this);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.literal("Fezzes are cool!").formatted(Formatting.BLUE));
+        super.appendTooltip(stack, world, tooltip, context);
     }
 
     @Override

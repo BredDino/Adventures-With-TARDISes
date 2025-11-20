@@ -59,6 +59,12 @@ public class TrustableHat extends Item implements Trinket, TrinketRenderer {
     }
 
     @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.literal("Trust Us...").formatted(Formatting.DARK_BLUE));
+        super.appendTooltip(stack, world, tooltip, context);
+    }
+
+    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         if (equipItem(user, stack)) {
