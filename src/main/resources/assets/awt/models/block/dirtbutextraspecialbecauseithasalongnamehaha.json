@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ddwa:block/blocksprite_dirt",
-    "particle": "ddwa:block/blocksprite_dirt"
-  },
-  "render_type": "solid"
-}
