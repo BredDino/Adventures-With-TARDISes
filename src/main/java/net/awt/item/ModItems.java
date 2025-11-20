@@ -52,7 +52,7 @@ public class ModItems {
     public static final Item DBZ_SCOUTER = registerItem("dbz_scouter", new SonicGlasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item TRUSTABLE_HAT = registerItem("trustable_hat", new TrustableHat(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
-
+    public static final Item BOWTIE = registerItem("bowtie", new TrustableHat(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(ATRIUM);
     }
