@@ -51,5 +51,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.HARTNELL_ROUNDEL);
         addDrop(ModBlocks.HARTNELL_WALL);
         addDrop(ModBlocks.THE_MOMENT);
+        addDrop(ModBlocks.AWT_TRUSTABLE_MONITOR_BLOCK);
     }
 }
