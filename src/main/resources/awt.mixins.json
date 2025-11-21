@@ -16,6 +16,9 @@
     "client.ControlEntityRendererMixin",
     "client.DebugRendererMixin",
     "client.LogoDrawerMixin",
-    "console.ClientConsoleVariantRegistryMixin"
+    "console.ClientConsoleVariantRegistryMixin",
+    "ItemRendererAccessor",
+    "ItemRendererMixin",
+    "ModelLoaderMixin"
   ]
 }
