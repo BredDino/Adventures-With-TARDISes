@@ -122,6 +122,13 @@ public class AdventuresWithTARDISes implements ModInitializer {
         );
 
         ResourceManagerHelper.registerBuiltinResourcePack(
+                new Identifier("awt", "blueshiftgui"),
+                modContainer,
+                Text.literal("Blueshifted TARDIS Monitor GUIs"),
+                ResourcePackActivationType.NORMAL
+        );
+
+        ResourceManagerHelper.registerBuiltinResourcePack(
                 new Identifier("awt","awttesterrorsound"),
                 modContainer,
                 Text.literal("Comedic Error Sound"),
