@@ -28,7 +28,7 @@ public class ModItemGroups {
                         entries.add(ModItems.K9_SPAWN_EGG);
                         entries.add(ModItems.WEAPON_MATRIX);
                        // entries.add(ModBlocks.THE_MOMENT);
-                        entries.add(ModItems.TRUSTABLE_MONITOR);
+                       // entries.add(ModItems.TRUSTABLE_MONITOR);
 
                         entries.add(ModItems.spoon);
 
@@ -40,9 +40,6 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SONIC_GLASSES);
                         entries.add(ModItems.DBZ_SCOUTER);
-                        entries.add(ModItems.TRUSTABLE_HAT);
-                        entries.add(ModItems.BOWTIE);
-                        entries.add(ModItems.FEZ);
 
                     }).build());
 
@@ -108,7 +105,23 @@ public class ModItemGroups {
                         entries.add(ModItems.ROUNDELMOLD);
 
                     }).build());
+    public static final ItemGroup CLOTHING_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(AdventuresWithTARDISes.MOD_ID, "clothing"),
+            FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Clothing"))
+                    .icon(() -> new ItemStack(ModItems.TRUSTABLE_HAT)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.TRUSTABLE_HAT);
 
+                        entries.add(ModItems.BOWTIE);
+
+                        entries.add(ModItems.FEZ);
+                        entries.add(ModItems.PURPLEFEZ);
+                        entries.add(ModItems.GREENFEZ);
+                        entries.add(ModItems.ORANGEFEZ);
+                        entries.add(ModItems.PINKFEZ);
+                        entries.add(ModItems.GREYFEZ);
+                        entries.add(ModItems.BLUEFEZ);
+                        entries.add(ModItems.DARKBLUEFEZ);
+                    }).build());
 
     public static void registerItemGroups() {
         AdventuresWithTARDISes.LOGGER.info("Registering Item Groups for" + AdventuresWithTARDISes.MOD_ID);

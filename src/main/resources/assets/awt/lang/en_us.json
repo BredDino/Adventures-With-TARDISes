@@ -35,6 +35,13 @@
   "item.awt.bowtie": "Bowtie",
 
   "item.awt.fez": "Fez",
+  "item.awt.purplefez": "Fez",
+  "item.awt.pinkfez": "Fez",
+  "item.awt.greenfez": "Fez",
+  "item.awt.orangefez": "Fez",
+  "item.awt.greyfez": "Fez",
+  "item.awt.darkbluefez": "Fez",
+  "item.awt.bluefez": "Fez",
 
   "item.awt.k9_spawn_egg": "K-9 Spawn Egg",
   "item.awt.k9_spawn_egg.desc": "K-9!!",
@@ -284,6 +291,7 @@
   "item_group.awt.Roundel": "AWT: Roundels",
   "item_group.Atrium": "AWT: Main",
   "item_group.awt.Decor": "AWT: Decor",
+  "item_group.awt.Clothing": "AWT: Clothing",
 
   "key.awt.sgm": "Sonic Shades",
   "category.awt": "AWT"
