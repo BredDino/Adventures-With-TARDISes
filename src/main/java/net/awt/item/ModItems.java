@@ -57,6 +57,7 @@ public class ModItems {
     public static final Item BOWTIE = registerItem("bowtie", new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item FEZ = registerItem("fez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item FANCYFEZ = registerItem("fancyfez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item PURPLEFEZ = registerItem("purplefez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item GREENFEZ = registerItem("greenfez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item ORANGEFEZ = registerItem("orangefez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));

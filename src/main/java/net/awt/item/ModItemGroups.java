@@ -114,6 +114,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BOWTIE);
 
                         entries.add(ModItems.FEZ);
+                        entries.add(ModItems.FANCYFEZ);
                         entries.add(ModItems.PURPLEFEZ);
                         entries.add(ModItems.GREENFEZ);
                         entries.add(ModItems.ORANGEFEZ);

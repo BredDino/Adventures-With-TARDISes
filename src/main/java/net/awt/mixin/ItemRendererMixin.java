@@ -49,6 +49,10 @@ public abstract class ItemRendererMixin {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "bluefez3d", "inventory"));
         }
 
+        if (stack.isOf(ModItems.FANCYFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "fancyfez3d", "inventory"));
+        }
+
         return value;
     }
 }

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "b b",
+    "c c"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:red_wool"
+    },
+    "key": {
+      "b": {
+        "item": "minecraft:yellow_wool"
+      },
+      "key": {
+        "c": {
+          "item": "minecraft:gray_wool"
+        }
+  },
+  "result": {
+    "item": "awt:fancyfez",
+    "count": 1
+  }
+}
