@@ -42,10 +42,10 @@
 			"translation": [0, 3.25, 0],
 			"scale": [0.75, 0.75, 0.75]
 		},
-		"gui": {
-			"rotation": [0, -180, 0],
-			"translation": [0, 5, 0]
-		},
+        "gui": {
+        "rotation": [-139.3, -35.02, -153.75],
+        "translation": [2, 4, 0]
+        },
 		"head": {
 			"translation": [0, 14.25, 0]
 		},
