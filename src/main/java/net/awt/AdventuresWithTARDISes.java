@@ -120,6 +120,13 @@ public class AdventuresWithTARDISes implements ModInitializer {
                 Text.literal("Redshifted TARDIS Monitor GUIs"),
                 ResourcePackActivationType.NORMAL
         );
+
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                new Identifier("awt","awttesterrorsound"),
+                modContainer,
+                Text.literal("Comedic Error Sound"),
+                ResourcePackActivationType.NORMAL
+        );
 	}
 
 	public static Identifier id(String path) {
