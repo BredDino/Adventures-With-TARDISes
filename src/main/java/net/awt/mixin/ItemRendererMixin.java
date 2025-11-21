@@ -17,40 +17,40 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public abstract class ItemRendererMixin {
     @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
     public BakedModel useFez(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
-        if (stack.isOf(ModItems.FEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "fez3d", "inventory"));
+        if (stack.isOf(ModItems.FEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "fez3d", "head"));
         }
 
-        if (stack.isOf(ModItems.PINKFEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "pinkfez3d", "inventory"));
+        if (stack.isOf(ModItems.PINKFEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "pinkfez3d", "head"));
         }
 
-        if (stack.isOf(ModItems.PURPLEFEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "purplefez3d", "inventory"));
+        if (stack.isOf(ModItems.PURPLEFEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "purplefez3d", "head"));
         }
 
-        if (stack.isOf(ModItems.GREENFEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "greenfez3d", "inventory"));
+        if (stack.isOf(ModItems.GREENFEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "greenfez3d", "head"));
         }
 
-        if (stack.isOf(ModItems.DARKBLUEFEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "darkbluefez3d", "inventory"));
+        if (stack.isOf(ModItems.DARKBLUEFEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "darkbluefez3d", "head"));
         }
 
-        if (stack.isOf(ModItems.GREYFEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "greyfez3d", "inventory"));
+        if (stack.isOf(ModItems.GREYFEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "greyfez3d", "head"));
         }
 
-        if (stack.isOf(ModItems.ORANGEFEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "orangefez3d", "inventory"));
+        if (stack.isOf(ModItems.ORANGEFEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "orangefez3d", "head"));
         }
 
-        if (stack.isOf(ModItems.BLUEFEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "bluefez3d", "inventory"));
+        if (stack.isOf(ModItems.BLUEFEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "bluefez3d", "head"));
         }
 
-        if (stack.isOf(ModItems.FANCYFEZ) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "fancyfez3d", "inventory"));
+        if (stack.isOf(ModItems.FANCYFEZ) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.FIXED) {
+            return ((ItemRendererAccessor) this).awt$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "fancyfez3d", "head"));
         }
 
         return value;
