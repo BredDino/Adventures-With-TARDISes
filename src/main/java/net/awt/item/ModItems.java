@@ -65,8 +65,6 @@ public class ModItems {
     public static final Item PINKFEZ = registerItem("pinkfez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item GREYFEZ = registerItem("greyfez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
-  //  public static final Item TRUSTABLE_MONITOR = registerItem("trustable_monitor",new Item(new FabricItemSettings()));
-
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(ATRIUM);
     }

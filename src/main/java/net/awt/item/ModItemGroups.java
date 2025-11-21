@@ -28,7 +28,7 @@ public class ModItemGroups {
                         entries.add(ModItems.K9_SPAWN_EGG);
                         entries.add(ModItems.WEAPON_MATRIX);
                        // entries.add(ModBlocks.THE_MOMENT);
-                       // entries.add(ModItems.TRUSTABLE_MONITOR);
+                        entries.add(ModBlocks.TRUSTABLE_MONITOR);
 
                         entries.add(ModItems.spoon);
 
