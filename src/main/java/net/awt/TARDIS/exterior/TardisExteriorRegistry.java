@@ -61,6 +61,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior RHAMNOUSVANILLA;
     public static AddonExterior GLASGLOWVANILLA;
     public static AddonExterior GAMBLEBLOCKTIS;
+    public static AddonExterior BLOCKTISBNW;
    // public static AddonExterior BEEHIVE;
    // public static AddonExterior NEZUKO;
 
@@ -123,6 +124,9 @@ public class TardisExteriorRegistry {
 
         BLOCKTISV2 = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktisv2").register();
         BLOCKTISV2.setDoor(new AddonExterior.Door(BLOCKTISV2, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
+
+        BLOCKTISBNW = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktisbnw").register();
+        BLOCKTISBNW.setDoor(new AddonExterior.Door(BLOCKTISBNW, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
 
         BLOCKTISV3 = new AddonExterior(new Identifier(MOD_ID, "blocktardis"), MOD_ID, "blocktisv3").register();
         BLOCKTISV3.setDoor(new AddonExterior.Door(BLOCKTISV3, false, SoundEvents.BLOCK_IRON_DOOR_OPEN, SoundEvents.BLOCK_IRON_DOOR_CLOSE)).toDoor().register();
@@ -288,6 +292,12 @@ public class TardisExteriorRegistry {
         BLOCKTISV2.setPortalWidth(0.75f);
         BLOCKTISV2.setPortalHeight(1.75f);
         BLOCKTISV2.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        BLOCKTISBNW.setModel(new BlocktisV2Exterior()).toClient().register();
+        BLOCKTISBNW.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
+        BLOCKTISBNW.setPortalWidth(0.75f);
+        BLOCKTISBNW.setPortalHeight(1.75f);
+        BLOCKTISBNW.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         BLOCKTISV3.setModel(new BlocktisV2Exterior()).toClient().register();
         BLOCKTISV3.toDoor().setModel(new BlocktisV2Door(BlocktisV2Door.getTexturedModelData().createModel())).toClient().register();
