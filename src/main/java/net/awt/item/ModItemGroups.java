@@ -107,6 +107,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.BOWTIE);
 
+                        entries.add(ModItems.EYESTALK);
+
                         entries.add(ModItems.FEZ);
                         entries.add(ModItems.FANCYFEZ);
                         entries.add(ModItems.PURPLEFEZ);
