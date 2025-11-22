@@ -116,6 +116,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GREYFEZ);
                         entries.add(ModItems.BLUEFEZ);
                         entries.add(ModItems.DARKBLUEFEZ);
+                        entries.add(ModItems.YELLOWFEZ);
                     }).build());
 
     public static void registerItemGroups() {

@@ -52,6 +52,10 @@ public abstract class ItemRendererMixin {
         if (stack.isOf(ModItems.PINKFEZ) && renderMode != ModelTransformationMode.GUI) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "pinkfez3d", "inventory"));
         }
+
+        if (stack.isOf(ModItems.YELLOWFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "yellowfez3d", "inventory"));
+        }
         return value;
     }
 }

@@ -65,6 +65,7 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
         TrinketRendererRegistry.registerRenderer(ModItems.GREYFEZ, (TrinketRenderer) ModItems.GREYFEZ);
         TrinketRendererRegistry.registerRenderer(ModItems.BLUEFEZ, (TrinketRenderer) ModItems.BLUEFEZ);
         TrinketRendererRegistry.registerRenderer(ModItems.DARKBLUEFEZ, (TrinketRenderer) ModItems.DARKBLUEFEZ);
+        TrinketRendererRegistry.registerRenderer(ModItems.YELLOWFEZ, (TrinketRenderer) ModItems.YELLOWFEZ);
 
 
         ModPackets.registerS2CPackets();
