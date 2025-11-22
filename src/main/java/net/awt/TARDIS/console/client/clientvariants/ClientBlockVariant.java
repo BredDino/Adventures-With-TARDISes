@@ -4,9 +4,7 @@ import dev.amble.ait.client.models.consoles.ConsoleModel;
 import dev.amble.ait.data.schema.console.ClientConsoleVariantSchema;
 import net.awt.AdventuresWithTARDISes;
 import net.awt.TARDIS.console.client.models.BlockConsoleModel;
-import net.awt.TARDIS.console.client.models.DiceConsoleModel;
 import net.awt.TARDIS.console.variants.BlockVariant;
-import net.awt.TARDIS.console.variants.DiceVariant;
 import net.minecraft.util.Identifier;
 import org.joml.Vector3f;
 
