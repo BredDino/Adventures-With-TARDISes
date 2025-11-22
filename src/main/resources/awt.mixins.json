@@ -9,9 +9,6 @@
     "console.ConsoleRegistryMixin",
     "console.ConsoleVariantRegistryMixin"
   ],
-  "injectors": {
-    "defaultRequire": 1
-  },
   "client": [
     "client.ControlEntityRendererMixin",
     "client.DebugRendererMixin",
@@ -20,5 +17,9 @@
     "ItemRendererAccessor",
     "ItemRendererMixin",
     "ModelLoaderMixin"
-  ]
+  ],
+
+  "injectors": {
+    "defaultRequire": 1
+  }
 }
