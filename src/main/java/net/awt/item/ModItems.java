@@ -46,6 +46,9 @@ public class ModItems {
             new MusicDiscItem(15, AWTSound.doctorwho1411, new FabricItemSettings().maxCount(1), 60));
     public static final Item K9_SPAWN_EGG = registerItem("k9_spawn_egg",
             new SpawnEggItem(ModEntities.K9, 0xFFFFFF,0xFFFFFFFF, new FabricItemSettings().maxCount(64)));
+    public static final Item CYBERMAT_SPAWN_EGG = registerItem("cybermat_spawn_egg",
+            new SpawnEggItem(ModEntities.CYBERMAT, 0xFFFFFF,0xFFFFFFFF, new FabricItemSettings().maxCount(64)));
+
 
     public static final Item ATRIUM_FUEL = registerItem("atrium_fuel",
             new AtriumFuel(new FabricItemSettings()));

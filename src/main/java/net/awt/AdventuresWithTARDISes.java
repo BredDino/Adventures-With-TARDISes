@@ -12,6 +12,7 @@ import net.awt.TARDIS.exterior.category.AWTCategoryRegistry;
 import net.awt.block.ModBlocks;
 import net.awt.effect.ModEffects;
 import net.awt.entity.ModEntities;
+import net.awt.entity.custom.CybermatEntity;
 import net.awt.entity.custom.K9Entity;
 import net.awt.events.UseEvent;
 import net.awt.events.UseItemEvent;
@@ -89,6 +90,7 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModPackets.registerC2SPackets();
 
         FabricDefaultAttributeRegistry.register(ModEntities.K9, K9Entity.createK9Attributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.CYBERMAT, CybermatEntity.createK9Attributes());
 
         // Resource Pack Handler
         var modContainer = FabricLoader.getInstance().getModContainer("awt").orElseThrow();

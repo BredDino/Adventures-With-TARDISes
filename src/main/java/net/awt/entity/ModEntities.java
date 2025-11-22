@@ -15,4 +15,8 @@ public class ModEntities {
     public static final EntityType<K9Entity> K9 = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(AdventuresWithTARDISes.MOD_ID,"k9"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, K9Entity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
+
+    public static final EntityType<K9Entity> CYBERMAT = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(AdventuresWithTARDISes.MOD_ID,"cybermat"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, K9Entity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
 }

@@ -2,6 +2,7 @@
   "text.config.aitconfig.title": "Adventures With TARDISes",
 
   "entity.awt.k9": "K-9",
+  "entity.awt.cybermat": "Cybermat",
   "dimension.awt.skarodim": "Skaro",
   "dimension.awt.thelostworld": "The Lost Reality",
 
@@ -51,6 +52,8 @@
   "item.awt.k9_spawn_egg.desc": "K-9!!",
   "item.awt.spoon": "Spoon",
   "item.awt.spoon.desc": "I am The Doctor and this is my spoon!",
+
+  "item.awt.cybermat_spawn_egg": "Cybermat Spawn Egg",
 
   "effect.awt.Antiradiation":"Anti-Radiation",
 

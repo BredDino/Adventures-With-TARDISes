@@ -50,6 +50,7 @@ public class ModItemGroups {
 
                         //spawn eggs
                         entries.add(ModItems.K9_SPAWN_EGG);
+                        entries.add(ModItems.CYBERMAT_SPAWN_EGG);
 
                     }).build());
 

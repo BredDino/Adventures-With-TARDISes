@@ -3,17 +3,14 @@ package net.awt;
 import dev.amble.ait.core.AITSounds;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
-import mdt.k9mod.client.renderers.K9EntityRenderer;
 import net.awt.TARDIS.console.client.AWTClientConsoleVariantRegistry;
 import net.awt.TARDIS.exterior.TardisExteriorRegistry;
 import net.awt.block.ModBlocks;
 import net.awt.components.ModComponents;
 import net.awt.entity.ModEntities;
-import net.awt.entity.client.K9Renderer;
-import net.awt.entity.client.ModEntityRenderer;
-import net.awt.entity.client.ModModelLayers;
-import net.awt.entity.client.K9Model;
+import net.awt.entity.client.*;
 import net.awt.entity.custom.K9Entity;
+import net.awt.entity.custom.CybermatEntity;
 import net.awt.item.ModItems;
 import net.awt.item.custom.sonicglasses.SonicGlassesOverlay;
 import net.awt.networking.ModPackets;
@@ -79,6 +76,10 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.K9, K9Renderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.K9, K9Model::getTexturedModelData);
+
+       //why wont this crap work
+        // EntityRendererRegistry.register(ModEntities.CYBERMAT, CybermatRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.CYBERMAT, CybermatModel::getTexturedModelData);
 
         SonicGlassesKeybind();
 
