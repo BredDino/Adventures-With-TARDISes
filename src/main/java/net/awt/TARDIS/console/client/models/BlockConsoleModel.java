@@ -4,6 +4,7 @@ import dev.amble.ait.client.models.consoles.ConsoleModel;
 import dev.amble.ait.client.models.consoles.SimpleConsoleModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ConsoleBlockEntity;
+import dev.amble.ait.core.tardis.control.impl.pos.IncrementManager;
 import dev.amble.ait.core.tardis.handler.travel.TravelHandlerBase;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -45,7 +46,6 @@ public class BlockConsoleModel extends SimpleConsoleModel {
 	private final ModelPart prot19;
 	private final ModelPart hailmary;
 	private final ModelPart autopilot;
-	private final ModelPart prot3;
 	private final ModelPart handbreak;
 	private final ModelPart seigemode;
 	private final ModelPart antigravs;
@@ -89,7 +89,6 @@ public class BlockConsoleModel extends SimpleConsoleModel {
 		this.prot19 = this.Controls.getChild("prot19");
 		this.hailmary = this.Controls.getChild("hailmary");
 		this.autopilot = this.Controls.getChild("autopilot");
-		this.prot3 = this.Controls.getChild("prot3");
 		this.handbreak = this.Controls.getChild("handbreak");
 		this.seigemode = this.Controls.getChild("seigemode");
 		this.antigravs = this.Controls.getChild("antigravs");
@@ -212,6 +211,8 @@ public class BlockConsoleModel extends SimpleConsoleModel {
 
 		ModelPartData alarms_r1 = leverbases.addChild("alarms_r1", ModelPartBuilder.create().uv(5, 335).cuboid(-7.0F, -2.0F, -1.0F, 6.0F, 2.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(-26.0F, -24.0F, -28.0F, 0.0F, 1.5708F, 0.0F));
 
+		ModelPartData power_r1 = leverbases.addChild("power_r1", ModelPartBuilder.create().uv(5, 335).cuboid(-7.0F, -2.0F, -1.0F, 6.0F, 2.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(25.0F, -24.0F, 12.0F, 0.0F, -1.5708F, 0.0F));
+
 		ModelPartData antigravs_r1 = leverbases.addChild("antigravs_r1", ModelPartBuilder.create().uv(5, 335).cuboid(-7.0F, -2.0F, -1.0F, 6.0F, 2.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(9.0F, -24.0F, -28.0F, 0.0F, 1.5708F, 0.0F));
 
 		ModelPartData seige_r1 = leverbases.addChild("seige_r1", ModelPartBuilder.create().uv(0, 332).cuboid(-9.0F, -2.0F, -3.0F, 10.0F, 2.0F, 6.0F, new Dilation(0.0F)), ModelTransform.of(17.0F, -15.0F, 8.0F, 0.0F, 3.1416F, 0.0F));
@@ -240,33 +241,27 @@ public class BlockConsoleModel extends SimpleConsoleModel {
 
 		ModelPartData hailmary = Controls.addChild("hailmary", ModelPartBuilder.create(), ModelTransform.of(-27.0F, -25.0F, 40.0F, 0.0F, -1.5708F, 0.0F));
 
-		ModelPartData stick_r3 = hailmary.addChild("stick_r3", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, -1.0F, 0.0F, 0.0F, -0.9599F));
-
 		ModelPartData autopilot = Controls.addChild("autopilot", ModelPartBuilder.create(), ModelTransform.of(-19.0F, -25.0F, 40.0F, 0.0F, -1.5708F, 0.0F));
 
-		ModelPartData stick_r4 = autopilot.addChild("stick_r4", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, -1.0F, 0.0F, 0.0F, -0.9599F));
-
-		ModelPartData prot3 = Controls.addChild("prot3", ModelPartBuilder.create(), ModelTransform.of(2.0F, -25.0F, 40.0F, 0.0F, -1.5708F, 0.0F));
-
-		ModelPartData stick_r5 = prot3.addChild("stick_r5", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, -1.0F, 0.0F, 0.0F, -0.9599F));
+		ModelPartData stick_r3 = autopilot.addChild("stick_r3", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, -1.0F, 0.0F, 0.0F, -0.9599F));
 
 		ModelPartData handbreak = Controls.addChild("handbreak", ModelPartBuilder.create(), ModelTransform.pivot(24.0F, -25.0F, -8.0F));
 
-		ModelPartData stick_r6 = handbreak.addChild("stick_r6", ModelPartBuilder.create().uv(0, 348).cuboid(-1.0F, -10.0F, -1.0F, 2.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.9599F));
+		ModelPartData stick_r4 = handbreak.addChild("stick_r4", ModelPartBuilder.create().uv(0, 348).cuboid(-1.0F, -10.0F, -1.0F, 2.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.9599F));
 
 		ModelPartData seigemode = Controls.addChild("seigemode", ModelPartBuilder.create(), ModelTransform.of(20.0F, -16.0F, 8.0F, 0.0F, 0.0F, -3.1416F));
 
-		ModelPartData stick_r7 = seigemode.addChild("stick_r7", ModelPartBuilder.create().uv(0, 348).cuboid(-1.0F, -10.0F, -1.0F, 2.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.9599F));
+		ModelPartData stick_r5 = seigemode.addChild("stick_r5", ModelPartBuilder.create().uv(0, 348).cuboid(-1.0F, -10.0F, -1.0F, 2.0F, 10.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.9599F));
 
 		ModelPartData antigravs = Controls.addChild("antigravs", ModelPartBuilder.create(), ModelTransform.of(9.0F, -25.0F, -24.0F, 0.0F, 1.5708F, 0.0F));
 
-		ModelPartData stick_r8 = antigravs.addChild("stick_r8", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.9599F));
+		ModelPartData stick_r6 = antigravs.addChild("stick_r6", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.9599F));
 
 		ModelPartData refueler = Controls.addChild("refueler", ModelPartBuilder.create().uv(6, 335).cuboid(22.0F, -26.0F, 23.0F, 4.0F, 2.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(-20.0F, 0.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
 		ModelPartData alarms = Controls.addChild("alarms", ModelPartBuilder.create(), ModelTransform.of(-26.0F, -25.0F, -24.0F, 0.0F, 1.5708F, 0.0F));
 
-		ModelPartData stick_r9 = alarms.addChild("stick_r9", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.9599F));
+		ModelPartData stick_r7 = alarms.addChild("stick_r7", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, -0.9599F));
 
 		ModelPartData prot54 = Controls.addChild("prot54", ModelPartBuilder.create().uv(6, 335).cuboid(22.0F, -26.0F, 23.0F, 4.0F, 2.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(-45.0F, 0.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
@@ -279,9 +274,9 @@ public class BlockConsoleModel extends SimpleConsoleModel {
 
 		ModelPartData DoorLock_r1 = DoorLock.addChild("DoorLock_r1", ModelPartBuilder.create().uv(4, 412).cuboid(0.0F, -1.0F, -1.0F, 0.0F, 2.0F, 2.0F, new Dilation(0.001F)), ModelTransform.of(-4.0F, 8.0F, -6.0F, 2.6561F, 0.9959F, 0.3981F));
 
-		ModelPartData power = Controls.addChild("power", ModelPartBuilder.create().uv(5, 335).cuboid(21.0F, -26.0F, 23.0F, 6.0F, 2.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 32.0F, 0.0F, 1.5708F, 0.0F));
+		ModelPartData power = Controls.addChild("power", ModelPartBuilder.create(), ModelTransform.of(0.0F, 0.0F, 32.0F, 0.0F, 1.5708F, 0.0F));
 
-		ModelPartData stick_r10 = power.addChild("stick_r10", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(24.0F, -25.0F, 24.0F, 0.0F, 0.0F, -0.9599F));
+		ModelPartData stick_r8 = power.addChild("stick_r8", ModelPartBuilder.create().uv(3, 349).cuboid(0.0F, -7.0F, 0.0F, 1.0F, 7.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(24.0F, -25.0F, 24.0F, 0.0F, 0.0F, -0.9599F));
 
 		ModelPartData SonicPort = Controls.addChild("SonicPort", ModelPartBuilder.create().uv(17, 507).cuboid(0.0F, -1.05F, 0.0F, 0.0F, 0.0F, 0.0F, new Dilation(0.001F))
 		.uv(10, 506).cuboid(-1.75F, -0.45F, -1.75F, 3.5F, 2.0F, 3.5F, new Dilation(0.0F))
@@ -302,6 +297,35 @@ public class BlockConsoleModel extends SimpleConsoleModel {
         matrices.push();
         matrices.translate(0.5F, -1.5F, -0.5F);
         matrices.multiply(RotationAxis.NEGATIVE_Y.rotationDegrees(180.0F));
+
+        ModelPart throttle = this.throttle;
+        throttle.roll += (float)tardis.travel().speed() / (float)(Integer)tardis.travel().maxSpeed().get() * 1.5F;
+
+        ModelPart handbrake = this.handbreak;
+        handbrake.yaw = !tardis.travel().handbrake() ? handbrake.yaw - 0.5F : handbrake.yaw;
+
+      // ModelPart power = this.power;
+       // power.yaw = tardis.fuel().hasPower() ? power.pitch : power.roll - 1.55F;
+
+       // ModelPart doorlock = this.DoorLock;
+       // doorlock.yaw = tardis.door().locked() ? doorlock.yaw + 0.5F : doorlock.yaw;
+
+        ModelPart alarms = this.alarms;
+        alarms.pitch = (Boolean)tardis.alarm().enabled().get() ? alarms.pitch + 1.0F : alarms.pitch;
+
+        ModelPart security = this.prot19;
+        security.pitch = (Boolean)tardis.stats().security().get() ? security.pitch + 1.0F : security.pitch;
+
+        ModelPart autopilot = this.autopilot;
+        autopilot.pitch = tardis.travel().autopilot() ? autopilot.pitch + 1.0F : autopilot.pitch - 1.0F;
+
+        ModelPart siegeMode = this.seigemode;
+        siegeMode.yaw = tardis.siege().isActive() ? siegeMode.yaw + 1.55F : siegeMode.yaw;
+
+
+        ModelPart antigravs = this.antigravs;
+        antigravs.yaw = (Boolean)tardis.travel().antigravs().get() ? antigravs.yaw - 1.58F : antigravs.yaw;
+
         super.renderWithAnimations(console, tardis, root, matrices, vertices, light, overlay, red, green, blue, pAlpha);
         matrices.pop();
     }
