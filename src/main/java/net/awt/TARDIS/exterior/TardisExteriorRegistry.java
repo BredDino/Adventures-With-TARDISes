@@ -62,6 +62,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior GLASGLOWVANILLA;
     public static AddonExterior GAMBLEBLOCKTIS;
     public static AddonExterior BLOCKTISBNW;
+    public static AddonExterior TIMEPOD;
    // public static AddonExterior BEEHIVE;
    // public static AddonExterior NEZUKO;
 
@@ -190,6 +191,9 @@ public class TardisExteriorRegistry {
 
         POLICEBOXFLATLINE = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_flatline").register();
         POLICEBOXFLATLINE.setDoor(new AddonExterior.Door(POLICEBOXFLATLINE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        TIMEPOD = new AddonExterior(new Identifier(MOD_ID, "ships"), MOD_ID, "timepod").register();
+        TIMEPOD.setDoor(new AddonExterior.Door(TIMEPOD, false, SoundEvents.BLOCK_IRON_TRAPDOOR_OPEN, SoundEvents.BLOCK_IRON_TRAPDOOR_CLOSE)).toDoor().register();
 
         // BEEHIVE = new AddonExterior(new Identifier(MOD_ID, "beehive"), MOD_ID, "beehive").register();
         //BEEHIVE.setDoor(new AddonExterior.Door(BEEHIVE, false, SoundEvents.BLOCK_BEEHIVE_ENTER, SoundEvents.BLOCK_BEEHIVE_EXIT)).toDoor().register();
@@ -401,7 +405,10 @@ public class TardisExteriorRegistry {
         POLICEBOXFLATLINE.toDoor().setModel(new flatline_policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
         POLICEBOXFLATLINE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
-       // BEEHIVE.setModel(new beehive()).toClient().register();
+        TIMEPOD.setModel(new timepod(timepod.getTexturedModelData().createModel())).toClient().register();
+        TIMEPOD.toDoor().setModel(new timepoddoor(timepoddoor.getTexturedModelData().createModel())).toClient().register();
+
+        // BEEHIVE.setModel(new beehive()).toClient().register();
        // BEEHIVE.toDoor().setModel(new beehivedoor(beehivedoor.getTexturedModelData().createModel())).toClient().register();
        // BEEHIVE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
