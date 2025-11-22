@@ -16,30 +16,40 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("item_group.Atrium"))
                     .icon(() -> new ItemStack(ModItems.ATRIUM)).entries((displayContext, entries) -> {
                         entries.add(ModItems.ATRIUM);
-                        entries.add(ModItems.PROCESSINGUNIT);
-                        entries.add(ModItems.ATRIUMCORE);
-                        entries.add(ModItems.ATRIUM_FUEL);
                         entries.add(ModItems.ENERGIZEDATRIUM);
+                        entries.add(ModItems.ATRIUMCORE);
+                        entries.add(ModItems.PROCESSINGUNIT);
+                        entries.add(ModItems.ATRIUM_FUEL);
+                        entries.add(ModItems.WEAPON_MATRIX);
+
+                        //blocks
                         entries.add(ModBlocks.ATRIUM_BLOCK);
                         entries.add(ModBlocks.ATRIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_ATRIUM_ORE);
+
+                        //misc
+                        // entries.add(ModBlocks.THE_MOMENT);
+                        entries.add(ModBlocks.TRUSTABLE_MONITOR);
+
+                        //useable items
+
+                        entries.add(ModItems.SONIC_GLASSES);
+                        entries.add(ModItems.DBZ_SCOUTER);
+
                         entries.add(ModItems.VORTEX_MANIPULATOR);
                         entries.add(ModItems.VORTEX_MANIPULATOR2);
-                        entries.add(ModItems.K9_SPAWN_EGG);
-                        entries.add(ModItems.WEAPON_MATRIX);
-                       // entries.add(ModBlocks.THE_MOMENT);
-                        entries.add(ModBlocks.TRUSTABLE_MONITOR);
 
                         entries.add(ModItems.spoon);
 
+                        //music discs
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.doctorwhoxv_music_disc);
                         entries.add(ModItems.paralyzer_music_disc);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);
                         entries.add(ModItems.doctorwho1411_music_disc);
 
-                        entries.add(ModItems.SONIC_GLASSES);
-                        entries.add(ModItems.DBZ_SCOUTER);
+                        //spawn eggs
+                        entries.add(ModItems.K9_SPAWN_EGG);
 
                     }).build());
 
@@ -47,6 +57,9 @@ public class ModItemGroups {
             new Identifier(AdventuresWithTARDISes.MOD_ID, "roundel"),
             FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Roundel"))
                     .icon(() -> new ItemStack(ModBlocks.HARTNELL_ROUNDEL)).entries((displayContext, entries) -> {
+
+                        //roundels
+
                         entries.add(ModBlocks.HARTNELL_ROUNDEL);
                         entries.add(ModBlocks.WHITE_CONCRETE_ROUNDEL);
                         entries.add(ModBlocks.BLACK_CONCRETE_ROUNDEL);
@@ -92,6 +105,9 @@ public class ModItemGroups {
                         entries.add(ModBlocks.YELLOW_CONCRETE_ROUNDEL);
                         entries.add(ModBlocks.WEATHERED_COPPER_ROUNDEL);
                         entries.add(ModItems.ROUNDELMOLD);
+
+                        //none roundels
+
                         entries.add(ModBlocks.HARTNELL_WALL);
                         entries.add(ModBlocks.GRATE_BLOCK);
                         entries.add(ModBlocks.THICK_GRATE_BLOCK);
@@ -105,10 +121,7 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.TRUSTABLE_HAT)).entries((displayContext, entries) -> {
                         entries.add(ModItems.TRUSTABLE_HAT);
 
-                        entries.add(ModItems.BOWTIE);
-
-                        entries.add(ModItems.EYESTALK);
-
+                        //fezzes
                         entries.add(ModItems.FEZ);
                         entries.add(ModItems.FANCYFEZ);
                         entries.add(ModItems.PURPLEFEZ);
@@ -119,6 +132,13 @@ public class ModItemGroups {
                         entries.add(ModItems.BLUEFEZ);
                         entries.add(ModItems.DARKBLUEFEZ);
                         entries.add(ModItems.YELLOWFEZ);
+
+                        //bowties
+                        entries.add(ModItems.BOWTIE);
+
+                        //misc
+                        entries.add(ModItems.EYESTALK);
+
                     }).build());
 
     public static void registerItemGroups() {

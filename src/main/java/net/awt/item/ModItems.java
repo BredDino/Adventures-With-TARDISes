@@ -72,7 +72,6 @@ public class ModItems {
     public static final Item YELLOWFEZ = registerItem("yellowfez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(ATRIUM);
     }
 
     private static Item registerItem(String name, Item item) {
