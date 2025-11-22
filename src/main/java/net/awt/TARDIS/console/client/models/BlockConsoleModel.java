@@ -1,16 +1,21 @@
 package net.awt.TARDIS.console.client.models;
 
+import dev.amble.ait.client.animation.console.toyota.ToyotaAnimations;
 import dev.amble.ait.client.models.consoles.ConsoleModel;
 import dev.amble.ait.client.models.consoles.SimpleConsoleModel;
 import dev.amble.ait.client.tardis.ClientTardis;
 import dev.amble.ait.core.blockentities.ConsoleBlockEntity;
 import dev.amble.ait.core.tardis.control.impl.pos.IncrementManager;
 import dev.amble.ait.core.tardis.handler.travel.TravelHandlerBase;
+import net.awt.TARDIS.console.client.animations.BlockConsoleModelAnimations;
+import net.awt.TARDIS.console.client.animations.JunkGlassModelAnimations;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.RotationAxis;
+
+import static net.awt.TARDIS.console.client.animations.BlockConsoleModelAnimations.FLIGHT;
 
 // Made with Blockbench 4.12.4
 // Exported for Minecraft version 1.17+ for Yarn
@@ -332,7 +337,17 @@ public class BlockConsoleModel extends SimpleConsoleModel {
 
     @Override
     public Animation getAnimationForState(TravelHandlerBase.State state) {
-        return Animation.Builder.create(0.0F).build();
+        Animation var10000;
+        switch (state) {
+            case FLIGHT:
+                var10000 = BlockConsoleModelAnimations.FLIGHT;
+                break;
+            default:
+                var10000 = Animation.Builder.create(0.0F).build();
+                break;
+        }
+
+        return var10000;
     }
 
     @Override
