@@ -43,7 +43,7 @@ public class timepoddoor extends DoorModel {
             return;
 
         DoorHandler door =  doorEntity.tardis().get().door();
-        this.door.visible = door.isOpen();
+        this.door.visible = door.isClosed();
 
         matrices.push();
         matrices.scale(1.5F, 1.5F, 1.5F);

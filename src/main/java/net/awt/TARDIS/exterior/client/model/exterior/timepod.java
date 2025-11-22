@@ -108,7 +108,7 @@ public class timepod extends SimpleExteriorModel {
             return;
 
         DoorHandler door =  exterior.tardis().get().door();
-        this.door.visible = door.isOpen();
+        this.door.visible = door.isClosed();
 
         matrices.push();
         matrices.scale(1.5F, 1.5F, 1.5F);
