@@ -24,6 +24,34 @@ public abstract class ItemRendererMixin {
         if (stack.isOf(ModItems.FANCYFEZ) && renderMode != ModelTransformationMode.GUI) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "fancyfez3d", "inventory"));
         }
+
+        if (stack.isOf(ModItems.PURPLEFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "purplefez3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.GREENFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "greenfez3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.GREYFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "greyfez3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.ORANGEFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "orangefez3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.BLUEFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "bluefez3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.DARKBLUEFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "darkbluefez3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.PINKFEZ) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "pinkfez3d", "inventory"));
+        }
         return value;
     }
 }
