@@ -43,17 +43,6 @@ public class ModItemGroups {
 
                     }).build());
 
-    public static final ItemGroup DECOR_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(AdventuresWithTARDISes.MOD_ID, "decor"),
-            FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Decor"))
-                    .icon(() -> new ItemStack(ModBlocks.HARTNELL_WALL)).entries((displayContext, entries) ->  {
-                        entries.add(ModBlocks.HARTNELL_WALL);
-                        entries.add(ModBlocks.GRATE_BLOCK);
-                        entries.add(ModBlocks.THICK_GRATE_BLOCK);
-                        entries.add(ModBlocks.RUSTY_GRATE_BLOCK);
-                        entries.add(ModBlocks.RUSTY_THICK_GRATE_BLOCK);
-                    }).build());
-
     public static final ItemGroup ROUNDEL_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdventuresWithTARDISes.MOD_ID, "roundel"),
             FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Roundel"))
@@ -103,6 +92,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.YELLOW_CONCRETE_ROUNDEL);
                         entries.add(ModBlocks.WEATHERED_COPPER_ROUNDEL);
                         entries.add(ModItems.ROUNDELMOLD);
+                        entries.add(ModBlocks.HARTNELL_WALL);
+                        entries.add(ModBlocks.GRATE_BLOCK);
+                        entries.add(ModBlocks.THICK_GRATE_BLOCK);
+                        entries.add(ModBlocks.RUSTY_GRATE_BLOCK);
+                        entries.add(ModBlocks.RUSTY_THICK_GRATE_BLOCK);
 
                     }).build());
     public static final ItemGroup CLOTHING_GROUP = Registry.register(Registries.ITEM_GROUP,
