@@ -1,6 +1,7 @@
 package net.awt.entity;
 
 import net.awt.AdventuresWithTARDISes;
+import net.awt.entity.custom.CybermatEntity;
 import net.awt.entity.custom.K9Entity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.impl.object.builder.FabricEntityType;
@@ -16,7 +17,7 @@ public class ModEntities {
             new Identifier(AdventuresWithTARDISes.MOD_ID,"k9"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, K9Entity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
 
-    public static final EntityType<K9Entity> CYBERMAT = Registry.register(Registries.ENTITY_TYPE,
+    public static final EntityType<CybermatEntity> CYBERMAT = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(AdventuresWithTARDISes.MOD_ID,"cybermat"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, K9Entity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
 }

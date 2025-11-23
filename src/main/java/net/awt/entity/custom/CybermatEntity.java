@@ -70,5 +70,10 @@ public class CybermatEntity extends HostileEntity {
                 .add(EntityAttributes.GENERIC_ARMOR,1);
 
     }
+    Nullable
+    @Override
+    public HostileEntity createChild(ServerWorld world, HostileEntity entity) {
+        return ModEntities.CYBERMAT.create(world);
+    }
 
 }
