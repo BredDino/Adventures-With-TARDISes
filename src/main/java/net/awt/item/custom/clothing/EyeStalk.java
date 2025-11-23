@@ -41,7 +41,7 @@ public class EyeStalk extends Item implements Trinket, TrinketRenderer {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal("Fezzes are cool!").formatted(Formatting.BLUE));
+        tooltip.add(Text.literal("I am a DALEK!").formatted(Formatting.GOLD));
         super.appendTooltip(stack, world, tooltip, context);
     }
 
