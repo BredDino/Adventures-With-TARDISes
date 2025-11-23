@@ -19,5 +19,5 @@ public class ModEntities {
 
     public static final EntityType<CybermatEntity> CYBERMAT = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(AdventuresWithTARDISes.MOD_ID,"cybermat"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, K9Entity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CybermatEntity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
 }
