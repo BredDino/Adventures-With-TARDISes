@@ -136,6 +136,13 @@ public class AdventuresWithTARDISes implements ModInitializer {
                 Text.literal("Comedic Error Sound"),
                 ResourcePackActivationType.NORMAL
         );
+
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                new Identifier("awt","feztastlealt"),
+                modContainer,
+                Text.literal("Fez Alt"),
+                ResourcePackActivationType.NORMAL
+        );
 	}
 
 	public static Identifier id(String path) {
