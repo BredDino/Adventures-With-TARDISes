@@ -54,6 +54,7 @@
   "item.awt.spoon.desc": "I am The Doctor and this is my spoon!",
 
   "item.awt.cybermat_spawn_egg": "Cybermat Spawn Egg",
+  "item.awt.cybermat_spawn_egg.desc": "Do NOT spawn. Broken ATM, will crash.",
 
   "effect.awt.Antiradiation":"Anti-Radiation",
 
