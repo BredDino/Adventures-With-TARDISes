@@ -62,7 +62,7 @@ public class CybermatEntity extends HostileEntity {
     }
 
 
-    public static DefaultAttributeContainer.Builder createK9Attributes(){
+    public static DefaultAttributeContainer.Builder createCybermatAttributes(){
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH,50)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10)

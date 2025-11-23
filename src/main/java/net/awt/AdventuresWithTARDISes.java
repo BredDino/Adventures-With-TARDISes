@@ -90,7 +90,7 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModPackets.registerC2SPackets();
 
         FabricDefaultAttributeRegistry.register(ModEntities.K9, K9Entity.createK9Attributes());
-        FabricDefaultAttributeRegistry.register(ModEntities.CYBERMAT, CybermatEntity.createK9Attributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.CYBERMAT, CybermatEntity.createCybermatAttributes());
 
         // Resource Pack Handler
         var modContainer = FabricLoader.getInstance().getModContainer("awt").orElseThrow();

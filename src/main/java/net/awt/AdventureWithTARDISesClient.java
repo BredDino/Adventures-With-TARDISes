@@ -78,7 +78,7 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.K9, K9Model::getTexturedModelData);
 
        //why wont this crap work
-        // EntityRendererRegistry.register(ModEntities.CYBERMAT, CybermatRenderer::new);
+        EntityRendererRegistry.register(ModEntities.CYBERMAT, CybermatRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.CYBERMAT, CybermatModel::getTexturedModelData);
 
         SonicGlassesKeybind();
