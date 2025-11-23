@@ -61,6 +61,10 @@ public abstract class ItemRendererMixin {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "eyestalk3d", "inventory"));
         }
 
+        if (stack.isOf(ModItems.BOWTIE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "bowtie3d", "inventory"));
+        }
+
         return value;
     }
 }

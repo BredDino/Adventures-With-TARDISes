@@ -24,6 +24,7 @@ public abstract class ModelLoaderMixin {
     @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
     public void addFez(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
         this.addModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "fez3d", "inventory"));
+        this.addModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "fancyfez3d", "inventory"));
     }
 
     @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
@@ -74,5 +75,9 @@ public abstract class ModelLoaderMixin {
     @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
     public void addEyestalk(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
         this.addModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "eyestalk3d", "inventory"));
+    }
+    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
+    public void addbowtie(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
+        this.addModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "bowtie3d", "inventory"));
     }
 }
