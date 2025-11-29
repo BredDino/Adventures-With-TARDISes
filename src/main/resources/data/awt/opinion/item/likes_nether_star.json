@@ -1,8 +1,0 @@
-{
-  "id": "awt:likes_nether_star",
-  "stack": {
-    "id": "minecraft:nether_star",
-    "Count": 1
-  },
-  "loyalty": 500
-}
