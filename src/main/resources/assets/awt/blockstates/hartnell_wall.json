@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "awt:block/hartnell_wall",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "awt:block/hartnell_wall",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "awt:block/hartnell_wall",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "awt:block/hartnell_wall",
+      "y": 270
+    }
+  }
+}

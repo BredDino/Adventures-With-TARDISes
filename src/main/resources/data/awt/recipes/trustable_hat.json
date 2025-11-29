@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "bbb",
+    "bab",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "b": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "item": "awt:trustable_hat",
+    "count": 1
+  }
+}

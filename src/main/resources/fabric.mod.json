@@ -1,0 +1,57 @@
+{
+	"schemaVersion": 1,
+	"id": "awt",
+	"version": "${version}",
+	"name": "Adventures With TARDISes",
+	"description": "I live, I see, I conquer. An addon specially designed for AIT by a group of mates.",
+	"authors": [
+		"Lieutenant_DO7",
+		"Dino",
+        "Rhamn0us",
+        "Left",
+		"NathanR2",
+		"torchwood1"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Lt-DO7/Adventures-With-TARDISes",
+		"issues": "https://github.com/Lt-DO7/Adventures-With-TARDISes/issues"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/awt/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.awt.AdventuresWithTARDISes"
+		],
+		"client": [
+			"net.awt.AdventureWithTARDISesClient"
+		],
+		"fabric-datagen": [
+			"net.awt.AdventuresWithTARDISesDataGenerator"
+		],
+		"ait-main": [
+			"net.awt.amblekit.ait.AITUtil"
+		],
+		"cardinal-components": [
+			"net.awt.components.ModComponents"
+		]
+			},
+	"mixins": [
+		"awt.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"awt:sonic_glasses_component"
+		]
+	}
+}

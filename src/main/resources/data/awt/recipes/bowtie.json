@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  ",
+    "aba",
+    "  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:string"
+    },
+    "b": {
+      "item": "minecraft:red_wool"
+    }
+  },
+  "result": {
+    "item": "awt:bowtie",
+    "count": 1
+  }
+}

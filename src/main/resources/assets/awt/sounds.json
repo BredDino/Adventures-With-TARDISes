@@ -1,0 +1,213 @@
+
+{
+  "paradoxmat": {
+    "category": "mat",
+    "subtitle": "paradoxmat",
+    "sounds": [
+      {
+        "name": "awt:paradoxmat",
+        "stream": false
+      }
+    ]
+  },
+  "k9_die": {
+    "category": "k9",
+    "subtitle": "K9 Dies",
+    "sounds": [
+      {
+        "name": "awt:k9_die",
+        "stream": false
+      }
+    ]
+  },
+  "k9_hurt": {
+    "category": "k9",
+    "subtitle": "K9 Gets Hit",
+    "sounds": [
+      {
+        "name": "awt:k9_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "k9_tame": {
+    "category": "k9",
+    "subtitle": "K9 Gets Tamed",
+    "sounds": [
+      {
+        "name": "awt:k9_tame",
+        "stream": false
+      }
+    ]
+  },
+  "hourglass": {
+    "category": "hum",
+    "subtitle": "hourglass hums",
+    "sounds": [
+      {
+        "name": "awt:hourglass",
+        "stream": false
+      }
+    ]
+  },
+  "type70mat": {
+    "category": "mat",
+    "subtitle": "subtitles.type70mat",
+    "sounds": [
+      {
+        "name": "awt:type70mat",
+        "stream": false
+      }
+    ]
+  },
+  "type70demat": {
+    "category": "demat",
+    "subtitle": "type70demat",
+    "sounds": [
+      {
+        "name": "awt:type70demat",
+        "stream": false
+      }
+    ]
+  },
+  "type70flight": {
+    "category": "flight",
+    "subtitle": "type70flight",
+    "sounds": [
+      {
+        "name": "awt:type70flight",
+        "stream": false
+      }
+    ]
+  },
+  "emergency_land": {
+    "category": "mat",
+    "subtitle": "emergency_land",
+    "sounds": [
+      {
+        "name": "awt:emergency_land",
+        "stream": false
+      }
+    ]
+  },
+  "police_box_door_open": {
+    "category": "door",
+    "subtitle": "police_box_door_open",
+    "sounds": [
+      {
+        "name": "awt:police_box_door_open",
+        "stream": false
+      }
+    ]
+  },
+  "police_box_door_close": {
+    "category": "door",
+    "subtitle": "police_box_door_close",
+    "sounds": [
+      {
+        "name": "awt:police_box_door_close",
+        "stream": false
+      }
+    ]
+  },
+  "classic1": {
+    "category": "music",
+    "subtitle": "classic1",
+    "sounds": [
+      {
+        "name": "awt:classic1",
+        "stream": true
+      }
+    ]
+  },
+  "classic2": {
+    "category": "music",
+    "subtitle": "classic2",
+    "sounds": [
+      {
+        "name": "awt:classic2",
+        "stream": true
+      }
+    ]
+  },
+  "drwhovale": {
+    "category": "jukebox",
+    "subtitle": "Bro thinks he's david tennant",
+    "sounds": [
+      {
+        "name": "awt:drwhovale",
+        "stream": true
+      }
+    ]
+  },
+  "doctorwho1411": {
+    "category": "jukebox",
+    "subtitle": "AWT's Main Theme!!!",
+    "sounds": [
+      {
+        "name": "awt:doctorwho1411",
+        "stream": true
+      }
+    ]
+  },
+  "doctorwhoxv": {
+    "category": "jukebox",
+    "subtitle": "OOO WEE OOO EEEEE OOOOO",
+    "sounds": [
+      {
+        "name": "awt:doctorwhoxv",
+        "stream": true
+      }
+    ]
+  },
+  "paralyzer": {
+    "category": "jukebox",
+    "subtitle": "Bro's from Old Youtube",
+    "sounds": [
+      {
+        "name": "awt:paralyzer",
+        "stream": true
+      }
+    ]
+  },
+  "dugga_doo": {
+    "category": "jukebox",
+    "subtitle": "Dugga doo Dugga doo Dugga doo",
+    "sounds": [
+      {
+        "name": "awt:dugga_doo",
+        "stream": false
+      }
+    ]
+  },
+  "bloop": {
+    "category": "neutral",
+    "subtitle": "bloop",
+    "sounds": [
+      {
+        "name": "awt:bloop",
+        "stream": false,
+        "vortexactivate": {
+          "category": "neutral",
+          "subtitle": "vortexactivate",
+          "sounds": [
+            {
+              "name": "ddwa:vortex_manipulator_use",
+              "stream": false
+            }
+          ]
+        },
+        "dalekshoot": {
+          "category": "hostile",
+          "subtitle": "dalekshoot",
+          "sounds": [
+            {
+              "name": "awt:dalekshoot",
+              "stream": false
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

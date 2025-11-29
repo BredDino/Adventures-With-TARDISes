@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " c ",
+    "bab",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "awt:atrium"
+    },
+    "b": {
+      "item": "minecraft:redstone"
+    },
+    "c": {
+      "item": "ait:zeiton_shard"
+    }
+  },
+    "result": {
+      "item": "awt:energized_atrium",
+      "count": 1
+    }
+}
+
+
+

@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "awt:trustable_hat",
+    "awt:fez",
+    "awt:fancyfez",
+    "awt:purplefez",
+    "awt:greenfez",
+    "awt:bluefez",
+    "awt:darkbluefez",
+    "awt:pinkfez",
+    "awt:orangefez",
+    "awt:greyfez",
+    "awt:yellowfez"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "awt:block/grate/grate_block",
+    "up": "awt:block/grate/grate_block",
+    "north": "awt:block/grate/grate_block",
+    "east": "awt:block/grate/grate_block",
+    "south": "awt:block/grate/grate_block",
+    "west": "awt:block/grate/grate_block",
+    "particle": "awt:block/grate/grate_block"
+  },
+  "render_type": "solid"
+}

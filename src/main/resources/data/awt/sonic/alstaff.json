@@ -1,0 +1,13 @@
+{
+  "id": "awt:alstaff",
+  "models": {
+    "inactive": "awt:item/sonic/alstaff",
+    "interaction": "awt:item/sonic/alstaff",
+    "overload": "awt:item/sonic/alstaff",
+    "scanning": "awt:item/sonic/alstaff",
+    "tardis": "awt:item/sonic/alstaff"
+  },
+  "loyalty": {
+    "type": "OWNER"
+  }
+}

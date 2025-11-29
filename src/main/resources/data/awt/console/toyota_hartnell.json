@@ -1,0 +1,6 @@
+{
+    "id": "awt:toyota_hartnell",
+    "parent": "ait:console/toyota",
+    "texture": "awt:textures/blockentities/consoles/toyota_hartnell.png",
+    "emission": "awt:textures/blockentities/consoles/toyota_hartnell_emission.png"
+}

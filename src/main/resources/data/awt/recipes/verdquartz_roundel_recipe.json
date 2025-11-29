@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "cbc",
+    "cac",
+    "cdc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:green_concrete"
+    },
+    "b": {
+      "item": "minecraft:smooth_quartz"
+    },
+    "c": {
+      "item": "minecraft:air"
+    },
+    "d": {
+      "item": "awt:roundel_mold"
+    }
+  },
+  "result": {
+    "item": "awt:verdquartz_roundel",
+    "count": 1
+  }
+}

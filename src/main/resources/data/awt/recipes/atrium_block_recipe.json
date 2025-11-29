@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "awt:atrium"
+    }
+  },
+    "result": {
+      "item": "awt:atrium_block",
+      "count": 1
+    }
+}
+
+
+

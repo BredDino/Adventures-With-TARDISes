@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "awt:item/clothing/2d/eyestalk2d"
+  }
+}

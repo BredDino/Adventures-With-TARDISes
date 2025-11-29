@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "bcb",
+    "bab",
+    "bcb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:nether_star"
+    },
+    "b": {
+      "item": "minecraft:leather"
+    },
+    "c": {
+      "item": "awt:processing_unit"
+
+    }},
+    "result": {
+      "item": "awt:vortex_manipulator",
+      "count": 1
+    }
+
+}
+
+
+
