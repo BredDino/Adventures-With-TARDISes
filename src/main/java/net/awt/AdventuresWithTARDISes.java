@@ -67,13 +67,13 @@ public class AdventuresWithTARDISes implements ModInitializer {
             @Override
             public boolean run(ServerPlayerEntity serverPlayerEntity, HandlesSound handlesSound, ServerTardis serverTardis) {
                 serverTardis.selfDestruct().boom();
-                this.sendChat(serverPlayerEntity, Text.literal("Killing myself."));
+                this.sendChat(serverPlayerEntity, Text.literal("Command Confirmed: Activating self destruct, please evacuate."));
                 return this.success(handlesSound);
             }
 
             @Override
             public List<String> getCommandWords() {
-                return List.of("kill yourself", "kys");
+                return List.of("activate self destruct, command code 0-0-0-destruct-0","activate self destruct, command code 000destruct0");
             }
 
             @Override
