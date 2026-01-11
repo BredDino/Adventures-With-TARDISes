@@ -302,6 +302,9 @@
   "item_group.Atrium": "AWT: Main",
   "item_group.awt.Clothing": "AWT: Clothing",
 
+  "tardis.message.self_destruct.warning": "WARNING: EYE OF HARMONY RUPTURED - SELF DESTRUCT IN 30 SECONDS.",
+  "awt.tardis.selfdestruct.syke": "Just kidding. I will not be detonating the TARDIS.",
+  "awt.tardis.selfdestruct.enable": "WARNING: EYE OF HARMONY RUPTURED - EVACUATE IMMEDIATELY!",
   "key.awt.sgm": "Sonic Shades",
   "category.awt": "AWT"
 }

@@ -1,10 +1,14 @@
 package net.awt;
 
+import dev.amble.ait.core.tardis.handler.SelfDestructHandler;
 import dev.amble.ait.core.handles.HandlesResponse;
 import dev.amble.ait.core.handles.HandlesSound;
 import dev.amble.ait.core.tardis.ServerTardis;
 import dev.amble.ait.core.tardis.handler.TardisCrashHandler;
 import dev.amble.ait.registry.impl.HandlesResponseRegistry;
+import dev.amble.ait.data.properties.bool.BoolProperty;
+import dev.amble.ait.data.properties.bool.BoolValue;
+
 import net.awt.TARDIS.console.AWTConsoleRegistry;
 import net.awt.TARDIS.console.AWTConsoleVariantRegistry;
 import net.awt.TARDIS.exterior.TardisExteriorRegistry;
@@ -21,6 +25,7 @@ import net.awt.item.ModItems;
 import net.awt.networking.ModPackets;
 import net.awt.sound.AWTSound;
 import net.awt.world.gen.ModWorldGeneration;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -29,13 +34,17 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+
 import net.minecraft.server.command.PlaySoundCommand;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
+import net.minecraft.server.MinecraftServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 import java.util.List;
 
@@ -57,23 +66,30 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		AWTConsoleVariantRegistry.init();
 		AWTCategoryRegistry.init();
 
+        final int delayTicks = 20; // 1 second. This is for the "SD" Command.
+        final int[] ticks = {0};
+
         //Atrium Coal
         FuelRegistry.INSTANCE.add(ModItems.ATRIUM_FUEL, 12800);
 
-        // Your Idol Disc TARDIS Response
-
-        // Handles, KYS.
-        HandlesResponseRegistry.register(new HandlesResponse() {
+        // Handles Pranks you now
+         HandlesResponseRegistry.register(new HandlesResponse() {
             @Override
             public boolean run(ServerPlayerEntity serverPlayerEntity, HandlesSound handlesSound, ServerTardis serverTardis) {
-                serverTardis.selfDestruct().boom();
-                this.sendChat(serverPlayerEntity, Text.literal("Killing myself."));
+                this.sendChat(serverPlayerEntity, Text.translatable("awt.tardis.selfdestruct.enable").formatted(Formatting.RED));
+                serverTardis.alarm().enable();
+                serverTardis.door().setLocked(true);
+
+                this.sendChat(serverPlayerEntity, Text.translatable("awt.tardis.selfdestruct.syke").formatted(Formatting.BLUE));
+                serverTardis.alarm().disable();
+                serverTardis.door().setLocked(false);
                 return this.success(handlesSound);
+
             }
 
             @Override
             public List<String> getCommandWords() {
-                return List.of("kill yourself", "kys");
+                return List.of("activate self destruct","activate self destruct");
             }
 
             @Override

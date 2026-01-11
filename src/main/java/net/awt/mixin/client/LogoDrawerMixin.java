@@ -60,7 +60,7 @@ public class LogoDrawerMixin {
     @Unique
     private boolean isChristmas() {
         LocalDate date = LocalDate.now();
-        return date.getMonth() == Month.DECEMBER && date.getDayOfMonth() == 25;
+        return date.getMonth() == Month.DECEMBER;
     }
 
     @Unique
