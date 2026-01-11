@@ -63,6 +63,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior GAMBLEBLOCKTIS;
     public static AddonExterior BLOCKTISBNW;
     public static AddonExterior TIMEPOD;
+    public static AddonExterior POLICEBOXLUX;
    // public static AddonExterior BEEHIVE;
    // public static AddonExterior NEZUKO;
 
@@ -191,6 +192,9 @@ public class TardisExteriorRegistry {
 
         POLICEBOXFLATLINE = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_flatline").register();
         POLICEBOXFLATLINE.setDoor(new AddonExterior.Door(POLICEBOXFLATLINE, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        POLICEBOXLUX = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_lux").register();
+        POLICEBOXLUX.setDoor(new AddonExterior.Door(POLICEBOXLUX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         TIMEPOD = new AddonExterior(new Identifier(MOD_ID, "ships"), MOD_ID, "timepod").register();
         TIMEPOD.setDoor(new AddonExterior.Door(TIMEPOD, false, SoundEvents.BLOCK_IRON_TRAPDOOR_OPEN, SoundEvents.BLOCK_IRON_TRAPDOOR_CLOSE)).toDoor().register();
@@ -404,6 +408,10 @@ public class TardisExteriorRegistry {
         POLICEBOXFLATLINE.setModel(new flatline_policebox()).toClient().register();
         POLICEBOXFLATLINE.toDoor().setModel(new flatline_policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
         POLICEBOXFLATLINE.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOXLUX.setModel(new policebox()).toClient().register();
+        POLICEBOXLUX.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXLUX.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         TIMEPOD.setModel(new timepod(timepod.getTexturedModelData().createModel())).toClient().register();
         TIMEPOD.toDoor().setModel(new timepoddoor(timepoddoor.getTexturedModelData().createModel())).toClient().register();
