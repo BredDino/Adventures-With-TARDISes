@@ -2,26 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "cbc",
-    "cac",
-    "cdc"
+    "aaa",
+    "aba",
+    "aaa"
   ],
   "key": {
     "a": {
-      "item": "minecraft:yellow_concrete"
+      "item": "awt:quartz_roundel"
     },
     "b": {
-      "item": "minecraft:smooth_quartz"
-    },
-    "c": {
-      "item": "minecraft:air"
-    },
-    "d": {
-      "item": "awt:roundel_mold"
+      "item": "minecraft:yellow_dye"
     }
   },
   "result": {
     "item": "awt:ambquartz_roundel",
-    "count": 1
+    "count": 8
   }
 }
