@@ -12,7 +12,7 @@
     },
     "b": {
       "item": "minecraft:coal"
-    },
+    }
   },
   "result": {
     "item": "awt:atrium_fuel",

@@ -2,18 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "  ",
-    "aba",
-    "  "
+    "   ",
+    "bab",
+    "   "
   ],
   "key": {
     "a": {
-      "item": "minecraft:string"
+      "item": "minecraft:red_wool"
     },
     "b": {
-      "item": "minecraft:red_wool"
+      "item": "minecraft:string"
     }
   },
+
   "result": {
     "item": "awt:bowtie",
     "count": 1
