@@ -85,31 +85,28 @@ public class AdventuresWithTARDISes implements ModInitializer {
         //Atrium Coal
         FuelRegistry.INSTANCE.add(ModItems.ATRIUM_FUEL, 12800);
 
-        // Handles Pranks you now
+        // Handles, KYS.
+
          HandlesResponseRegistry.register(new HandlesResponse() {
-            @Override
-            public boolean run(ServerPlayerEntity serverPlayerEntity, HandlesSound handlesSound, ServerTardis serverTardis) {
-                this.sendChat(serverPlayerEntity, Text.translatable("awt.tardis.selfdestruct.enable").formatted(Formatting.RED));
-                serverTardis.alarm().enable();
-                serverTardis.door().setLocked(true);
+                @Override
+                public boolean run(ServerPlayerEntity serverPlayerEntity, HandlesSound handlesSound, ServerTardis serverTardis) {
+                    serverTardis.selfDestruct().boom();
+                    this.sendChat(serverPlayerEntity, Text.literal("Killing myself."));
+                    return this.success(handlesSound);
 
-                this.sendChat(serverPlayerEntity, Text.translatable("awt.tardis.selfdestruct.syke").formatted(Formatting.BLUE));
-                serverTardis.alarm().disable();
-                serverTardis.door().setLocked(false);
-                return this.success(handlesSound);
+                }
 
-            }
+                @Override
+                public List<String> getCommandWords() {
+                    return List.of("kill yourself", "kys");
+                }
 
-            @Override
-            public List<String> getCommandWords() {
-                return List.of("activate self destruct","activate self destruct");
-            }
+                @Override
+                public Identifier id() {
+                    return new Identifier(AdventuresWithTARDISes.MOD_ID, "kill_yourself");
+                }
+            });
 
-            @Override
-            public Identifier id() {
-                return new Identifier(AdventuresWithTARDISes.MOD_ID, "kill_yourself");
-            }
-        });
 
 		UseBlockCallback.EVENT.register(UseEvent.EVENT.invoker());
 		UseItemCallback.EVENT.register(UseItemEvent.EVENT.invoker());
