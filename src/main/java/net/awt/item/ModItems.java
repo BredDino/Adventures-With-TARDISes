@@ -59,8 +59,10 @@ public class ModItems {
 
     // Custom Items
     public static final Item ATRIUM_FUEL = registerItem("atrium_fuel", new AtriumFuel(new FabricItemSettings()));
+
     public static final Item SONIC_GLASSES = registerItem("sonic_glasses",
             new SonicGlasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+
     public static final Item DBZ_SCOUTER = registerItem("dbz_scouter",
             new SonicGlasses(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
