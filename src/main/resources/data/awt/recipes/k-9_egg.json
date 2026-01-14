@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ccc",
+    "bab",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "awt:processing_unit"
+    },
+    "b": {
+      "item": "awt:atrium_core"
+    },
+    "c": {
+      "item": "minecraft:iron_block"
+    }
+  },
+
+  "result": {
+    "item": "awt:k9_spawn_egg",
+    "count": 1
+  }
+}
