@@ -24,6 +24,7 @@ import net.awt.item.ModItemGroups;
 import net.awt.item.ModItems;
 import net.awt.networking.ModPackets;
 import net.awt.sound.AWTSound;
+import net.awt.world.ModEntitySpawns;
 import net.awt.world.gen.ModWorldGeneration;
 
 import net.fabricmc.api.ModInitializer;
@@ -35,6 +36,8 @@ import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 
+import net.minecraft.entity.SpawnRestriction;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.server.command.PlaySoundCommand;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
@@ -42,6 +45,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.Heightmap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,6 +64,14 @@ public class AdventuresWithTARDISes implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
 		ModEffects.registerEffects();
+        SpawnRestriction.register(
+                ModEntities.CYBERMAT,
+                SpawnRestriction.Location.ON_GROUND,
+                Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+                HostileEntity::canSpawnInDark
+        );
+
+        ModEntitySpawns.addSpawns();
 
 		TardisExteriorRegistry.onInitialize();
 		AWTConsoleRegistry.init();
