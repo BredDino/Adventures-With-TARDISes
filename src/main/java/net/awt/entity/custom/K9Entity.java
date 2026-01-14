@@ -1,6 +1,7 @@
 package net.awt.entity.custom;
 
 import net.awt.entity.ModEntities;
+import net.awt.item.ModItems;
 import net.awt.sound.AWTSound;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.Entity;
@@ -99,8 +100,8 @@ public class K9Entity extends TameableEntity {
             return ActionResult.SUCCESS;
         }
 
-        // Taming with bone
-        if (!this.isTamed() && stack.isOf(Items.BONE)) {
+        // Taming with Processing unit
+        if (!this.isTamed() && stack.isOf(ModItems.PROCESSINGUNIT)) {
             if (!player.getAbilities().creativeMode) {
                 stack.decrement(1);
             }
