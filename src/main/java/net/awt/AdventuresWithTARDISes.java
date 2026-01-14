@@ -38,6 +38,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 
 import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.server.command.PlaySoundCommand;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
@@ -68,7 +69,7 @@ public class AdventuresWithTARDISes implements ModInitializer {
                 ModEntities.CYBERMAT,
                 SpawnRestriction.Location.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-                HostileEntity::canSpawnInDark
+                MobEntity::canMobSpawn
         );
 
         ModEntitySpawns.addSpawns();
