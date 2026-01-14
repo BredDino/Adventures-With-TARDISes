@@ -17,16 +17,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
                 .add(ModItems.DRWHOVALE_MUSIC_DISC)
-                .add(ModItems.doctorwhoxv_music_disc)
-                .add(ModItems.paralyzer_music_disc)
-                .add(ModItems.DUGGA_DOO_MUSIC_DISC)
-                .add(ModItems.doctorwho1411_music_disc);
+                .add(ModItems.DOCTORWHOXV_MUSIC_DISC)
+                .add(ModItems.PARALYZER_MUSIC_DISC)
+                .add(ModItems.DOCTORWHO1411_MUSIC_DISC)
+                .add(ModItems.DUGGA_DOO_MUSIC_DISC);
 
         getOrCreateTagBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
                 .add(ModItems.DRWHOVALE_MUSIC_DISC)
-                .add(ModItems.doctorwhoxv_music_disc)
-                .add(ModItems.paralyzer_music_disc)
-                .add(ModItems.doctorwho1411_music_disc)
+                .add(ModItems.DOCTORWHOXV_MUSIC_DISC)
+                .add(ModItems.PARALYZER_MUSIC_DISC)
+                .add(ModItems.DOCTORWHO1411_MUSIC_DISC)
                 .add(ModItems.DUGGA_DOO_MUSIC_DISC);
 
     }

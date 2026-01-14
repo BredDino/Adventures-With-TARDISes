@@ -39,14 +39,14 @@ public class ModItemGroups {
                         entries.add(ModItems.VORTEX_MANIPULATOR);
                         entries.add(ModItems.VORTEX_MANIPULATOR2);
 
-                        entries.add(ModItems.spoon);
+                        entries.add(ModItems.SPOON);
 
                         //music discs
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
-                        entries.add(ModItems.doctorwhoxv_music_disc);
-                        entries.add(ModItems.paralyzer_music_disc);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);
-                        entries.add(ModItems.doctorwho1411_music_disc);
+                        entries.add(ModItems.DOCTORWHOXV_MUSIC_DISC);
+                        entries.add(ModItems.PARALYZER_MUSIC_DISC);
+                        entries.add(ModItems.DOCTORWHO1411_MUSIC_DISC);
 
                         //spawn eggs
                         entries.add(ModItems.K9_SPAWN_EGG);
