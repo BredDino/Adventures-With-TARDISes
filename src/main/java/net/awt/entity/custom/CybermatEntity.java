@@ -1,13 +1,12 @@
 package net.awt.entity.custom;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.EntityType;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.SilverfishEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.world.World;
 
@@ -46,22 +45,30 @@ public class CybermatEntity extends SilverfishEntity {
 
     @Override
     protected void initGoals() {
-        // Do NOT call super.initGoals(), it adds Silverfish-specific burrowing goal
+        // ----- General AI Goals -----
+        this.goalSelector.add(0, new SwimGoal(this)); // Swim if in water
+        this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0, true)); // Melee attack
+        this.goalSelector.add(2, new WanderAroundGoal(this, 1.0)); // Random wandering
+        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F)); // Look at players
+        this.goalSelector.add(4, new LookAroundGoal(this)); // Look around when idle
 
-        // Standard mob AI
-        this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0, true));
-        this.goalSelector.add(2, new WanderAroundGoal(this, 1.0));
-        this.goalSelector.add(3, new LookAtEntityGoal(this, net.minecraft.entity.player.PlayerEntity.class, 6.0F));
-        this.goalSelector.add(4, new LookAroundGoal(this));
-
+        // ----- Targeting AI Goals -----
+        // Revenge goal: attack entities that harm this Cybermat
         this.targetSelector.add(0, new RevengeGoal(this));
-        this.targetSelector.add(1, new net.minecraft.entity.ai.goal.ActiveTargetGoal<>(this, net.minecraft.entity.player.PlayerEntity.class, true));
+
+        // Active targeting: attack all living entities except itself and other Cybermats
+        this.targetSelector.add(1, new ActiveTargetGoal<LivingEntity>(
+                this,
+                LivingEntity.class,  // Target all living entities
+                10,                  // Check every 10 ticks
+                true,                // Must see the target
+                true,                // Nearby only
+                target -> target != this && !(target instanceof CybermatEntity) // Filter out self and other Cybermats
+        ));
     }
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return null; // No hissing sound when idle
+        return null; // No idle sound
     }
 }
-
