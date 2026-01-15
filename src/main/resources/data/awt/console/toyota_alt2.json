@@ -1,6 +1,0 @@
-{
-    "id": "awt:toyota_alt2",
-    "parent": "ait:console/toyota",
-    "texture": "awt:textures/blockentities/consoles/toyota_alt.png",
-    "emission": "awt:textures/blockentities/consoles/toyota_rhamnous_emission.png"
-}

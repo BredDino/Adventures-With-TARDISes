@@ -1,6 +1,0 @@
-{
-    "id": "awt:toyota_rhamnous",
-    "parent": "ait:console/toyota",
-    "texture": "awt:textures/blockentities/consoles/toyota_rhamnous.png",
-    "emission": "awt:textures/blockentities/consoles/toyota_rhamnous_emission.png"
-}

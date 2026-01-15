@@ -1,6 +1,0 @@
-{
-  "id": "awt:aborted_mat",
-  "name": "aborted_mat",
-  "expected_state": "mat",
-  "sound": "ait:tardis/abort_flight"
-}
