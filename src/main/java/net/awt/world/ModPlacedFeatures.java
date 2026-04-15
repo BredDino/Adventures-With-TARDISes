@@ -18,31 +18,59 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
-    public static final RegistryKey<PlacedFeature> ATRIUM_ORE_PLACED_KEY = registerKey("atrium_ore_placed");
+    public static final RegistryKey<PlacedFeature> ATRIUM_ORE_PLACED_KEY =
+            registerKey("atrium_ore_placed");
+
+    public static final RegistryKey<PlacedFeature> PREHISTORIC_ORE_PLACED_KEY =
+            registerKey("prehistoric_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
-        var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
+        var configured = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, ATRIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ATRIUM_ORE_KEY),
-                ModOreGeneration.modifiersWithCount(10,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))));
+        register(context,
+                ATRIUM_ORE_PLACED_KEY,
+                configured.getOrThrow(ModConfiguredFeatures.ATRIUM_ORE_KEY),
+                ModOreGeneration.modifiersWithCount(
+                        8, // diamond-like frequency
+                        HeightRangePlacementModifier.uniform(
+                                YOffset.fixed(-64),
+                                YOffset.fixed(16)
+                        )
+                )
+        );
 
+        register(context,
+                PREHISTORIC_ORE_PLACED_KEY,
+                configured.getOrThrow(ModConfiguredFeatures.PREHISTORIC_ORE_KEY),
+                ModOreGeneration.modifiersWithCount(
+                        8, // SAME rarity as diamond
+                        HeightRangePlacementModifier.uniform(
+                                YOffset.fixed(-64),
+                                YOffset.fixed(16)
+                        )
+                )
+        );
     }
-
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(AdventuresWithTARDISes.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE,
+                new Identifier(AdventuresWithTARDISes.MOD_ID, name));
     }
 
-    private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,
+    private static void register(Registerable<PlacedFeature> context,
+                                 RegistryKey<PlacedFeature> key,
+                                 RegistryEntry<ConfiguredFeature<?, ?>> configuration,
                                  List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 
-    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key,
-                                                                                   RegistryEntry<ConfiguredFeature<?, ?>> configuration,
-                                                                                   PlacementModifier... modifiers) {
+    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(
+            Registerable<PlacedFeature> context,
+            RegistryKey<PlacedFeature> key,
+            RegistryEntry<ConfiguredFeature<?, ?>> configuration,
+            PlacementModifier... modifiers) {
+
         register(context, key, configuration, List.of(modifiers));
     }
 }

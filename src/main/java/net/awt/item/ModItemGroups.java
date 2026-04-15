@@ -28,6 +28,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_ATRIUM_ORE);
 
                         entries.add(ModBlocks.PREHISTORIC_BLOCK);
+                        entries.add(ModBlocks.PREHISTORIC_ORE);
 
                         //misc
                         // entries.add(ModBlocks.THE_MOMENT);

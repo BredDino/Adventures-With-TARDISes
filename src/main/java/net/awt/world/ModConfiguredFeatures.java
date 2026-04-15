@@ -21,6 +21,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> ATRIUM_ORE_KEY = registerKey("atrium_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PREHISTORIC_ORE_KEY = registerKey("prehistoric_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -29,15 +30,23 @@ public class ModConfiguredFeatures {
         RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
 
-        List<OreFeatureConfig.Target> overworldPinkGarnetOres =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.ATRIUM_ORE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_ATRIUM_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> atriumOres =
+                List.of(
+                        OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.ATRIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_ATRIUM_ORE.getDefaultState())
+                );
 
+        register(context, ATRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(atriumOres, 12));
 
-
-        register(context, ATRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPinkGarnetOres, 12));
+        List<OreFeatureConfig.Target> prehistoricOres =
+                List.of(
+                        OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.PREHISTORIC_ORE.getDefaultState())
+                );
+        register(context, PREHISTORIC_ORE_KEY, Feature.ORE, new OreFeatureConfig(prehistoricOres, 5));
 
     }
+
+
 
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

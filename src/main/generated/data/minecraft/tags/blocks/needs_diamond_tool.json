@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "awt:the_moment"
+    "awt:the_moment",
+    "awt:prehistoric_block",
+    "awt:prehistoric_ore"
   ]
 }

@@ -54,5 +54,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TRUSTABLE_MONITOR);
 
         addDrop(ModBlocks.PREHISTORIC_BLOCK);
+        addDrop(ModBlocks.PREHISTORIC_ORE); //will make this drop ingot
     }
 }
