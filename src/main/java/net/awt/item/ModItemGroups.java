@@ -33,7 +33,6 @@ public class ModItemGroups {
 
                         //misc
                         // entries.add(ModBlocks.THE_MOMENT);
-                        entries.add(ModBlocks.TRUSTABLE_MONITOR);
 
                         //useable items
 

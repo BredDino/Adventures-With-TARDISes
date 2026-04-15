@@ -16,9 +16,6 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     //AWT
 
-    public static final Block TRUSTABLE_MONITOR = registerBlock("trustable_monitor",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
-
     public static final Block ATRIUM_BLOCK = registerBlock("atrium_block",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool().strength(1.5F, 3.0F)));
 
