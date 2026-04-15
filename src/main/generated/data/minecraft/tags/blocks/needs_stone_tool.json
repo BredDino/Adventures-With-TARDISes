@@ -34,6 +34,7 @@
     "awt:exposed_copper_roundel",
     "awt:copper_roundel",
     "awt:hartnell_roundel",
-    "awt:hartnell_wall"
+    "awt:hartnell_wall",
+    "awt:trustable_monitor"
   ]
 }
