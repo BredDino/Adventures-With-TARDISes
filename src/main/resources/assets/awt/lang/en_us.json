@@ -109,7 +109,7 @@
   "exterior.awt.policebox_nathan": "NathanBox",
   "exterior.awt.policebox_dino": "Dino",
   "exterior.awt.policebox_flatline": "Flatline",
-  "exterior.awt.policebox_lux": "Luxurious",
+  "exterior.awt.policebox_lux": "Midnight",
 
   "exterior.awt.billcipher": "Bill Cipher",
   "exterior.awt.toywardianbooth": "GambleBox Booth",
@@ -173,7 +173,6 @@
   "sonic.awt.laser_screwdriver": "Laser Screwdriver",
   "sonic.awt.dbz_sonic": "Dragon Ball Radar",
   "sonic.awt.alstaff": "Alastor's Staff",
-  "sonic.awt.lux_sonic": "Luxurious",
 
   "desktop.awt.hell": "Hell",
   "desktop.awt.fnaf4": "FNAF 4",
