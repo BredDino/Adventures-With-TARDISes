@@ -186,6 +186,10 @@ public class ModBlocks {
     public static final Block HARTNELL_WALL = registerBlock("hartnell_wall",
             new RoundelBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 6.0F)));
 
+    public static final Block PREHISTORIC_BLOCK = registerBlock("prehistoric_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).sounds(BlockSoundGroup.DEEPSLATE).requiresTool().strength(1.5F, 3.0F)));
+
+
 
 
 

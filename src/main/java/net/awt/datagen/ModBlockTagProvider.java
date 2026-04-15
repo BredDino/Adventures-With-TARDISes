@@ -60,6 +60,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ATRIUM_BLOCK)
                 .add(ModBlocks.ATRIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_ATRIUM_ORE)
+                .add(ModBlocks.PREHISTORIC_BLOCK)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -116,6 +117,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.COPPER_ROUNDEL)
                 .add(ModBlocks.HARTNELL_ROUNDEL)
                 .add(ModBlocks.HARTNELL_WALL)
+                .add(ModBlocks.PREHISTORIC_BLOCK)
         ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)

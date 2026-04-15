@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "awt:block/prehistoric_dim/prehistoric_block",
+    "up": "awt:block/prehistoric_dim/prehistoric_block",
+    "north": "awt:block/prehistoric_dim/prehistoric_block",
+    "east": "awt:block/prehistoric_dim/prehistoric_block",
+    "south": "awt:block/prehistoric_dim/prehistoric_block",
+    "west": "awt:block/prehistoric_dim/prehistoric_block",
+    "particle": "awt:block/prehistoric_dim/prehistoric_block"
+  },
+  "render_type": "solid"
+}
