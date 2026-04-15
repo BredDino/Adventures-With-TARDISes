@@ -120,6 +120,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.HARTNELL_ROUNDEL)
                 .add(ModBlocks.HARTNELL_WALL)
                 .add(ModBlocks.PREHISTORIC_BLOCK)
+                .add(ModBlocks.PREHISTORIC_ORE)
+                .add(ModBlocks.DEEPSLATE_PREHISTORIC_ORE)
         ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)

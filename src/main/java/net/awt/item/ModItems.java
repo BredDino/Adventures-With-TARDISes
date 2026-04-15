@@ -31,6 +31,7 @@ public class ModItems {
     public static final Item ENERGIZEDATRIUM = registerItem("energized_atrium", new Item(new FabricItemSettings()));
     public static final Item ATRIUMCORE = registerItem("atrium_core", new Item(new FabricItemSettings()));
     public static final Item ROUNDELMOLD = registerItem("roundel_mold", new Item(new FabricItemSettings()));
+    public static final Item PREHISTORIC_INGOT = registerItem("prehistoric_ingot", new Item(new FabricItemSettings()));
 
     // Vortex Manipulator
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator", new VortexManipulator(new FabricItemSettings()));

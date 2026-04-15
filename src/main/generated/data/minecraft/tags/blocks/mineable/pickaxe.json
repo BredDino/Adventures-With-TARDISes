@@ -39,6 +39,8 @@
     "awt:copper_roundel",
     "awt:hartnell_roundel",
     "awt:hartnell_wall",
-    "awt:prehistoric_block"
+    "awt:prehistoric_block",
+    "awt:prehistoric_ore",
+    "awt:deepslate_prehistoric_ore"
   ]
 }

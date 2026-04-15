@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ATRIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_ATRIUM_ORE);
 
+                        entries.add(ModItems.PREHISTORIC_INGOT);
                         entries.add(ModBlocks.PREHISTORIC_BLOCK);
                         entries.add(ModBlocks.PREHISTORIC_ORE);
                         entries.add(ModBlocks.DEEPSLATE_PREHISTORIC_ORE);
