@@ -60,12 +60,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ATRIUM_BLOCK)
                 .add(ModBlocks.ATRIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_ATRIUM_ORE)
+
+                .add(ModBlocks.PREHISTORIC_BLOCK)
+                .add(ModBlocks.PREHISTORIC_ORE)
+                .add(ModBlocks.DEEPSLATE_PREHISTORIC_ORE)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.THE_MOMENT)
-                .add(ModBlocks.PREHISTORIC_BLOCK)
-                .add(ModBlocks.PREHISTORIC_ORE)
         ;
 
 

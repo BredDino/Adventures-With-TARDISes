@@ -55,5 +55,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.PREHISTORIC_BLOCK);
         addDrop(ModBlocks.PREHISTORIC_ORE); //will make this drop ingot
+        addDrop(ModBlocks.DEEPSLATE_PREHISTORIC_ORE);
     }
 }

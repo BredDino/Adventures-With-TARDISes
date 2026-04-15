@@ -192,6 +192,9 @@ public class ModBlocks {
     public static final Block PREHISTORIC_ORE = registerBlock("prehistoric_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
 
+    public static final Block DEEPSLATE_PREHISTORIC_ORE = registerBlock("deepslate_prehistoric_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
+
 
 
 

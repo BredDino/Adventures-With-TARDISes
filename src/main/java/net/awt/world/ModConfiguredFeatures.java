@@ -40,7 +40,8 @@ public class ModConfiguredFeatures {
 
         List<OreFeatureConfig.Target> prehistoricOres =
                 List.of(
-                        OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.PREHISTORIC_ORE.getDefaultState())
+                        OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.PREHISTORIC_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_PREHISTORIC_ORE.getDefaultState())
                 );
         register(context, PREHISTORIC_ORE_KEY, Feature.ORE, new OreFeatureConfig(prehistoricOres, 5));
 
