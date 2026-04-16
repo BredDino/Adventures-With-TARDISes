@@ -80,7 +80,6 @@
   "exterior.awt.lightblueonion": "Ice",
   "exterior.awt.limegreenonion": "Glow",
   "exterior.awt.multionion": "Multi",
-  "exterior.awt.policebox": "Copper",
   "exterior.awt.type70": "Type 70",
   "exterior.awt.type70wg": "War Games",
   "exterior.awt.type70alt": "Type 70 Alt",
@@ -99,6 +98,7 @@
   "exterior.awt.blocktisbnw": "Black & White",
   "exterior.awt.timepod": "Time Capsule",
 
+  "exterior.awt.policebox": "Copper",
   "exterior.awt.policebox_alt": "Toyota",
   "exterior.awt.policebox_purple": "TardisOwner",
   "exterior.awt.policebox_coral": "Coral",
@@ -111,6 +111,7 @@
   "exterior.awt.policebox_dino": "Dino",
   "exterior.awt.policebox_flatline": "Flatline",
   "exterior.awt.policebox_lux": "Midnight",
+  "exterior.awt.policebox_candy": "Candy Box",
 
   "exterior.awt.glasglow": "Glasglow",
 
