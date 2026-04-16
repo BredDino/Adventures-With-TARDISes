@@ -64,6 +64,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior BLOCKTISBNW;
     public static AddonExterior TIMEPOD;
     public static AddonExterior POLICEBOXLUX;
+    public static AddonExterior GLASGLOW;
    // public static AddonExterior BEEHIVE;
    // public static AddonExterior NEZUKO;
 
@@ -204,6 +205,9 @@ public class TardisExteriorRegistry {
 
         //NEZUKO = new AddonExterior(new Identifier(MOD_ID, "nezukobox"), MOD_ID, "nezuko").register();
         //NEZUKO.setDoor(new AddonExterior.Door(NEZUKO, false, SoundEvents.BLOCK_WOODEN_DOOR_OPEN, SoundEvents.BLOCK_WOODEN_DOOR_CLOSE)).toDoor().register();
+
+        GLASGLOW = new AddonExterior(new Identifier(MOD_ID, "classicboxes"), MOD_ID, "glasglow").register();
+        GLASGLOW.setDoor(new AddonExterior.Door(POLICEBOX, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
     }
 
@@ -423,5 +427,9 @@ public class TardisExteriorRegistry {
         //NEZUKO.setModel(new neziko()).toClient().register();
         //NEZUKO.toDoor().setModel(new nezikodoor(nezikodoor.getTexturedModelData().createModel())).toClient().register();
        // NEZUKO.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        GLASGLOW.setModel(new Glasgow()).toClient().register();
+        GLASGLOW.toDoor().setModel(new GlasgowDoor(GlasgowDoor.getTexturedModelData().createModel())).toClient().register();
+        GLASGLOW.setSonicItemTranslations(new Vector3f(0, 0, 0));
     }
 }
