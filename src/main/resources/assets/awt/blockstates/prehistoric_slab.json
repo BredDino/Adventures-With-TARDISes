@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=double": { "model": "awt:block/prehistoric_planks" },
+    "type=bottom": { "model": "awt:block/prehistoric_slab" },
+    "type=top": { "model": "awt:block/prehistoric_slab", "x": 180 }
+  }
+}

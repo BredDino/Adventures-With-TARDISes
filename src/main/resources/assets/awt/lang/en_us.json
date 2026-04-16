@@ -305,6 +305,8 @@
   "block.awt.deepslate_prehistoric_ore": "Deepslate Prehistoric Ore",
   "block.awt.prehistoric_planks": "Prehistoric Planks",
   "block.awt.prehistoric_log": "Prehistoric Log",
+  "block.awt.prehistoric_stairs": "Prehistoric Stairs",
+  "block.awt.prehistoric_slab": "Prehistoric Slab",
 
   "item_group.awt.Roundel": "AWT: Decor",
   "item_group.Atrium": "AWT: Main",

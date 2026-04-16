@@ -8,6 +8,10 @@
     "awt:stripped_jungle_log_roundel",
     "awt:stripped_mangrove_log_roundel",
     "awt:stripped_oak_log_roundel",
-    "awt:stripped_spruce_log_roundel"
+    "awt:stripped_spruce_log_roundel",
+    "awt:prehistoric_planks",
+    "awt:prehistoric_log",
+    "awt:prehistoric_stairs",
+    "awt:prehistoric_slab"
   ]
 }

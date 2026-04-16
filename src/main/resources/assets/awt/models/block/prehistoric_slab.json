@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "awt:block/prehistoric_dim/prehistoric_planks",
+    "top": "awt:block/prehistoric_dim/prehistoric_planks",
+    "side": "awt:block/prehistoric_dim/prehistoric_planks"
+  }
+}

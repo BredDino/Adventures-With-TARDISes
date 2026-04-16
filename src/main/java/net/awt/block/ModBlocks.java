@@ -13,6 +13,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.block.PillarBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 
 public class ModBlocks {
     //AWT
@@ -199,6 +201,13 @@ public class ModBlocks {
 
     public static final Block PREHISTORIC_LOG = registerBlock("prehistoric_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.SPRUCE_LOG).sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block PREHISTORIC_STAIRS = registerBlock("prehistoric_stairs",
+            new StairsBlock(PREHISTORIC_PLANKS.getDefaultState(),
+                    FabricBlockSettings.copyOf(PREHISTORIC_PLANKS)));
+
+    public static final Block PREHISTORIC_SLAB = registerBlock("prehistoric_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(PREHISTORIC_PLANKS)));
 
 
 

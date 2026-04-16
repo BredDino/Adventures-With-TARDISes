@@ -80,7 +80,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.PREHISTORIC_PLANKS)
-                .add(ModBlocks.PREHISTORIC_LOG);
+                .add(ModBlocks.PREHISTORIC_LOG)
+                .add(ModBlocks.PREHISTORIC_STAIRS)
+                .add(ModBlocks.PREHISTORIC_SLAB);
+
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.ATRIUM_BLOCK)
@@ -136,7 +139,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_OAK_LOG_ROUNDEL)
                 .add(ModBlocks.STRIPPED_SPRUCE_LOG_ROUNDEL)
                 .add(ModBlocks.PREHISTORIC_PLANKS)
-                .add(ModBlocks.PREHISTORIC_LOG);
+                .add(ModBlocks.PREHISTORIC_LOG)
+                .add(ModBlocks.PREHISTORIC_STAIRS)
+                .add(ModBlocks.PREHISTORIC_SLAB);
 
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
