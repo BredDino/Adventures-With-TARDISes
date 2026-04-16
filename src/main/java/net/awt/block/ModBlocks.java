@@ -12,6 +12,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.block.PillarBlock;
 
 public class ModBlocks {
     //AWT
@@ -197,7 +198,7 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.SPRUCE_PLANKS).sounds(BlockSoundGroup.WOOD)));
 
     public static final Block PREHISTORIC_LOG = registerBlock("prehistoric_log",
-            new Block(FabricBlockSettings.copyOf(Blocks.SPRUCE_LOG).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.SPRUCE_LOG).sounds(BlockSoundGroup.WOOD)));
 
 
 
