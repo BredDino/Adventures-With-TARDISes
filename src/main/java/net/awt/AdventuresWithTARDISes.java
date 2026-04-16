@@ -28,6 +28,7 @@ import net.awt.world.ModEntitySpawns;
 import net.awt.world.gen.ModWorldGeneration;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
@@ -37,34 +38,45 @@ import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 
 import net.minecraft.entity.SpawnRestriction;
-import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.server.command.PlaySoundCommand;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.Heightmap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 
 import java.util.List;
 
 public class AdventuresWithTARDISes implements ModInitializer {
-	public static final String MOD_ID = "awt";
+    public static final String MOD_ID = "awt";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    @Override
+    public void onInitialize() {
 
-	@Override
-	public void onInitialize() {
-		AWTSound.init();
-		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
-		ModItemGroups.registerItemGroups();
-		ModEffects.registerEffects();
+        AWTSound.init();
+        ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
+        ModItemGroups.registerItemGroups();
+        ModEffects.registerEffects();
+
+        FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
+        //wood roundels
+        registry.add(ModBlocks.STRIPPED_ACACIA_LOG_ROUNDEL, 5, 5);
+        registry.add(ModBlocks.STRIPPED_BIRCH_LOG_ROUNDEL, 5, 5);
+        registry.add(ModBlocks.STRIPPED_CHERRY_LOG_ROUNDEL, 5, 5);
+        registry.add(ModBlocks.STRIPPED_DARK_OAK_LOG_ROUNDEL, 5, 5);
+        registry.add(ModBlocks.STRIPPED_JUNGLE_LOG_ROUNDEL, 5, 5);
+        registry.add(ModBlocks.STRIPPED_MANGROVE_LOG_ROUNDEL, 5, 5);
+        registry.add(ModBlocks.STRIPPED_OAK_LOG_ROUNDEL, 5, 5);
+        registry.add(ModBlocks.STRIPPED_SPRUCE_LOG_ROUNDEL, 5, 5);
+
+        // wood
+        registry.add(ModBlocks.PREHISTORIC_PLANKS, 5, 20);
+
+
         SpawnRestriction.register(
                 ModEntities.CYBERMAT,
                 SpawnRestriction.Location.ON_GROUND,
@@ -74,51 +86,44 @@ public class AdventuresWithTARDISes implements ModInitializer {
 
         ModEntitySpawns.addSpawns();
 
-		TardisExteriorRegistry.onInitialize();
-		AWTConsoleRegistry.init();
-		AWTConsoleVariantRegistry.init();
-		AWTCategoryRegistry.init();
+        TardisExteriorRegistry.onInitialize();
+        AWTConsoleRegistry.init();
+        AWTConsoleVariantRegistry.init();
+        AWTCategoryRegistry.init();
 
-        final int delayTicks = 20; // 1 second. This is for the "SD" Command.
-        final int[] ticks = {0};
-
-        //Atrium Coal
+        // Fuel
         FuelRegistry.INSTANCE.add(ModItems.ATRIUM_FUEL, 12800);
 
-        // Handles, KYS.
+        // Handles
+        HandlesResponseRegistry.register(new HandlesResponse() {
+            @Override
+            public boolean run(ServerPlayerEntity player, HandlesSound sound, ServerTardis tardis) {
+                tardis.selfDestruct().boom();
+                this.sendChat(player, Text.literal("Killing myself."));
+                return this.success(sound);
+            }
 
-         HandlesResponseRegistry.register(new HandlesResponse() {
-                @Override
-                public boolean run(ServerPlayerEntity serverPlayerEntity, HandlesSound handlesSound, ServerTardis serverTardis) {
-                    serverTardis.selfDestruct().boom();
-                    this.sendChat(serverPlayerEntity, Text.literal("Killing myself."));
-                    return this.success(handlesSound);
+            @Override
+            public List<String> getCommandWords() {
+                return List.of("kill yourself", "kys");
+            }
 
-                }
+            @Override
+            public Identifier id() {
+                return new Identifier(MOD_ID, "kill_yourself");
+            }
+        });
 
-                @Override
-                public List<String> getCommandWords() {
-                    return List.of("kill yourself", "kys");
-                }
+        UseBlockCallback.EVENT.register(UseEvent.EVENT.invoker());
+        UseItemCallback.EVENT.register(UseItemEvent.EVENT.invoker());
 
-                @Override
-                public Identifier id() {
-                    return new Identifier(AdventuresWithTARDISes.MOD_ID, "kill_yourself");
-                }
-            });
-
-
-		UseBlockCallback.EVENT.register(UseEvent.EVENT.invoker());
-		UseItemCallback.EVENT.register(UseItemEvent.EVENT.invoker());
-
-		ModWorldGeneration.generateModWorldGen();
-
-		ModPackets.registerC2SPackets();
+        ModWorldGeneration.generateModWorldGen();
+        ModPackets.registerC2SPackets();
 
         FabricDefaultAttributeRegistry.register(ModEntities.K9, K9Entity.createK9Attributes());
         FabricDefaultAttributeRegistry.register(ModEntities.CYBERMAT, CybermatEntity.createCybermatAttributes());
 
-        // Resource Pack Handler
+        // Resource Packs
         var modContainer = FabricLoader.getInstance().getModContainer("awt").orElseThrow();
 
         ResourceManagerHelper.registerBuiltinResourcePack(
@@ -127,52 +132,9 @@ public class AdventuresWithTARDISes implements ModInitializer {
                 Text.literal("Main Menu Music"),
                 ResourcePackActivationType.DEFAULT_ENABLED
         );
+    }
 
-        ResourceManagerHelper.registerBuiltinResourcePack(
-                new Identifier("awt", "greyedgui"),
-                modContainer,
-                Text.literal("Greyed Out TARDIS Monitor GUI"),
-                ResourcePackActivationType.NORMAL
-        );
-
-        ResourceManagerHelper.registerBuiltinResourcePack(
-                new Identifier("awt", "lebronjamesgui"),
-                modContainer,
-                Text.literal("Lebron James TARDIS Monitor GUI"),
-                ResourcePackActivationType.NORMAL
-        );
-
-        ResourceManagerHelper.registerBuiltinResourcePack(
-                new Identifier("awt", "redshiftgui"),
-                modContainer,
-                Text.literal("Redshifted TARDIS Monitor GUIs"),
-                ResourcePackActivationType.NORMAL
-        );
-
-        ResourceManagerHelper.registerBuiltinResourcePack(
-                new Identifier("awt", "blueshiftgui"),
-                modContainer,
-                Text.literal("Blueshifted TARDIS Monitor GUIs"),
-                ResourcePackActivationType.NORMAL
-        );
-
-        ResourceManagerHelper.registerBuiltinResourcePack(
-                new Identifier("awt","awttesterrorsound"),
-                modContainer,
-                Text.literal("Comedic Error Sound"),
-                ResourcePackActivationType.NORMAL
-        );
-
-        ResourceManagerHelper.registerBuiltinResourcePack(
-                new Identifier("awt","feztastlealt"),
-                modContainer,
-                Text.literal("Fez Alt"),
-                ResourcePackActivationType.NORMAL
-        );
-	}
-
-	public static Identifier id(String path) {
-		return new Identifier("awt", path);
-	}
-
+    public static Identifier id(String path) {
+        return new Identifier("awt", path);
+    }
 }

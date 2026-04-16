@@ -78,7 +78,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES);
         getOrCreateTagBuilder(BlockTags.WALLS);
 
-        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN);
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PREHISTORIC_PLANKS);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.ATRIUM_BLOCK)
