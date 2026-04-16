@@ -204,10 +204,13 @@ public class ModBlocks {
 
     public static final Block PREHISTORIC_STAIRS = registerBlock("prehistoric_stairs",
             new StairsBlock(ModBlocks.PREHISTORIC_PLANKS.getDefaultState(),
-                    FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)));
+                    FabricBlockSettings.copyOf(Blocks.SPRUCE_STAIRS)));
 
     public static final Block PREHISTORIC_SLAB = registerBlock("prehistoric_slab",
             new SlabBlock(FabricBlockSettings.copyOf(PREHISTORIC_PLANKS)));
+
+    public static final Block PREHISTORIC_LEAVES = registerBlock("prehistoric_leaves",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.SPRUCE_LEAVES).sounds(BlockSoundGroup.CHERRY_LEAVES)));
 
 
 

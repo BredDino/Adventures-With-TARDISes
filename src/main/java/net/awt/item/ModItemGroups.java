@@ -35,6 +35,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PREHISTORIC_LOG);
                         entries.add(ModBlocks.PREHISTORIC_STAIRS);
                         entries.add(ModBlocks.PREHISTORIC_SLAB);
+                        entries.add(ModBlocks.PREHISTORIC_LEAVES);
 
                         //misc
                         // entries.add(ModBlocks.THE_MOMENT);

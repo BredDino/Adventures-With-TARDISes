@@ -147,5 +147,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.MOSS_ROUNDEL)
                 .add(ModBlocks.DIRT_ROUNDEL);
+
     }
 }

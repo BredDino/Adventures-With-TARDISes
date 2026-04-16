@@ -59,5 +59,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PREHISTORIC_LOG);
         addDrop(ModBlocks.PREHISTORIC_STAIRS);
         addDrop(ModBlocks.PREHISTORIC_SLAB);
+        addDrop(ModBlocks.PREHISTORIC_LEAVES);
     }
 }
