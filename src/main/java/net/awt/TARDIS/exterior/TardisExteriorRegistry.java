@@ -68,6 +68,7 @@ public class TardisExteriorRegistry {
    // public static AddonExterior BEEHIVE;
    // public static AddonExterior NEZUKO;
    public static AddonExterior POLICEBOXCANDY;
+   public static AddonExterior POLICEBOXGLASGLOW;
 
     public static AddonExterior JAKE;
 
@@ -200,6 +201,9 @@ public class TardisExteriorRegistry {
 
         POLICEBOXCANDY = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_candy").register();
         POLICEBOXCANDY.setDoor(new AddonExterior.Door(POLICEBOXCANDY, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
+
+        POLICEBOXGLASGLOW = new AddonExterior(new Identifier(MOD_ID, "modernboxes"), MOD_ID, "policebox_glasglow").register();
+        POLICEBOXGLASGLOW.setDoor(new AddonExterior.Door(POLICEBOXGLASGLOW, true, AWTSound.POLICEBOXDOOROPEN, AWTSound.POLICEBOXDOORCLOSED)).toDoor().register();
 
         TIMEPOD = new AddonExterior(new Identifier(MOD_ID, "ships"), MOD_ID, "timepod").register();
         TIMEPOD.setDoor(new AddonExterior.Door(TIMEPOD, false, SoundEvents.BLOCK_IRON_TRAPDOOR_OPEN, SoundEvents.BLOCK_IRON_TRAPDOOR_CLOSE)).toDoor().register();
@@ -424,6 +428,10 @@ public class TardisExteriorRegistry {
         POLICEBOXCANDY.setModel(new policebox()).toClient().register();
         POLICEBOXCANDY.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
         POLICEBOXCANDY.setSonicItemTranslations(new Vector3f(0, 0, 0));
+
+        POLICEBOXGLASGLOW.setModel(new policebox()).toClient().register();
+        POLICEBOXGLASGLOW.toDoor().setModel(new policebox_door(policebox_door.getTexturedModelData().createModel())).toClient().register();
+        POLICEBOXGLASGLOW.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         TIMEPOD.setModel(new timepod(timepod.getTexturedModelData().createModel())).toClient().register();
         TIMEPOD.toDoor().setModel(new timepoddoor(timepoddoor.getTexturedModelData().createModel())).toClient().register();
