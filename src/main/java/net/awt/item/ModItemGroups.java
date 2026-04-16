@@ -32,6 +32,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PREHISTORIC_ORE);
                         entries.add(ModBlocks.DEEPSLATE_PREHISTORIC_ORE);
                         entries.add(ModBlocks.PREHISTORIC_PLANKS);
+                        entries.add(ModBlocks.PREHISTORIC_LOG);
 
                         //misc
                         // entries.add(ModBlocks.THE_MOMENT);

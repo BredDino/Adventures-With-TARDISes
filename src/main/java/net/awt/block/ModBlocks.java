@@ -196,6 +196,9 @@ public class ModBlocks {
     public static final Block PREHISTORIC_PLANKS = registerBlock("prehistoric_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.SPRUCE_PLANKS).sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block PREHISTORIC_LOG = registerBlock("prehistoric_log",
+            new Block(FabricBlockSettings.copyOf(Blocks.SPRUCE_LOG).sounds(BlockSoundGroup.WOOD)));
+
 
 
     private static Block registerBlock(String name, Block block) {

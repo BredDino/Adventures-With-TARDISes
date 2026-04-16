@@ -75,6 +75,7 @@ public class AdventuresWithTARDISes implements ModInitializer {
 
         // wood
         registry.add(ModBlocks.PREHISTORIC_PLANKS, 5, 20);
+        registry.add(ModBlocks.PREHISTORIC_LOG, 5, 20);
 
 
         SpawnRestriction.register(

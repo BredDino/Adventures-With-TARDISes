@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=y": {
       "model": "awt:block/prehistoric_log"
+    },
+    "axis=x": {
+      "model": "awt:block/prehistoric_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "awt:block/prehistoric_log",
+      "x": 90
     }
   }
 }
