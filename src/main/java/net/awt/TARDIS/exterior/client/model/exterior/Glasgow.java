@@ -17,7 +17,8 @@ import net.minecraft.entity.Entity;
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
 public class Glasgow extends SimpleExteriorModel {
-	private final ModelPart tardis;
+	private ModelPart tardis;
+
 	public Glasgow(ModelPart root) {
 		this.tardis = root.getChild("tardis");
 	}
@@ -49,9 +50,9 @@ public class Glasgow extends SimpleExteriorModel {
 
 		ModelPartData cube_r6 = right_door.addChild("cube_r6", ModelPartBuilder.create().uv(48, 157).cuboid(-11.2F, -17.5F, -0.5F, 0.0F, 35.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(9.0F, -17.0F, 10.0F, 0.0F, -1.5708F, 0.0F));
 
-		ModelPartData left_door = tardis.addChild("left_door", ModelPartBuilder.create().uv(155, 128).cuboid(-8.1F, -19.8F, -1.6F, 0.6F, 3.0F, 0.0F, new Dilation(0.0F))
-		.uv(155, 128).cuboid(-8.1F, -16.8F, -1.6F, 0.6F, 0.0F, 0.6F, new Dilation(0.0F))
-		.uv(155, 128).cuboid(-8.1F, -19.8F, -1.6F, 0.6F, 0.0F, 0.6F, new Dilation(0.0F)), ModelTransform.pivot(9.0F, -4.0F, -10.0F));
+		ModelPartData left_door = tardis.addChild("left_door", ModelPartBuilder.create().uv(154, 128).cuboid(-8.1F, -19.8F, -1.6F, 0.6F, 3.0F, 0.0F, new Dilation(0.0F))
+		.uv(154, 128).cuboid(-8.1F, -16.8F, -1.6F, 0.6F, 0.0F, 0.6F, new Dilation(0.0F))
+		.uv(154, 128).cuboid(-8.1F, -19.8F, -1.6F, 0.6F, 0.0F, 0.6F, new Dilation(0.0F)), ModelTransform.pivot(9.0F, -4.0F, -10.0F));
 
 		ModelPartData cube_r7 = left_door.addChild("cube_r7", ModelPartBuilder.create().uv(156, 104).cuboid(0.25F, -34.0F, -0.4F, 1.0F, 35.0F, 9.0F, new Dilation(0.0F)), ModelTransform.of(-0.4F, -0.5F, -1.25F, 0.0F, -1.5708F, 0.0F));
 
@@ -124,7 +125,6 @@ public class Glasgow extends SimpleExteriorModel {
     public ModelPart getPart() {
         return tardis;
     }
-
 
     @Override
     public void renderDoors(ClientTardis tardis, ExteriorBlockEntity exterior, net.minecraft.client.model.ModelPart root, net.minecraft.client.util.math.MatrixStack matrices, net.minecraft.client.render.VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float pAlpha, boolean isBOTI) {

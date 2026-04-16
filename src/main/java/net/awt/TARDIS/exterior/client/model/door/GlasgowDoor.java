@@ -41,9 +41,9 @@ public class GlasgowDoor extends DoorModel {
 
 		ModelPartData cube_r3 = right_door.addChild("cube_r3", ModelPartBuilder.create().uv(48, 157).cuboid(-11.2F, -17.5F, -0.5F, 0.0F, 35.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(9.0F, -17.0F, 10.0F, 0.0F, -1.5708F, 0.0F));
 
-		ModelPartData left_door = tardis.addChild("left_door", ModelPartBuilder.create().uv(155, 128).cuboid(-8.1F, -19.8F, -1.6F, 0.6F, 3.0F, 0.0F, new Dilation(0.0F))
-		.uv(155, 128).cuboid(-8.1F, -16.8F, -1.6F, 0.6F, 0.0F, 0.6F, new Dilation(0.0F))
-		.uv(155, 128).cuboid(-8.1F, -19.8F, -1.6F, 0.6F, 0.0F, 0.6F, new Dilation(0.0F)), ModelTransform.pivot(9.0F, -4.0F, -10.0F));
+		ModelPartData left_door = tardis.addChild("left_door", ModelPartBuilder.create().uv(154, 128).cuboid(-8.1F, -19.8F, -1.6F, 0.6F, 3.0F, 0.0F, new Dilation(0.0F))
+		.uv(154, 128).cuboid(-8.1F, -16.8F, -1.6F, 0.6F, 0.0F, 0.6F, new Dilation(0.0F))
+		.uv(154, 128).cuboid(-8.1F, -19.8F, -1.6F, 0.6F, 0.0F, 0.6F, new Dilation(0.0F)), ModelTransform.pivot(9.0F, -4.0F, -10.0F));
 
 		ModelPartData cube_r4 = left_door.addChild("cube_r4", ModelPartBuilder.create().uv(156, 104).cuboid(0.25F, -34.0F, -0.4F, 1.0F, 35.0F, 9.0F, new Dilation(0.0F)), ModelTransform.of(-0.4F, -0.5F, -1.25F, 0.0F, -1.5708F, 0.0F));
 
