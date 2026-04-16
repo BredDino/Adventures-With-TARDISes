@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "awt:block/prehistoric_dim/prehistoric_planks",
+    "top": "awt:block/prehistoric_dim/prehistoric_planks",
+    "side": "awt:block/prehistoric_dim/prehistoric_planks"
+  },
+  "variants": {
+    "facing=east,half=bottom,shape=inner_right": {
+      "model": "awt:block/prehistoric_stairs_inner_right"
+    },
+    "facing=west,half=bottom,shape=inner_right": {
+      "model": "awt:block/prehistoric_stairs_inner_right",
+      "y": 180
+    },
+    "facing=south,half=bottom,shape=inner_right": {
+      "model": "awt:block/prehistoric_stairs_inner_right",
+      "y": 90
+    },
+    "facing=north,half=bottom,shape=inner_right": {
+      "model": "awt:block/prehistoric_stairs_inner_right",
+      "y": 270
+    }
+  }
+}

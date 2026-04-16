@@ -203,8 +203,8 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.SPRUCE_LOG).sounds(BlockSoundGroup.WOOD)));
 
     public static final Block PREHISTORIC_STAIRS = registerBlock("prehistoric_stairs",
-            new StairsBlock(PREHISTORIC_PLANKS.getDefaultState(),
-                    FabricBlockSettings.copyOf(PREHISTORIC_PLANKS)));
+            new StairsBlock(ModBlocks.PREHISTORIC_PLANKS.getDefaultState(),
+                    FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)));
 
     public static final Block PREHISTORIC_SLAB = registerBlock("prehistoric_slab",
             new SlabBlock(FabricBlockSettings.copyOf(PREHISTORIC_PLANKS)));
