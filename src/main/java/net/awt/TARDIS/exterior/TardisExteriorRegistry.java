@@ -65,7 +65,7 @@ public class TardisExteriorRegistry {
     public static AddonExterior TIMEPOD;
     public static AddonExterior POLICEBOXLUX;
     public static AddonExterior GLASGLOW;
-   // public static AddonExterior BEEHIVE;
+   public static AddonExterior BEEHIVE;
    public static AddonExterior NEZUKO;
    public static AddonExterior POLICEBOXCANDY;
    public static AddonExterior POLICEBOXGLASGLOW;
@@ -208,8 +208,8 @@ public class TardisExteriorRegistry {
         TIMEPOD = new AddonExterior(new Identifier(MOD_ID, "ships"), MOD_ID, "timepod").register();
         TIMEPOD.setDoor(new AddonExterior.Door(TIMEPOD, false, SoundEvents.BLOCK_IRON_TRAPDOOR_OPEN, SoundEvents.BLOCK_IRON_TRAPDOOR_CLOSE)).toDoor().register();
 
-        // BEEHIVE = new AddonExterior(new Identifier(MOD_ID, "beehive"), MOD_ID, "beehive").register();
-        //BEEHIVE.setDoor(new AddonExterior.Door(BEEHIVE, false, SoundEvents.BLOCK_BEEHIVE_ENTER, SoundEvents.BLOCK_BEEHIVE_EXIT)).toDoor().register();
+        BEEHIVE = new AddonExterior(new Identifier(MOD_ID, "ships"), MOD_ID, "beehive").register();
+        BEEHIVE.setDoor(new AddonExterior.Door(BEEHIVE, false, SoundEvents.BLOCK_BEEHIVE_ENTER, SoundEvents.BLOCK_BEEHIVE_EXIT)).toDoor().register();
 
         NEZUKO = new AddonExterior(new Identifier(MOD_ID, "ships"), MOD_ID, "nezuko").register();
         NEZUKO.setDoor(new AddonExterior.Door(NEZUKO, false, SoundEvents.BLOCK_WOODEN_DOOR_OPEN, SoundEvents.BLOCK_WOODEN_DOOR_CLOSE)).toDoor().register();
@@ -436,9 +436,9 @@ public class TardisExteriorRegistry {
         TIMEPOD.setModel(new timepod(timepod.getTexturedModelData().createModel())).toClient().register();
         TIMEPOD.toDoor().setModel(new timepoddoor(timepoddoor.getTexturedModelData().createModel())).toClient().register();
 
-        // BEEHIVE.setModel(new beehive()).toClient().register();
-       // BEEHIVE.toDoor().setModel(new beehivedoor(beehivedoor.getTexturedModelData().createModel())).toClient().register();
-       // BEEHIVE.setSonicItemTranslations(new Vector3f(0, 0, 0));
+         BEEHIVE.setModel(new beehive()).toClient().register();
+        BEEHIVE.toDoor().setModel(new beehivedoor(beehivedoor.getTexturedModelData().createModel())).toClient().register();
+        BEEHIVE.setSonicItemTranslations(new Vector3f(0, 0, 0));
 
         NEZUKO.setModel(new neziko()).toClient().register();
         NEZUKO.toDoor().setModel(new nezikodoor(nezikodoor.getTexturedModelData().createModel())).toClient().register();
