@@ -38,7 +38,7 @@ public class SonicGlassesModeRenderer {
     }
 
     private void renderTardis(MatrixStack matrices, VertexConsumerProvider.Immediate vertexConsumers, double cameraX, double cameraY, double cameraZ) {
-        if (client.player != null && ModComponents.SONIC_GLASSES.maybeGet(client.player).isPresent() && ModComponents.SONIC_GLASSES.get(client.player).sonicMode == SonicMode.Modes.TARDIS && ModComponents.SONIC_GLASSES.get(client.player).equipped && ModComponents.SONIC_GLASSES.get(client.player).fuel>0 ) {
+        if (client.player != null && ModComponents.SONIC_GLASSES.maybeGet(client.player).isPresent() && ModComponents.SONIC_GLASSES.get(client.player).sonicMode == SonicMode.Modes.TARDIS && ModComponents.SONIC_GLASSES.get(client.player).equipped && ModComponents.SONIC_GLASSES.get(client.player).fuel>0 && client.world != null && ModComponents.SONIC_GLASSES.get(client.player).equippedStack != null) {
             if (ModComponents.SONIC_GLASSES.get(client.player).equippedStack != null) {
                 Tardis tardis = SonicItem.getTardisStatic(client.world, ModComponents.SONIC_GLASSES.get(client.player).equippedStack);
                 if (tardis != null) {

@@ -34,7 +34,7 @@ public class SGUsePacket {
         BlockPos hitPos = buf.readBlockPos();
         boolean foundHitPos = buf.readBoolean();
 
-        if (ModComponents.SONIC_GLASSES.maybeGet(player).isPresent() && ModComponents.SONIC_GLASSES.get(player).equipped && ModComponents.SONIC_GLASSES.get(player).equippedStack.getOrCreateNbt().getInt("fuel") > 0) {
+        if (ModComponents.SONIC_GLASSES.maybeGet(player).isPresent() && ModComponents.SONIC_GLASSES.get(player).equipped && ModComponents.SONIC_GLASSES.get(player).equippedStack.getOrCreateNbt().getInt("fuel") > 0 && hitPos != null) {
             SonicGlassesComponent sonicGlassesComponent = ModComponents.SONIC_GLASSES.get(player);
             SonicMode sonicMode = sonicGlassesComponent.sonicMode;
             ServerWorld world = player.getServerWorld();
