@@ -108,7 +108,7 @@ public class AdventureWithTARDISesClient implements ClientModInitializer {
                         BlockPos hitblock = ((BlockHitResult) blockHit).getBlockPos();
                         ClientPlayNetworking.send(ModPackets.SGU_PACKET, new PacketByteBuf(PacketByteBufs.create().writeBlockPos(hitblock).writeBoolean(true)));
                     } else {
-                        ClientPlayNetworking.send(ModPackets.SGU_PACKET, new PacketByteBuf(PacketByteBufs.create().writeBoolean(false)));
+                        ClientPlayNetworking.send(ModPackets.SGU_PACKET, new PacketByteBuf(PacketByteBufs.create().writeBlockPos(new BlockPos(0,0,0)).writeBoolean(false)));
                     }
                 }
             }

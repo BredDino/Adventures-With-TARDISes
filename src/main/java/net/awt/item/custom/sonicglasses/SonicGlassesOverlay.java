@@ -46,7 +46,7 @@ public class SonicGlassesOverlay implements HudRenderCallback {
     @Override
     public void onHudRender(DrawContext drawContext, float v) {
         ClientPlayerEntity player = MinecraftClient.getInstance().player;
-        if (hasEquipped(player, ModItems.SONIC_GLASSES) && equippedStack.getOrCreateNbt().getDouble("fuel") > 0) {
+        if ((hasEquipped(player, ModItems.SONIC_GLASSES) || hasEquipped(player, ModItems.DBZ_SCOUTER)) && equippedStack.getOrCreateNbt().getDouble("fuel") > 0) {
             MatrixStack matrixStack = drawContext.getMatrices();
             RenderSystem.enableBlend();
             RenderSystem.setShaderColor(1,1,1, 0.5f);

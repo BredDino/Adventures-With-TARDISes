@@ -75,7 +75,7 @@ public class SonicGlassesComponent extends PlayerComponent implements CommonTick
 
     @Override
     public void tick() {
-        this.equipped = hasEquipped(player, ModItems.SONIC_GLASSES);
+        this.equipped = hasEquipped(player, ModItems.SONIC_GLASSES) || hasEquipped(player, ModItems.DBZ_SCOUTER);
         if (equippedStack != null) {
             fuel = equippedStack.getOrCreateNbt().getInt("fuel");
         }

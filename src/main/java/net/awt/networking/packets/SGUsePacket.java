@@ -11,6 +11,9 @@ import dev.amble.lib.data.CachedDirectedGlobalPos;
 import net.awt.components.ModComponents;
 import net.awt.components.custom.SonicGlassesComponent;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.DoorBlock;
+import net.minecraft.block.RedstoneLampBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
@@ -34,7 +37,7 @@ public class SGUsePacket {
         BlockPos hitPos = buf.readBlockPos();
         boolean foundHitPos = buf.readBoolean();
 
-        if (ModComponents.SONIC_GLASSES.maybeGet(player).isPresent() && ModComponents.SONIC_GLASSES.get(player).equipped && ModComponents.SONIC_GLASSES.get(player).equippedStack.getOrCreateNbt().getInt("fuel") > 0 && hitPos != null) {
+        if (ModComponents.SONIC_GLASSES.maybeGet(player).isPresent() && ModComponents.SONIC_GLASSES.get(player).equipped && ModComponents.SONIC_GLASSES.get(player).equippedStack.getOrCreateNbt().getInt("fuel") > 0) {
             SonicGlassesComponent sonicGlassesComponent = ModComponents.SONIC_GLASSES.get(player);
             SonicMode sonicMode = sonicGlassesComponent.sonicMode;
             ServerWorld world = player.getServerWorld();
@@ -83,7 +86,26 @@ public class SGUsePacket {
                     }
                 }
             }
-            //
+
+            if (sonicMode == SonicMode.Modes.OVERLOAD) {
+                if (foundHitPos) {
+                    BlockState blockState = world.getBlockState(hitPos);
+                    if (blockState.getBlock() instanceof RedstoneLampBlock) {
+                        world.setBlockState(hitPos, blockState.cycle(RedstoneLampBlock.LIT));
+                    }
+
+                }
+            }
+
+            if (sonicMode == SonicMode.Modes.INTERACTION) {
+                if (foundHitPos) {
+                    BlockState blockState = world.getBlockState(hitPos);
+
+                    if (blockState.getBlock() instanceof DoorBlock) {
+                        world.setBlockState(hitPos, blockState.cycle(DoorBlock.OPEN));
+                    }
+                }
+            }
 
         }
 
