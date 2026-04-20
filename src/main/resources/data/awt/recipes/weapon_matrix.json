@@ -3,26 +3,20 @@
   "category": "misc",
   "pattern": [
     "bbb",
-    "cac",
+    "bab",
     "bbb"
   ],
   "key": {
     "a": {
-      "item": "awt:weapon_matrix"
+      "item": "ait:personality_matrix"
     },
     "b": {
       "item": "awt:prehistoric_ingot"
-    },
-    "c": {
-      "item": "awt:processing_unit"
-
-    }},
-    "result": {
-      "item": "awt:vortex_manipulator2",
-      "count": 1
     }
-
+  },
+  "result": {
+    "item": "awt:weapon_matrix",
+    "count": 1
+  }
 }
-
-
 
