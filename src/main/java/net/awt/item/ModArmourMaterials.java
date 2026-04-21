@@ -10,8 +10,16 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmourMaterials implements ArmorMaterial {
-    PREHISTORIC("prehistoric", 25, new int[] { 3, 8, 6, 3 }, 19,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2f, 0.1f, () -> Ingredient.ofItems(ModItems.PREHISTORIC_INGOT));
+    PREHISTORIC(
+            "prehistoric",
+            37, // 🔥 was 25 → stronger durability (netherite is 37 base equivalent scaling)
+            new int[] { 5, 10, 8, 5 }, // 🔥 double-ish netherite protection
+            22, // better enchantability than netherite
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+            5.0f, // 🔥 netherite = 3.0f → this is much stronger
+            0.3f, // knockback resistance higher than netherite (0.1)
+            () -> Ingredient.ofItems(ModItems.PREHISTORIC_INGOT)
+    );
 
     private final String name;
     private final int durabilityMultiplier;
@@ -24,8 +32,16 @@ public enum ModArmourMaterials implements ArmorMaterial {
 
     private static final int[] BASE_DURABILITY = { 11, 16, 15, 13 };
 
-    ModArmourMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound,
-                       float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
+    ModArmourMaterials(
+            String name,
+            int durabilityMultiplier,
+            int[] protectionAmounts,
+            int enchantability,
+            SoundEvent equipSound,
+            float toughness,
+            float knockbackResistance,
+            Supplier<Ingredient> repairIngredient
+    ) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
@@ -65,8 +81,6 @@ public enum ModArmourMaterials implements ArmorMaterial {
     public String getName() {
         return AdventuresWithTARDISes.MOD_ID + ":prehistoric";
     }
-
-
 
     @Override
     public float getToughness() {
