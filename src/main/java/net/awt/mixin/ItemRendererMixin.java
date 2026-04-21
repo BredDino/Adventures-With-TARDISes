@@ -65,6 +65,33 @@ public abstract class ItemRendererMixin {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "bowtie3d", "inventory"));
         }
 
+        if (stack.isOf(ModItems.BLUEBOWTIE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "bluebowtie3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.CYANBOWTIE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "cyanbowtie3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.GREENBOWTIE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "greenbowtie3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.ORANGEBOWTIE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "orangebowtie3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.GREYBOWTIE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "greybowtie3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.MAGENTABOWTIE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "magentabowtie3d", "inventory"));
+        }
+
+        if (stack.isOf(ModItems.PURPLEBOWTIE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(AdventuresWithTARDISes.MOD_ID, "purplebowtie3d", "inventory"));
+        }
         return value;
     }
 }

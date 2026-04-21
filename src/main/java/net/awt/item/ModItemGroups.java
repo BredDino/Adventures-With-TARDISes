@@ -134,6 +134,13 @@ public class ModItemGroups {
 
                         //bowties
                         entries.add(ModItems.BOWTIE);
+                        entries.add(ModItems.BLUEBOWTIE);
+                        entries.add(ModItems.CYANBOWTIE);
+                        entries.add(ModItems.ORANGEBOWTIE);
+                        entries.add(ModItems.MAGENTABOWTIE);
+                        entries.add(ModItems.PURPLEBOWTIE);
+                        entries.add(ModItems.GREYBOWTIE);
+                        entries.add(ModItems.GREENBOWTIE);
 
                         //misc
                         entries.add(ModItems.EYESTALK);

@@ -101,8 +101,7 @@ public class ModItems {
 
     public static final Item TRUSTABLE_HAT = registerItem("trustable_hat",
             new TrustableHat(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
-    public static final Item BOWTIE = registerItem("bowtie",
-            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+
     public static final Item EYESTALK = registerItem("eyestalk",
             new EyeStalk(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
 
@@ -117,6 +116,25 @@ public class ModItems {
     public static final Item PINKFEZ = registerItem("pinkfez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item GREYFEZ = registerItem("greyfez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
     public static final Item YELLOWFEZ = registerItem("yellowfez", new Fez(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+
+    //Bowtie Variants
+    public static final Item BOWTIE = registerItem("bowtie",
+            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item BLUEBOWTIE = registerItem("bluebowtie",
+            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item CYANBOWTIE = registerItem("cyanbowtie",
+            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item ORANGEBOWTIE = registerItem("orangebowtie",
+            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item MAGENTABOWTIE = registerItem("magentabowtie",
+            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item PURPLEBOWTIE = registerItem("purplebowtie",
+            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item GREENBOWTIE = registerItem("greenbowtie",
+            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+    public static final Item GREYBOWTIE = registerItem("greybowtie",
+            new Bowtie(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
+
 
     public static final Item SPOON = registerItem("spoon", new Spoon());
 

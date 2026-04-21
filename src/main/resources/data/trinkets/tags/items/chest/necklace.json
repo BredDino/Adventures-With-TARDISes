@@ -1,6 +1,13 @@
 {
   "replace": false,
   "values": [
-    "awt:bowtie"
+    "awt:bowtie",
+    "awt:cyanbowtie",
+    "awt:bluebowtie",
+    "awt:purplebowtie",
+    "awt:magentabowtie",
+    "awt:greenbowtie",
+    "awt:greybowtie",
+    "awt:orangebowtie"
   ]
 }

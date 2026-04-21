@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    "bab",
+    "   "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gray_wool"
+    },
+    "b": {
+      "item": "minecraft:string"
+    }
+  },
+
+  "result": {
+    "item": "awt:greybowtie",
+    "count": 1
+  }
+}
