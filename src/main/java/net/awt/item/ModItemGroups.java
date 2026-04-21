@@ -119,9 +119,7 @@ public class ModItemGroups {
     public static final ItemGroup CLOTHING_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdventuresWithTARDISes.MOD_ID, "clothing"),
             FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Clothing"))
-                    .icon(() -> new ItemStack(ModItems.TRUSTABLE_HAT)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.TRUSTABLE_HAT);
-
+                    .icon(() -> new ItemStack(ModItems.FANCYFEZ)).entries((displayContext, entries) -> {
                         //fezzes
                         entries.add(ModItems.FEZ);
                         entries.add(ModItems.FANCYFEZ);
@@ -139,6 +137,7 @@ public class ModItemGroups {
 
                         //misc
                         entries.add(ModItems.EYESTALK);
+                        entries.add(ModItems.TRUSTABLE_HAT);
 
                     }).build());
 
@@ -146,6 +145,7 @@ public class ModItemGroups {
             new Identifier(AdventuresWithTARDISes.MOD_ID, "prehistoric"),
             FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Prehistoric"))
                     .icon(() -> new ItemStack(ModBlocks.PREHISTORIC_BLOCK)).entries((displayContext, entries) -> {
+
                         //items
                         entries.add(ModItems.PREHISTORIC_INGOT);
                         entries.add(ModItems.PREHISTORIC_TEMPLATE);
