@@ -151,6 +151,11 @@ public class ModItemGroups {
                         entries.add(ModItems.PREHISTORIC_TEMPLATE);
 
                         //tools
+                        entries.add(ModItems.PREHISTORIC_SWORD);
+                        entries.add(ModItems.PREHISTORIC_PICKAXE);
+                        entries.add(ModItems.PREHISTORIC_AXE);
+                        entries.add(ModItems.PREHISTORIC_SHOVEL);
+                        entries.add(ModItems.PREHISTORIC_HOE);
 
                         //armour
                         entries.add(ModItems.PREHISTORIC_HELMET);

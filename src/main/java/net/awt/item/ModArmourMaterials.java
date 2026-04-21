@@ -12,12 +12,12 @@ import java.util.function.Supplier;
 public enum ModArmourMaterials implements ArmorMaterial {
     PREHISTORIC(
             "prehistoric",
-            37, // 🔥 was 25 → stronger durability (netherite is 37 base equivalent scaling)
-            new int[] { 5, 10, 8, 5 }, // 🔥 double-ish netherite protection
-            22, // better enchantability than netherite
+            37,
+            new int[] { 5, 10, 8, 5 },
+            22,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
-            5.0f, // 🔥 netherite = 3.0f → this is much stronger
-            0.3f, // knockback resistance higher than netherite (0.1)
+            5.0f,
+            0.3f,
             () -> Ingredient.ofItems(ModItems.PREHISTORIC_INGOT)
     );
 
