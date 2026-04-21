@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "awt:item/prehistoric_chestplate"
+    "layer0": "awt:item/prehistoric_dim/prehistoric_chestplate"
   }
 }
