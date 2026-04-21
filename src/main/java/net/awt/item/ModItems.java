@@ -50,40 +50,20 @@ public class ModItems {
 
     //Prehistoric Tools
 
-    public static final Item PREHISTORIC_SWORD = new SwordItem(
-            ModToolMaterials.PREHISTORIC,
-            6,
-            -2.4f,
-            new Item.Settings()
-    );
+    public static final Item PREHISTORIC_SWORD = registerItem("prehistoric_sword",
+            new SwordItem(ModToolMaterials.PREHISTORIC, 6, -2.4f, new FabricItemSettings()));
 
-    public static final Item PREHISTORIC_PICKAXE = new PickaxeItem(
-            ModToolMaterials.PREHISTORIC,
-            1,
-            -2.8f,
-            new Item.Settings()
-    );
+    public static final Item PREHISTORIC_PICKAXE = registerItem("prehistoric_pickaxe",
+            new PickaxeItem(ModToolMaterials.PREHISTORIC, 1, -2.8f, new FabricItemSettings()));
 
-    public static final Item PREHISTORIC_AXE = new AxeItem(
-            ModToolMaterials.PREHISTORIC,
-            9.0f,
-            -3.0f,
-            new Item.Settings()
-    );
+    public static final Item PREHISTORIC_AXE = registerItem("prehistoric_axe",
+            new AxeItem(ModToolMaterials.PREHISTORIC, 9.0f, -3.0f, new FabricItemSettings()));
 
-    public static final Item PREHISTORIC_SHOVEL = new ShovelItem(
-            ModToolMaterials.PREHISTORIC,
-            1.5f,
-            -3.0f,
-            new Item.Settings()
-    );
+    public static final Item PREHISTORIC_SHOVEL = registerItem("prehistoric_shovel",
+            new ShovelItem(ModToolMaterials.PREHISTORIC, 1.5f, -3.0f, new FabricItemSettings()));
 
-    public static final Item PREHISTORIC_HOE = new HoeItem(
-            ModToolMaterials.PREHISTORIC,
-            -4,
-            0.0f,
-            new Item.Settings()
-    );
+    public static final Item PREHISTORIC_HOE = registerItem("prehistoric_hoe",
+            new HoeItem(ModToolMaterials.PREHISTORIC, -4, 0.0f, new FabricItemSettings()));
 
     // Vortex Manipulator
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator", new VortexManipulator(new FabricItemSettings()));
