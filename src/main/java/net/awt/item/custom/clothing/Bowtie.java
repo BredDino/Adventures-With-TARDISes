@@ -46,12 +46,44 @@ public class Bowtie extends Item implements Trinket, TrinketRenderer {
     }
 
     @Override
-    public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrixStack, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
+    public void render(ItemStack stack, SlotReference slotReference,
+                       EntityModel<? extends LivingEntity> contextModel,
+                       MatrixStack matrixStack,
+                       VertexConsumerProvider vertexConsumers,
+                       int light,
+                       LivingEntity entity,
+                       float limbAngle,
+                       float limbDistance,
+                       float tickDelta,
+                       float animationProgress,
+                       float headYaw,
+                       float headPitch) {
+
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
-        TrinketRenderer.translateToFace(matrixStack, (PlayerEntityModel<AbstractClientPlayerEntity>) contextModel, (AbstractClientPlayerEntity) entity, headYaw, headPitch);
-        matrixStack.translate(0,0.85,0.4);
-        itemRenderer.renderItem(entity, stack, ModelTransformationMode.HEAD, false, matrixStack, vertexConsumers, entity.getWorld(), light, OverlayTexture.DEFAULT_UV, 0);
-        matrixStack.scale(1,1,1);
+
+        if (!(contextModel instanceof PlayerEntityModel<?> model)) {
+            return;
+        }
+
+        matrixStack.push();
+        model.body.rotate(matrixStack);
+        matrixStack.translate(0.0D, 0.12D, -0.10D);
+        matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180.0F));
+
+        itemRenderer.renderItem(
+                entity,
+                stack,
+                ModelTransformationMode.FIXED,
+                false,
+                matrixStack,
+                vertexConsumers,
+                entity.getWorld(),
+                light,
+                OverlayTexture.DEFAULT_UV,
+                0
+        );
+
+        matrixStack.pop();
     }
 
     @Override
