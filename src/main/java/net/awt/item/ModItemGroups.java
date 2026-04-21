@@ -148,6 +148,7 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModBlocks.PREHISTORIC_BLOCK)).entries((displayContext, entries) -> {
                         //items
                         entries.add(ModItems.PREHISTORIC_INGOT);
+                        entries.add(ModItems.PREHISTORIC_TEMPLATE);
 
                         //tools
 
