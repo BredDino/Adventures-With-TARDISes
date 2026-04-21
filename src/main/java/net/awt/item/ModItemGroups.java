@@ -27,15 +27,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ATRIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_ATRIUM_ORE);
 
-                        entries.add(ModItems.PREHISTORIC_INGOT);
-                        entries.add(ModBlocks.PREHISTORIC_BLOCK);
-                        entries.add(ModBlocks.PREHISTORIC_ORE);
-                        entries.add(ModBlocks.DEEPSLATE_PREHISTORIC_ORE);
-                        entries.add(ModBlocks.PREHISTORIC_PLANKS);
-                        entries.add(ModBlocks.PREHISTORIC_LOG);
-                        entries.add(ModBlocks.PREHISTORIC_STAIRS);
-                        entries.add(ModBlocks.PREHISTORIC_SLAB);
-                        entries.add(ModBlocks.PREHISTORIC_LEAVES);
 
                         //misc
                         // entries.add(ModBlocks.THE_MOMENT);
@@ -148,6 +139,34 @@ public class ModItemGroups {
 
                         //misc
                         entries.add(ModItems.EYESTALK);
+
+                    }).build());
+
+    public static final ItemGroup PREHISTORIC_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(AdventuresWithTARDISes.MOD_ID, "prehistoric"),
+            FabricItemGroup.builder().displayName(Text.translatable("item_group.awt.Prehistoric"))
+                    .icon(() -> new ItemStack(ModBlocks.PREHISTORIC_BLOCK)).entries((displayContext, entries) -> {
+                        //items
+                        entries.add(ModItems.PREHISTORIC_INGOT);
+
+                        //tools
+
+                        //armour
+                        entries.add(ModItems.PREHISTORIC_HELMET);
+                        entries.add(ModItems.PREHISTORIC_CHESTPLATE);
+                        entries.add(ModItems.PREHISTORIC_LEGGINGS);
+                        entries.add(ModItems.PREHISTORIC_BOOTS);
+
+
+                        //blocks
+                        entries.add(ModBlocks.PREHISTORIC_BLOCK);
+                        entries.add(ModBlocks.PREHISTORIC_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_PREHISTORIC_ORE);
+                        entries.add(ModBlocks.PREHISTORIC_PLANKS);
+                        entries.add(ModBlocks.PREHISTORIC_LOG);
+                        entries.add(ModBlocks.PREHISTORIC_STAIRS);
+                        entries.add(ModBlocks.PREHISTORIC_SLAB);
+                        entries.add(ModBlocks.PREHISTORIC_LEAVES);
 
                     }).build());
 

@@ -27,7 +27,6 @@
   "item.awt.weapon_matrix": "Weapon Matrix",
   "item.awt.atrium_fuel": "§eAtriacoal",
   "tooltip.awt.atrium_fuel": "§cA Super-Fuel created from Atrium and coal.",
-  "item.awt.prehistoric_ingot":"Prehistoric Ingot",
 
   "item.awt.sonic_glasses": "Sonic Shades",
   "item.awt.dbz_scouter": "Sonic Scouter",
@@ -305,6 +304,12 @@
   "block.awt.rusty_grate_block": "Rusty Grate",
   "block.awt.rusty_thick_grate_block": "Rusty Thick Grate",
 
+  "item.awt.prehistoric_ingot":"Prehistoric Ingot",
+  "item.awt.prehistoric_helmet":"Prehistoric Helmet",
+  "item.awt.prehistoric_chestplate":"Prehistoric Chestplate",
+  "item.awt.prehistoric_leggings":"Prehistoric Leggings",
+  "item.awt.prehistoric_boots":"Prehistoric Boots",
+
   "block.awt.prehistoric_block": "Prehistoric Block",
   "block.awt.prehistoric_ore": "Prehistoric Ore",
   "block.awt.deepslate_prehistoric_ore": "Deepslate Prehistoric Ore",
@@ -317,6 +322,7 @@
   "item_group.awt.Roundel": "AWT: Decor",
   "item_group.Atrium": "AWT: Main",
   "item_group.awt.Clothing": "AWT: Clothing",
+  "item_group.awt.Prehistoric": "AWT: Prehistoric",
 
   "key.awt.sgm": "Sonic Shades",
   "category.awt": "AWT"

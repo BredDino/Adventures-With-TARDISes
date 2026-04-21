@@ -29,5 +29,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DOCTORWHO1411_MUSIC_DISC)
                 .add(ModItems.DUGGA_DOO_MUSIC_DISC);
 
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.PREHISTORIC_HELMET, ModItems.PREHISTORIC_CHESTPLATE, ModItems.PREHISTORIC_LEGGINGS, ModItems.PREHISTORIC_BOOTS);
     }
 }

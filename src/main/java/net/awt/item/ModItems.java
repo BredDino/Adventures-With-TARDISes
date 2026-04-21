@@ -33,6 +33,21 @@ public class ModItems {
     public static final Item ROUNDELMOLD = registerItem("roundel_mold", new Item(new FabricItemSettings()));
     public static final Item PREHISTORIC_INGOT = registerItem("prehistoric_ingot", new Item(new FabricItemSettings()));
 
+    //Prehistoric Armour
+
+    public static final Item PREHISTORIC_HELMET = registerItem("prehistoric_helmet",
+            new ArmorItem(ModArmourMaterials.PREHISTORIC, ArmorItem.Type.HELMET, new FabricItemSettings()));
+
+    public static final Item PREHISTORIC_CHESTPLATE = registerItem("prehistoric_chestplate",
+            new ArmorItem(ModArmourMaterials.PREHISTORIC, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+
+    public static final Item PREHISTORIC_LEGGINGS = registerItem("prehistoric_leggings",
+            new ArmorItem(ModArmourMaterials.PREHISTORIC, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+
+    public static final Item PREHISTORIC_BOOTS = registerItem("prehistoric_boots",
+            new ArmorItem(ModArmourMaterials.PREHISTORIC, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+
     // Vortex Manipulator
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator", new VortexManipulator(new FabricItemSettings()));
     public static final Item VORTEX_MANIPULATOR2 = registerItem("vortex_manipulator2", new VortexManipulator(new FabricItemSettings()));
