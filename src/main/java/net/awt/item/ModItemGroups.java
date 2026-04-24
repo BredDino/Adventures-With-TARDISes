@@ -44,6 +44,7 @@ public class ModItemGroups {
                         //Dalekanium Shite
 
                         entries.add(ModItems.DALEKANIUM_INGOT);
+                        entries.add(ModItems.LIQUID_DALEKANIUM);
                         entries.add(ModItems.DALEKANIUM_SWORD);
                         entries.add(ModItems.DALEKANIUM_PICKAXE);
                         entries.add(ModItems.DALEKANIUM_AXE);

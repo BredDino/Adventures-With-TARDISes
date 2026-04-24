@@ -71,6 +71,7 @@ public class ModItems {
     //Dalekanium Items
 
     public static final Item DALEKANIUM_INGOT = registerItem("dalekanium_ingot", new Item(new FabricItemSettings()));
+    public static final Item LIQUID_DALEKANIUM = registerItem("liquid_dalekanium", new Item(new FabricItemSettings()));
 
     //Dalekanium Armour
 
