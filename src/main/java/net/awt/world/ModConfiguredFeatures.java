@@ -37,21 +37,21 @@ public class ModConfiguredFeatures {
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_ATRIUM_ORE.getDefaultState())
                 );
 
-        register(context, ATRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(atriumOres, 7));
+        register(context, ATRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(atriumOres, 6));
 
         List<OreFeatureConfig.Target> prehistoricOres =
                 List.of(
                         OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.PREHISTORIC_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_PREHISTORIC_ORE.getDefaultState())
                 );
-        register(context, PREHISTORIC_ORE_KEY, Feature.ORE, new OreFeatureConfig(prehistoricOres, 5));
+        register(context, PREHISTORIC_ORE_KEY, Feature.ORE, new OreFeatureConfig(prehistoricOres, 1));
 
         List<OreFeatureConfig.Target> dalekaniumOres =
                 List.of(
                         OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.DALEKANIUM_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_DALEKANIUM_ORE.getDefaultState())
                 );
-        register(context, DALEKANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(dalekaniumOres, 6));
+        register(context, DALEKANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(dalekaniumOres, 5));
 
     }
 
