@@ -32,7 +32,16 @@ public enum ModToolMaterials implements ToolMaterial {
             3.0f,
             11,
             () -> Ingredient.ofItems(ModItems.STEEL_INGOT)
-    );
+    ),
+
+    METALERTANIUM(
+            5,
+                    2800,
+                    11.0f,
+                    5.0f,
+                    22,
+                    () -> Ingredient.ofItems(ModItems.METALERTANIUM_INGOT)
+            );
 
     private final int miningLevel;
     private final int itemDurability;

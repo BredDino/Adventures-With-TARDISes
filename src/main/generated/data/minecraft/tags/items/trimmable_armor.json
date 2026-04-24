@@ -12,6 +12,10 @@
     "awt:steel_helmet",
     "awt:steel_chestplate",
     "awt:steel_leggings",
-    "awt:steel_boots"
+    "awt:steel_boots",
+    "awt:metalertanium_helmet",
+    "awt:metalertanium_chestplate",
+    "awt:metalertanium_leggings",
+    "awt:metalertanium_boots"
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "awt:metalertanium_ingot"
+  },
+  "base": {
+    "item": "awt:dalekanium_shovel"
+  },
+  "addition": {
+    "item": "minecraft:lava_bucket"
+  },
+  "result": {
+    "item": "awt:metalertanium_shovel"
+  }
+}

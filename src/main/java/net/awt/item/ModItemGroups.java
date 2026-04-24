@@ -75,6 +75,22 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.STEEL_BLOCK);
 
+                        //Metalertanium
+
+                        entries.add(ModItems.METALERTANIUM_INGOT);
+                        entries.add(ModItems.LIQUID_METALERTANIUM);
+                        entries.add(ModItems.METALERTANIUM_SWORD);
+                        entries.add(ModItems.METALERTANIUM_PICKAXE);
+                        entries.add(ModItems.METALERTANIUM_AXE);
+                        entries.add(ModItems.METALERTANIUM_SHOVEL);
+                        entries.add(ModItems.METALERTANIUM_HOE);
+                        entries.add(ModItems.METALERTANIUM_HELMET);
+                        entries.add(ModItems.METALERTANIUM_CHESTPLATE);
+                        entries.add(ModItems.METALERTANIUM_LEGGINGS);
+                        entries.add(ModItems.METALERTANIUM_BOOTS);
+
+                        entries.add(ModBlocks.METALERTANIUM_BLOCK);
+
                         //music discs
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);

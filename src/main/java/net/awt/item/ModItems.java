@@ -87,6 +87,7 @@ public class ModItems {
     public static final Item DALEKANIUM_BOOTS = registerItem("dalekanium_boots",
             new ArmorItem(ModArmourMaterials.DALEKANIUM, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
+
     //Dalekanium Tools
 
     public static final Item DALEKANIUM_SWORD = registerItem("dalekanium_sword",
@@ -140,6 +141,42 @@ public class ModItems {
     public static final Item STEEL_HOE = registerItem("steel_hoe",
             new HoeItem(ModToolMaterials.STEEL, -4, 0.0f, new FabricItemSettings()));
 
+    //Metalertanium Items
+
+    public static final Item METALERTANIUM_INGOT = registerItem("metalertanium_ingot", new Item(new FabricItemSettings()));
+    public static final Item LIQUID_METALERTANIUM = registerItem("liquid_metalertanium", new Item(new FabricItemSettings()));
+
+    //Metalertanium Armour
+
+    public static final Item METALERTANIUM_HELMET = registerItem("metalertanium_helmet",
+            new ArmorItem(ModArmourMaterials.METALERTANIUM, ArmorItem.Type.HELMET, new FabricItemSettings()));
+
+    public static final Item METALERTANIUM_CHESTPLATE = registerItem("metalertanium_chestplate",
+            new ArmorItem(ModArmourMaterials.METALERTANIUM, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+
+    public static final Item METALERTANIUM_LEGGINGS = registerItem("metalertanium_leggings",
+            new ArmorItem(ModArmourMaterials.METALERTANIUM, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+
+    public static final Item METALERTANIUM_BOOTS = registerItem("metalertanium_boots",
+            new ArmorItem(ModArmourMaterials.METALERTANIUM, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+
+    //Metalertanium Tools
+
+    public static final Item METALERTANIUM_SWORD = registerItem("metalertanium_sword",
+            new SwordItem(ModToolMaterials.METALERTANIUM, 6, -2.4f, new FabricItemSettings()));
+
+    public static final Item METALERTANIUM_PICKAXE = registerItem("metalertanium_pickaxe",
+            new PickaxeItem(ModToolMaterials.METALERTANIUM, 1, -2.8f, new FabricItemSettings()));
+
+    public static final Item METALERTANIUM_AXE = registerItem("metalertanium_axe",
+            new AxeItem(ModToolMaterials.METALERTANIUM, 9.0f, -3.0f, new FabricItemSettings()));
+
+    public static final Item METALERTANIUM_SHOVEL = registerItem("metalertanium_shovel",
+            new ShovelItem(ModToolMaterials.METALERTANIUM, 1.5f, -3.0f, new FabricItemSettings()));
+
+    public static final Item METALERTANIUM_HOE = registerItem("metalertanium_hoe",
+            new HoeItem(ModToolMaterials.METALERTANIUM, -4, 0.0f, new FabricItemSettings()));
 
     // Vortex Manipulator
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator", new VortexManipulator(new FabricItemSettings()));

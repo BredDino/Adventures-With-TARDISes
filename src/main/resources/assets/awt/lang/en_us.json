@@ -345,7 +345,7 @@
   "item.awt.dalekanium_axe":"Dalekanium Axe",
   "item.awt.dalekanium_shovel":"Dalekanium Shovel",
   "item.awt.dalekanium_hoe":"Dalekanium Hoe",
-  "item.awt.;iquid_dalekanium":"Liquified Dalekanium",
+  "item.awt.liquid_dalekanium":"Liquified Dalekanium",
 
   "block.awt.dalekanium_block": "Dalekanium Block",
   "block.awt.dalekanium_ore": "Dalekanium Ore",
@@ -365,6 +365,21 @@
   "item.awt.steel_hoe":"Steel Hoe",
 
   "block.awt.steel_block": "Steel Block",
+
+  "item.awt.metalertanium_ingot":"Metalert Ingot",
+  "item.awt.metalertanium_helmet":"Metalert Helmet",
+  "item.awt.metalertanium_chestplate":"Metalert Chestplate",
+  "item.awt.metalertanium_leggings":"Metalert Leggings",
+  "item.awt.metalertanium_boots":"Metalert Boots",
+  "item.awt.metalertanium_template":"Metalert Template",
+  "item.awt.metalertanium_sword":"Metalert Sword",
+  "item.awt.metalertanium_pickaxe":"Metalert Pickaxe",
+  "item.awt.metalertanium_axe":"Metalert Axe",
+  "item.awt.metalertanium_shovel":"Metalert Shovel",
+  "item.awt.metalertanium_hoe":"Metalert Hoe",
+  "item.awt.liquid_metalertanium":"Bottle of Metalert",
+
+  "block.awt.metalertanium_block": "Metalert Block",
 
   "item_group.awt.Roundel": "AWT: Decor",
   "item_group.Atrium": "AWT: Main",

@@ -66,5 +66,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEEPSLATE_DALEKANIUM_ORE, oreDrops(ModBlocks.DEEPSLATE_DALEKANIUM_ORE, ModItems.DALEKANIUM_INGOT));
 
         addDrop(ModBlocks.STEEL_BLOCK);
+        addDrop(ModBlocks.METALERTANIUM_BLOCK);
     }
 }
