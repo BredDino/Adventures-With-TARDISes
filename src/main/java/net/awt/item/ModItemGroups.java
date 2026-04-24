@@ -58,6 +58,22 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DALEKANIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_DALEKANIUM_ORE);
 
+                        //Steel
+
+                        entries.add(ModItems.STEEL_INGOT);
+                        entries.add(ModItems.STEEL_TEMPLATE);
+                        entries.add(ModItems.STEEL_SWORD);
+                        entries.add(ModItems.STEEL_PICKAXE);
+                        entries.add(ModItems.STEEL_AXE);
+                        entries.add(ModItems.STEEL_SHOVEL);
+                        entries.add(ModItems.STEEL_HOE);
+                        entries.add(ModItems.STEEL_HELMET);
+                        entries.add(ModItems.STEEL_CHESTPLATE);
+                        entries.add(ModItems.STEEL_LEGGINGS);
+                        entries.add(ModItems.STEEL_BOOTS);
+
+                        entries.add(ModBlocks.STEEL_BLOCK);
+
                         //music discs
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);

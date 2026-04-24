@@ -223,6 +223,11 @@ public class ModBlocks {
     public static final Block DEEPSLATE_DALEKANIUM_ORE = registerBlock("deepslate_dalekanium_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
 
+    //Steel Blocks
+
+    public static final Block STEEL_BLOCK = registerBlock("steel_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.NETHERITE).requiresTool().strength(1.5F, 3.0F)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

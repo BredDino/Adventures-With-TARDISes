@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa ",
+    "aa ",
+    "   "
+  ],
+  "key": {
+    "a": {
+      "item": "awt:grate_block"
+    }
+  },
+    "result": {
+      "item": "awt:thick_grate_block",
+      "count": 2
+    }
+}
+
+
+

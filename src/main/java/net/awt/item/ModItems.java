@@ -103,6 +103,43 @@ public class ModItems {
     public static final Item DALEKANIUM_HOE = registerItem("dalekanium_hoe",
             new HoeItem(ModToolMaterials.DALEKANIUM, -4, 0.0f, new FabricItemSettings()));
 
+    //Steel Items
+
+    public static final Item STEEL_INGOT = registerItem("steel_ingot", new Item(new FabricItemSettings()));
+    public static final Item STEEL_TEMPLATE = registerItem("steel_template", new Item(new FabricItemSettings()));
+
+    //Steel Armour
+
+    public static final Item STEEL_HELMET = registerItem("steel_helmet",
+            new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.HELMET, new FabricItemSettings()));
+
+    public static final Item STEEL_CHESTPLATE = registerItem("steel_chestplate",
+            new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+
+    public static final Item STEEL_LEGGINGS = registerItem("steel_leggings",
+            new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+
+    public static final Item STEEL_BOOTS = registerItem("steel_boots",
+            new ArmorItem(ModArmourMaterials.STEEL, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    //Steel Tools
+
+    public static final Item STEEL_SWORD = registerItem("steel_sword",
+            new SwordItem(ModToolMaterials.STEEL, 6, -2.4f, new FabricItemSettings()));
+
+    public static final Item STEEL_PICKAXE = registerItem("steel_pickaxe",
+            new PickaxeItem(ModToolMaterials.STEEL, 1, -2.8f, new FabricItemSettings()));
+
+    public static final Item STEEL_AXE = registerItem("steel_axe",
+            new AxeItem(ModToolMaterials.STEEL, 9.0f, -3.0f, new FabricItemSettings()));
+
+    public static final Item STEEL_SHOVEL = registerItem("steel_shovel",
+            new ShovelItem(ModToolMaterials.STEEL, 1.5f, -3.0f, new FabricItemSettings()));
+
+    public static final Item STEEL_HOE = registerItem("steel_hoe",
+            new HoeItem(ModToolMaterials.STEEL, -4, 0.0f, new FabricItemSettings()));
+
+
     // Vortex Manipulator
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator", new VortexManipulator(new FabricItemSettings()));
     public static final Item VORTEX_MANIPULATOR2 = registerItem("vortex_manipulator2", new VortexManipulator(new FabricItemSettings()));

@@ -54,7 +54,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.PREHISTORIC_BLOCK);
         addDrop(ModBlocks.PREHISTORIC_ORE, oreDrops(ModBlocks.PREHISTORIC_ORE, ModItems.PREHISTORIC_INGOT));
-        addDrop(ModBlocks.DEEPSLATE_PREHISTORIC_ORE, oreDrops(ModBlocks.DEEPSLATE_ATRIUM_ORE, ModItems.PREHISTORIC_INGOT));
+        addDrop(ModBlocks.DEEPSLATE_PREHISTORIC_ORE, oreDrops(ModBlocks.DEEPSLATE_PREHISTORIC_ORE, ModItems.PREHISTORIC_INGOT));
         addDrop(ModBlocks.PREHISTORIC_PLANKS);
         addDrop(ModBlocks.PREHISTORIC_LOG);
         addDrop(ModBlocks.PREHISTORIC_STAIRS);
@@ -64,5 +64,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DALEKANIUM_BLOCK);
         addDrop(ModBlocks.DALEKANIUM_ORE, oreDrops(ModBlocks.DALEKANIUM_ORE, ModItems.DALEKANIUM_INGOT));
         addDrop(ModBlocks.DEEPSLATE_DALEKANIUM_ORE, oreDrops(ModBlocks.DEEPSLATE_DALEKANIUM_ORE, ModItems.DALEKANIUM_INGOT));
+
+        addDrop(ModBlocks.STEEL_BLOCK);
     }
 }

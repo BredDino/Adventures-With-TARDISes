@@ -8,6 +8,10 @@
     "awt:dalekanium_helmet",
     "awt:dalekanium_chestplate",
     "awt:dalekanium_leggings",
-    "awt:dalekanium_boots"
+    "awt:dalekanium_boots",
+    "awt:steel_helmet",
+    "awt:steel_chestplate",
+    "awt:steel_leggings",
+    "awt:steel_boots"
   ]
 }

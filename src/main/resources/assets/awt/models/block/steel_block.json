@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "awt:block/steel/steel_block",
+    "up": "awt:block/steel/steel_block",
+    "north": "awt:block/steel/steel_block",
+    "east": "awt:block/steel/steel_block",
+    "south": "awt:block/steel/steel_block",
+    "west": "awt:block/steel/steel_block",
+    "particle": "awt:block/steel/steel_block"
+  },
+  "render_type": "solid"
+}

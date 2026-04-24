@@ -67,6 +67,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DALEKANIUM_BLOCK)
                 .add(ModBlocks.DALEKANIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_DALEKANIUM_ORE)
+
+                .add(ModBlocks.STEEL_BLOCK)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -134,6 +136,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DALEKANIUM_BLOCK)
                 .add(ModBlocks.DALEKANIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_DALEKANIUM_ORE)
+                .add(ModBlocks.STEEL_BLOCK)
         ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)

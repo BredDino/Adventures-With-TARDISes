@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "awt:steel_template"
+  },
+  "base": {
+    "item": "minecraft:iron_hoe"
+  },
+  "addition": {
+    "item": "awt:steel_ingot"
+  },
+  "result": {
+    "item": "awt:steel_hoe"
+  }
+}

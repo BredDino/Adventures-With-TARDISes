@@ -32,6 +32,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.PREHISTORIC_HELMET, ModItems.PREHISTORIC_CHESTPLATE, ModItems.PREHISTORIC_LEGGINGS, ModItems.PREHISTORIC_BOOTS)
-                .add(ModItems.DALEKANIUM_HELMET, ModItems.DALEKANIUM_CHESTPLATE, ModItems.DALEKANIUM_LEGGINGS, ModItems.DALEKANIUM_BOOTS);
+                .add(ModItems.DALEKANIUM_HELMET, ModItems.DALEKANIUM_CHESTPLATE, ModItems.DALEKANIUM_LEGGINGS, ModItems.DALEKANIUM_BOOTS)
+                .add(ModItems.STEEL_HELMET, ModItems.STEEL_CHESTPLATE, ModItems.STEEL_LEGGINGS, ModItems.STEEL_BOOTS);
     }
 }

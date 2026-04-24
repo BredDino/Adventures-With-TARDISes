@@ -31,6 +31,17 @@ public enum ModArmourMaterials implements ArmorMaterial {
             1.0f,
             0.05f,
             () -> Ingredient.ofItems(ModItems.DALEKANIUM_INGOT)
+    ),
+
+    STEEL(
+            "steel",
+            20,
+            new int[] { 2, 7, 5, 2 },
+            10,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+            0.5f,
+            0.0f,
+            () -> Ingredient.ofItems(ModItems.STEEL_INGOT)
     );
 
     private final String name;
