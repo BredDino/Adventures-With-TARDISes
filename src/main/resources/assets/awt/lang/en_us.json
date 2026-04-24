@@ -334,6 +334,22 @@
   "block.awt.prehistoric_slab": "Prehistoric Slab",
   "block.awt.prehistoric_leaves": "Prehistoric Leaves",
 
+  "item.awt.dalekanium_ingot":"Dalekanium Ingot",
+  "item.awt.dalekanium_helmet":"Dalekanium Helmet",
+  "item.awt.dalekanium_chestplate":"Dalekanium Chestplate",
+  "item.awt.dalekanium_leggings":"Dalekanium Leggings",
+  "item.awt.dalekanium_boots":"Dalekanium Boots",
+  "item.awt.dalekanium_template":"Dalekanium Template",
+  "item.awt.dalekanium_sword":"Dalekanium Sword",
+  "item.awt.dalekanium_pickaxe":"Dalekanium Pickaxe",
+  "item.awt.dalekanium_axe":"Dalekanium Axe",
+  "item.awt.dalekanium_shovel":"Dalekanium Shovel",
+  "item.awt.dalekanium_hoe":"Dalekanium Hoe",
+
+  "block.awt.dalekanium_block": "Dalekanium Block",
+  "block.awt.dalekanium_ore": "Dalekanium Ore",
+  "block.awt.deepslate_dalekanium_ore": "Deepslate Dalekanium Ore",
+
   "item_group.awt.Roundel": "AWT: Decor",
   "item_group.Atrium": "AWT: Main",
   "item_group.awt.Clothing": "AWT: Clothing",

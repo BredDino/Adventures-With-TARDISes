@@ -31,6 +31,9 @@ public class ModItems {
     public static final Item ENERGIZEDATRIUM = registerItem("energized_atrium", new Item(new FabricItemSettings()));
     public static final Item ATRIUMCORE = registerItem("atrium_core", new Item(new FabricItemSettings()));
     public static final Item ROUNDELMOLD = registerItem("roundel_mold", new Item(new FabricItemSettings()));
+
+    //Prehistoric Items
+
     public static final Item PREHISTORIC_INGOT = registerItem("prehistoric_ingot", new Item(new FabricItemSettings()));
     public static final Item PREHISTORIC_TEMPLATE = registerItem("prehistoric_template", new Item(new FabricItemSettings()));
 
@@ -64,6 +67,41 @@ public class ModItems {
 
     public static final Item PREHISTORIC_HOE = registerItem("prehistoric_hoe",
             new HoeItem(ModToolMaterials.PREHISTORIC, -4, 0.0f, new FabricItemSettings()));
+
+    //Dalekanium Items
+
+    public static final Item DALEKANIUM_INGOT = registerItem("dalekanium_ingot", new Item(new FabricItemSettings()));
+
+    //Dalekanium Armour
+
+    public static final Item DALEKANIUM_HELMET = registerItem("dalekanium_helmet",
+            new ArmorItem(ModArmourMaterials.DALEKANIUM, ArmorItem.Type.HELMET, new FabricItemSettings()));
+
+    public static final Item DALEKANIUM_CHESTPLATE = registerItem("dalekanium_chestplate",
+            new ArmorItem(ModArmourMaterials.DALEKANIUM, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+
+    public static final Item DALEKANIUM_LEGGINGS = registerItem("dalekanium_leggings",
+            new ArmorItem(ModArmourMaterials.DALEKANIUM, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+
+    public static final Item DALEKANIUM_BOOTS = registerItem("dalekanium_boots",
+            new ArmorItem(ModArmourMaterials.DALEKANIUM, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    //Dalekanium Tools
+
+    public static final Item DALEKANIUM_SWORD = registerItem("dalekanium_sword",
+            new SwordItem(ModToolMaterials.DALEKANIUM, 6, -2.4f, new FabricItemSettings()));
+
+    public static final Item DALEKANIUM_PICKAXE = registerItem("dalekanium_pickaxe",
+            new PickaxeItem(ModToolMaterials.DALEKANIUM, 1, -2.8f, new FabricItemSettings()));
+
+    public static final Item DALEKANIUM_AXE = registerItem("dalekanium_axe",
+            new AxeItem(ModToolMaterials.DALEKANIUM, 9.0f, -3.0f, new FabricItemSettings()));
+
+    public static final Item DALEKANIUM_SHOVEL = registerItem("dalekanium_shovel",
+            new ShovelItem(ModToolMaterials.DALEKANIUM, 1.5f, -3.0f, new FabricItemSettings()));
+
+    public static final Item DALEKANIUM_HOE = registerItem("dalekanium_hoe",
+            new HoeItem(ModToolMaterials.DALEKANIUM, -4, 0.0f, new FabricItemSettings()));
 
     // Vortex Manipulator
     public static final Item VORTEX_MANIPULATOR = registerItem("vortex_manipulator", new VortexManipulator(new FabricItemSettings()));

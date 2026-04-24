@@ -212,6 +212,16 @@ public class ModBlocks {
     public static final Block PREHISTORIC_LEAVES = registerBlock("prehistoric_leaves",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.SPRUCE_LEAVES).sounds(BlockSoundGroup.CHERRY_LEAVES)));
 
+    //Dalekanium Blocks
+
+    public static final Block DALEKANIUM_BLOCK = registerBlock("dalekanium_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.DEEPSLATE).requiresTool().strength(1.5F, 3.0F)));
+
+    public static final Block DALEKANIUM_ORE = registerBlock("dalekanium_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
+
+    public static final Block DEEPSLATE_DALEKANIUM_ORE = registerBlock("deepslate_dalekanium_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).sounds(BlockSoundGroup.STONE).requiresTool().strength(1.5F, 3.0F)));
 
 
     private static Block registerBlock(String name, Block block) {

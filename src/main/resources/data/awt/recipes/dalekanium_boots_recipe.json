@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "awt:dalekanium_ingot"
+    }
+  },
+  "result": {
+    "item": "awt:dalekanium_boots",
+    "count": 1
+  }
+}
+

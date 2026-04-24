@@ -41,6 +41,23 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SPOON);
 
+                        //Dalekanium Shite
+
+                        entries.add(ModItems.DALEKANIUM_INGOT);
+                        entries.add(ModItems.DALEKANIUM_SWORD);
+                        entries.add(ModItems.DALEKANIUM_PICKAXE);
+                        entries.add(ModItems.DALEKANIUM_AXE);
+                        entries.add(ModItems.DALEKANIUM_SHOVEL);
+                        entries.add(ModItems.DALEKANIUM_HOE);
+                        entries.add(ModItems.DALEKANIUM_HELMET);
+                        entries.add(ModItems.DALEKANIUM_CHESTPLATE);
+                        entries.add(ModItems.DALEKANIUM_LEGGINGS);
+                        entries.add(ModItems.DALEKANIUM_BOOTS);
+
+                        entries.add(ModBlocks.DALEKANIUM_BLOCK);
+                        entries.add(ModBlocks.DALEKANIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_DALEKANIUM_ORE);
+
                         //music discs
                         entries.add(ModItems.DRWHOVALE_MUSIC_DISC);
                         entries.add(ModItems.DUGGA_DOO_MUSIC_DISC);

@@ -14,6 +14,15 @@ public enum ModToolMaterials implements ToolMaterial {
             5.0f,
             22,
             () -> Ingredient.ofItems(ModItems.PREHISTORIC_INGOT)
+    ),
+
+    DALEKANIUM(
+            3,
+            800,
+            7.0f,
+            2.5f,
+            12,
+            () -> Ingredient.ofItems(ModItems.DALEKANIUM_INGOT)
     );
 
     private final int miningLevel;

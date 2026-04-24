@@ -22,6 +22,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> ATRIUM_ORE_KEY = registerKey("atrium_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PREHISTORIC_ORE_KEY = registerKey("prehistoric_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DALEKANIUM_ORE_KEY = registerKey("dalekanium_ore");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -36,7 +37,7 @@ public class ModConfiguredFeatures {
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_ATRIUM_ORE.getDefaultState())
                 );
 
-        register(context, ATRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(atriumOres, 12));
+        register(context, ATRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(atriumOres, 7));
 
         List<OreFeatureConfig.Target> prehistoricOres =
                 List.of(
@@ -44,6 +45,13 @@ public class ModConfiguredFeatures {
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_PREHISTORIC_ORE.getDefaultState())
                 );
         register(context, PREHISTORIC_ORE_KEY, Feature.ORE, new OreFeatureConfig(prehistoricOres, 5));
+
+        List<OreFeatureConfig.Target> dalekaniumOres =
+                List.of(
+                        OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.DALEKANIUM_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_DALEKANIUM_ORE.getDefaultState())
+                );
+        register(context, DALEKANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(dalekaniumOres, 6));
 
     }
 

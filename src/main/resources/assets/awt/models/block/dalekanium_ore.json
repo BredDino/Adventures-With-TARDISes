@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "awt:block/dalekanium/dalekanium_ore",
+    "up": "awt:block/dalekanium/dalekanium_ore",
+    "north": "awt:block/dalekanium/dalekanium_ore",
+    "east": "awt:block/dalekanium/dalekanium_ore",
+    "south": "awt:block/dalekanium/dalekanium_ore",
+    "west": "awt:block/dalekanium/dalekanium_ore",
+    "particle": "awt:block/dalekanium/dalekanium_ore"
+  },
+  "render_type": "solid"
+}

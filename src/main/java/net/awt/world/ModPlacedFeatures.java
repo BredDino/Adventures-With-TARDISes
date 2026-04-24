@@ -24,6 +24,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> PREHISTORIC_ORE_PLACED_KEY =
             registerKey("prehistoric_ore_placed");
 
+    public static final RegistryKey<PlacedFeature> DALEKANIUM_ORE_PLACED_KEY =
+            registerKey("dalekanium_ore_placed");
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
 
         var configured = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -32,7 +35,7 @@ public class ModPlacedFeatures {
                 ATRIUM_ORE_PLACED_KEY,
                 configured.getOrThrow(ModConfiguredFeatures.ATRIUM_ORE_KEY),
                 ModOreGeneration.modifiersWithCount(
-                        8, // diamond-like frequency
+                        8,
                         HeightRangePlacementModifier.uniform(
                                 YOffset.fixed(-64),
                                 YOffset.fixed(16)
@@ -44,7 +47,19 @@ public class ModPlacedFeatures {
                 PREHISTORIC_ORE_PLACED_KEY,
                 configured.getOrThrow(ModConfiguredFeatures.PREHISTORIC_ORE_KEY),
                 ModOreGeneration.modifiersWithCount(
-                        8, // SAME rarity as diamond
+                        8,
+                        HeightRangePlacementModifier.uniform(
+                                YOffset.fixed(-64),
+                                YOffset.fixed(16)
+                        )
+                )
+        );
+
+        register(context,
+                DALEKANIUM_ORE_PLACED_KEY,
+                configured.getOrThrow(ModConfiguredFeatures.DALEKANIUM_ORE_KEY),
+                ModOreGeneration.modifiersWithCount(
+                        8,
                         HeightRangePlacementModifier.uniform(
                                 YOffset.fixed(-64),
                                 YOffset.fixed(16)

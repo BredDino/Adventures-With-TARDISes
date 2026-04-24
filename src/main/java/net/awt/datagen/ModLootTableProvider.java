@@ -60,5 +60,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PREHISTORIC_STAIRS);
         addDrop(ModBlocks.PREHISTORIC_SLAB);
         addDrop(ModBlocks.PREHISTORIC_LEAVES);
+
+        addDrop(ModBlocks.DALEKANIUM_BLOCK);
+        addDrop(ModBlocks.DALEKANIUM_ORE, oreDrops(ModBlocks.DALEKANIUM_ORE, ModItems.DALEKANIUM_INGOT));
+        addDrop(ModBlocks.DEEPSLATE_DALEKANIUM_ORE, oreDrops(ModBlocks.DEEPSLATE_DALEKANIUM_ORE, ModItems.DALEKANIUM_INGOT));
     }
 }

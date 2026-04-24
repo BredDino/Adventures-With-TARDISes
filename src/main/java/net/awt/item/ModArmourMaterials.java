@@ -10,6 +10,7 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmourMaterials implements ArmorMaterial {
+
     PREHISTORIC(
             "prehistoric",
             37,
@@ -19,6 +20,17 @@ public enum ModArmourMaterials implements ArmorMaterial {
             5.0f,
             0.3f,
             () -> Ingredient.ofItems(ModItems.PREHISTORIC_INGOT)
+    ),
+
+    DALEKANIUM(
+            "dalekanium",
+            25,
+            new int[] { 3, 7, 6, 3 },
+            12,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+            1.0f,
+            0.05f,
+            () -> Ingredient.ofItems(ModItems.DALEKANIUM_INGOT)
     );
 
     private final String name;
@@ -79,7 +91,7 @@ public enum ModArmourMaterials implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return AdventuresWithTARDISes.MOD_ID + ":prehistoric";
+        return AdventuresWithTARDISes.MOD_ID + ":" + this.name;
     }
 
     @Override

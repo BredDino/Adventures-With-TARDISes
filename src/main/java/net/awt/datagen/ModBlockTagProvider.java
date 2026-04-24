@@ -63,6 +63,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PREHISTORIC_BLOCK)
                 .add(ModBlocks.PREHISTORIC_ORE)
                 .add(ModBlocks.DEEPSLATE_PREHISTORIC_ORE)
+
+                .add(ModBlocks.DALEKANIUM_BLOCK)
+                .add(ModBlocks.DALEKANIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_DALEKANIUM_ORE)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -127,6 +131,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PREHISTORIC_BLOCK)
                 .add(ModBlocks.PREHISTORIC_ORE)
                 .add(ModBlocks.DEEPSLATE_PREHISTORIC_ORE)
+                .add(ModBlocks.DALEKANIUM_BLOCK)
+                .add(ModBlocks.DALEKANIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_DALEKANIUM_ORE)
         ;
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
