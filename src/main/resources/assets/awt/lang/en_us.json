@@ -380,6 +380,16 @@
 
   "block.awt.metalertanium_block": "Metalert Block",
 
+  "item.awt.prehistoric_metalertanium_helmet":"Prehistoric Metalert Helmet",
+  "item.awt.prehistoric_metalertanium_chestplate":"Prehistoric Metalert Chestplate",
+  "item.awt.prehistoric_metalertanium_leggings":"Prehistoric Metalert Leggings",
+  "item.awt.prehistoric_metalertanium_boots":"Prehistoric Metalert Boots",
+  "item.awt.prehistoric_metalertanium_sword":"Prehistoric Metalert Sword",
+  "item.awt.prehistoric_metalertanium_pickaxe":"Prehistoric Metalert Pickaxe",
+  "item.awt.prehistoric_metalertanium_axe":"Prehistoric Metalert Axe",
+  "item.awt.prehistoric_metalertanium_shovel":"Prehistoric Metalert Shovel",
+  "item.awt.prehistoric_metalertanium_hoe":"Prehistoric Metalert Hoe",
+
   "item_group.awt.Roundel": "AWT: Decor",
   "item_group.Atrium": "AWT: Main",
   "item_group.awt.Clothing": "AWT: Clothing",
